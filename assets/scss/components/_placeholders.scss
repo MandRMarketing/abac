@@ -1,0 +1,39 @@
+.placeholder {
+	color: $purple;
+	opacity: 1;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: normal;
+}
+
+::-moz-placeholder {
+	color: $purple;
+	opacity: 1;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: normal;
+}
+
+::-webkit-input-placeholder {
+	color: $purple;
+	opacity: 1;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: normal;
+}
+
+:-ms-input-placeholder {
+	color: $purple;
+	opacity: 1;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: normal;
+}
+
+::-ms-input-placeholder {
+	color: $purple;
+	opacity: 1;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: normal;
+}

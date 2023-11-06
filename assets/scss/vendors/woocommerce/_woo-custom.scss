@@ -1,0 +1,11 @@
+/**
+ *	In order to style WooCommerce try to take as much from their stylesheets as possible,
+ *		add it in this folder,
+ *		and then dequeue their stylesheets completely in the woo-hooks.php file.
+ *
+ *		This lets us use some of their styles without having to load a ton of unnecessary CSS
+ *		that we would override anyway.
+ *
+ *		Make sure to include styles from their stylesheets in a file separate from this one,
+ *		but in this same folder.
+ */

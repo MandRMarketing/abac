@@ -1,0 +1,73 @@
+/* Custom Gravity Forms Tooltips */
+
+.gform_fields {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.gfield, .gfield li {
+	text-indent: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	list-style-type: none !important;
+	
+	&:before {
+		content: normal !important;
+	}
+}
+
+textarea.medium {
+	height: 148px;
+}
+
+.ginput_counter {
+	display: none;
+}
+
+.gfield_description {
+	position: relative;	
+	top: -12px;
+	left: 8px;
+	font-size: 12px;
+}
+
+.gfield_list_container {
+	tbody {
+		border: none;
+	}	
+}
+
+.gfield_list_group {
+	> td {
+		border: none;
+		padding: 0;
+		
+		> input {
+			margin: 0;
+		}
+	}
+}
+
+.validation_message {
+	margin: -12px 0 16px;
+	
+	&:before {
+		font-family: "WooCommerce";
+		content: "\e02a ";
+		margin-right: 6px;
+		color: $red;
+	}
+}
+
+.validation_error {
+	padding: 16px;
+	margin-bottom: 24px;
+	background-color: $offWhite;
+	border: 1px solid $red;
+}
+
+.gform_validation_container, .gform_wrapper .gform_validation_container, body .gform_wrapper li.gform_validation_container, body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container, body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
+    display: none !important;
+    position: absolute !important;
+    left: -9000px;
+}

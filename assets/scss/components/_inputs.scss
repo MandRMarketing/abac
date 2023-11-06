@@ -1,0 +1,105 @@
+/* Forms
+--------------------------------------------- */
+
+/* note: .button includes input[type="submit"], watch for styles that need to be overridden one way or the other */
+input,
+textarea {
+    background-color: $grey;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 12px;
+    height: 50px;
+}
+
+.select-wrapper {
+    position: relative;
+    &::after {
+        content: '';
+        background: url(assets/images/select-dropdown-arrow.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 10px;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: white;
+    background-color: $dark-green;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    border: 0px;
+    height: 28px;
+    width: 165px;
+    padding-left: 10px;
+}
+
+.filter-input {
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid #999;
+    outline: none;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    width: auto;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button {
+    display: none;
+}
+
+.search-container,
+.search-container-grey {
+    position: relative;
+    display: block;
+    margin-bottom: 12px;
+
+    input {
+        margin-bottom: 0;
+    }
+
+    &:after {
+        content: '\e906';
+        position: absolute;
+        z-index: 5;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1px;
+        max-height: 50px;
+        padding: 8px 10px;
+        color: $purple;
+        font-family: 'icomoon' !important;
+        font-size: 20px;
+        pointer-events: none;
+    }
+}
+
+.search-container:after {
+    background-color: #fff;
+}
+.search-container-grey:after {
+    background-color: $grey;
+}

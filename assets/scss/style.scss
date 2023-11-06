@@ -1,0 +1,27 @@
+/*!
+ * Theme Name: M&R Marketing Group Custom Theme
+ * Description: Custom theme
+ * Author: M&R Marketing Group
+ * Author URI: http://www.mandr-group.com/
+ * Version: 3.0.0
+*/
+
+@import "bourbon";
+
+/* contains global styles, such as resets, typography, colors, etc. */
+@import "base/glob";
+
+/* contains global mixins, functions, helper selectors, etc. */
+@import "utils/glob";
+
+/* contains 3rd-party plugin styles and mixins, etc. */
+@import "vendors/glob";
+
+/* contains styling for larger layout components on every page; e.g. nav, header, footer, etc. */
+@import "layout/glob";
+
+/* contains each self-contained html or type of component in its own .scss partial */
+@import "components/glob";
+
+/* contains page-specific or shortcode/view-specific styling, if necessary */
+@import "pages/glob";

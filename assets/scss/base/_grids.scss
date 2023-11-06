@@ -1,0 +1,306 @@
+/* 
+Inspired by many other grids out there.
+Version 1.2.5
+--increased width via haun's edits
+--added center_grid
+*/
+
+.container {
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	width: 1140px;
+	
+	&.grey-container {
+		background: $grey;
+	}
+}
+
+.container-large {
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	width: 95%;
+
+	@media screen and (max-width: $second-break) {
+		width: 90%;
+	}
+	
+	@media screen and (max-width: $mobile-break) {
+		width: 100%;
+		padding: 0 2.5%;
+	}
+}
+
+/* Column Classes
+                Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
+--------------------------------------------- */
+
+.five-sixths,
+.four-fifths,
+.one-fifth,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-fifths,
+.two-fifths,
+.two-thirds,
+.stay-column.five-sixths,
+.stay-column.one-fourth,
+.stay-column.one-half,
+.stay-column.one-sixth,
+.stay-column.one-third,
+.stay-column.three-fourths,
+.stay-column.two-sixths,
+.stay-column.two-thirds {
+	float: left;
+	margin-left: 3.5087719298246%;
+}
+
+.one-half,
+.stay-column.one-half {
+	width: 48.245614035088%;
+}
+
+.one-third,
+.stay-column.one-third {
+	width: 30.994152046784%;
+}
+
+.two-thirds,
+.stay-column.two-thirds {
+	width: 65.497076023392%;
+}
+
+.one-fourth,
+.stay-column.one-fourth {
+	width: 22.368421052632%;
+}
+
+.three-fourths,
+.stay-column.three-fourths {
+	width: 74.122807017544%;
+}
+
+.one-fifth,
+.stay-column.one-fifth {
+	width: 17.19298245614%;
+}
+
+.two-fifths,
+.stay-column.two-fifths {
+	width: 37.894736842105%;
+}
+
+.three-fifths,
+.stay-column.three-fifths {
+	width: 58.59649122807%;
+}
+
+.four-fifths,
+.stay-column.four-fifths {
+	width: 79.298245614035%;
+}
+
+.one-sixth,
+.stay-column.one-sixth {
+	width: 13.74269005848%;
+}
+
+.five-sixths,
+.stay-column.five-sixths {
+	width: 82.748538011696%;
+}
+
+.first,
+.stay-column.first {
+	clear: both;
+	margin-left: 0;
+}
+
+.five-sixths:first-child,
+.four-fifths:first-child,
+.one-fourth:first-child,
+.three-fifths:first-child,
+.two-fifths:first-child,
+.one-fifth:first-child,
+.one-half:first-child,
+.one-sixth:first-child,
+.one-third:first-child,
+.three-fourths:first-child,
+.two-thirds:first-child {
+	clear: both;
+	margin-left: 0;
+}
+
+@media only screen and (max-width: $first-break) {
+
+	.container {
+		width: 960px;
+	}
+}
+
+@media only screen and (max-width: $mobile-break) {
+
+	.five-sixths,
+	.one-fourth,
+	.one-half,
+	.one-sixth,
+	.one-third,
+	.three-fourths,
+	.two-thirds,
+	.one-fifth,
+	.two-fifths,
+	.three-fifths,
+	.four-fifths {
+		margin: 0;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: $second-break) {
+
+	.container {
+		width: 100%;
+		padding: 0 5%;
+	}
+	.med-five-sixths,
+	.med-four-fifths,
+	.med-one-fifth,
+	.med-one-fourth,
+	.med-one-half,
+	.med-one-sixth,
+	.med-one-third,
+	.med-three-fourths,
+	.med-three-fifths,
+	.med-two-fifths,
+	.med-two-thirds {
+		clear: none;
+		float: left;
+		margin-left: 3.5087719298246%;
+	}
+	
+	.med-one-half {
+		width: 48.245614035088%;
+	}
+	
+	.med-one-third {
+		width: 30.994152046784%;
+	}
+	
+	.med-two-thirds {
+		width: 65.497076023392%;
+	}
+	
+	.med-one-fourth {
+		width: 22.368421052632%;
+	}
+	
+	.med-three-fourths {
+		width: 74.122807017544%;
+	}
+	
+	.med-one-fifth {
+		width: 17.19298245614%;
+	}
+	
+	.med-two-fifths {
+		width: 37.894736842105%;
+	}
+	
+	.med-three-fifths {
+		width: 58.59649122807%;
+	}
+	
+	.med-four-fifths {
+		width: 79.298245614035%;
+	}
+	
+	.med-one-sixth {
+		width: 13.74269005848%;
+	}
+	
+	.med-five-sixths {
+		width: 82.748538011696%;
+	}
+	
+	.med-first {
+		clear: both;
+		margin-left: 0;
+	}
+	
+	.med-five-sixths:first-child,
+	.med-four-fifths:first-child,
+	.med-one-fourth:first-child,
+	.med-three-fifths:first-child,
+	.med-two-fifths:first-child,
+	.med-one-fifth:first-child,
+	.med-one-half:first-child,
+	.med-one-sixth:first-child,
+	.med-one-third:first-child,
+	.med-three-fourths:first-child,
+	.med-two-thirds:first-child {
+		clear: both;
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: $mobile-small) {
+
+	.med-five-sixths,
+	.med-one-fourth,
+	.med-one-half,
+	.med-one-sixth,
+	.med-one-third,
+	.med-three-fourths,
+	.med-three-sixths,
+	.med-two-thirds,
+	.med-one-fifth,
+	.med-two-fifths,
+	.med-three-fifths,
+	.med-four-fifths {
+		margin: 0;
+		width: 100%;
+	}
+}
+
+.clearfix::before,
+.clearfix::after,
+.container::before,
+.container::after,
+#main::before,
+#main::after,
+header::before,
+header::after {
+	content: "";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.simpleClear {
+	clear: both;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+/* Box Sizing
+--------------------------------------------- */
+
+* {
+	box-sizing: border-box;
+}

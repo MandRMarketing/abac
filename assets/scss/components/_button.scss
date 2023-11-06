@@ -1,0 +1,113 @@
+button.button,
+button.content-limiter-expander,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.mobile-button {
+	width: auto;
+	color: #fff !important;
+	background-color: $purple;
+	cursor: pointer;
+	padding: 12px 32px;
+	text-transform: uppercase;
+	border: none;
+	border-radius: none;
+	box-shadow: none;
+	font-style: italic;
+	
+	/*@include transition(all 2.0s ease-in-out);*/
+	
+	&:hover,
+	&:focus {
+		background-color: $darkGrey;
+	}
+}
+
+.button {
+	display: inline-block;
+	margin-bottom: 24px; /* match p margin-bottom inside typography.scss */
+}
+
+.mobile-button {
+	display: none;
+	
+	@media screen and (max-width: $mobile-break) {
+		display: inline-block;
+	}
+}
+
+.center-button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p.centered-button {
+	text-align: center;
+}
+
+.large-button-container {
+	position: relative;
+	width: 42%;
+
+	@media screen and (max-width: $third-break) {
+		width: 100%;
+		float: none;
+		margin-bottom: 25px;
+	}
+}
+
+.large-button {
+	display: block;
+	position: relative;	
+	background-color: $grey;
+	margin-bottom: 25px;
+	padding: 70px 20px;
+	color: $purple;
+	font-size: 42px;
+	text-align: center;
+	
+	#{headings(1,6)},p {
+		margin: 0 auto;
+		max-width: 85%;
+		color: $purple;
+		font-weight: bold;
+		text-transform: uppercase;
+		overflow-wrap: break-word;
+		
+	}
+	
+	.icon-angle-right {
+		padding-left: 10px;
+	}
+	
+	&:after {
+		content: '';
+		@extend .abs-center;
+		z-index: 1;
+		pointer-events: none;
+		width: 85%;
+		height: 65%;
+		border: 1px solid #fff;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: $purple;
+		
+		#{headings(1,6)},p {
+			color: #fff;
+		}
+	}
+	
+	@media screen and (max-width: $mobile-break){		
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.large-button-left {
+	float: left;
+}

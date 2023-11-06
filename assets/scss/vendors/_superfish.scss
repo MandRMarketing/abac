@@ -1,0 +1,34 @@
+/*** ESSENTIAL STYLES ***/
+.inner-menu, .inner-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.inner-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+
+.inner-menu > li {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.inner-menu li:hover > ul,
+.inner-menu li.sfHover > ul {
+	display: block;
+}
+
+.inner-menu a {
+	display: block;
+	position: relative;
+}
+
+.inner-menu ul ul {
+	top: 0;
+	left: 100%;
+}
