@@ -31,13 +31,7 @@ const pxtorem = require('postcss-pxtorem'); // write all your units as pixels, a
  */
 function lintScripts() {
     return gulp
-        .src([
-            'assets/js/src/custom-scripts.js',
-            'assets/js/src/custom-menu-dropdown.js',
-            'assets/js/src/custom-menu-slide.js',
-            'assets/js/src/custom-footer.js',
-            'template-parts/modules/**/assets/js/*.js',
-        ])
+        .src(['assets/js/src/custom-scripts.js'])
         .pipe(
             jshint({
                 asi: true,
@@ -106,8 +100,6 @@ function compileScripts() {
                 'assets/js/src/jquery.hoverIntent.js',
                 'assets/js/src/slick.js',
                 'assets/js/src/magnific.js',
-                'assets/js/src/focus-visible.js',
-                'assets/js/src/cookies.js',
                 'assets/js/src/custom-scripts.js',
             ],
             { sourcemaps: false }
@@ -124,41 +116,40 @@ function compileScripts() {
  * If you ever have JS that needs to be included more/less often, you can always create a new compile function
  * to process it.
  */
-function compileFooterScripts() {
-    return gulp
-        .src(
-            [
-                'assets/js/src/custom-footer.js',
-                'template-parts/modules/**/assets/js/*.js',
-            ],
-            { sourcemaps: false }
-        )
-        .pipe(babel({ presets: ['@babel/env'] }))
-        .pipe(concat('ftr.js'))
-        .pipe(rename('ftr.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('assets/js', { sourcemaps: false }));
-}
+// function compileFooterScripts() {
+//     return gulp
+//         .src(
+//             [
+//                 'assets/js/src/custom-footer.js',
+//             ],
+//             { sourcemaps: false }
+//         )
+//         .pipe(babel({ presets: ['@babel/env'] }))
+//         .pipe(concat('ftr.js'))
+//         .pipe(rename('ftr.min.js'))
+//         .pipe(uglify())
+//         .pipe(gulp.dest('assets/js', { sourcemaps: false }));
+// }
 
-function compileMenuDropdownScripts() {
-    return gulp
-        .src(['assets/js/src/custom-menu-dropdown.js'], { sourcemaps: false })
-        .pipe(babel({ presets: ['@babel/env'] }))
-        .pipe(concat('mdd.js'))
-        .pipe(rename('mdd.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('assets/js', { sourcemaps: false }));
-}
+// function compileMenuDropdownScripts() {
+//     return gulp
+//         .src(['assets/js/src/custom-menu-dropdown.js'], { sourcemaps: false })
+//         .pipe(babel({ presets: ['@babel/env'] }))
+//         .pipe(concat('mdd.js'))
+//         .pipe(rename('mdd.min.js'))
+//         .pipe(uglify())
+//         .pipe(gulp.dest('assets/js', { sourcemaps: false }));
+// }
 
-function compileMenuSliderScripts() {
-    return gulp
-        .src(['assets/js/src/custom-menu-slide.js'], { sourcemaps: false })
-        .pipe(babel({ presets: ['@babel/env'] }))
-        .pipe(concat('msl.js'))
-        .pipe(rename('msl.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('assets/js', { sourcemaps: false }));
-}
+// function compileMenuSliderScripts() {
+//     return gulp
+//         .src(['assets/js/src/custom-menu-slide.js'], { sourcemaps: false })
+//         .pipe(babel({ presets: ['@babel/env'] }))
+//         .pipe(concat('msl.js'))
+//         .pipe(rename('msl.min.js'))
+//         .pipe(uglify())
+//         .pipe(gulp.dest('assets/js', { sourcemaps: false }));
+// }
 
 /**
  *
@@ -212,37 +203,13 @@ function minifyImages() {
  */
 function watch() {
     gulp.watch('assets/js/src/*.js', lintScripts);
-    gulp.watch(
-        [
-            'assets/js/src/*.js',
-            '!assets/js/src/custom-footer.js',
-            '!assets/js/src/custom-menu-full.js',
-            '!assets/js/src/custom-menu-dropdown.js',
-            '!assets/js/src/custom-menu-slide.js',
-        ],
-        compileScripts
-    );
-    gulp.watch(
-        [
-            'assets/js/src/custom-footer.js',
-            'template-parts/modules/**/assets/js/*.js',
-        ],
-        compileFooterScripts
-    );
+    gulp.watch(['assets/js/src/*.js'], compileScripts);
     gulp.watch(
         [
             'assets/scss/**/**/**/*.scss',
             'template-parts/modules/**/assets/scss/*.scss',
         ],
         compileSass
-    );
-    gulp.watch(
-        ['assets/js/src/custom-menu-dropdown.js'],
-        compileMenuDropdownScripts
-    );
-    gulp.watch(
-        ['assets/js/src/custom-menu-slide.js'],
-        compileMenuSliderScripts
     );
 }
 

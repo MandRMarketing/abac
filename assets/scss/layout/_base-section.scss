@@ -1,0 +1,55 @@
+// basic page section-wrap padding
+.section-wrap {
+    // last item before footer has padding below
+    &:last-child {
+        padding-bottom: 64px;
+
+        @media (max-width: $extra-break) {
+            padding-bottom: 52px;
+        }
+
+        @media (max-width: $mobile-med) {
+            padding-bottom: 36px;
+        }
+    }
+
+    padding-top: 88px;
+    padding-bottom: 88px;
+
+    article > &:first-child {
+        padding-top: 56px;
+    }
+
+    &.padding-as-margin {
+        padding-top: 0;
+        margin-top: 88px;
+    }
+
+    @media (max-width: $extra-break) {
+        padding-top: 56px;
+        padding-bottom: 56px;
+
+        article > &:first-child {
+            padding-top: 48px;
+        }
+
+        &.padding-as-margin {
+            padding-top: 0;
+            margin-top: 56px;
+        }
+    }
+
+    @media (max-width: $mobile-med) {
+        padding-top: 36px;
+        padding-bottom: 36px;
+
+        article > &:first-child {
+            padding-top: 36px;
+        }
+
+        &.padding-as-margin {
+            padding-top: 0;
+            margin-top: 36px;
+        }
+    }
+}

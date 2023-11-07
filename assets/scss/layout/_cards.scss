@@ -1,0 +1,52 @@
+#university-stats {
+    background: url(assets/images/hp-stats-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding-top: 600px;
+    padding-bottom: 300px;
+}
+
+.horizontal-cards {
+    &__cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        &__card {
+            background: white;
+            border-bottom: 8px solid $primary-yellow;
+            height: 273px;
+            width: 372px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 30px;
+            strong {
+                display: block;
+                color: $green;
+                font-size: 79px;
+                font-family: 'bookmania', serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            p {
+                display: block;
+                color: $green;
+                font-size: 34px;
+                text-align: center;
+                font-family: 'bookmania', serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 25px;
+    }
+}

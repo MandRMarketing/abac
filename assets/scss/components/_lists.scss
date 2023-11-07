@@ -16,133 +16,120 @@
 }
 */
 
-.post-body ul {
-	padding-left: 0;
-	
-	li {
-		position: relative;
-		list-style-type: none;
-		text-indent: -0;
-		padding-left: 35px;
-		
-		a {
-			padding: 5px 0;
-		}
-		
-		a:hover {
-			color: $altGrey;
-		}
-		
-		&:before {
-			content: '';
-			background: url('assets/images/mga-list-bullet.png') no-repeat center;
-			background-size: 8px 9px;
-			color: $purple;
-			width: 8px;
-			height: 9px;
-			line-height: 0;
-			position: absolute;
-			top: 8px;
-    		left: 0;
-		}
-	}
+#main,
+main {
+    ul {
+        padding-left: 0;
+
+        li {
+            position: relative;
+            list-style-type: square;
+            text-indent: -0;
+            margin-left: 25px;
+
+            &::marker {
+                color: $primary-yellow;
+            }
+        }
+    }
 }
 
 ol {
-	counter-reset: list;
-	list-style-type: none;
-	
-	> li::before {
-		counter-increment: list;
-		content: counters(list, '.');
-		
-		display: inline-block;
-		width: 20px;
-		margin-right: 6px;
-		color: $purple;
-		font-weight: bold;
-		
-	}
+    counter-reset: list;
+    list-style-type: none;
+
+    > li::before {
+        counter-increment: list;
+        content: counters(list, '.');
+
+        display: inline-block;
+        width: 20px;
+        margin-right: 6px;
+        color: $purple;
+        font-weight: bold;
+    }
 }
 
-ul, ol {
-	margin: 0 0 24px;
-	padding: 0;
-	
-	> li > ul, > li > ol {
-		margin-left: 24px;
-		margin-bottom: 0;
-	}
+ul,
+ol {
+    margin: 0 0 24px;
+    padding: 0;
+
+    > li > ul,
+    > li > ol {
+        margin-left: 24px;
+        margin-bottom: 0;
+    }
 }
 
 p + ul {
-	margin-top: -12px;
+    margin-top: -12px;
 }
 
 .two-column {
-	@extend .responsive-column-count;
-	
-	column-count: 2;
-	-moz-column-count: 2;
-	
-	> li {
-		display: inline-block;
-		width:100%;
-		
-		margin-bottom: 5px;
-		line-height: 1.2;
-	}	
-	
-	@media screen and (max-width: $mobile-break) {
-		-moz-column-count: 1 !important;
-	}
+    @extend .responsive-column-count;
+
+    column-count: 2;
+    -moz-column-count: 2;
+
+    > li {
+        display: inline-block;
+        width: 100%;
+
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+
+    @media screen and (max-width: $mobile-break) {
+        -moz-column-count: 1 !important;
+    }
 }
 
 .three-column {
-	@extend .responsive-column-count;
-	
-	column-count: 3;
-	-moz-column-count: 3;
-	
-	> li {
-		display: inline-block;
-		width:100%;
-		
-		margin-bottom: 5px;
-		line-height: 1.2;
-	}	
-	
-	@media screen and (max-width: $mobile-break) {
-		-moz-column-count: 1 !important;
-	}
+    @extend .responsive-column-count;
+
+    column-count: 3;
+    -moz-column-count: 3;
+
+    > li {
+        display: inline-block;
+        width: 100%;
+
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+
+    @media screen and (max-width: $mobile-break) {
+        -moz-column-count: 1 !important;
+    }
 }
 
 .four-column {
-	@extend .responsive-column-count;
-	
-	column-count: 4;
-	-moz-column-count: 4;
-	
-	@media screen and (max-width: $first-break) {
-		column-count: 2;
-		-moz-column-count: 2;
-	}
-	
-	> li {
-		display: inline-block;
-		width:100%;
-		
-		margin-bottom: 5px;
-		line-height: 1.2;
-	}	
-	
-	@media screen and (max-width: $mobile-break) {
-		-moz-column-count: 1 !important;
-	}
+    @extend .responsive-column-count;
+
+    column-count: 4;
+    -moz-column-count: 4;
+
+    @media screen and (max-width: $first-break) {
+        column-count: 2;
+        -moz-column-count: 2;
+    }
+
+    > li {
+        display: inline-block;
+        width: 100%;
+
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+
+    @media screen and (max-width: $mobile-break) {
+        -moz-column-count: 1 !important;
+    }
 }
 
 ol.two-column {
-	> li {
-		display: list-item;
-	}
+    > li {
+        display: list-item;
+    }
 }

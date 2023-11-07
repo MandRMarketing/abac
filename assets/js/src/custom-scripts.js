@@ -394,7 +394,7 @@
                             e.preventDefault();
                         }
                     }
-                );
+                ); //
 
                 // Return to last item on tab
                 $('#navigation-content button.close').bind(
@@ -564,3 +564,28 @@
 	});
 	*/
 })(jQuery);
+
+//NON JQUERY CODE
+
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the primary-nav and secondary-nav elements
+    const primaryNav = document.getElementById('primary-nav');
+    const secondaryNav = document.getElementById('secondary-nav');
+
+    // Calculate the total height of primary-nav and secondary-nav
+    const totalNavHeight = primaryNav.offsetHeight + secondaryNav.offsetHeight;
+
+    // Check if the body element has the "home" class
+    if (document.body.classList.contains('home')) {
+        // Apply the margin-top to the .front-slider-wrapper element
+        const frontSliderWrapper = document.querySelector(
+            '.front-slider-wrapper'
+        );
+        frontSliderWrapper.style.marginTop = totalNavHeight + 'px';
+    } else {
+        // Apply the margin-top to the #main element
+        const main = document.getElementById('main');
+        main.style.marginTop = totalNavHeight + 'px';
+    }
+});

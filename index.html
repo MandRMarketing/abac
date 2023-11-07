@@ -7,10 +7,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,400i,700"
-            rel="stylesheet"
-        />
+        <link rel="stylesheet" href="https://use.typekit.net/ebu8uhb.css" />
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/all.min.js"></script>
@@ -38,7 +35,7 @@
             type="text/javascript"
             src="assets/js/src/plugins/jquery.ScrollMagic.min.js"
         ></script>
-        <title>Middle Georgia State University</title>
+        <title>Abraham Baldwin Agricultural College</title>
     </head>
     <body class="home">
         <a
@@ -51,7 +48,7 @@
         <!-- Header -->
         <header id="header" role="banner">
             <!-- Navigation menu -->
-            <nav class="secondary-nav" role="navigation" aria-label="secondary">
+            <nav id="secondary-nav" role="navigation" aria-label="secondary">
                 <ul
                     id="main-menu"
                     class="sf-menu secondary-items"
@@ -99,7 +96,7 @@
                     </li>
                 </ul>
             </nav>
-            <nav class="primary-nav" role="navigation" aria-label="primary">
+            <nav id="primary-nav" role="navigation" aria-label="primary">
                 <h1 class="site-title">
                     <a href="index.html">
                         <img
@@ -196,7 +193,8 @@
                         <div class="slick-caption abs-center">
                             <h1 class="slider-caption-header">
                                 Community for
-                                <strong>Learning.</strong> Community for Life.
+                                <strong><em>Learning.</em></strong> Community
+                                for <strong><em>Life.</em></strong>
                             </h1>
                             <a href="#" class="button slider-button"
                                 >Apply For Admissions</a
@@ -218,7 +216,8 @@
                         <div class="slick-caption abs-center">
                             <h1 class="slider-caption-header">
                                 Community for
-                                <strong>Learning.</strong> Community for Life.
+                                <strong><em>Learning.</em></strong> Community
+                                for <strong><em>Life.</em></strong>
                             </h1>
                             <a href="#" class="button slider-button"
                                 >Apply For Admissions</a
@@ -240,7 +239,8 @@
                         <div class="slick-caption abs-center">
                             <h1 class="slider-caption-header">
                                 Community for
-                                <strong>Learning.</strong> Community for Life.
+                                <strong><em>Learning.</em></strong> Community
+                                for <strong><em>Life.</em></strong>
                             </h1>
                             <a href="#" class="button slider-button"
                                 >Apply For Admissions</a
@@ -288,196 +288,143 @@
         <div id="main" class="" role="main">
             <!-- Main Content Body -->
             <div class="primary-content-wrap">
-                <div id="trigger"></div>
-                <!-- Begin homepage video & news links -->
-                <section id="find-your-greatness" role="region">
-                    <div class="diamond-fg abs-center">
-                        <span class="diamond-excerpt abs-center">
-                            <h1 class="greatness-heading-1">Find Your</h1>
-                            <h1 class="greatness-heading-2">Greatness</h1>
-                        </span>
-                    </div>
-                    <div class="left-container">
-                        <div
-                            class="greatness-bg-img"
-                            style="
-                                background: url('assets/images/mga-hmpg-greatness-video.jpg')
-                                    no-repeat center;
-                                background-size: cover;
-                            "
-                        >
-                            <svg
-                                class="border-effect abs-center"
-                                height="60"
-                                width="200"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <rect
-                                    class="shape"
-                                    height="60"
-                                    width="200"
-                                ></rect>
-                                <h2 class="greatness-title abs-center">
-                                    View Our Video
-                                </h2>
-                            </svg>
-
-                            <span class="hover-diamond"></span>
-                            <a
-                                href="https://www.youtube.com/watch?v=L92Qo_mRbTA"
-                                class="image-overlay"
-                                target="_blank"
-                            ></a>
-                        </div>
-                    </div>
-                    <div class="right-container">
-                        <div
-                            class="greatness-bg-img"
-                            style="
-                                background: url('assets/images/mga-hmpg-greatness-news.jpg')
-                                    no-repeat center;
-                                background-size: cover;
-                            "
-                        >
-                            <svg
-                                class="border-effect abs-center"
-                                height="60"
-                                width="200"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <rect
-                                    class="shape"
-                                    height="60"
-                                    width="200"
-                                ></rect>
-                                <h2 class="greatness-title abs-center">
-                                    Read Our News
-                                </h2>
-                            </svg>
-
-                            <span class="hover-diamond"></span>
-                            <a href="news.html" class="image-overlay"></a>
-                        </div>
-                    </div>
-                </section>
-                <!-- end #find-your-greatness -->
-
-                <!-- Begin large button area -->
+                <!-- <div id="trigger"></div> -->
+                <!-- Begin universit stats section -->
                 <section
-                    id="home-horiz-sidebar"
-                    class="outer-container panel"
+                    id="university-stats"
+                    class="horizontal-cards"
                     role="region"
                     aria-label="Beginning of content body"
                 >
                     <div class="container-large">
-                        <div class="large-button-container left">
-                            <div
-                                class="greatness-bg-img"
-                                style="
-                                    background: url('assets/images/mga-hmpg-plan-visit.jpg')
-                                        no-repeat center;
-                                    background-size: cover;
-                                "
-                            ></div>
-                            <a
-                                href="pages/admissions-plan-a-visit.html"
-                                class="large-button"
-                                title="Plan a visit today"
-                                ><h1 class="abs-center">
-                                    Plan a Visit
-                                    <span class="icon-angle-right"></span></h1
-                            ></a>
-                            <span class="greatness-bg"></span>
+                        <div class="horizontal-cards__cards">
+                            <div class="horizontal-cards__cards__card">
+                                <strong
+                                    class="horizontal-cards__cards__card__top-text"
+                                    >26</strong
+                                >
+                                <p
+                                    class="horizontal-cards__cards__card__bot-text"
+                                >
+                                    Academic Programs
+                                </p>
+                            </div>
+                            <div class="horizontal-cards__cards__card">
+                                <strong
+                                    class="horizontal-cards__cards__card__top-text"
+                                    >8,200+</strong
+                                >
+                                <p
+                                    class="horizontal-cards__cards__card__bot-text"
+                                >
+                                    Students
+                                </p>
+                            </div>
+                            <div class="horizontal-cards__cards__card">
+                                <strong
+                                    class="horizontal-cards__cards__card__top-text"
+                                    >18:1</strong
+                                >
+                                <p
+                                    class="horizontal-cards__cards__card__bot-text"
+                                >
+                                    Student to Faculty Ratio
+                                </p>
+                            </div>
+                            <div class="horizontal-cards__cards__card">
+                                <strong
+                                    class="horizontal-cards__cards__card__top-text"
+                                    >>50%</strong
+                                >
+                                <p
+                                    class="horizontal-cards__cards__card__bot-text"
+                                >
+                                    of graduates finish debt-free
+                                </p>
+                            </div>
                         </div>
-                        <div class="large-button-container right">
-                            <div
-                                class="greatness-bg-img"
-                                style="
-                                    background: url('assets/images/mga-hmpg-find-program.jpg')
-                                        no-repeat center;
-                                    background-size: cover;
-                                "
-                            ></div>
-                            <a
-                                href="programs.html"
-                                class="large-button"
-                                title="Find a program"
-                                ><h1 class="abs-center">
-                                    Find a Program
-                                    <span class="icon-angle-right"></span></h1
-                            ></a>
-                            <span class="greatness-bg"></span>
+                        <div class="horizontal-cards__content">
+                            <a href="" class="button">Apply For Admissions</a>
+                            <a href="" class="button">Degree Programs</a>
                         </div>
                     </div>
                 </section>
-                <!-- end #home-horiz-sidebar -->
+                <!-- end university stats -->
+
+                <!-- Begin call to action -->
+                <section
+                    id="become-a-stallion"
+                    class="cta section-wrap"
+                    role="region"
+                >
+                    <div class="container">
+                        <div class="cta__container left">
+                            <img
+                                src="assets/images/ABAC.svg"
+                                alt="ABAC Logo w/ no text"
+                            />
+                        </div>
+                        <div class="cta__container right">
+                            <h2>Become an ABAC Stallion!</h2>
+                            <p>
+                                Are you ready to join our thriving and engaged
+                                community? No matter where your interests lie,
+                                there’s a place for you at ABAC. Stallions
+                                graduate with a broad base of experience, from
+                                essential foundations to innovative new fields
+                                of study.
+                            </p>
+                            <a href="" class="button">Visit Us</a>
+                            <a href="" class="button">Apply Today</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- end call to action -->
 
                 <!-- Begin full-width card section -->
                 <section
-                    id="faculty-landing-feed"
-                    class="outer-container panel full-width-cards faculty-profiles grey-backdrop mobile-img-hide pull-middle"
+                    id="programs"
+                    class="image-content-box-overlay section-wrap"
                     role="region"
                 >
-                    <div class="one-fifth first card-full-width">
-                        <div class="card-excerpt abs-center">
-                            <h2 class="card-title">Faculty Member Name</h2>
-                            <a class="button">Learn More</a>
-                        </div>
-                        <span class="card-overlay"></span>
-                        <img
-                            class="card-thumb object-fit-image"
-                            src="assets/images/mga-faculty1.jpg"
-                        />
-                    </div>
-                    <div class="one-fifth card-full-width">
-                        <div class="card-excerpt abs-center">
-                            <h2 class="card-title">Faculty Member Name</h2>
-                            <a class="button" role="button">Learn More</a>
-                        </div>
-                        <span class="card-overlay"></span>
-                        <img
-                            class="card-thumb object-fit-image"
-                            src="assets/images/mga-faculty2.jpg"
-                        />
-                    </div>
-                    <div class="one-fifth card-full-width">
-                        <div class="card-text-container">
-                            <h1 class="section-header header-underline">
-                                Faculty
-                            </h1>
+                    <div class="container-large">
+                        <div class="content-left">
+                            <h3>Degrees to Build Your Career On</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam, quis nostrud exercitation
-                                ullamco
+                                With 26 academic program offerings, including
+                                two- and four-year degrees and certificates,
+                                ABAC has a program of study to help you
+                                demonstrate your excellence.
                             </p>
-                            <a class="button" href="faculty.html" role="button"
-                                >View All Faculty</a
-                            >
+                            <button>
+                                School of Agriculture and Natural Resources
+                            </button>
+                            <button>School of Arts & Sciences</button>
+                            <button>
+                                School of Nursing and Health Sciences
+                            </button>
+                            <button>Stafford School of Business</button>
                         </div>
-                    </div>
-                    <div class="one-fifth card-full-width">
-                        <div class="card-excerpt abs-center">
-                            <h2 class="card-title">Faculty Member Name</h2>
-                            <a class="button" role="button">Learn More</a>
+                        <div class="content-right">
+                            <div>
+                                <h4>
+                                    School of Agriculture and Natural Resources
+                                    Programs
+                                </h4>
+                                <ul>
+                                    <li>Program</li>
+                                    <li>Program</li>
+                                    <li>Program</li>
+                                    <li>Program</li>
+                                    <li>Program</li>
+                                    <li>Program</li>
+                                    <li>Program</li>
+                                    <li>Program</li>
+                                    <li>Program</li>
+                                </ul>
+                                <a href="" class="button">Find Your Program</a>
+                            </div>
                         </div>
-                        <span class="card-overlay"></span>
-                        <img
-                            class="card-thumb object-fit-image"
-                            src="assets/images/mga-faculty3.jpg"
-                        />
-                    </div>
-                    <div class="one-fifth card-full-width">
-                        <div class="card-excerpt abs-center">
-                            <h2 class="card-title">Faculty Member Name</h2>
-                            <a class="button" role="button">Learn More</a>
-                        </div>
-                        <span class="card-overlay"></span>
-                        <img
-                            class="card-thumb object-fit-image"
-                            src="assets/images/mga-faculty4.jpg"
-                        />
                     </div>
                 </section>
                 <!-- end .full-width-card section -->

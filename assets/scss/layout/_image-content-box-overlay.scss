@@ -1,0 +1,103 @@
+#programs {
+    background: url(assets/images/hp-programs-bg.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    &::before {
+        content: '';
+        background: #002a15ad;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &::after {
+        content: '';
+        background: #002a15ad;
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .content-left {
+        width: 40%;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $primary-yellow;
+        }
+        button {
+            display: block;
+            border: 0px;
+            border-bottom: 1px solid $primary-yellow;
+            background: transparent;
+            padding: 15px;
+            min-width: 550px;
+            text-align: left;
+            position: relative;
+            &:first-of-type {
+                border-top: 1px solid $primary-yellow;
+                margin-top: 75px;
+            }
+            &::after {
+                content: '';
+                background: url(assets/images/btn-arrow.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 10px;
+                height: 16px;
+                position: absolute;
+                right: 30px;
+                top: calc(50% + 3px);
+                transform: translateY(-50%);
+                filter: brightness(999);
+            }
+
+            &:hover {
+                color: $primary-yellow;
+                &::after {
+                    filter: brightness(1);
+                }
+            }
+        }
+    }
+
+    .content-right {
+        width: 60%;
+        padding-top: 100px;
+        padding-left: 75px;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $primary-yellow;
+        }
+    }
+}
+
+.image-content-box-overlay {
+    .container-large {
+        display: flex;
+    }
+    .content-left {
+        width: 50%;
+        * {
+            color: white;
+        }
+    }
+
+    .content-right {
+        width: 50%;
+        * {
+            color: white;
+        }
+    }
+}
