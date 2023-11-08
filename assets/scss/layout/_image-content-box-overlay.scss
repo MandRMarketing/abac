@@ -10,20 +10,22 @@
         height: 100%;
         top: 0;
         left: 0;
-        z-index: -1;
     }
     &::after {
         content: '';
         background: #002a15ad;
         position: absolute;
-        width: 40%;
+        width: 37.5%;
         height: 100%;
         top: 0;
         left: 0;
-        z-index: -1;
+        z-index: 0;
     }
     .content-left {
-        width: 40%;
+        width: 37.5%;
+        max-width: 37.5%;
+        padding-right: 25px;
+        z-index: 1;
         h1,
         h2,
         h3,
@@ -69,7 +71,8 @@
     }
 
     .content-right {
-        width: 60%;
+        width: 62.5%;
+        z-index: 1;
         padding-top: 100px;
         padding-left: 75px;
         h1,

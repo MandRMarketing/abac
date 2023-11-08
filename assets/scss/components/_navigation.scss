@@ -94,6 +94,9 @@
                     span[aria-hidden='true'] {
                         display: none;
                     }
+                    &::after {
+                        content: unset;
+                    }
                 }
             }
             a {

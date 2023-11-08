@@ -1,0 +1,28 @@
+.news-grid {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__articles {
+        display: flex;
+        gap: 50px;
+        &__primary-article {
+        }
+        &__secoondary-articles {
+            display: flex;
+            flex-direction: column;
+            &__article {
+                padding: 25px 0;
+                border-bottom: 2px solid $primary-yellow;
+                &:last-of-type {
+                    border-bottom: 0px;
+                }
+            }
+        }
+        time {
+            font-size: 18px;
+            font-style: italic;
+        }
+    }
+}

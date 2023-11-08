@@ -41,6 +41,36 @@ input[type='submit'],
     }
 }
 
+.button-arrow {
+    position: relative;
+    width: auto;
+    color: black !important;
+    font-size: 20px;
+    padding-right: 25px;
+    cursor: pointer;
+    text-transform: capitalize;
+    &:hover {
+        &::after {
+            right: 0px;
+            filter: brightness(1);
+        }
+    }
+    &::after {
+        content: '';
+        background: url(assets/images/btn-arrow.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 10px;
+        height: 16px;
+        position: absolute;
+        right: 5px;
+        top: calc(50%);
+        transform: translateY(-50%);
+        filter: brightness(1);
+        transition: 0.25s ease;
+    }
+}
+
 .button {
     display: inline-block;
     margin-bottom: 24px; /* match p margin-bottom inside typography.scss */
