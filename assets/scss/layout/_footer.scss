@@ -5,208 +5,96 @@ Site Footer
 #footer {
     position: relative;
     z-index: 30;
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
     background-color: $green;
     border-top: 11px solid $primary-yellow;
-
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    * {
+        color: white;
+    }
     p {
         margin-bottom: 0;
     }
-
-    a:hover,
-    a:focus {
-        color: $altGrey;
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
-    .outer-container {
-        padding: 15px 0;
+    #footer-socials {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &::before,
+        &::after {
+            content: unset;
+        }
+        .footer-site-logo {
+            img {
+                max-width: 488px;
+            }
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
     }
 
     #footer-navigation {
-        padding-bottom: 0;
-
-        .container {
-            @media screen and (max-width: $mobile-break) {
-                padding: 0;
-            }
+        li {
+            list-style-type: none !important;
         }
-
-        .footer-info-header {
-            background-color: transparent;
-            position: relative;
-            z-index: 10;
-            display: block;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            color: #fff;
-            font-size: 16px;
-            font-weight: normal;
-            line-height: 40px;
-            text-align: center;
-
-            &:after {
-                content: '';
-                background-color: #fff;
-                position: absolute;
-                z-index: 1;
-                left: 0;
-                right: 0;
-                bottom: -8px;
-                margin: auto;
-                width: 50%;
-                height: 1px;
-            }
-        }
-
-        ul.footer-nav {
-            display: block;
-            width: 100%;
-            margin-bottom: 35px;
-            font-size: 16px;
-
-            @media screen and (max-width: $mobile-break) {
-                width: 84%;
-                margin: auto auto 35px;
-            }
-
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
             li {
-                position: relative;
-                display: inline-block;
-                margin: 0 5px;
-                font-weight: 700;
-
-                &:after {
-                    content: '';
-                    background-color: #fff;
-                    position: absolute;
-                    z-index: 1;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: -8px;
-                    width: 1px;
-                    height: 50%;
+                max-width: 142px;
+            }
+            .foooter-sub-nav {
+                margin: 0;
+                text-align: left;
+                li {
+                    margin: 0;
+                    margin-bottom: 15px;
                 }
             }
-
-            li:last-of-type:after {
-                display: none;
+        }
+        .foooter-sub-nav-header {
+            border-bottom: 1px solid $primary-yellow;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                text-align: left;
+                font-family: 'bookmania', serif;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 0;
             }
         }
-    }
-
-    #footer-contact {
-        @media screen and (max-width: $mobile-break) {
-            #contact-info,
-            .social-media-container {
-                float: none;
-                width: 100%;
-                margin: 10px 0;
-                text-align: center;
+        .foooter-secondary-nav {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 15px 0;
+            border-top: 1px solid $primary-yellow;
+            border-bottom: 1px solid $primary-yellow;
+            gap: 10px;
+            li {
+                margin: 0;
+                &:not(:last-of-type) {
+                    padding-right: 10px;
+                    border-right: 1px solid white;
+                }
             }
-        }
-    }
-
-    #footer-copyright {
-        font-style: italic;
-    }
-
-    .foooter-sub-nav {
-        @media screen and (max-width: $mobile-break) {
-            .one-fifth:nth-of-type(3) {
-                order: -1;
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    .mobile-toggle-container {
-        display: block;
-        width: 100%;
-    }
-
-    .mobile-toggle .box {
-        background: lighten($darkGrey, 5%);
-    }
-
-    .mobile-toggle .box ul {
-        margin: 0;
-        padding: 15px 40px;
-        text-align: left;
-    }
-
-    .mobile-toggle .box a {
-        display: block;
-    }
-
-    .mobile-toggle .trigger {
-        border: none;
-    }
-
-    .mobile-toggle .toggle-dropdown {
-        background-color: transparent;
-        position: relative;
-        display: block;
-        width: 100%;
-        height: auto;
-        border-bottom: 1px solid $grey;
-        border-top: 1px solid $grey;
-        margin-bottom: -1px;
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 40px;
-        text-align: left;
-        text-indent: 40px;
-        cursor: pointer;
-
-        &:after {
-            content: '\e905';
-            background-color: transparent;
-            position: absolute;
-            top: 0;
-            left: initial;
-            right: 0;
-            bottom: initial;
-            border: none;
-            margin-right: 40px;
-            width: auto;
-            height: auto;
-            font-family: 'icomoon' !important;
-        }
-    }
-
-    .social-media-container {
-        z-index: 50;
-    }
-
-    .sub-nav {
-        list-style-type: none;
-
-        li {
-            position: relative;
-            color: #fff;
-
-            /*&:first-of-type {
-				font-weight: bold;
-				margin-bottom: 20px;
-				
-				&:after {
-					content: '';
-					position: absolute;
-					z-index: 1;
-					left: 0;
-					right: 0;
-					bottom: -8px;
-					margin: auto;
-					width: 50%;
-					height: 1px;
-					background: #fff;
-				}
-			}*/
         }
     }
 }

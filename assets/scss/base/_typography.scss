@@ -186,24 +186,6 @@ a {
     img {
         vertical-align: bottom;
     }
-
-    p & {
-        border-bottom: 1px solid rgba(195, 197, 200, 0);
-        padding-bottom: 3px;
-        color: $purple;
-        font-style: italic;
-        font-weight: bold;
-        transition: border-bottom 0.3s ease-in, color 0.3s ease-in;
-
-        &:hover,
-        &:focus {
-            border-bottom: 1px solid rgba(195, 197, 200, 1);
-        }
-
-        &:focus {
-            color: $darkGrey;
-        }
-    }
 }
 
 p {

@@ -1,0 +1,25 @@
+.instagram-feed {
+    &__header {
+        text-align: center;
+        .badge-icon {
+            display: inline-block;
+        }
+        h4 {
+            display: inline-block;
+            text-transform: unset;
+        }
+    }
+    &__feed {
+        padding: 0 15px;
+        display: flex;
+        gap: 5px;
+        &__thumbnail {
+            flex: 1;
+            img {
+                min-height: 300px;
+                min-width: 300px;
+                object-fit: cover;
+            }
+        }
+    }
+}
