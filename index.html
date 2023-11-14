@@ -47,10 +47,14 @@
 
         <!-- Header -->
         <header id="header" role="banner">
-            <!-- Navigation menu -->
-            <nav id="secondary-nav" role="navigation" aria-label="secondary">
+            <!-- Desktop Navigation menus -->
+            <nav
+                id="desktop-nav-secondary"
+                class="mobile-hide"
+                role="navigation"
+                aria-label="secondary desktop navigation menu"
+            >
                 <ul
-                    id="main-menu"
                     class="sf-menu secondary-items"
                     role="tablist"
                     aria-describedby="menu-description"
@@ -96,7 +100,12 @@
                     </li>
                 </ul>
             </nav>
-            <nav id="primary-nav" role="navigation" aria-label="primary">
+            <nav
+                id="desktop-nav-primary"
+                class="mobile-hide"
+                role="navigation"
+                aria-label="primary desktop navigation menu"
+            >
                 <h1 class="site-title">
                     <a href="index.html">
                         <img
@@ -168,127 +177,1235 @@
                     </li>
                 </ul>
             </nav>
-            <div class="navigation-bg"></div>
-            <!-- end of menu -->
-
-            <!-- Beginning of homepage slider -->
-            <section
-                id="slider-wrapper"
-                class="slider-wrapper front-slider-wrapper"
-                aria-label="Sliding content area for Abraham Baldwin Agricultural College."
+            <!-- end of desktop navigation menus -->
+            <!-- mobile navigation menu-->
+            <nav
+                id="mobile-nav"
+                class="desktop-hide"
+                role="navigation"
+                aria-label="mobile navigation menu"
             >
-                <div class="slick-slider">
-                    <div
-                        class="slick-slide front-page-slide"
-                        style="
-                            background: url('assets/images/hp-slider-1.jpg')
-                                no-repeat center;
-                            background-size: cover;
-                            display: block;
-                            width: 100%;
-                            height: 636px;
-                            min-height: 1;
-                        "
-                    >
-                        <div class="slick-caption abs-center">
-                            <h1 class="slider-caption-header">
-                                Community for
-                                <strong><em>Learning.</em></strong> Community
-                                for <strong><em>Life.</em></strong>
-                            </h1>
-                            <a href="#" class="button slider-button"
-                                >Apply For Admissions</a
-                            >
-                        </div>
-                    </div>
-                    <div
-                        class="slick-slide front-page-slide"
-                        style="
-                            background: url('assets/images/hp-slider-1.jpg')
-                                no-repeat center;
-                            background-size: cover;
-                            display: block;
-                            width: 100%;
-                            height: 636px;
-                            min-height: 1;
-                        "
-                    >
-                        <div class="slick-caption abs-center">
-                            <h1 class="slider-caption-header">
-                                Community for
-                                <strong><em>Learning.</em></strong> Community
-                                for <strong><em>Life.</em></strong>
-                            </h1>
-                            <a href="#" class="button slider-button"
-                                >Apply For Admissions</a
-                            >
-                        </div>
-                    </div>
-                    <div
-                        class="slick-slide front-page-slide"
-                        style="
-                            background: url('assets/images/hp-slider-1.jpg')
-                                no-repeat center;
-                            background-size: cover;
-                            display: block;
-                            width: 100%;
-                            height: 636px;
-                            min-height: 1;
-                        "
-                    >
-                        <div class="slick-caption abs-center">
-                            <h1 class="slider-caption-header">
-                                Community for
-                                <strong><em>Learning.</em></strong> Community
-                                for <strong><em>Life.</em></strong>
-                            </h1>
-                            <a href="#" class="button slider-button"
-                                >Apply For Admissions</a
-                            >
-                        </div>
-                    </div>
+                <h1 class="site-title">
+                    <a href="index.html">
+                        <img
+                            src="assets/images/logo-green.svg"
+                            alt="The logo of Abraham Baldwin Agricultural College"
+                        />
+                    </a>
+                    <span>Middle Georgia State University</span>
+                </h1>
+                <div id="toggle-btn">
+                    <span id="toggle-btn-line-1"></span>
+                    <span id="toggle-btn-line-2"></span>
+                    <span id="toggle-btn-line-3"></span>
                 </div>
-                <script>
-                    jQuery(window).load(function () {
-                        jQuery('.slick-slider').slick({
-                            accessibility: true,
-                            //appendArrows: $(element),
-                            //appendDots: $(element),
-                            arrows: false,
-                            autoplay: false,
-                            autoplaySpeed: 5000,
-                            dots: true,
-                            //dotsClass: 'slick-dots',
-                            //draggable: true,
-                            //easing: 'linear',
-                            //edgeFriction: 0.35,
-                            fade: false,
-                            slide: '.slick-slide',
-                            speed: 800,
-                            //swipe: true,
-                            //swipeToSlide: false,
-                            //touchMove: true,
-                            //touchThreshold: 5,
-                            //waitForAnimate: true
-                        });
-                    });
-                </script>
-            </section>
-            <section class="front-slider-footer-content">
-                <h3>
-                    Abraham Baldwin Agricultural College offers a unique and
-                    intimate experience-based learning environment, where
-                    students are challenged to recognize their potential and
-                    push the limits of what’s possible.
-                    <strong><em>Pursue your future at ABAC!</em></strong>
-                </h3>
-            </section>
+
+                <ul
+                    id="mobile-menu"
+                    class="sf-menu mobile-items"
+                    role="tablist"
+                    aria-describedby="menu-description"
+                >
+                    <li class="mobile-nav-primary-item" role="presentation">
+                        <a
+                            href="#"
+                            aria-expanded="false"
+                            title="Toggle Academics menu"
+                            class="mobile-nav-subnav-trigger"
+                        >
+                            Academics
+                        </a>
+                        <ul
+                            class="mobile-nav-subnav"
+                            role="tablist"
+                            aria-describedby="menu-description"
+                        >
+                            <li
+                                class="mobile-nav-subnav-item back-btn"
+                                role="presentation"
+                            >
+                                <a href="#">Back</a>
+                            </li>
+
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Academics Home</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Employment Opportunities</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Office of the Provost</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Schools</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"
+                                            >School of Agriculture & Natural
+                                            Resources
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"
+                                            >School of Arts & Sciences
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"
+                                            >School of Nursing and Health
+                                            Sciences
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"
+                                            >Stafford School of Business</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Academic Resources</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Class Schedule Search</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Catalogs</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Libraries</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">The Tutoring Center</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Testing</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Office of the Registrar</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Graduation</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">ABAC Connect</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Outside the Classroom</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">
+                                            STEPS (Student Engagement Programs)
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Multicultural Education</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav-button" role="presentation">
+                                <a class="button" href="#"
+                                    >Apply For Admissions</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav-primary-item" role="presentation">
+                        <a
+                            href="#"
+                            aria-expanded="false"
+                            title="Toggle Academics menu"
+                            class="mobile-nav-subnav-trigger"
+                            >Programs</a
+                        >
+                        <ul
+                            class="mobile-nav-subnav"
+                            role="tablist"
+                            aria-describedby="menu-description"
+                        >
+                            <li
+                                class="mobile-nav-subnav-item back-btn"
+                                role="presentation"
+                            >
+                                <a href="#">Back</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Find Your Program</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">ABAC Catalogs</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Academics Home</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span
+                                            >Agriculture & Natural
+                                            Sciences</span
+                                        >
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Agribusiness </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Agriculture </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">
+                                            Ag Technology Management
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">
+                                            Environmental Horticulture
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">
+                                            Natural Resource Management
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"> Ag Education </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"> Ag Communication </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Arts & Sciences</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Core Curriculum</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Writing & Communication</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"> Music </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"> History & Government </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">
+                                            Rural Community Development
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"> Criminal Justice </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"> Biology </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Nursing</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Nursing ASN</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Nursing BSN</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Business</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Business</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav-button" role="presentation">
+                                <a class="button" href="#"
+                                    >Apply For Admissions</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav-primary-item" role="presentation">
+                        <a
+                            href="#"
+                            aria-expanded="false"
+                            title="Toggle Academics menu"
+                            class="mobile-nav-subnav-trigger"
+                            >Admissions</a
+                        >
+                        <ul
+                            class="mobile-nav-subnav"
+                            role="tablist"
+                            aria-describedby="menu-description"
+                        >
+                            <li
+                                class="mobile-nav-subnav-item back-btn"
+                                role="presentation"
+                            >
+                                <a href="#">Back</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Admissions Home</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Find Your Program</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Prospective Students</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Visit ABAC</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Stallion Days</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"> Submit SAT Scores </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"> Submit ACT Scores </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>New Students</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">New Student Checklist</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Reserve Your Spot</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Orientation</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Office of the Registrar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Student Accounts</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Financial Aid</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">ABAC Affordability</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Tuition & Fees</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">FAFSA</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Verification</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Ways to Pay</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav-button" role="presentation">
+                                <a class="button" href="#"
+                                    >Apply For Admissions</a
+                                >
+                            </li>
+                            <li class="mobile-nav-button" role="presentation">
+                                <a class="button" href="#"
+                                    >Check Application Status</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav-primary-item" role="presentation">
+                        <a
+                            href="#"
+                            aria-expanded="false"
+                            title="Toggle Academics menu"
+                            class="mobile-nav-subnav-trigger"
+                            >Campus Life</a
+                        >
+                        <ul
+                            class="mobile-nav-subnav"
+                            role="tablist"
+                            aria-describedby="menu-description"
+                        >
+                            <li
+                                class="mobile-nav-subnav-item back-btn"
+                                role="presentation"
+                            >
+                                <a href="#">Back</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Campus Life Home</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Campus Map</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">ABAC Police</a>
+                            </li>
+
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Events & Organizations</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Clubs & Organizations</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Arts & Culture</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Greek Life</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Recreational Sports</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Thrash Wellness Center</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Foundation Legacy Pool</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Life on Campus</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Residence Life & Housing</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Dining Services</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Parking Information</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Dean of Students</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Technology</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Student Handbook</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Bookstore</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Health & Safety</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">ABAC Police</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Health Center</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Counseling Center</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">CARE Team</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">
+                                            Accomodation & Disability Services
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">LetsChat@ABAC</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Title IX</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav-button" role="presentation">
+                                <a class="button" href="#">ABAC Athletics</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav-primary-item" role="presentation">
+                        <a
+                            href="#"
+                            aria-expanded="false"
+                            title="Toggle Academics menu"
+                            class="mobile-nav-subnav-trigger"
+                        >
+                            About ABAC
+                        </a>
+                        <ul
+                            class="mobile-nav-subnav"
+                            role="tablist"
+                            aria-describedby="menu-description"
+                        >
+                            <li
+                                class="mobile-nav-subnav-item back-btn"
+                                role="presentation"
+                            >
+                                <a href="#">Back</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">About ABAC</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Employee Directory</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Departmental Directory</a>
+                            </li>
+
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Community</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Arts & Culture</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Forest Lakes Golf Course</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"
+                                            >Georgia Museum of Agriculture</a
+                                        >
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Georgia's Rural Center</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Nature Study Area</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Travel with ABAC</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Alumni & Friends</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Alumni & Friends Home</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">ABAC Foundation</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Resources</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Policy Guides</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Branding Guide</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <ul
+                                    class="mobile-nav-subnav-sublist"
+                                    role="tablist"
+                                    aria-describedby="menu-description"
+                                >
+                                    <li
+                                        class="mobile-nav-subnav-item mobile-nav-header"
+                                        role="presentation"
+                                    >
+                                        <span>Compliance & Regulation</span>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Accreditation</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Accessibility</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#"
+                                            >Ethics & Compliance Hotline</a
+                                        >
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Emergency Info</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Human Trafficking</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Privacy Policy</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">Title IX</a>
+                                    </li>
+                                    <li
+                                        class="mobile-nav-subnav-item"
+                                        role="presentation"
+                                    >
+                                        <a href="#">FCC</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav-button" role="presentation">
+                                <a class="button" href="#"> Give to ABAC</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav-secondary-item" role="presentation">
+                        <a href="#">Giving</a>
+                    </li>
+                    <li class="mobile-nav-secondary-item" role="presentation">
+                        <a href="#">News</a>
+                    </li>
+                    <li class="mobile-nav-secondary-item" role="presentation">
+                        <ul
+                            class="mobile-nav-subnav"
+                            role="tablist"
+                            aria-describedby="menu-description"
+                        >
+                            <li
+                                class="mobile-nav-subnav-item mobile-nav-header"
+                                role="presentation"
+                            >
+                                <span>Information For</span>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Current Students</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Future Students</a>
+                            </li>
+                            <li
+                                class="mobile-nav-subnav-item"
+                                role="presentation"
+                            >
+                                <a href="#">Faculty and Staff</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav-button" role="presentation">
+                        <a class="button" href="#">Apply For Admissions</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
 
         <div id="main" class="" role="main">
             <!-- Main Content Body -->
             <div class="primary-content-wrap">
                 <!-- <div id="trigger"></div> -->
+                <!-- Beginning of homepage slider -->
+                <section
+                    id="slider-wrapper"
+                    class="slider-wrapper front-slider-wrapper"
+                    aria-label="Sliding content area for Abraham Baldwin Agricultural College."
+                >
+                    <div class="slick-slider">
+                        <div
+                            class="slick-slide front-page-slide"
+                            style="
+                                background: url('assets/images/hp-slider-1.jpg')
+                                    no-repeat center;
+                                background-size: cover;
+                                display: block;
+                                width: 100%;
+                                height: 636px;
+                                min-height: 1;
+                            "
+                        >
+                            <div class="slick-caption abs-center">
+                                <h1 class="slider-caption-header">
+                                    Community for
+                                    <strong><em>Learning.</em></strong>
+                                    Community for
+                                    <strong><em>Life.</em></strong>
+                                </h1>
+                                <a href="#" class="button slider-button"
+                                    >Apply For Admissions</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="slick-slide front-page-slide"
+                            style="
+                                background: url('assets/images/hp-slider-1.jpg')
+                                    no-repeat center;
+                                background-size: cover;
+                                display: block;
+                                width: 100%;
+                                height: 636px;
+                                min-height: 1;
+                            "
+                        >
+                            <div class="slick-caption abs-center">
+                                <h1 class="slider-caption-header">
+                                    Community for
+                                    <strong><em>Learning.</em></strong>
+                                    Community for
+                                    <strong><em>Life.</em></strong>
+                                </h1>
+                                <a href="#" class="button slider-button"
+                                    >Apply For Admissions</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="slick-slide front-page-slide"
+                            style="
+                                background: url('assets/images/hp-slider-1.jpg')
+                                    no-repeat center;
+                                background-size: cover;
+                                display: block;
+                                width: 100%;
+                                height: 636px;
+                                min-height: 1;
+                            "
+                        >
+                            <div class="slick-caption abs-center">
+                                <h1 class="slider-caption-header">
+                                    Community for
+                                    <strong><em>Learning.</em></strong>
+                                    Community for
+                                    <strong><em>Life.</em></strong>
+                                </h1>
+                                <a href="#" class="button slider-button"
+                                    >Apply For Admissions</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        jQuery(window).load(function () {
+                            jQuery('.slick-slider').slick({
+                                accessibility: true,
+                                //appendArrows: $(element),
+                                //appendDots: $(element),
+                                arrows: false,
+                                autoplay: false,
+                                autoplaySpeed: 5000,
+                                dots: true,
+                                //dotsClass: 'slick-dots',
+                                //draggable: true,
+                                //easing: 'linear',
+                                //edgeFriction: 0.35,
+                                fade: false,
+                                slide: '.slick-slide',
+                                speed: 800,
+                                //swipe: true,
+                                //swipeToSlide: false,
+                                //touchMove: true,
+                                //touchThreshold: 5,
+                                //waitForAnimate: true
+                            });
+                        });
+                    </script>
+                </section>
+                <section class="front-slider-footer-content">
+                    <h3>
+                        Abraham Baldwin Agricultural College offers a unique and
+                        intimate experience-based learning environment, where
+                        students are challenged to recognize their potential and
+                        push the limits of what’s possible.
+                        <strong><em>Pursue your future at ABAC!</em></strong>
+                    </h3>
+                </section>
                 <!-- Begin universit stats section -->
                 <section
                     id="university-stats"

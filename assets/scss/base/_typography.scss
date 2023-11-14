@@ -37,46 +37,82 @@ body {
 
 .home {
     h2 {
-        font-size: 47px;
+        font-size: 40px;
+        @media (min-width: $mobile-med) {
+            font-size: 42px;
+        }
+        @media (min-width: $mobile-break) {
+            font-size: 47px;
+        }
     }
     h3 {
-        font-size: 34px;
+        font-size: 28px;
+        @media (min-width: $mobile-med) {
+            font-size: 30px;
+        }
+        @media (min-width: $mobile-break) {
+            font-size: 34px;
+        }
     }
 }
 
 h1 {
-    font-size: 47px;
+    font-size: 40px;
     font-family: 'bookmania', serif;
     font-weight: 400;
     font-style: normal;
     text-transform: capitalize;
     color: $green;
+    @media (min-width: $mobile-med) {
+        font-size: 42px;
+    }
+    @media (min-width: $mobile-break) {
+        font-size: 47px;
+    }
 }
 h2 {
     color: $darkGrey;
-    font-size: 34px;
+    font-size: 28px;
     font-family: 'bookmania', serif;
     font-weight: 400;
     font-style: normal;
     color: $green;
     text-transform: capitalize;
+    @media (min-width: $mobile-med) {
+        font-size: 30px;
+    }
+    @media (min-width: $mobile-break) {
+        font-size: 34px;
+    }
 }
 h3 {
     color: $darkGrey;
-    font-size: 28px;
+    font-size: 24px;
     font-family: 'bookmania', serif;
     font-weight: 700;
     font-style: normal;
     text-transform: capitalize;
+    @media (min-width: $mobile-med) {
+        font-size: 26px;
+    }
+    @media (min-width: $mobile-break) {
+        font-size: 28px;
+    }
 }
 h4 {
     color: $green;
     font-family: 'libre-franklin', sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     text-transform: capitalize;
+    @media (min-width: $mobile-med) {
+        font-size: 23px;
+    }
+    @media (min-width: $mobile-break) {
+        font-size: 24px;
+    }
 }
 h5 {
     color: $darkGrey;

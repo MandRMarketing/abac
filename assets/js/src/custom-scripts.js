@@ -505,6 +505,37 @@
             }
         });
 
+        //New code
+
+        $('#toggle-btn').click(function () {
+            $(this).toggleClass('active');
+            $('#mobile-menu').toggleClass('active');
+            $('body').toggleClass('menu-active'); // Add a class to body for styling when the menu is active
+            $('.mobile-nav-subnav-trigger').attr('aria-expanded', false);
+            $('.mobile-nav-primary-item').removeClass('expanded');
+        });
+
+        $('.mobile-nav-subnav-trigger').click(function () {
+            // Get the current value of aria-expanded
+            var currentValue = $(this).attr('aria-expanded');
+
+            // Toggle the value
+            var newValue = currentValue === 'true' ? 'false' : 'true';
+
+            // Set the new value
+            $(this).attr('aria-expanded', newValue);
+
+            // Get the parent element and toggle the 'expanded' class
+            $(this)
+                .parent()
+                .toggleClass('expanded', newValue === 'true');
+        });
+
+        $('.mobile-nav-subnav-item.back-btn').click(function () {
+            $('.mobile-nav-subnav-trigger').attr('aria-expanded', false);
+            $('.mobile-nav-primary-item').removeClass('expanded');
+        });
+
         /*---------------------------------------------------------
 			On Scroll
 			-- fade in sections
@@ -564,28 +595,3 @@
 	});
 	*/
 })(jQuery);
-
-//NON JQUERY CODE
-
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function () {
-    // Get the primary-nav and secondary-nav elements
-    const primaryNav = document.getElementById('primary-nav');
-    const secondaryNav = document.getElementById('secondary-nav');
-
-    // Calculate the total height of primary-nav and secondary-nav
-    const totalNavHeight = primaryNav.offsetHeight + secondaryNav.offsetHeight;
-
-    // Check if the body element has the "home" class
-    if (document.body.classList.contains('home')) {
-        // Apply the margin-top to the .front-slider-wrapper element
-        const frontSliderWrapper = document.querySelector(
-            '.front-slider-wrapper'
-        );
-        frontSliderWrapper.style.marginTop = totalNavHeight + 'px';
-    } else {
-        // Apply the margin-top to the #main element
-        const main = document.getElementById('main');
-        main.style.marginTop = totalNavHeight + 'px';
-    }
-});

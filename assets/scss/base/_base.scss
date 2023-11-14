@@ -1,271 +1,185 @@
-$push : 410px;
+$push: 410px;
 
 /* General CSS */
 
 .no-margin {
-	margin: 0;
+    margin: 0;
 }
 
 /* Desktop specific classes
 ---------------------------*/
 .desktop-hide {
-	display: none;
-	visibility: hidden;
-	
-	@media screen and (max-width: $mobile-break){
-		display: block;
-		visibility: visible;
-	}
+    display: none;
+    visibility: hidden;
+
+    @media screen and (max-width: $mobile-break) {
+        display: block;
+        visibility: visible;
+    }
 }
 
 .pull-middle {
-	@media screen and (max-width: $first-break) {
-		*:nth-child(2):nth-last-child(3) {
-				order: -1;
-			}
+    @media screen and (max-width: $first-break) {
+        *:nth-child(2):nth-last-child(3) {
+            order: -1;
+        }
 
-		*:nth-child(3):nth-last-child(3) {
-			order: -1;
-		}
-	}
+        *:nth-child(3):nth-last-child(3) {
+            order: -1;
+        }
+    }
 }
 
 /* Mobile specific classes
 ---------------------------*/
 
 .mobile-hide {
-	@media screen and (max-width: $mobile-break){
-		width: 0;
-		height: 0;
-		visibility: hidden;
-		overflow: hidden;
-	}
+    @media screen and (max-width: $mobile-break) {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+    }
 }
 
 /* Hide all images & bg images */
 .mobile-img-hide {
-	@media screen and (max-width: $mobile-break){
-		img {
-			width: 0;
-			height: 0;
-			visibility: hidden;
-			overflow: hidden;
-		}
-	
-		div[style*="background:"] {
-			background: none !important;
-			width: 0;
-			height: 0;
-			min-height: 0 !important;
-			margin: 0;
-			padding: 0;
-			visibility: hidden;
-			overflow: hidden;
-		}
-	}
+    @media screen and (max-width: $mobile-break) {
+        img {
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            overflow: hidden;
+        }
+
+        div[style*='background:'] {
+            background: none !important;
+            width: 0;
+            height: 0;
+            min-height: 0 !important;
+            margin: 0;
+            padding: 0;
+            visibility: hidden;
+            overflow: hidden;
+        }
+    }
 }
 
 /* Allow for items to be manipulated w/ flex on mobile */
 .mobile-flex {
-	@media screen and (max-width: $mobile-break) {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		
-		-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-	}
-}
+    @media screen and (max-width: $mobile-break) {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
 
-/* Background color classes
----------------------------*/
-
-.dark-bg {
-	background-color: $darkGrey;
-	
-	p,a,h1,h2,h3,h4,h5,h6 {
-		color: #fff;
-	}
-}
-
-.grey-bg {
-	background-color: $grey;
-}
-
-.purple-bg {
-	background-color: $purple;
-	
-	p,a,h1,h2,h3,h4,h5,h6 {
-		color: #fff;
-	}
-}
-
-.dark-p-bg {
-	background-color: $darkPurple;
-	
-	p,a,h1,h2,h3,h4,h5,h6 {
-		color: #fff;
-	}
-}
-
-.white-bg {
-	background-color: #fff;
-	
-	p,a,h1,h2,h3,h4,h5,h6 {
-		color: $purple;
-	}
-}
-
-.grey-backdrop {
-	position: relative;
-	z-index: 1;
-	text-align: center;
-	
-	.one-fifth {
-		width: 19%;
-		margin-left: 1.25%;
-		
-		&:nth-of-type(1){
-			margin-left: 0;
-		}
-		
-		@media screen and (max-width: $mobile-break){
-			width: 100%;
-			margin: 0;
-		}
-	}
-	
-	&:after {
-		content: '';
-		background: #efefef;
-		position: absolute;
-		z-index: -1;
-		top: 50%;
-		transform: translateY(-50%);
-		left: 0;
-		right: 0;
-		width: 95%;
-		height: 100%;
-		margin: auto;
-
-		@media screen and (max-width: $second-break) {
-			width: 90%;
-		}
-		
-		@media screen and (max-width: $mobile-break) {
-			width: 100%;
-			padding: 0;
-		}
-	}
-}
-
-span.image-overlay {
-	background: rgba(0,0,0,.7);
-	position: absolute;
-	z-index: 0;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
 }
 
 /* Primary container classes
 ---------------------------*/
 
 #main {
-	position: relative;
-	right: 0;
-	transition: all .3s ease-in-out;
-	
-/*	@media screen and (max-width: $mobile-break){
+    position: relative;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+
+    /* Margin for desktop and mobile menus */
+    margin-top: 150px; /* Desktop Menu Height */
+    @media screen and (max-width: $mobile-break) {
+        margin-top: 80px; /* Mobile Menu Height */
+    }
+
+    /*	@media screen and (max-width: $mobile-break){
 		margin-top: 65px;
 	}*/
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .hidden {
-	display: none !important;
+    display: none !important;
 }
 
 .outer-container {
-	display: inline-block;
-	vertical-align: middle;
-	width: 100%;
-	height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
 }
 
 /* Primary Content Wrap-related CSS */
 .primary-content-wrap {
-	background-color: #fff;
-	padding-bottom: 55px;
+    background-color: #fff;
+    padding-bottom: 55px;
 }
 
 .primary-content-wrap .outer-container {
-	margin-top: 55px;
-	
-	@media screen and (max-width: $mobile-med) {
-		margin-top: 25px;
-	}
+    margin-top: 55px;
+
+    @media screen and (max-width: $mobile-med) {
+        margin-top: 25px;
+    }
 }
 
 .primary-content-wrap.outer-container,
 .primary-content-wrap .outer-container.grey-backdrop {
-	padding: 55px 0;
-	
-	@media screen and (max-width: $mobile-med) {
-		padding: 25px 0 0;
-	}
+    padding: 55px 0;
+
+    @media screen and (max-width: $mobile-med) {
+        padding: 25px 0 0;
+    }
 }
 
 /* Positioning classes
 ---------------------------*/
 .left {
-	float: left;
+    float: left;
 }
 
 .right {
-	float: right;
+    float: right;
 }
 
 /* Position object in center of parent */
 .abs-center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
 }
 
 /* Center all elements in container using flex */
 .center-flex {
-	display: -webkit-box;
-	display: -moz-box;
+    display: -webkit-box;
+    display: -moz-box;
     display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	
-	-webkit-flex-wrap: wrap;
-	-moz-flex-wrap: wrap;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-moz-justify-content: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	
-	@media screen and (max-width: $mobile-med) {
-		display: block;
-	}
+    flex-wrap: wrap;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    @media screen and (max-width: $mobile-med) {
+        display: block;
+    }
 }
 
 /**
@@ -273,38 +187,38 @@ img {
  *	NOTE: object-fit not supported in IE or Edge; fallback in place
  */
 .object-fit-image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Object fit fallback class generated by JS */
 .compat-object-fit {
-	background-size: cover !important;
+    background-size: cover !important;
 }
 
 /* Needs to be coupled with parent :hover class */
 .image-overlay {
-	background-color: rgba(0,0,0,0);
-	display: block;
-	position: absolute;
-	z-index: 5;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	transition: background-color .3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0);
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s ease-in-out;
 }
 .image-overlay-excerpt {
-	@extend .abs-center;
-	z-index: 10;
-	font-style: italic;
-	font-weight: bold;
-	opacity: 0;
-	transition: opacity .3s ease-in-out;
-	
-	span {
-		vertical-align: middle;
-	}
+    @extend .abs-center;
+    z-index: 10;
+    font-style: italic;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    span {
+        vertical-align: middle;
+    }
 }
