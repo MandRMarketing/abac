@@ -217,6 +217,15 @@
             }
         }
     }
+    @media screen and (max-width: $mobile-break) {
+        background: $green;
+        margin-bottom: 0;
+        height: auto;
+        &::before,
+        &::after {
+            content: unset;
+        }
+    }
 }
 
 .front-page-slide {

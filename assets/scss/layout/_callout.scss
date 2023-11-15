@@ -1,18 +1,39 @@
 .cta {
-    .container {
-        display: flex;
-    }
-    &__container {
-        &.left {
-            padding-right: 70px;
-            border-right: 8px solid $primary-yellow;
-            img {
-                min-height: 100%;
-                max-width: unset !important;
+    @media screen and (max-width: $mobile-break) {
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__container {
+            &.left {
+                border-bottom: 8px solid $primary-yellow;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 25px;
+            }
+            &.right {
+                padding-top: 25px;
             }
         }
-        &.right {
-            padding-left: 70px;
+    }
+
+    @media screen and (min-width: $mobile-break) {
+        .container {
+            display: flex;
+        }
+
+        &__container {
+            &.left {
+                padding-right: 70px;
+                border-right: 8px solid $primary-yellow;
+                img {
+                    min-height: 100%;
+                    max-width: unset !important;
+                }
+            }
+            &.right {
+                padding-left: 70px;
+            }
         }
     }
 }

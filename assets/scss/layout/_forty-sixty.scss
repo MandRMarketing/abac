@@ -11,6 +11,13 @@
             position: absolute;
             left: 50px;
             top: 100px;
+            @media screen and (max-width: $mobile-break) {
+                width: 320px;
+                height: 320px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 25px;
+            }
         }
     }
 }
@@ -37,9 +44,27 @@
         .forty-sixty__right {
         }
     }
-
-    &__left {
-    }
-    &__right {
+    @media screen and (max-width: $mobile-break) {
+        &.image-right {
+            flex-direction: column;
+            .forty-sixty__left {
+                width: 100%;
+                padding: 20px;
+            }
+            .forty-sixty__right {
+                width: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        &.image-left {
+            .forty-sixty__left {
+            }
+            .forty-sixty__right {
+            }
+        }
     }
 }

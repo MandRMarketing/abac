@@ -1,6 +1,9 @@
 #bainbridge-campus-links {
     .image-banner__bg {
         background: url(assets/images/hp-stallion-statue.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
     }
 }
 .image-banner {
@@ -34,6 +37,13 @@
         z-index: 1;
         * {
             color: white;
+        }
+    }
+    @media screen and (max-width: $mobile-break) {
+        .container-large {
+            padding: 20px;
+        }
+        &__bg {
         }
     }
 }

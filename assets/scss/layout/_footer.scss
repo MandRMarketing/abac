@@ -97,4 +97,42 @@ Site Footer
             }
         }
     }
+    @media screen and (max-width: $mobile-break) {
+        #footer-socials {
+            flex-direction: column;
+            gap: 25px;
+            .footer-site-logo {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        #footer-navigation {
+            .footer-nav {
+                flex-wrap: wrap;
+                li {
+                    flex: 1 0 calc(50% - 10px); /* Two items per row with some spacing */
+                    margin: 5px; /* Adjust margin as needed */
+                    max-width: unset;
+                }
+            }
+            .foooter-secondary-nav {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+        }
+        #footer-copyright {
+            text-align: left;
+        }
+    }
+    @media screen and (max-width: $mobile-small) {
+        #footer-navigation {
+            .footer-nav {
+                flex-direction: column;
+                li {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
 }

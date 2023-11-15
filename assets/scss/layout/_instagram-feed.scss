@@ -22,4 +22,10 @@
             }
         }
     }
+    @media screen and (max-width: $mobile-break) {
+        &__feed {
+            flex-direction: column;
+            padding: 0;
+        }
+    }
 }

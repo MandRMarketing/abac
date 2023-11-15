@@ -25,4 +25,15 @@
             font-style: italic;
         }
     }
+    @media screen and (max-width: $mobile-break) {
+        &__header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__articles {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
 }
