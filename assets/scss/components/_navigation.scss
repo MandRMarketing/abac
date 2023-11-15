@@ -52,6 +52,13 @@
     padding-left: 5%;
     border-bottom: 11px solid $primary-yellow;
 
+    h1.site-title {
+        img {
+            min-height: 65px;
+            min-width: 172px;
+        }
+    }
+
     .primary-items {
         margin: 0;
         display: flex;
@@ -110,6 +117,10 @@
                     left: -1px;
                     top: 50%;
                     background: $primary-yellow;
+                }
+                @media screen and (max-width: $first-break) {
+                    padding: 15px 15px;
+                    font-size: 18px;
                 }
             }
         }

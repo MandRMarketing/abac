@@ -4,12 +4,12 @@
     background-repeat: no-repeat;
     background-position: bottom;
 
-    @media screen and (min-width: $mobile-break) {
+    @media screen and (min-width: $extra-break) {
         background-size: cover;
         padding-top: 600px;
         padding-bottom: 300px;
     }
-    @media screen and (max-width: $mobile-break) {
+    @media screen and (max-width: $extra-break) {
         padding-bottom: 300px;
         &::before {
             content: '';
@@ -64,7 +64,7 @@
                 font-style: normal;
             }
         }
-        @media screen and (max-width: $mobile-break) {
+        @media screen and (max-width: $extra-break) {
             flex-direction: column;
             &__card {
                 width: 100%;

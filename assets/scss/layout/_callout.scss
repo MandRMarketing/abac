@@ -1,23 +1,5 @@
 .cta {
-    @media screen and (max-width: $mobile-break) {
-        .container {
-            display: flex;
-            flex-direction: column;
-        }
-        &__container {
-            &.left {
-                border-bottom: 8px solid $primary-yellow;
-                display: flex;
-                justify-content: center;
-                padding-bottom: 25px;
-            }
-            &.right {
-                padding-top: 25px;
-            }
-        }
-    }
-
-    @media screen and (min-width: $mobile-break) {
+    @media screen and (min-width: $first-break) {
         .container {
             display: flex;
         }
@@ -33,6 +15,23 @@
             }
             &.right {
                 padding-left: 70px;
+            }
+        }
+    }
+    @media screen and (max-width: $first-break) {
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__container {
+            &.left {
+                border-bottom: 8px solid $primary-yellow;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 25px;
+            }
+            &.right {
+                padding-top: 25px;
             }
         }
     }

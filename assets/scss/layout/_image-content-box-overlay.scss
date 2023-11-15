@@ -40,7 +40,7 @@
             border-bottom: 1px solid $primary-yellow;
             background: transparent;
             padding: 15px;
-            min-width: 550px;
+            min-width: 100%;
             text-align: left;
             position: relative;
             &:first-of-type {
@@ -85,7 +85,7 @@
         }
     }
 
-    @media screen and (max-width: $mobile-break) {
+    @media screen and (max-width: $extra-break) {
         background-size: 100% 400px;
         &::before {
             content: '';
@@ -148,7 +148,7 @@
             color: white;
         }
     }
-    @media screen and (max-width: $mobile-break) {
+    @media screen and (max-width: $extra-break) {
         .container-large {
             flex-direction: column;
         }

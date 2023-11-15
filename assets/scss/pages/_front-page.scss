@@ -132,6 +132,8 @@
     }
     .slick-dots {
         z-index: 1;
+        position: absolute;
+        bottom: 140px;
         li button {
             background-color: white;
         }
@@ -142,6 +144,9 @@
     }
 
     @media screen and (max-width: $mobile-break) {
+        .slick-dots {
+            bottom: 65px;
+        }
         height: auto;
 
         .front-page-slide {
@@ -151,18 +156,20 @@
     }
 
     @media screen and (max-width: $mobile-med) {
+        .slick-dots {
+            bottom: 40px;
+        }
         .front-page-slide {
             min-height: 550px;
         }
     }
 
     @media screen and (max-width: $extra-small) {
+        .slick-dots {
+            bottom: 0;
+        }
         .front-page-slide {
             min-height: 420px;
-        }
-
-        .slick-dots {
-            bottom: 25px;
         }
     }
 }
@@ -217,7 +224,12 @@
             }
         }
     }
-    @media screen and (max-width: $mobile-break) {
+    @media screen and (max-width: $extra-large) {
+        h3 {
+            font-size: 28px;
+        }
+    }
+    @media screen and (max-width: $extra-break) {
         background: $green;
         margin-bottom: 0;
         height: auto;
