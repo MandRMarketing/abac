@@ -464,20 +464,6 @@
         $(window).load(navigationMenu());
 
         /*---------------------------------------------------------
-			On Scroll
-			--only runs once per scroll session
-		----------------------------------------------------------*/
-        function scrollAddClass() {
-            if ($(window).scrollTop() > 10) {
-                $('body').addClass('hide-menu-tabs');
-            } else {
-                $('body').removeClass('hide-menu-tabs');
-            }
-        }
-
-        $(window).scroll($.debounce(20, scrollAddClass));
-
-        /*---------------------------------------------------------
 			Javascript font size increase
 		----------------------------------------------------------*/
         var size = parseInt($('p').css('font-size'));
@@ -507,6 +493,7 @@
 
         //New code
 
+        /* Mobile Nav Code */
         $('#toggle-btn').click(function () {
             $(this).toggleClass('active');
             $('#mobile-menu').toggleClass('active');
@@ -531,9 +518,66 @@
                 .toggleClass('expanded', newValue === 'true');
         });
 
-        $('.mobile-nav-subnav-item.back-btn').click(function () {
-            $('.mobile-nav-subnav-trigger').attr('aria-expanded', false);
-            $('.mobile-nav-primary-item').removeClass('expanded');
+        /* Desktop Nav Code */
+
+        // Click event for desktop-nav-subnav-trigger
+        $('.primary-item .desktop-nav-subnav-trigger').click(function (event) {
+            // Prevent the default behavior of the anchor link
+            event.preventDefault();
+            // Close all desktop-nav-subnavs and set opacity to 0
+            $('.desktop-nav-subnav').fadeOut(400, function () {
+                // Remove inline style for opacity after fadeOut is complete
+                $(this).css('opacity', '');
+            });
+
+            // Toggle the display property to 'flex' and fade in the opacity for the clicked subnav
+            var subnav = $(this).next('.desktop-nav-subnav');
+            subnav.css('display', 'flex').stop().fadeTo(400, 1);
+
+            // Ensure 'desktop-menu-active' class is set on the body
+            $('body').addClass('desktop-menu-active');
+        });
+
+        // Check for clicks on the document
+        $(document).on('click', function (event) {
+            // Check if the body has the class 'desktop-menu-active'
+            if ($('body').hasClass('desktop-menu-active')) {
+                // Check if the clicked element is not a .desktop-nav-subnav or .desktop-nav-subnav-trigger
+                if (
+                    !$(event.target).is(
+                        '.desktop-nav-subnav, .desktop-nav-subnav-trigger'
+                    )
+                ) {
+                    // Fade out all .desktop-nav-subnavs and set opacity to 0
+                    $('.desktop-nav-subnav').fadeOut(400, function () {
+                        // Remove inline style for opacity after fadeOut is complete
+                        $(this).css('opacity', '');
+                        // Set display to 'none' after removing opacity style
+                        $(this).css('display', 'none');
+                    });
+
+                    // Remove the 'desktop-menu-active' class from the body
+                    $('body').removeClass('desktop-menu-active');
+                }
+            }
+        });
+
+        // Scroll event to remove 'desktop-menu-active' class when the user scrolls
+        $(window).scroll(function () {
+            // Check if the subnav is currently visible before fading out
+            var desktopNavSubnav = $('.desktop-nav-subnav');
+            if (desktopNavSubnav.is(':visible')) {
+                // Remove 'desktop-menu-active' class from the body
+                $('body').removeClass('desktop-menu-active');
+
+                // Close all desktop-nav-subnavs and set opacity to 0
+                desktopNavSubnav.fadeOut(400, function () {
+                    // Remove inline style for opacity after fadeOut is complete
+                    $(this).css('opacity', '');
+                    // Set display to 'none' after removing opacity style
+                    $(this).css('display', 'none');
+                });
+            }
         });
 
         /*---------------------------------------------------------

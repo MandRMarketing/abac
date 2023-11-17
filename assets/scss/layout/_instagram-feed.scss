@@ -22,10 +22,16 @@
             }
         }
     }
-    @media screen and (max-width: $mobile-break) {
+    @media screen and (max-width: $second-break) {
         &__feed {
             flex-direction: column;
             padding: 0;
+            &__thumbnail {
+                img {
+                    min-width: 100%;
+                    object-fit: cover;
+                }
+            }
         }
     }
 }

@@ -11,7 +11,7 @@
             position: absolute;
             left: 50px;
             top: 100px;
-            @media screen and (max-width: $mobile-break) {
+            @media screen and (max-width: $extra-break) {
                 width: 320px;
                 height: 320px;
                 left: 50%;
@@ -44,7 +44,7 @@
         .forty-sixty__right {
         }
     }
-    @media screen and (max-width: $mobile-break) {
+    @media screen and (max-width: $extra-break) {
         &.image-right {
             flex-direction: column;
             .forty-sixty__left {

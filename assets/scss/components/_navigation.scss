@@ -13,7 +13,7 @@
     .secondary-items {
         margin: 0;
         display: flex;
-        li {
+        .secondary-item {
             border-left: 1px solid $primary-yellow;
             padding: 15px 35px;
             display: flex;
@@ -36,6 +36,7 @@
     }
 }
 #desktop-nav-primary {
+    position: relative;
     width: 100%;
     height: 100px;
     margin-top: 50px;
@@ -51,6 +52,7 @@
     justify-content: space-between;
     padding-left: 5%;
     border-bottom: 11px solid $primary-yellow;
+    box-shadow: 0rem 0.15rem 0.5rem 0 rgba(0, 0, 0, 0.29);
 
     h1.site-title {
         img {
@@ -64,8 +66,9 @@
         display: flex;
         align-items: center;
         height: 100%;
-        li {
+        .primary-item {
             height: 100%;
+            position: unset;
             &:first-of-type {
                 a {
                     &::after {
@@ -91,7 +94,94 @@
                     }
                 }
             }
-            a {
+            .desktop-nav-subnav {
+                display: none;
+                opacity: 0;
+                position: absolute;
+                width: 100vw;
+                left: 0;
+                top: calc(
+                    100% + 11px
+                ); /* 100% + border bottom of prumary desktop menu */
+                background: $offWhite;
+                gap: 25px;
+                padding: 25px;
+                box-shadow: 0rem 0.15rem 0.5rem 0 rgba(0, 0, 0, 0.29);
+
+                .desktop-nav-subnav-list {
+                    flex: 1;
+                    &.no-header {
+                        a:not(.button),
+                        span {
+                            text-align: left;
+                            position: relative;
+                            display: block;
+                            padding: 10px;
+                            color: $green;
+                            text-decoration: none;
+                            font-family: 'bookmania', serif;
+                            font-weight: 400;
+                            font-size: 22px;
+                            border-bottom: 1px solid $primary-yellow;
+                            transition: background-color 0.3s ease;
+                            &::after {
+                                content: '';
+                                background: url(assets/images/btn-arrow.svg)
+                                    no-repeat;
+                                background-size: contain;
+                                height: 22px;
+                                width: 13px;
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                left: unset;
+                                transform: translateY(-50%);
+                                filter: brightness(0);
+                            }
+                        }
+                    }
+                    a:not(.button),
+                    span {
+                        text-align: left;
+                        position: relative;
+                        display: block;
+                        padding: 10px;
+                        color: $textColor;
+                        text-decoration: none;
+                        font-family: 'bookmania', serif;
+                        font-weight: 400;
+                        font-size: 22px;
+                        border-bottom: 1px solid $primary-yellow;
+                        transition: background-color 0.3s ease;
+                        &::after {
+                            content: unset;
+                        }
+                    }
+
+                    .desktop-nav-subnav-item {
+                        a:hover {
+                            color: $green;
+                        }
+                        &.desktop-nav-header {
+                            span {
+                                padding-bottom: 0;
+                                color: $green;
+                                border-bottom: 4px solid $primary-yellow;
+                                font-size: 28px;
+                                &::after {
+                                    content: unset;
+                                }
+                            }
+                        }
+                    }
+                    .desktop-nav-subnav-button {
+                        text-align: left;
+                        margin-top: 20px;
+                    }
+                }
+            }
+            .desktop-nav-subnav-trigger {
+                position: relative;
                 color: $textColor;
                 height: 100%;
                 display: flex;
