@@ -1,7 +1,10 @@
-.cta {
+.callout {
     @media screen and (min-width: $first-break) {
         .container {
             display: flex;
+            border-top: 2px solid $primary-yellow;
+            border-bottom: 2px solid $primary-yellow;
+            padding: 50px 0;
         }
 
         &__container {

@@ -1,0 +1,12 @@
+.standard-content {
+    .container {
+        display: flex;
+        gap: 50px;
+        @media screen and (max-width: $mobile-break) {
+            flex-direction: column;
+        }
+        .column {
+            flex: 1;
+        }
+    }
+}

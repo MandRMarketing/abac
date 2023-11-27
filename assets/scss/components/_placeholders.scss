@@ -1,39 +1,74 @@
 .placeholder {
-	color: $purple;
-	opacity: 1;
-	font-size: 16px;
-	font-weight: 700;
-	text-transform: normal;
+    color: $green;
+    opacity: 1;
+    font-size: 24px;
+    font-family: 'bookmania', serif;
+    font-weight: 700;
+    font-style: normal;
+    @media (min-width: $mobile-med) {
+        font-size: 26px;
+    }
+    @media (min-width: $mobile-break) {
+        font-size: 28px;
+    }
 }
 
 ::-moz-placeholder {
-	color: $purple;
-	opacity: 1;
-	font-size: 16px;
-	font-weight: 700;
-	text-transform: normal;
+    color: $green;
+    opacity: 1;
+    font-size: 24px;
+    font-family: 'bookmania', serif;
+    font-weight: 700;
+    font-style: normal;
+    @media (min-width: $mobile-med) {
+        font-size: 26px;
+    }
+    @media (min-width: $mobile-break) {
+        font-size: 28px;
+    }
 }
 
 ::-webkit-input-placeholder {
-	color: $purple;
-	opacity: 1;
-	font-size: 16px;
-	font-weight: 700;
-	text-transform: normal;
+    color: $green;
+    opacity: 1;
+    font-size: 24px;
+    font-family: 'bookmania', serif;
+    font-weight: 700;
+    font-style: normal;
+    @media (min-width: $mobile-med) {
+        font-size: 26px;
+    }
+    @media (min-width: $mobile-break) {
+        font-size: 28px;
+    }
 }
 
 :-ms-input-placeholder {
-	color: $purple;
-	opacity: 1;
-	font-size: 16px;
-	font-weight: 700;
-	text-transform: normal;
+    color: $green;
+    opacity: 1;
+    font-size: 24px;
+    font-family: 'bookmania', serif;
+    font-weight: 700;
+    font-style: normal;
+    @media (min-width: $mobile-med) {
+        font-size: 26px;
+    }
+    @media (min-width: $mobile-break) {
+        font-size: 28px;
+    }
 }
 
 ::-ms-input-placeholder {
-	color: $purple;
-	opacity: 1;
-	font-size: 16px;
-	font-weight: 700;
-	text-transform: normal;
+    color: $green;
+    opacity: 1;
+    font-size: 24px;
+    font-family: 'bookmania', serif;
+    font-weight: 700;
+    font-style: normal;
+    @media (min-width: $mobile-med) {
+        font-size: 26px;
+    }
+    @media (min-width: $mobile-break) {
+        font-size: 28px;
+    }
 }

@@ -61,6 +61,14 @@
     display: block;
 }
 
+.icon-search-green:before {
+    content: '';
+    background: url(assets/images/icon-search-green.svg);
+    height: 42px;
+    width: 42px;
+    display: block;
+}
+
 .icon-facebook-official:hover:before {
     color: $facebook;
 }

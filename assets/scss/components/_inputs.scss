@@ -4,7 +4,7 @@
 /* note: .button includes input[type="submit"], watch for styles that need to be overridden one way or the other */
 input,
 textarea {
-    background-color: $grey;
+    background: transparent;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -12,10 +12,16 @@ textarea {
     width: 100%;
     margin-bottom: 12px;
     height: 50px;
+    color: $green;
 }
 
 .select-wrapper {
     position: relative;
+    height: 50px;
+    cursor: pointer;
+    select {
+        cursor: pointer;
+    }
     &::after {
         content: '';
         background: url(assets/images/select-dropdown-arrow.svg);
@@ -27,6 +33,7 @@ textarea {
         transform: translateY(-50%);
         width: 15px;
         height: 10px;
+        pointer-events: none;
     }
 }
 
@@ -38,7 +45,7 @@ select {
     background-repeat: no-repeat;
     font-weight: bold;
     border: 0px;
-    height: 28px;
+    height: 50px;
     width: 165px;
     padding-left: 10px;
     font-size: 16px;

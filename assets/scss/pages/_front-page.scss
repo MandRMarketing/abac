@@ -255,8 +255,11 @@
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     }
 
-    .slick-caption .button {
-        margin-bottom: 0;
+    .slick-caption {
+        width: 90%;
+        .button {
+            margin-bottom: 0;
+        }
     }
 
     .slider-caption-excerpt {

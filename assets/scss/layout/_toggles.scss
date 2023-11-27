@@ -1,0 +1,102 @@
+/* Toggles */
+.toggles {
+    &.green-bg {
+        .toggle__trigger-text {
+            * {
+                color: white;
+            }
+        }
+        .toggle__trigger-icon:before {
+            color: white;
+        }
+
+        .toggle__box {
+            * {
+                color: white;
+            }
+        }
+    }
+    .toggle {
+        margin: 0 0 8px;
+        padding: 0 0 2px 0;
+        width: 100%;
+
+        &__trigger {
+            background: transparent;
+            display: block;
+            position: relative;
+            width: 100%;
+            height: auto;
+            border: none;
+            padding: 25px 60px 25px 25px;
+            text-align: left;
+            border: 2px solid $primary-yellow;
+            border-left: 8px solid $primary-yellow;
+            color: $color-text;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            &:hover,
+            &:focus {
+                color: $color-text;
+            }
+
+            &-text {
+                pointer-events: none;
+                h3 {
+                    text-transform: initial !important;
+                    margin-bottom: 0;
+                }
+            }
+
+            &-icon {
+                display: block;
+                background: transparent;
+                position: absolute;
+                top: 0;
+                left: initial;
+                right: 10px;
+                width: 45px;
+                height: 100%;
+
+                color: $color-text;
+                font-size: 26px;
+                line-height: 52px;
+                text-align: center;
+                transition: color 0.3s ease-in-out;
+                pointer-events: none;
+                &:before {
+                    z-index: 2;
+                    content: '+';
+                    position: absolute;
+                    top: calc(50% - 1px);
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: $green;
+                    font-size: 60px;
+                }
+            }
+        }
+
+        &__box {
+            overflow: hidden;
+            padding: 25px;
+            border-bottom: 2px solid $primary-yellow;
+            border-left: 8px solid $primary-yellow;
+            border-right: 2px solid $primary-yellow;
+        }
+
+        &--active {
+            border-bottom: unset !important;
+
+            .toggle {
+                &__trigger-icon {
+                    &:before {
+                        content: '-';
+                    }
+                }
+            }
+        }
+    }
+}

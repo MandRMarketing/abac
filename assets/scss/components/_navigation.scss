@@ -76,12 +76,12 @@
                     }
                 }
             }
-            &#search-menu-item {
+            &#desktop-search-menu-item {
                 height: 100%;
                 padding: 0px;
                 width: 100px;
                 background: $primary-yellow;
-                #search-link {
+                #desktop-search-trigger {
                     height: 100%;
                     display: flex;
                     align-items: center;
@@ -92,13 +92,56 @@
                     &::after {
                         content: unset;
                     }
+
+                    .icon-search-green,
+                    .icon-search {
+                        pointer-events: none;
+                    }
+                }
+                #desktop-search-form {
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+                    opacity: 0;
+                    background: $offWhite;
+                    height: 95px;
+                    width: 100vw;
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: calc(
+                        100% + 11px
+                    ); /* 100% + border bottom of primary desktop menu */
+                    padding: 0 15px;
+
+                    input {
+                        margin-bottom: 0;
+                    }
+
+                    input[type='search'] {
+                        width: 1200px;
+                        height: 100%;
+
+                        &:focus {
+                            border: 0px;
+                        }
+                    }
+
+                    input[type='reset'] {
+                        width: 95px;
+                        font-weight: 900;
+                    }
+                    input[type='submit'] {
+                        width: min-content;
+                    }
                 }
             }
             .desktop-nav-subnav {
                 display: none;
                 opacity: 0;
                 position: absolute;
-                width: 100vw;
+                width: 100%;
                 left: 0;
                 top: calc(
                     100% + 11px
@@ -228,7 +271,70 @@
     border-bottom: 11px solid $primary-yellow;
     padding-left: 15px;
     background: white;
+    display: flex;
+    gap: 15px;
 
+    #mobile-search-menu-item {
+        flex: 1;
+        height: 100%;
+        padding: 0px;
+        width: 58px;
+        #mobile-search-trigger {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            span[aria-hidden='true'] {
+                display: none;
+            }
+            &::after {
+                content: unset;
+            }
+
+            .icon-search-green,
+            .icon-search {
+                pointer-events: none;
+            }
+        }
+        #mobile-search-form {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            opacity: 0;
+            background: $offWhite;
+            height: 68px;
+            width: 100vw;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: calc(
+                100% + 11px
+            ); /* 100% + border bottom of primary desktop menu */
+            padding: 0 15px;
+
+            input {
+                margin-bottom: 0;
+            }
+
+            input[type='search'] {
+                width: 1200px;
+                height: 100%;
+
+                &:focus {
+                    border: 0px;
+                }
+            }
+
+            input[type='reset'] {
+                width: 95px;
+                font-weight: 900;
+            }
+            input[type='submit'] {
+                width: min-content;
+            }
+        }
+    }
     #mobile-menu {
         position: fixed;
         top: 80px;
@@ -334,7 +440,7 @@
             }
             &.expanded {
                 .mobile-nav-subnav {
-                    display: block;
+                    display: block !important;
                     right: 0;
                     z-index: 301;
                 }
@@ -409,8 +515,8 @@
         }
     }
 
-    #toggle-btn {
-        position: absolute;
+    #mobile-menu-trigger {
+        position: relative;
         width: 54px;
         top: 0;
         right: 0;
@@ -443,13 +549,13 @@
         }
         &.active {
             span {
-                &#toggle-btn-line-1 {
+                &#mobile-menu-trigger-line-1 {
                     transform: translateY(9px) rotateZ(45deg);
                 }
-                &#toggle-btn-line-2 {
+                &#mobile-menu-trigger-line-2 {
                     opacity: 0;
                 }
-                &#toggle-btn-line-3 {
+                &#mobile-menu-trigger-line-3 {
                     transform: translateY(-9px) rotateZ(-45deg);
                 }
             }

@@ -44,47 +44,6 @@
 		});
 		**/
 
-        // Run Mobile Menu
-        $(document.getElementById('secondary-navigation')).slicknav({
-            label: 'MENU', // Label for menu button. Use an empty string for no label.
-            //duplicate: true, // If true, the mobile menu is a copy of the original.
-            //duration: true, // The duration of the sliding animation.
-            //easingOpen: 'swing', // Easing used for open animations.
-            //easingClose: 'swing' // Easing used for close animations.
-            //closedSymbol: '►', // Character after collapsed parents.
-            //openedSymbol: '▼', // Character after expanded parents.
-            prependTo: $('#secondary-navigation'), // Element, jQuery object, or jQuery selector string to prepend the mobile menu to.
-            //parentTag: 'a', // Element type for parent menu items.
-            //closeOnClick: false, // Close menu when a link is clicked.
-            allowParentLinks: true, // Allow clickable links as parent elements.
-            //nestedParentLinks: true // If false, parent links will be separated from the sub-menu toggle.
-            //showChildren: false // Show children of parent links by default.
-            //removeIds: false // Remove IDs from all menu elements. Defaults to true if duplicate is true.
-            removeClasses: true, // Remove classes from all menu elements.
-            //brand: '' // Add branding to menu bar.
-        });
-
-        // Adds animation to menu bars for SlickNav
-        $('a.slicknav_btn').click(function () {
-            if ($(this).hasClass('slicknav_icon_animation')) {
-                $(this).removeClass('slicknav_icon_animation');
-                $(this).addClass('slicknav_animation_reset');
-            } else {
-                $(this).addClass('slicknav_icon_animation');
-                $(this).removeClass('slicknav_animation_reset');
-            }
-        });
-
-        // Magnific - For Video Only
-        $('.popup-video').magnificPopup({
-            disableOn: 480,
-            type: 'iframe',
-            mainClass: 'mfp-fade',
-            removalDelay: 160,
-            preloader: false,
-            fixedContentPos: false,
-        });
-
         // Magnific - Images & Galleries
         var groups = {};
 
@@ -494,12 +453,47 @@
         //New code
 
         /* Mobile Nav Code */
-        $('#toggle-btn').click(function () {
+
+        // Click event for mobile-nav-search trigger
+        $('#mobile-search-trigger').click(function (event) {
+            console.log('1');
+            event.preventDefault();
+            // Close all mobile-nav-subnavs and set opacity to 0
+            $('#mobile-menu').removeClass('active');
+            $('#mobile-menu-trigger').removeClass('active');
+            $('.mobile-nav-primary-item').removeClass('expanded');
+            $('.mobile-nav-subnav-trigger').attr('aria-expanded', 'false');
+
+            $('body').removeClass('mobile-menu-active'); // Add a class to body for styling when the menu is active
+            $(this).attr('aria-expanded', 'true');
+            $('#mobile-search-form')
+                .css('display', 'flex')
+                .stop()
+                .fadeTo(400, 1);
+        });
+
+        // Click event for mobile nav .back-btn elements
+        $('.back-btn').click(function () {
+            // Remove the 'expanded' class from all .mobile-nav-primary-item elements
+            $('.mobile-nav-primary-item').removeClass('expanded');
+
+            // Set the aria-expanded attribute to 'false' for all .mobile-nav-subnav-trigger elements
+            $('.mobile-nav-subnav-trigger').attr('aria-expanded', 'false');
+        });
+
+        $('#mobile-menu-trigger').click(function () {
             $(this).toggleClass('active');
             $('#mobile-menu').toggleClass('active');
-            $('body').toggleClass('menu-active'); // Add a class to body for styling when the menu is active
+            $('body').toggleClass('mobile-menu-active'); // Add a class to body for styling when the menu is active
             $('.mobile-nav-subnav-trigger').attr('aria-expanded', false);
             $('.mobile-nav-primary-item').removeClass('expanded');
+            $('#mobile-search-trigger').attr('aria-expanded', 'false');
+            $('#mobile-search-form').fadeOut(400, function () {
+                // Remove inline style for opacity after fadeOut is complete
+                $(this).css('opacity', '');
+                // Set display to 'none' after removing opacity style
+                $(this).css('display', 'none');
+            });
         });
 
         $('.mobile-nav-subnav-trigger').click(function () {
@@ -520,16 +514,47 @@
 
         /* Desktop Nav Code */
 
-        // Click event for desktop-nav-subnav-trigger
-        $('.primary-item .desktop-nav-subnav-trigger').click(function (event) {
-            // Prevent the default behavior of the anchor link
+        // Click event for desktop-nav-search trigger
+        $('#desktop-search-trigger').click(function (event) {
+            console.log('1');
             event.preventDefault();
             // Close all desktop-nav-subnavs and set opacity to 0
             $('.desktop-nav-subnav').fadeOut(400, function () {
                 // Remove inline style for opacity after fadeOut is complete
                 $(this).css('opacity', '');
             });
+            $(this).attr('aria-expanded', 'true');
+            $('#desktop-search-form')
+                .css('display', 'flex')
+                .stop()
+                .fadeTo(400, 1);
 
+            // Ensure 'desktop-menu-active' class is set on the body
+            $('body').addClass('desktop-menu-active');
+        });
+
+        // Click event for desktop-nav-subnav-trigger
+        $('.primary-item .desktop-nav-subnav-trigger').click(function (event) {
+            console.log('2');
+            // Prevent the default behavior of the anchor link
+            event.preventDefault();
+            $('.desktop-nav-subnav-trigger').attr('aria-expanded', 'false');
+            // Close all desktop-nav-subnavs and set opacity to 0
+            $('.desktop-nav-subnav').fadeOut(400, function () {
+                // Remove inline style for opacity after fadeOut is complete
+                $(this).css('opacity', '');
+            });
+
+            $('#desktop-search-trigger').attr('aria-expanded', 'false');
+            $('#desktop-search-form').fadeOut(400, function () {
+                // Remove inline style for opacity after fadeOut is complete
+                $(this).css('opacity', '');
+                // Set display to 'none' after removing opacity style
+                $(this).css('display', 'none');
+            });
+
+            // Set the new value
+            $(this).attr('aria-expanded', 'true');
             // Toggle the display property to 'flex' and fade in the opacity for the clicked subnav
             var subnav = $(this).next('.desktop-nav-subnav');
             subnav.css('display', 'flex').stop().fadeTo(400, 1);
@@ -538,18 +563,42 @@
             $('body').addClass('desktop-menu-active');
         });
 
+        //code for both mobile and desktop navs
+
         // Check for clicks on the document
         $(document).on('click', function (event) {
+            console.log('3');
             // Check if the body has the class 'desktop-menu-active'
             if ($('body').hasClass('desktop-menu-active')) {
                 // Check if the clicked element is not a .desktop-nav-subnav or .desktop-nav-subnav-trigger
                 if (
                     !$(event.target).is(
-                        '.desktop-nav-subnav, .desktop-nav-subnav-trigger'
+                        '.desktop-nav-subnav, .desktop-nav-subnav-trigger, #desktop-search-trigger, #desktop-search-form, #desktop-search-form *, #mobile-search-trigger, mobile-search-form, mobile-search-form *'
                     )
                 ) {
+                    console.log('here');
                     // Fade out all .desktop-nav-subnavs and set opacity to 0
+                    $('.desktop-nav-subnav-trigger').attr(
+                        'aria-expanded',
+                        'false'
+                    );
                     $('.desktop-nav-subnav').fadeOut(400, function () {
+                        // Remove inline style for opacity after fadeOut is complete
+                        $(this).css('opacity', '');
+                        // Set display to 'none' after removing opacity style
+                        $(this).css('display', 'none');
+                    });
+
+                    $('#desktop-search-trigger').attr('aria-expanded', 'false');
+                    $('#desktop-search-form').fadeOut(400, function () {
+                        // Remove inline style for opacity after fadeOut is complete
+                        $(this).css('opacity', '');
+                        // Set display to 'none' after removing opacity style
+                        $(this).css('display', 'none');
+                    });
+
+                    $('#mobile-search-trigger').attr('aria-expanded', 'false');
+                    $('#mobile-search-form').fadeOut(400, function () {
                         // Remove inline style for opacity after fadeOut is complete
                         $(this).css('opacity', '');
                         // Set display to 'none' after removing opacity style
@@ -564,21 +613,172 @@
 
         // Scroll event to remove 'desktop-menu-active' class when the user scrolls
         $(window).scroll(function () {
+            console.log('4');
             // Check if the subnav is currently visible before fading out
             var desktopNavSubnav = $('.desktop-nav-subnav');
-            if (desktopNavSubnav.is(':visible')) {
+            var desktopSearchForm = $('#desktop-search-form');
+            var mobileSearchForm = $('#mobile-search-form');
+            if (
+                desktopNavSubnav.is(':visible') ||
+                desktopSearchForm.is(':visible') ||
+                mobileSearchForm.is(':visible')
+            ) {
                 // Remove 'desktop-menu-active' class from the body
                 $('body').removeClass('desktop-menu-active');
 
                 // Close all desktop-nav-subnavs and set opacity to 0
+                $('.desktop-nav-subnav-trigger').attr('aria-expanded', 'false');
                 desktopNavSubnav.fadeOut(400, function () {
                     // Remove inline style for opacity after fadeOut is complete
                     $(this).css('opacity', '');
                     // Set display to 'none' after removing opacity style
                     $(this).css('display', 'none');
                 });
+
+                $('#desktop-search-trigger').attr('aria-expanded', 'false');
+                desktopSearchForm.fadeOut(400, function () {
+                    // Remove inline style for opacity after fadeOut is complete
+                    $(this).css('opacity', '');
+                    // Set display to 'none' after removing opacity style
+                    $(this).css('display', 'none');
+                });
+
+                $('#mobile-search-trigger').attr('aria-expanded', 'false');
+                $('#mobile-search-form').fadeOut(400, function () {
+                    // Remove inline style for opacity after fadeOut is complete
+                    $(this).css('opacity', '');
+                    // Set display to 'none' after removing opacity style
+                    $(this).css('display', 'none');
+                });
+
+                console.log('here');
             }
         });
+
+        /* Content Box Overlay Code */
+        $('.image-content-box-overlay .content-left .overlay-link').click(
+            function (event) {
+                $(
+                    '.image-content-box-overlay .content-left .overlay-link'
+                ).attr('aria-expanded', false);
+                $(this).attr('aria-expanded', true);
+                // Get the id
+                var buttonID = $(this).data('id');
+                $('.image-content-box-overlay .content-right .content').attr(
+                    'aria-hidden',
+                    'true'
+                );
+                var contentElement = $(
+                    ".image-content-box-overlay .content-right .content[data-id='" +
+                        buttonID +
+                        "'"
+                );
+                contentElement.attr('aria-hidden', 'false');
+            }
+        );
+
+        //Toggles code
+
+        (function () {
+            console.log('here');
+            const toggles = document.querySelectorAll('.toggle');
+            console.log(toggles);
+            if (typeof toggles !== 'undefined' && toggles !== null) {
+                console.log('why');
+
+                Toggles(toggles);
+            } else {
+            }
+        })();
+
+        /**
+         * Default toggle functionality
+         *
+         * @param {Node} toggles Node list of all toggles
+         */
+        function Toggles(toggles) {
+            console.log('here dasd');
+
+            function toggleBehavior(e) {
+                e.preventDefault();
+
+                const $this = e.target;
+
+                // Control ARIA landmarks on open
+                if ($this.getAttribute('aria-expanded') === 'false') {
+                    $this.setAttribute('aria-expanded', 'true');
+                    $this.nextElementSibling.setAttribute(
+                        'aria-hidden',
+                        'false'
+                    );
+                } else if ($this.getAttribute('aria-expanded') === 'true') {
+                    $this.setAttribute('aria-expanded', 'false');
+                    $this.nextElementSibling.setAttribute(
+                        'aria-hidden',
+                        'true'
+                    );
+                }
+
+                // Control ARIA landmarks on close
+                if (
+                    $this.classList.contains('active') &&
+                    $this.getAttribute('aria-expanded') === 'true'
+                ) {
+                    $this.setAttribute('aria-expanded', 'false');
+                    $this.nextElementSibling.setAttribute(
+                        'aria-hidden',
+                        'true'
+                    );
+                }
+
+                // Check if toggle trigger has multiple children
+                let triggerText = $this.querySelector('.toggle__trigger-text');
+                if (triggerText !== null) {
+                    const revealedText = triggerText.dataset.show;
+                    const hiddenText = triggerText.dataset.hide;
+
+                    // Only run if data attributes found
+                    if (
+                        typeof revealedText !== 'undefined' &&
+                        typeof hiddenText !== 'undefined'
+                    ) {
+                        // Change value based on if toggle is active
+                        const toggleText = $this.classList.contains(
+                            'toggle--active'
+                        )
+                            ? triggerText.dataset.show
+                            : triggerText.dataset.hide;
+
+                        // Replace the current text value
+                        triggerText.textContent = toggleText;
+                    }
+                }
+
+                $this.classList.toggle('toggle--active');
+
+                const toggleBoxDisplay = $this.classList.contains(
+                    'toggle--active'
+                )
+                    ? 'block'
+                    : 'none';
+                $this.nextElementSibling.style.display = toggleBoxDisplay;
+            }
+            console.log(toggles);
+            Array.prototype.slice.call(toggles, 0).forEach(function (e) {
+                console.log('test');
+                const toggleBox = e.querySelector('.toggle__box');
+
+                // Check to make sure box is intended to be hidden on load
+                if (toggleBox.getAttribute('aria-hidden') !== 'false') {
+                    toggleBox.style.display = 'none';
+                }
+
+                e.querySelector('.toggle__trigger').addEventListener(
+                    'click',
+                    toggleBehavior
+                );
+            });
+        }
 
         /*---------------------------------------------------------
 			On Scroll
