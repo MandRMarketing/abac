@@ -1,5 +1,9 @@
 .standard-content {
     .container {
+        &::before,
+        &::after {
+            content: unset;
+        }
         display: flex;
         gap: 50px;
         @media screen and (max-width: $mobile-break) {
@@ -7,6 +11,47 @@
         }
         .column {
             flex: 1;
+        }
+    }
+
+    /* Group of buttons standard content styling */
+    &.button-group {
+        .container {
+            .column {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 35px;
+                a.button-lg,
+                a.button,
+                a.button-arrow {
+                    display: flex;
+                    align-items: center;
+                    max-width: calc(33.33% - 24px);
+                    flex: 1 0 calc(33.33% - 24px); /* Each item takes up 33.33% of the container width with margin */
+                }
+            }
+        }
+    }
+}
+@media (max-width: $mobile-break) {
+    .standard-content {
+        .container {
+            flex-direction: column;
+        }
+        /* Group of buttons standard content styling */
+        &.button-group {
+            .container {
+                .column {
+                    flex-direction: column;
+                    gap: 0px;
+                    a.button-lg,
+                    a.button,
+                    a.button-arrow {
+                        max-width: unset;
+                        flex: 1;
+                    }
+                }
+            }
         }
     }
 }

@@ -9,32 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://use.typekit.net/ebu8uhb.css" />
         <link href="style.css" rel="stylesheet" type="text/css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/all.min.js"></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/ScrollMagic.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/TweenMax.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/plugins/animation.gsap.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/plugins/animation.velocity.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/plugins/debug.addIndicators.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/plugins/jquery.ScrollMagic.min.js"
-        ></script>
         <title>Abraham Baldwin Agricultural College</title>
     </head>
     <body class="home">
@@ -95,7 +71,11 @@
                                 <option value="" disabled selected>
                                     Select
                                 </option>
-                                <option><a href="">Current Students</a></option>
+                                <option>
+                                    <a href="current-students.html"
+                                        >Current Students</a
+                                    >
+                                </option>
                                 <option>Future Students</option>
                                 <option>Faculty & Staff</option>
                             </select>
@@ -2248,6 +2228,7 @@
                     <img
                         class="secondary-page-banner__image"
                         src="assets/images/school-single-banner.png"
+                        alt="Students sitting together laughing"
                     />
                     <div class="secondary-page-banner__title">
                         <h1>School of Arts & Sciences</h1>
@@ -2255,8 +2236,11 @@
                 </section>
                 <!-- end secondary page banner -->
 
-                <!-- standard content -->
-                <section class="section-wrap standard-content" role="region">
+                <!-- button group -->
+                <section
+                    class="section-wrap standard-content button-group no-padding-bot"
+                    role="region"
+                >
                     <div class="container">
                         <div class="column">
                             <a href="#" class="button-lg"
@@ -2268,6 +2252,18 @@
                             <a href="#" class="button-lg"
                                 >Give to Arts & Sciences
                             </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- end button group -->
+
+                <!-- standard content -->
+                <section
+                    class="section-wrap standard-content no-padding-top"
+                    role="region"
+                >
+                    <div class="container">
+                        <div class="column">
                             <p>
                                 No matter where your life and career take you,
                                 critical thinking, writing, and research skills
@@ -2284,14 +2280,14 @@
                 </section>
                 <!-- end standard content -->
 
-                <!--start forty-sixty image-right section-->
+                <!--start full-width forty-sixty image-right section-->
                 <section
                     id="campus-life"
-                    class="forty-sixty forty-right image-right"
+                    class="full-width forty-sixty forty-right image-right"
                     role="region"
                     aria-label=""
                 >
-                    <div class="forty-sixty__left">
+                    <div class="full-width forty-sixty__left">
                         <h2>Message From the Dean</h2>
                         <p>
                             Welcome to the School of Arts and Sciences at
@@ -2305,14 +2301,14 @@
                         </p>
                         <a href="" class="button">Read More</a>
                     </div>
-                    <div class="forty-sixty__right">
+                    <div class="full-width forty-sixty__right">
                         <img
                             src="assets/images/dr-matthew-anderson.jpg"
                             alt="Dr. Matthew Anderson headshot"
                         />
                     </div>
                 </section>
-                <!-- end forty-sixty image-right section -->
+                <!-- end full-width forty-sixty image-right section -->
 
                 <!-- callout image section -->
                 <section class="section-wrap callout-image" role="region">
@@ -2569,7 +2565,7 @@
                     role="region"
                 >
                     <div class="container-large mobile-hide">
-                        <h2>Meet Our Students & Alumni</h2>
+                        <h2 class="text-center">Meet Our Students & Alumni</h2>
                         <div class="image-overlays__items">
                             <div class="image-overlays__items__item">
                                 <img
@@ -2665,7 +2661,7 @@
                         </div>
                     </div>
                     <div class="desktop-hide">
-                        <h2>Meet Our Students & Alumni</h2>
+                        <h2 class="text-center">Meet Our Students & Alumni</h2>
                         <div class="student-slider">
                             <div class="slick-slide">
                                 <img
@@ -2729,8 +2725,8 @@
                             </div>
                         </div>
                         <script>
-                            jQuery(window).load(function () {
-                                jQuery('.student-slider').slick({
+                            $(window).on('load', function (e) {
+                                $('.student-slider').slick({
                                     accessibility: true,
                                     //appendArrows: $(element),
                                     //appendDots: $(element),
@@ -2978,8 +2974,8 @@
                             </div>
                         </div>
                         <script>
-                            jQuery(window).load(function () {
-                                jQuery('.student-slider').slick({
+                            $(window).on('load', function (e) {
+                                $('.student-slider').slick({
                                     accessibility: true,
                                     //appendArrows: $(element),
                                     //appendDots: $(element),
@@ -3006,13 +3002,13 @@
                 </section>
                 <!-- end #faculty-spotlight -->
 
-                <!--start forty-sixty image-right section-->
+                <!--start full-width forty-sixty image-right section-->
                 <section
-                    class="forty-sixty image-right forty-left"
+                    class="full-width forty-sixty image-right forty-left"
                     role="region"
                     aria-label=""
                 >
-                    <div class="forty-sixty__left">
+                    <div class="full-width forty-sixty__left">
                         <h2>Thriving Together</h2>
                         <strong>
                             There’s more to the college experience than time in
@@ -3029,14 +3025,14 @@
                         <a href="" class="button">Stallion Athletics</a>
                         <a href="" class="button">Student Resources</a>
                     </div>
-                    <div class="forty-sixty__right">
+                    <div class="full-width forty-sixty__right">
                         <img
                             src="assets/images/hp-thriving-together.jpg"
                             alt="Two students sitting in a courtyard on campus laughing"
                         />
                     </div>
                 </section>
-                <!-- end forty-sixty image-right section -->
+                <!-- end full-width forty-sixty image-right section -->
 
                 <!-- Begin callout -->
                 <section

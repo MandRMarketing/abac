@@ -9,32 +9,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://use.typekit.net/ebu8uhb.css" />
         <link href="style.css" rel="stylesheet" type="text/css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/all.min.js"></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/ScrollMagic.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/TweenMax.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/plugins/animation.gsap.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/plugins/animation.velocity.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/plugins/debug.addIndicators.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="assets/js/src/plugins/jquery.ScrollMagic.min.js"
-        ></script>
+
         <title>Abraham Baldwin Agricultural College</title>
     </head>
     <body class="home">
@@ -91,11 +68,14 @@
                             <select
                                 title="information-select"
                                 id="information-select"
+                                onchange="location = this.value;"
                             >
-                                <option value="" disabled selected>
+                                <option value="/" disabled selected>
                                     Select
                                 </option>
-                                <option><a href="">Current Students</a></option>
+                                <option value="current-students.html">
+                                    Current Students
+                                </option>
                                 <option>Future Students</option>
                                 <option>Faculty & Staff</option>
                             </select>
@@ -2326,8 +2306,8 @@
                         </div>
                     </div>
                     <script>
-                        jQuery(window).load(function () {
-                            jQuery('.slick-slider').slick({
+                        $(window).on('load', function () {
+                            $('.slick-slider').slick({
                                 accessibility: true,
                                 //appendArrows: $(element),
                                 //appendDots: $(element),
@@ -2573,14 +2553,14 @@
                 </section>
                 <!-- end .full-width-card section -->
 
-                <!--start forty-sixty image-right section-->
+                <!--start full-width forty-sixty image-right section-->
                 <section
                     id="campus-life"
-                    class="forty-sixty image-right forty-left"
+                    class="full-width forty-sixty image-right forty-left"
                     role="region"
                     aria-label=""
                 >
-                    <div class="forty-sixty__left">
+                    <div class="full-width forty-sixty__left">
                         <h2>Thriving Together</h2>
                         <strong>
                             There’s more to the college experience than time in
@@ -2597,14 +2577,14 @@
                         <a href="" class="button">Stallion Athletics</a>
                         <a href="" class="button">Student Resources</a>
                     </div>
-                    <div class="forty-sixty__right">
+                    <div class="full-width forty-sixty__right">
                         <img
                             src="assets/images/hp-thriving-together.jpg"
                             alt="Two students sitting in a courtyard on campus laughing"
                         />
                     </div>
                 </section>
-                <!-- end forty-sixty image-right section -->
+                <!-- end full-width forty-sixty image-right section -->
 
                 <!-- Begin meet our students-->
                 <section
@@ -2772,8 +2752,8 @@
                             </div>
                         </div>
                         <script>
-                            jQuery(window).load(function () {
-                                jQuery('.student-slider').slick({
+                            $(window).on('load', function (e) {
+                                $('.student-slider').slick({
                                     accessibility: true,
                                     //appendArrows: $(element),
                                     //appendDots: $(element),

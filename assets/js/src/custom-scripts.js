@@ -263,165 +263,6 @@
             return false;
         });
 
-        // ---------------------------------------------------------
-        // Sidbar Navigation Toggle behavior
-        // ---------------------------------------------------------
-
-        function sidebarDropdownToggle() {
-            $('#side-navigation li').each(function () {
-                $(this)
-                    .has('ul')
-                    .addClass('child-dropdown')
-                    .append('<a href="#" class="dropdown-toggle"></a>')
-                    .children('ul')
-                    .hide();
-            });
-
-            $('#side-navigation li').on(
-                'click',
-                'a.dropdown-toggle',
-                function (e) {
-                    e.preventDefault();
-                    $(this)
-                        .toggleClass('active')
-                        .prev()
-                        .stop(true, true)
-                        .slideToggle('normal');
-                }
-            );
-        }
-
-        $(window).load(sidebarDropdownToggle());
-
-        // ---------------------------------------------------------
-        // Navigation behavior
-        // ---------------------------------------------------------
-
-        function navigationMenu() {
-            var menu = $('#navigation-content');
-            var $body = $('body');
-
-            // Switch focus to modal nav menu
-            function retainFocus() {
-                // Add focus to menu
-                menu.attr('tabindex', '0');
-                menu.focus();
-
-                // Remove tab-index from anything not modal
-                $('#main').children().attr('tabindex', '-1');
-                $('#header').attr('tabindex', '-1');
-
-                if ($body.hasClass('menu-open')) {
-                    menu.focus();
-                }
-            }
-
-            // Remove modal classes & attrs
-            function removeModal() {
-                if ($body.hasClass('menu-open')) {
-                    $body.removeClass('menu-open');
-
-                    // Remove aria-hidden attr
-                    $('#main').removeAttr('aria-hidden', 'true');
-                    $('#header').removeAttr('aria-hidden', 'true');
-                }
-            }
-
-            // Move focus to menu
-            function moveFocus() {
-                $(document).focus(function (event) {
-                    if ($body.hasClass('menu-open') && !menu.has(':focus')) {
-                        event.stopPropagation();
-                        menu.focus();
-                    }
-                });
-            }
-
-            // Restrict menu focus
-            function restrictFocus() {
-                // Return to first item on tab
-                $('#navigation-content a:last').bind(
-                    'focus keydown',
-                    function (e) {
-                        console.log('focus');
-
-                        if (
-                            e.keyCode === 9 &&
-                            !e.shiftKey &&
-                            $body.hasClass('menu-open')
-                        ) {
-                            e.preventDefault();
-                        }
-                    }
-                ); //
-
-                // Return to last item on tab
-                $('#navigation-content button.close').bind(
-                    'focus keydown',
-                    function (e) {
-                        if (
-                            e.shiftKey &&
-                            e.keyCode === 9 &&
-                            $body.hasClass('menu-open')
-                        ) {
-                            e.preventDefault();
-                        }
-                    }
-                );
-            }
-
-            // Open menu actions
-            // $('#main-menu, #scroll-menu').click(function(){
-            // 	$body.addClass('menu-open');
-
-            // 	// Add aria-hidden attr
-            // 	$('#main').attr('aria-hidden', 'true');
-            // 	$('#header').attr('aria-hidden', 'true');
-
-            // 	retainFocus();
-            // 	moveFocus();
-            // 	restrictFocus();
-            // });
-
-            $('#scroll-menu').click(function () {
-                $('#navigation-menu').removeAttr('aria-hidden', 'true');
-                $('#navigation-menu').attr('aria-expanded', 'true');
-
-                var sibs = $('#navigation-menu').siblings('.menu-tab');
-                sibs.removeAttr('aria-expanded', 'true');
-                sibs.attr('aria-hidden', 'true');
-            });
-
-            // Close menu actions
-            $('.modal-overlay, button.close').click(function () {
-                removeModal();
-            });
-
-            // Close menu keyboard command
-            $(document).keyup(function (e) {
-                if (e.keyCode === 27) {
-                    removeModal();
-                }
-            });
-
-            // Open menu tabs
-            $('#main-menu li a').click(function () {
-                var aria = $(this).attr('aria-controls');
-                var tab = $('#' + aria);
-                var hidden = tab.attr('aria-hidden');
-                var sibs = tab.siblings('.menu-tab');
-
-                if (hidden === 'true') {
-                    tab.removeAttr('aria-hidden', 'true');
-                    tab.attr('aria-expanded', 'true');
-                    sibs.removeAttr('aria-expanded', 'true');
-                    sibs.attr('aria-hidden', 'true');
-                }
-            });
-        }
-
-        $(window).load(navigationMenu());
-
         /*---------------------------------------------------------
 			Javascript font size increase
 		----------------------------------------------------------*/
@@ -456,7 +297,6 @@
 
         // Click event for mobile-nav-search trigger
         $('#mobile-search-trigger').click(function (event) {
-            console.log('1');
             event.preventDefault();
             // Close all mobile-nav-subnavs and set opacity to 0
             $('#mobile-menu').removeClass('active');
@@ -516,7 +356,6 @@
 
         // Click event for desktop-nav-search trigger
         $('#desktop-search-trigger').click(function (event) {
-            console.log('1');
             event.preventDefault();
             // Close all desktop-nav-subnavs and set opacity to 0
             $('.desktop-nav-subnav').fadeOut(400, function () {
@@ -535,7 +374,6 @@
 
         // Click event for desktop-nav-subnav-trigger
         $('.primary-item .desktop-nav-subnav-trigger').click(function (event) {
-            console.log('2');
             // Prevent the default behavior of the anchor link
             event.preventDefault();
             $('.desktop-nav-subnav-trigger').attr('aria-expanded', 'false');
@@ -567,7 +405,6 @@
 
         // Check for clicks on the document
         $(document).on('click', function (event) {
-            console.log('3');
             // Check if the body has the class 'desktop-menu-active'
             if ($('body').hasClass('desktop-menu-active')) {
                 // Check if the clicked element is not a .desktop-nav-subnav or .desktop-nav-subnav-trigger
@@ -576,7 +413,6 @@
                         '.desktop-nav-subnav, .desktop-nav-subnav-trigger, #desktop-search-trigger, #desktop-search-form, #desktop-search-form *, #mobile-search-trigger, mobile-search-form, mobile-search-form *'
                     )
                 ) {
-                    console.log('here');
                     // Fade out all .desktop-nav-subnavs and set opacity to 0
                     $('.desktop-nav-subnav-trigger').attr(
                         'aria-expanded',
@@ -613,7 +449,6 @@
 
         // Scroll event to remove 'desktop-menu-active' class when the user scrolls
         $(window).scroll(function () {
-            console.log('4');
             // Check if the subnav is currently visible before fading out
             var desktopNavSubnav = $('.desktop-nav-subnav');
             var desktopSearchForm = $('#desktop-search-form');
@@ -650,8 +485,6 @@
                     // Set display to 'none' after removing opacity style
                     $(this).css('display', 'none');
                 });
-
-                console.log('here');
             }
         });
 
@@ -680,12 +513,8 @@
         //Toggles code
 
         (function () {
-            console.log('here');
             const toggles = document.querySelectorAll('.toggle');
-            console.log(toggles);
             if (typeof toggles !== 'undefined' && toggles !== null) {
-                console.log('why');
-
                 Toggles(toggles);
             } else {
             }
@@ -697,8 +526,6 @@
          * @param {Node} toggles Node list of all toggles
          */
         function Toggles(toggles) {
-            console.log('here dasd');
-
             function toggleBehavior(e) {
                 e.preventDefault();
 
@@ -763,9 +590,7 @@
                     : 'none';
                 $this.nextElementSibling.style.display = toggleBoxDisplay;
             }
-            console.log(toggles);
             Array.prototype.slice.call(toggles, 0).forEach(function (e) {
-                console.log('test');
                 const toggleBox = e.querySelector('.toggle__box');
 
                 // Check to make sure box is intended to be hidden on load

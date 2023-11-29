@@ -107,7 +107,9 @@ input[type='button'],
     }
 }
 
-.button {
+.button,
+.button-lg,
+.button-arrow {
     display: inline-block;
     margin-bottom: 24px; /* match p margin-bottom inside typography.scss */
 }
