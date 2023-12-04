@@ -23,6 +23,7 @@
                 font-size: 18px;
                 font-family: 'bookmania', serif;
                 font-weight: 400;
+                text-decoration: none;
             }
             label {
                 color: white;
@@ -224,6 +225,7 @@
                 }
             }
             .desktop-nav-subnav-trigger {
+                text-decoration: none;
                 position: relative;
                 color: $textColor;
                 height: 100%;

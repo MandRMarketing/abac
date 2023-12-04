@@ -24,7 +24,8 @@ input[type='button'],
     background-size: 100% 200%;
     transition: background-position 0.3s;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-position: 0 100%;
     }
     &::after {
@@ -59,7 +60,8 @@ input[type='button'],
     background-position: 100%;
     transition: background-position 0.3s;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-position: 0% 0;
     }
     &::after {
@@ -85,7 +87,8 @@ input[type='button'],
     padding-right: 25px;
     cursor: pointer;
     text-transform: capitalize;
-    &:hover {
+    &:hover,
+    &:focus {
         &::after {
             right: 0px;
             filter: brightness(1);
@@ -112,6 +115,11 @@ input[type='button'],
 .button-arrow {
     display: inline-block;
     margin-bottom: 24px; /* match p margin-bottom inside typography.scss */
+    text-decoration: none;
+    &.block {
+        display: block;
+        width: fit-content;
+    }
 }
 
 .mobile-button {

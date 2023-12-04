@@ -135,9 +135,11 @@ h6 {
     text-align: center;
 }
 
-.green-bg {
+.green-bg,
+.dark-green-bg {
     p,
     a,
+    strong,
     h1,
     h2,
     h3,
@@ -233,11 +235,15 @@ h6 {
 --------------------------------------------- */
 
 a {
-    color: #fff;
-    text-decoration: none;
+    color: $green;
+    text-decoration: underline;
 
     img {
         vertical-align: bottom;
+    }
+
+    &.block {
+        margin: 0 0 16px;
     }
 }
 
@@ -248,6 +254,7 @@ p {
 
 strong {
     font-weight: 700;
+    margin: 0 0 16px;
 }
 
 blockquote,

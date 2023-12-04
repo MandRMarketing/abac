@@ -1,12 +1,5 @@
 // basic page section-wrap padding
 .section-wrap {
-    &.green-bg {
-        background-color: $green;
-    }
-
-    &.offwhite-bg {
-        background-color: $offWhite;
-    }
     // last item before footer has padding below
     &:last-child {
         padding-bottom: 64px;

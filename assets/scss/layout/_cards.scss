@@ -78,4 +78,26 @@
         margin-top: 50px;
         gap: 25px;
     }
+    &.icons {
+        .horizontal-cards__cards {
+            gap: 25px;
+            .horizontal-cards__cards__card {
+                gap: 15px;
+                width: 100%;
+                height: unset;
+                .badge-icon {
+                    @media screen and (min-width: $extra-break) {
+                        margin-top: -70px;
+                    }
+                    height: 96px;
+                    width: 77px;
+                }
+                h3 {
+                    color: $green;
+                }
+            }
+        }
+        .horizontal-cards__content {
+        }
+    }
 }
