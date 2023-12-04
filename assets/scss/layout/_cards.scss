@@ -4,6 +4,28 @@
     background-repeat: no-repeat;
     background-position: bottom;
 
+    .horizontal-cards__cards__card {
+        height: 273px;
+        width: 372px;
+        p {
+            display: block;
+            color: $green;
+            font-size: 34px;
+            text-align: center;
+            font-family: 'bookmania', serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        strong {
+            display: block;
+            color: $green;
+            font-size: 79px;
+            font-family: 'bookmania', serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+
     @media screen and (min-width: $extra-break) {
         background-size: cover;
         padding-top: 600px;
@@ -38,31 +60,14 @@
         &__card {
             background: white;
             border-bottom: 8px solid $primary-yellow;
-            height: 273px;
-            width: 372px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
             padding: 30px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            strong {
-                display: block;
-                color: $green;
-                font-size: 79px;
-                font-family: 'bookmania', serif;
-                font-weight: 400;
-                font-style: normal;
-            }
-            p {
-                display: block;
-                color: $green;
-                font-size: 34px;
-                text-align: center;
-                font-family: 'bookmania', serif;
-                font-weight: 400;
-                font-style: normal;
-            }
+            flex: 1;
+            align-self: stretch;
         }
         @media screen and (max-width: $extra-break) {
             flex-direction: column;
@@ -94,6 +99,46 @@
                 }
                 h3 {
                     color: $green;
+                }
+            }
+        }
+        .horizontal-cards__content {
+        }
+    }
+    &.borders {
+        .horizontal-cards__cards {
+            gap: 25px;
+            .horizontal-cards__cards__card {
+                position: relative;
+                padding: 0;
+                gap: 25px;
+                width: 100%;
+                height: unset;
+                border: 2px solid $primary-yellow;
+                img {
+                    height: 50%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                h3 {
+                    text-align: center;
+                    color: $green;
+                }
+                &::after {
+                    content: '';
+                    opacity: 0;
+                    background: $primary-yellow;
+                    height: 6px;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    transition: 0.25s ease;
+                }
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
                 }
             }
         }
