@@ -11,10 +11,9 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/all.min.js"></script>
-
         <title>Abraham Baldwin Agricultural College</title>
     </head>
-    <body class="home">
+    <body class="secondary-page">
         <a
             class="skip-content"
             href="#main"
@@ -68,13 +67,14 @@
                             <select
                                 title="information-select"
                                 id="information-select"
-                                onchange="location = this.value;"
                             >
-                                <option value="/" disabled selected>
+                                <option value="" disabled selected>
                                     Select
                                 </option>
-                                <option value="current-students.html">
-                                    Current Students
+                                <option>
+                                    <a href="current-students.html"
+                                        >Current Students</a
+                                    >
                                 </option>
                                 <option>Future Students</option>
                                 <option>Faculty & Staff</option>
@@ -133,9 +133,7 @@
                                     class="desktop-nav-subnav-item"
                                     role="presentation"
                                 >
-                                    <a href="academics-home.html"
-                                        >Academics Home</a
-                                    >
+                                    <a href="#">Academics Home</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
@@ -173,7 +171,7 @@
                                     class="desktop-nav-subnav-item"
                                     role="presentation"
                                 >
-                                    <a href="school-single.html"
+                                    <a href="#"
                                         >School of Agriculture & Natural
                                         Resources
                                     </a>
@@ -182,15 +180,13 @@
                                     class="desktop-nav-subnav-item"
                                     role="presentation"
                                 >
-                                    <a href="school-single.html"
-                                        >School of Arts & Sciences</a
-                                    >
+                                    <a href="#">School of Arts & Sciences</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
                                     role="presentation"
                                 >
-                                    <a href="school-single.html">
+                                    <a href="#">
                                         School of Nursing and Health Sciences
                                     </a>
                                 </li>
@@ -198,9 +194,7 @@
                                     class="desktop-nav-subnav-item"
                                     role="presentation"
                                 >
-                                    <a href="school-single.html"
-                                        >Stafford School of Business</a
-                                    >
+                                    <a href="#">Stafford School of Business</a>
                                 </li>
                             </ul>
                             <ul
@@ -508,9 +502,7 @@
                                     class="desktop-nav-subnav-item"
                                     role="presentation"
                                 >
-                                    <a href="admissions-home.html"
-                                        >Admissions Home</a
-                                    >
+                                    <a href="#">Admissions Home</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
@@ -1202,7 +1194,7 @@
                                         class="mobile-nav-subnav-item"
                                         role="presentation"
                                     >
-                                        <a href="school-single.html"
+                                        <a href="#"
                                             >School of Agriculture & Natural
                                             Resources
                                         </a>
@@ -1211,7 +1203,7 @@
                                         class="mobile-nav-subnav-item"
                                         role="presentation"
                                     >
-                                        <a href="school-single.html"
+                                        <a href="#"
                                             >School of Arts & Sciences
                                         </a>
                                     </li>
@@ -1219,7 +1211,7 @@
                                         class="mobile-nav-subnav-item"
                                         role="presentation"
                                     >
-                                        <a href="school-single.html"
+                                        <a href="#"
                                             >School of Nursing and Health
                                             Sciences
                                         </a>
@@ -1228,7 +1220,7 @@
                                         class="mobile-nav-subnav-item"
                                         role="presentation"
                                     >
-                                        <a href="school-single.html"
+                                        <a href="#"
                                             >Stafford School of Business</a
                                         >
                                     </li>
@@ -2228,183 +2220,327 @@
         <div id="main" class="" role="main">
             <!-- Main Content Body -->
             <div class="primary-content-wrap">
-                <!-- <div id="trigger"></div> -->
-                <!-- Beginning of homepage slider -->
+                <!-- secondary page banner -->
+                <section class="secondary-page-banner" role="region">
+                    <div class="secondary-page-banner__content container">
+                        <h1>Becoming a Stallion</h1>
+                    </div>
+                </section>
+                <!-- end secondary page banner -->
+
+                <!-- standard content -->
                 <section
-                    id="slider-wrapper"
-                    class="slider-wrapper front-slider-wrapper"
-                    aria-label="Sliding content area for Abraham Baldwin Agricultural College."
+                    class="section-wrap standard-content no-padding-bot"
+                    role="region"
                 >
-                    <div class="slick-slider">
-                        <div
-                            class="slick-slide front-page-slide"
-                            style="
-                                background: url('assets/images/hp-slider-1.jpg')
-                                    no-repeat center;
-                                background-size: cover;
-                                display: block;
-                                width: 100%;
-                                height: 636px;
-                                min-height: 1;
-                            "
-                        >
-                            <div class="slick-caption abs-center">
-                                <h1 class="slider-caption-header">
-                                    Community for
-                                    <strong><em>Learning.</em></strong>
-                                    Community for
-                                    <strong><em>Life.</em></strong>
-                                </h1>
-                                <a href="#" class="button slider-button"
-                                    >Apply For Admissions</a
-                                >
-                            </div>
-                        </div>
-                        <div
-                            class="slick-slide front-page-slide"
-                            style="
-                                background: url('assets/images/hp-slider-1.jpg')
-                                    no-repeat center;
-                                background-size: cover;
-                                display: block;
-                                width: 100%;
-                                height: 636px;
-                                min-height: 1;
-                            "
-                        >
-                            <div class="slick-caption abs-center">
-                                <h1 class="slider-caption-header">
-                                    Community for
-                                    <strong><em>Learning.</em></strong>
-                                    Community for
-                                    <strong><em>Life.</em></strong>
-                                </h1>
-                                <a href="#" class="button slider-button"
-                                    >Apply For Admissions</a
-                                >
-                            </div>
-                        </div>
-                        <div
-                            class="slick-slide front-page-slide"
-                            style="
-                                background: url('assets/images/hp-slider-1.jpg')
-                                    no-repeat center;
-                                background-size: cover;
-                                display: block;
-                                width: 100%;
-                                height: 636px;
-                                min-height: 1;
-                            "
-                        >
-                            <div class="slick-caption abs-center">
-                                <h1 class="slider-caption-header">
-                                    Community for
-                                    <strong><em>Learning.</em></strong>
-                                    Community for
-                                    <strong><em>Life.</em></strong>
-                                </h1>
-                                <a href="#" class="button slider-button"
-                                    >Apply For Admissions</a
-                                >
-                            </div>
+                    <div class="container">
+                        <div class="column">
+                            <h2 class="text-center">ABAC Admissions</h2>
+                            <p>
+                                Choosing the right college is a major decision.
+                                Finding the right fit is important to your
+                                success, both academically and as a member of a
+                                community. At ABAC, we provide a unique
+                                experience: a thriving and engaged campus that
+                                encourages hands-on learning and values each
+                                student as an individual.
+                            </p>
                         </div>
                     </div>
-                    <script>
-                        $(window).on('load', function () {
-                            $('.slick-slider').slick({
-                                accessibility: true,
-                                //appendArrows: $(element),
-                                //appendDots: $(element),
-                                arrows: false,
-                                autoplay: false,
-                                autoplaySpeed: 5000,
-                                dots: true,
-                                //dotsClass: 'slick-dots',
-                                //draggable: true,
-                                //easing: 'linear',
-                                //edgeFriction: 0.35,
-                                fade: false,
-                                slide: '.slick-slide',
-                                speed: 800,
-                                //swipe: true,
-                                //swipeToSlide: false,
-                                //touchMove: true,
-                                //touchThreshold: 5,
-                                //waitForAnimate: true
-                            });
-                        });
-                    </script>
                 </section>
-                <section class="front-slider-footer-content section-wrap">
-                    <h3>
-                        Abraham Baldwin Agricultural College offers a unique and
-                        intimate experience-based learning environment, where
-                        students are challenged to recognize their potential and
-                        push the limits of what’s possible.
-                        <strong><em>Pursue your future at ABAC!</em></strong>
-                    </h3>
-                </section>
-                <!-- Begin universit stats section -->
+                <!-- end standard content -->
+
+                <!-- start cards section-->
                 <section
-                    id="university-stats"
-                    class="horizontal-cards section-wrap"
+                    class="horizontal-cards icons section-wrap"
                     role="region"
                     aria-label="Beginning of content body"
                 >
                     <div class="container-large">
                         <div class="horizontal-cards__cards">
                             <div class="horizontal-cards__cards__card">
-                                <strong
-                                    class="horizontal-cards__cards__card__top-text"
-                                    >26</strong
-                                >
-                                <p
-                                    class="horizontal-cards__cards__card__bot-text"
-                                >
-                                    Academic Programs
+                                <div class="badge-icon">
+                                    <img
+                                        src="assets/images/campus-map.svg"
+                                        alt="Instagram logo"
+                                    />
+                                </div>
+                                <h3>A Thriving Campus</h3>
+                                <p>
+                                    With more than 50 student organizations,
+                                    intercollegiate and recreational sports, and
+                                    a calendar jam-packed with student events,
+                                    Stallions remain engaged from admission to
+                                    graduation.
                                 </p>
+                                <a class="button" href="#">Stallion Life</a>
                             </div>
                             <div class="horizontal-cards__cards__card">
-                                <strong
-                                    class="horizontal-cards__cards__card__top-text"
-                                    >8,200+</strong
-                                >
-                                <p
-                                    class="horizontal-cards__cards__card__bot-text"
-                                >
-                                    Students
+                                <div class="badge-icon">
+                                    <img
+                                        src="assets/images/academic-opportunity.svg"
+                                        alt="Instagram logo"
+                                    />
+                                </div>
+                                <h3>Academic Opportunity</h3>
+                                <p>
+                                    Our name may say “Agriculture,” but our
+                                    story is much bigger than that. With 26
+                                    degrees, minors, and certificates, ABAC
+                                    offers small classes and individual
+                                    attention to help students succeed.
                                 </p>
+                                <a class="button" href="#"
+                                    >Degrees & Programs</a
+                                >
                             </div>
                             <div class="horizontal-cards__cards__card">
-                                <strong
-                                    class="horizontal-cards__cards__card__top-text"
-                                    >18:1</strong
-                                >
-                                <p
-                                    class="horizontal-cards__cards__card__bot-text"
-                                >
-                                    Student to Faculty Ratio
+                                <div class="badge-icon">
+                                    <img
+                                        src="assets/images/affordable-education.svg"
+                                        alt="Instagram logo"
+                                    />
+                                </div>
+                                <h3>Affordable Education</h3>
+                                <p>
+                                    We pride ourselves on affordability. Between
+                                    scholarships, financial aid, and other
+                                    affordability initiatives, we see more than
+                                    half of all ABAC graduates leaving college
+                                    with no student debt.
                                 </p>
+                                <a class="button" href="#">Affordability</a>
                             </div>
-                            <div class="horizontal-cards__cards__card">
-                                <strong
-                                    class="horizontal-cards__cards__card__top-text"
-                                    >>50%</strong
-                                >
-                                <p
-                                    class="horizontal-cards__cards__card__bot-text"
-                                >
-                                    of graduates finish debt-free
-                                </p>
-                            </div>
-                        </div>
-                        <div class="horizontal-cards__content">
-                            <a href="" class="button">Apply For Admissions</a>
-                            <a href="" class="button">Degree Programs</a>
                         </div>
                     </div>
                 </section>
-                <!-- end university stats -->
+                <!-- end cards section-->
+
+                <!--start full-width forty-sixty image-right section-->
+                <section
+                    class="full-width forty-sixty image-right forty-left"
+                    role="region"
+                    aria-label=""
+                >
+                    <div class="full-width forty-sixty__left offwhite-bg">
+                        <h2>Check Your Application Status</h2>
+                        <p>
+                            If you’ve already applied for admission and
+                            submitted all
+                            <a href="#">required documentation</a>, follow the
+                            link below to check the status of your application.
+                        </p>
+                        <a href="#" class="button">Check Application Status</a>
+                    </div>
+                    <div class="full-width forty-sixty__right">
+                        <img
+                            src="assets/images/admissions.png"
+                            alt="student using laptop"
+                        />
+                    </div>
+                </section>
+                <!-- end full-width forty-sixty image-right section -->
+
+                <!-- standard content -->
+                <section
+                    class="section-wrap standard-content no-padding-bot"
+                    role="region"
+                >
+                    <div class="container">
+                        <div class="column">
+                            <h2 class="text-center">Information For…</h2>
+                        </div>
+                    </div>
+                </section>
+                <!-- end standard content -->
+
+                <!-- start cards section-->
+                <section
+                    class="horizontal-cards section-wrap no-padding-top"
+                    role="region"
+                    aria-label="Beginning of content body"
+                >
+                    <div class="container-large">
+                        <div class="horizontal-cards__cards">
+                            <div class="horizontal-cards__cards__card">
+                                <img
+                                    src="assets/images/admissions-2.jpg"
+                                    alt="students heading to class on campus"
+                                />
+                                <h3>Prospective Students</h3>
+                                <p>
+                                    Still learning about ABAC? Ready to start
+                                    your application and get started down the
+                                    path towards a quality education in a
+                                    setting unlike any other?
+                                </p>
+                                <p>
+                                    Visit our Prospective Students page to find
+                                    more information to help you make the right
+                                    choice – and to help you apply once you’ve
+                                    made your choice!
+                                </p>
+                                <a class="button" href="#"
+                                    >Prospective Students
+                                </a>
+                            </div>
+                            <div class="horizontal-cards__cards__card">
+                                <img
+                                    src="assets/images/admissions-1.jpg"
+                                    alt="students heading to class on campus"
+                                />
+                                <h3>Prospective Students</h3>
+                                <p>
+                                    Still learning about ABAC? Ready to start
+                                    your application and get started down the
+                                    path towards a quality education in a
+                                    setting unlike any other?
+                                </p>
+                                <p>
+                                    Visit our Prospective Students page to find
+                                    more information to help you make the right
+                                    choice – and to help you apply once you’ve
+                                    made your choice!
+                                </p>
+                                <a class="button" href="#"
+                                    >Prospective Students
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end cards section-->
+
+                <!--start full-width forty-sixty image-right section-->
+                <section
+                    class="full-width forty-sixty image-right forty-left"
+                    role="region"
+                    aria-label=""
+                >
+                    <div class="full-width forty-sixty__left offwhite-bg">
+                        <h2>Check Your Application Status</h2>
+                        <p>
+                            If you’ve already applied for admission and
+                            submitted all
+                            <a href="#">required documentation</a>, follow the
+                            link below to check the status of your application.
+                        </p>
+                        <a href="#" class="button">Check Application Status</a>
+                    </div>
+                    <div class="full-width forty-sixty__right">
+                        <img
+                            src="assets/images/admissions.png"
+                            alt="student using laptop"
+                        />
+                    </div>
+                </section>
+                <!-- end full-width forty-sixty image-right section -->
+
+                <!-- standard content -->
+                <section
+                    class="section-wrap standard-content no-padding-bot"
+                    role="region"
+                >
+                    <div class="container">
+                        <div class="column">
+                            <h2 class="text-center">
+                                We’re Here to Help: Meet Our Staff
+                            </h2>
+                            <p>
+                                Every member of the Enrollment Management staff
+                                is dedicated to helping students get started on
+                                their educational journey at ABAC. Meet our
+                                friendly team below, and reach out if you have
+                                any questions.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- end standard content -->
+
+                <!-- start cards section-->
+                <section
+                    class="section-wrap horizontal-cards borders no-padding-top"
+                    role="region"
+                    aria-label="Beginning of content body"
+                >
+                    <div class="container-large">
+                        <div class="horizontal-cards__cards">
+                            <div class="horizontal-cards__cards__card">
+                                <img
+                                    src="assets/images/spencer-stewart.jpg"
+                                    alt="Spencer Stewart headshot"
+                                />
+                                <h3>Spencer Stewart</h3>
+                                <h4>Director of Enrollment Management</h4>
+                                <h6>Academic and Student Affairs</h6>
+                                <a class="button-arrow" href="#">Contact</a>
+                            </div>
+                            <div class="horizontal-cards__cards__card">
+                                <img
+                                    src="assets/images/lori-haddock.jpg"
+                                    alt="Lori Haddock headshot"
+                                />
+                                <h3>Lori Haddock</h3>
+                                <h4>Director of Scholarships</h4>
+                                <h6>Academic and Student Affairs</h6>
+                                <a class="button-arrow" href="#">Contact</a>
+                            </div>
+                            <div class="horizontal-cards__cards__card">
+                                <img
+                                    src="assets/images/sunny-ross-sparrow.jpg"
+                                    alt="Sunny Ross Sparrow headhsot"
+                                />
+                                <h3>Sunny Ross Sparrow</h3>
+                                <h4>
+                                    Assistant Director of Enrollment Management
+                                </h4>
+                                <a class="button-arrow" href="#">Contact</a>
+                            </div>
+                            <div class="horizontal-cards__cards__card">
+                                <img
+                                    src="assets/images/robert-thompson.jpg"
+                                    alt="Robert Thomson headshot"
+                                />
+                                <h3>Robert Thompson</h3>
+                                <h4>
+                                    Assistant Director of Enrollment Management
+                                </h4>
+                                <a class="button-arrow" href="#">Contact</a>
+                            </div>
+                            <div class="horizontal-cards__cards__card">
+                                <img
+                                    src="assets/images/griffin-bates.jpg"
+                                    alt="Griffin Bates headshot"
+                                />
+                                <h3>Griffin Bates</h3>
+                                <h4>Enrollment Counselor</h4>
+                                <h6>Academic and Student Affairs</h6>
+                                <a class="button-arrow" href="#">Contact</a>
+                            </div>
+                            <div class="horizontal-cards__cards__card">
+                                <img
+                                    src="assets/images/katie-spooner.jpg"
+                                    alt="Katie Spooner headshot"
+                                />
+                                <h3>Katie Spooner</h3>
+                                <h4>Enrollment Counselor</h4>
+                                <a class="button-arrow" href="#">Contact</a>
+                            </div>
+                            <div class="horizontal-cards__cards__card">
+                                <img
+                                    src="assets/images/kaitlyn-hunt.jpg"
+                                    alt="Kaitlyn Hunt headshot"
+                                />
+                                <h3>Kaitlyn Hunt</h3>
+                                <h4>Enrollment Counselor</h4>
+                                <h6>Academic and Student Affairs</h6>
+                                <a class="button-arrow" href="#">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end cards section-->
 
                 <!-- Begin call to action -->
                 <section
@@ -2420,472 +2556,20 @@
                             />
                         </div>
                         <div class="callout__container right">
-                            <h2>Become an ABAC Stallion!</h2>
+                            <h2>Request More Information</h2>
                             <p>
-                                Are you ready to join our thriving and engaged
-                                community? No matter where your interests lie,
-                                there’s a place for you at ABAC. Stallions
-                                graduate with a broad base of experience, from
-                                essential foundations to innovative new fields
-                                of study.
+                                Tell us about you, and we’ll tell you about us!
+                                Click below to request more information about
+                                ABAC’s admissions requirements, academic
+                                programs, student life, and more!
                             </p>
-                            <a href="" class="button">Visit Us</a>
-                            <a href="" class="button">Apply Today</a>
+                            <a class="button" href="#"
+                                >Request More Information
+                            </a>
                         </div>
                     </div>
                 </section>
                 <!-- end call to action -->
-
-                <!-- Begin full-width card section -->
-                <section
-                    id="programs"
-                    class="image-content-box-overlay section-wrap"
-                    role="region"
-                >
-                    <div class="container-large">
-                        <div class="content-left">
-                            <h3>Degrees to Build Your Career On</h3>
-                            <p>
-                                With 26 academic program offerings, including
-                                two- and four-year degrees and certificates,
-                                ABAC has a program of study to help you
-                                demonstrate your excellence.
-                            </p>
-                            <a
-                                href="school-single.html"
-                                class="overlay-link"
-                                aria-expanded="true"
-                                data-id="0"
-                            >
-                                School of Agriculture and Natural Resources
-                            </a>
-                            <a
-                                href="school-single.html"
-                                class="overlay-link"
-                                aria-expanded="false"
-                                data-id="1"
-                            >
-                                School of Arts & Sciences
-                            </a>
-                            <a
-                                href="school-single.html"
-                                class="overlay-link"
-                                aria-expanded="false"
-                                data-id="2"
-                            >
-                                School of Nursing and Health Sciences
-                            </a>
-                            <a
-                                href="school-single.html"
-                                class="overlay-link"
-                                aria-expanded="false"
-                                data-id="3"
-                            >
-                                Stafford School of Business
-                            </a>
-                        </div>
-                        <div class="content-right">
-                            <div
-                                class="content"
-                                aria-hidden="false"
-                                data-id="0"
-                            >
-                                <h4>
-                                    School of Agriculture and Natural Resources
-                                    Programs
-                                </h4>
-                                <ul>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                </ul>
-                                <a href="" class="button">Find Your Program</a>
-                            </div>
-                            <div class="content" aria-hidden="true" data-id="1">
-                                <h4>School of Arts & Sciences</h4>
-                                <ul>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                </ul>
-                                <a href="" class="button">Find Your Program</a>
-                            </div>
-                            <div class="content" aria-hidden="true" data-id="2">
-                                <h4>School of Nursing and Health Sciences</h4>
-                                <ul>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                </ul>
-                                <a href="" class="button">Find Your Program</a>
-                            </div>
-                            <div class="content" aria-hidden="true" data-id="3">
-                                <h4>Stafford School of Business</h4>
-                                <ul>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                    <li>Program</li>
-                                </ul>
-                                <a href="" class="button">Find Your Program</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- end .full-width-card section -->
-
-                <!--start full-width forty-sixty image-right section-->
-                <section
-                    id="campus-life"
-                    class="full-width forty-sixty image-right forty-left"
-                    role="region"
-                    aria-label=""
-                >
-                    <div class="full-width forty-sixty__left offwhite-bg">
-                        <h2>Thriving Together</h2>
-                        <strong>
-                            There’s more to the college experience than time in
-                            the classroom.
-                        </strong>
-                        <br />
-                        <p>
-                            With robust campus life programs, a host of clubs
-                            and organizations, and resources to help every
-                            student find their way to graduation, ABAC Stallions
-                            are a community that thrives together.
-                        </p>
-                        <a href="" class="button">Stallion Life</a>
-                        <a href="" class="button">Stallion Athletics</a>
-                        <a href="" class="button">Student Resources</a>
-                    </div>
-                    <div class="full-width forty-sixty__right">
-                        <img
-                            src="assets/images/hp-thriving-together.jpg"
-                            alt="Two students sitting in a courtyard on campus laughing"
-                        />
-                    </div>
-                </section>
-                <!-- end full-width forty-sixty image-right section -->
-
-                <!-- Begin meet our students-->
-                <section
-                    class="section-wrap image-overlays offwhite-bg"
-                    role="region"
-                >
-                    <div class="container-large mobile-hide">
-                        <h2>Meet Our Students & Alumni</h2>
-                        <div class="image-overlays__items">
-                            <div class="image-overlays__items__item">
-                                <img
-                                    src="assets/images/hp-student-1.jpg"
-                                    alt="picture of student"
-                                />
-                                <div
-                                    class="image-overlays__items__item__primary-content"
-                                >
-                                    <h3>Student Name</h3>
-                                    <strong>Class of 2022</strong>
-                                    <em>Major</em>
-                                </div>
-                                <div
-                                    class="image-overlays__items__item__toggle-content"
-                                >
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat
-                                    </p>
-                                    <a>Learn More</a>
-                                </div>
-                                <span
-                                    class="image-overlays__items__item__toggle-trigger"
-                                    role="button"
-                                ></span>
-                            </div>
-                            <div class="image-overlays__items__item">
-                                <img
-                                    src="assets/images/hp-student-2.jpg"
-                                    alt="picture of student"
-                                />
-                                <div
-                                    class="image-overlays__items__item__primary-content"
-                                >
-                                    <h3>Student Name</h3>
-                                    <strong>Class of 2022</strong>
-                                    <em>Major</em>
-                                </div>
-                                <div
-                                    class="image-overlays__items__item__toggle-content"
-                                >
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat
-                                    </p>
-                                    <a>Learn More</a>
-                                </div>
-                                <span
-                                    class="image-overlays__items__item__toggle-trigger"
-                                    role="button"
-                                ></span>
-                            </div>
-                            <div class="image-overlays__items__item">
-                                <img
-                                    src="assets/images/hp-student-3.jpg"
-                                    alt="picture of student"
-                                />
-                                <div
-                                    class="image-overlays__items__item__primary-content"
-                                >
-                                    <h3>Student Name</h3>
-                                    <strong>Class of 2022</strong>
-                                    <em>Major</em>
-                                </div>
-                                <div
-                                    class="image-overlays__items__item__toggle-content"
-                                >
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat
-                                    </p>
-                                    <a>Learn More</a>
-                                </div>
-                                <span
-                                    class="image-overlays__items__item__toggle-trigger"
-                                    role="button"
-                                    aria-label="Click to display more information on this student."
-                                ></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="desktop-hide">
-                        <h2>Meet Our Students & Alumni</h2>
-                        <div class="student-slider">
-                            <div class="slick-slide">
-                                <img
-                                    src="assets/images/hp-student-3.jpg"
-                                    alt="picture of student"
-                                />
-                                <div class="slick-caption">
-                                    <h3>Student Name</h3>
-                                    <strong>Class of 2022</strong>
-                                    <em>Major</em>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat
-                                    </p>
-                                    <a>Learn More</a>
-                                </div>
-                            </div>
-                            <div class="slick-slide">
-                                <img
-                                    src="assets/images/hp-student-3.jpg"
-                                    alt="picture of student"
-                                />
-                                <div class="slick-caption">
-                                    <h3>Student Name</h3>
-                                    <strong>Class of 2022</strong>
-                                    <em>Major</em>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat
-                                    </p>
-                                    <a>Learn More</a>
-                                </div>
-                            </div>
-                            <div class="slick-slide">
-                                <img
-                                    src="assets/images/hp-student-3.jpg"
-                                    alt="picture of student"
-                                />
-                                <div class="slick-caption">
-                                    <h3>Student Name</h3>
-                                    <strong>Class of 2022</strong>
-                                    <em>Major</em>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat
-                                    </p>
-                                    <a>Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <script>
-                            $(window).on('load', function (e) {
-                                $('.student-slider').slick({
-                                    accessibility: true,
-                                    //appendArrows: $(element),
-                                    //appendDots: $(element),
-                                    //arrows: true,
-                                    autoplay: false,
-                                    autoplaySpeed: 5000,
-                                    dots: false,
-                                    //dotsClass: 'slick-dots',
-                                    //draggable: true,
-                                    //easing: 'linear',
-                                    //edgeFriction: 0.35,
-                                    fade: false,
-                                    slide: '.slick-slide',
-                                    speed: 800,
-                                    //swipe: true,
-                                    //swipeToSlide: false,
-                                    //touchMove: true,
-                                    //touchThreshold: 5,
-                                    //waitForAnimate: true
-                                });
-                            });
-                        </script>
-                    </div>
-                </section>
-                <!-- end #meet-our-students -->
-
-                <!-- Begin latest news section -->
-                <section
-                    class="news-grid section-wrap"
-                    role="region"
-                    aria-label="Links to the latest news articles from Abraham Baldwin Agricultural College"
-                >
-                    <div class="container">
-                        <div class="news-grid__header">
-                            <h2>Campus News & Featured Stories</h2>
-                            <a href="" class="button">View All News</a>
-                        </div>
-                        <div class="news-grid__articles">
-                            <div class="news-grid__articles__primary-article">
-                                <img
-                                    src="assets/images/primary-article-thumbnail.jpg"
-                                    alt="ABAC President shaking hands with faculty member"
-                                />
-                                <h4>
-                                    ABAC President addresses faculty, staff
-                                    prior to new academic year
-                                </h4>
-                                <time datetime="2023-08-08">
-                                    August 8, 2023
-                                </time>
-                                <a href="single.html" class="button-arrow">
-                                    Read Article
-                                </a>
-                            </div>
-                            <div
-                                class="news-grid__articles__secoondary-articles"
-                            >
-                                <div
-                                    class="news-grid__articles__secoondary-articles__article"
-                                >
-                                    <h4>
-                                        ABAC President addresses faculty, staff
-                                        prior to new academic year
-                                    </h4>
-                                    <time datetime="2023-08-08">
-                                        August 8, 2023
-                                    </time>
-                                    <a href="single.html" class="button-arrow">
-                                        Read Article
-                                    </a>
-                                </div>
-                                <div
-                                    class="news-grid__articles__secoondary-articles__article"
-                                >
-                                    <h4>
-                                        ABAC President addresses faculty, staff
-                                        prior to new academic year
-                                    </h4>
-                                    <time datetime="2023-08-08">
-                                        August 8, 2023
-                                    </time>
-                                    <a href="single.html" class="button-arrow">
-                                        Read Article
-                                    </a>
-                                </div>
-                                <div
-                                    class="news-grid__articles__secoondary-articles__article"
-                                >
-                                    <h4>
-                                        ABAC President addresses faculty, staff
-                                        prior to new academic year
-                                    </h4>
-                                    <time datetime="2023-08-08">
-                                        August 8, 2023
-                                    </time>
-                                    <a href="single.html" class="button-arrow">
-                                        Read Article
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- end #news section -->
-
-                <!-- callout image section -->
-                <section class="section-wrap callout-image" role="region">
-                    <div class="container-large">
-                        <img
-                            class="callout-image__bg"
-                            src="assets/images/hp-stallion-statue.jpg"
-                        />
-                        <div class="callout-image__content">
-                            <h2>Bainbridge Site</h2>
-                            <p>
-                                While ABAC’s home remains in the thriving rural
-                                community of Tifton, our additional instruction
-                                site for Southwest Georgia in Bainbridge offers
-                                students another option for starting their
-                                journey in higher education.
-                            </p>
-                            <a href="" class="button">Explore Bainbridge </a>
-                            <a href="" class="button">Bainbridge Campus Map </a>
-                        </div>
-                    </div>
-                </section>
-                <!-- end callout image section -->
-
                 <!-- start instagram feed section -->
                 <section class="instagram-feed section-wrap" role="region">
                     <div class="instagram-feed__header">
@@ -2982,7 +2666,6 @@
                 <!-- end instagram feed section -->
             </div>
             <!-- end .primary_content_wrap -->
-            <div class="modal-overlay"></div>
 
             <!-- Footer -->
             <footer id="footer" role="contentinfo" class="section-wrap">
