@@ -1,0 +1,54 @@
+.program-archive {
+    .container {
+        display: flex;
+        gap: 50px;
+    }
+    &__filters {
+        .checkboxes-header {
+            border-bottom: 1px solid $primary-yellow;
+        }
+        .toggles {
+            .toggle {
+                &__trigger {
+                    border-left: 0px;
+                    border-right: 0px;
+                    border-top: 0px;
+                    border-bottom: 1px solid $primary-yellow;
+
+                    &-text {
+                        h3 {
+                            color: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__programs {
+        width: 100%;
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            article {
+                border-bottom: 8px solid $primary-yellow;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                padding: 15px;
+                width: calc(50% - 9px);
+            }
+        }
+        &__pagination {
+            .page-numbers {
+                display: flex;
+                justify-content: flex-end;
+                li {
+                    list-style-type: none !important;
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
