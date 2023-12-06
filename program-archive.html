@@ -2232,8 +2232,14 @@
                 <section class="program-archive section-wrap" role="region">
                     <div class="container">
                         <div class="program-archive__filters">
-                            <form>
-                                <input type="search" placeholder="Search" />
+                            <form id="program-archive-form">
+                                <div class="search-wrapper">
+                                    <input
+                                        id="program-archive-search"
+                                        type="search"
+                                        placeholder="Search"
+                                    />
+                                </div>
                                 <h3 class="checkboxes-header">Filter</h3>
                                 <div class="toggles">
                                     <div class="toggle">
@@ -2254,9 +2260,10 @@
                                             aria-hidden="true"
                                         >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-agriculture-natural-resources"
                                                 type="checkbox"
-                                                name="school-of-agriculture-natural-resources"
+                                                class="css-checkbox"
                                             />
                                             <label
                                                 for="school-of-agriculture-natural-resources"
@@ -2264,18 +2271,20 @@
                                                 Resources</label
                                             >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-arts-sciences"
                                                 type="checkbox"
-                                                name="school-of-arts-sciences"
+                                                class="css-checkbox"
                                             />
                                             <label for="school-of-arts-sciences"
                                                 >School of Arts &
                                                 Sciences</label
                                             >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-nursing-health-services"
                                                 type="checkbox"
-                                                name="school-of-nursing-health-services"
+                                                class="css-checkbox"
                                             />
                                             <label
                                                 for="school-of-nursing-health-services"
@@ -2283,9 +2292,10 @@
                                                 Sciences</label
                                             >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-business"
                                                 type="checkbox"
-                                                name="school-of-business"
+                                                class="css-checkbox"
                                             />
                                             <label for="school-of-business"
                                                 >Stafford School of
@@ -2311,9 +2321,10 @@
                                             aria-hidden="true"
                                         >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-agriculture-natural-resources"
                                                 type="checkbox"
-                                                name="school-of-agriculture-natural-resources"
+                                                class="css-checkbox"
                                             />
                                             <label
                                                 for="school-of-agriculture-natural-resources"
@@ -2321,18 +2332,20 @@
                                                 Resources</label
                                             >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-arts-sciences"
                                                 type="checkbox"
-                                                name="school-of-arts-sciences"
+                                                class="css-checkbox"
                                             />
                                             <label for="school-of-arts-sciences"
                                                 >School of Arts &
                                                 Sciences</label
                                             >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-nursing-health-services"
                                                 type="checkbox"
-                                                name="school-of-nursing-health-services"
+                                                class="css-checkbox"
                                             />
                                             <label
                                                 for="school-of-nursing-health-services"
@@ -2340,9 +2353,10 @@
                                                 Sciences</label
                                             >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-business"
                                                 type="checkbox"
-                                                name="school-of-business"
+                                                class="css-checkbox"
                                             />
                                             <label for="school-of-business"
                                                 >Stafford School of
@@ -2368,9 +2382,10 @@
                                             aria-hidden="true"
                                         >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-agriculture-natural-resources"
                                                 type="checkbox"
-                                                name="school-of-agriculture-natural-resources"
+                                                class="css-checkbox"
                                             />
                                             <label
                                                 for="school-of-agriculture-natural-resources"
@@ -2378,18 +2393,20 @@
                                                 Resources</label
                                             >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-arts-sciences"
                                                 type="checkbox"
-                                                name="school-of-arts-sciences"
+                                                class="css-checkbox"
                                             />
                                             <label for="school-of-arts-sciences"
                                                 >School of Arts &
                                                 Sciences</label
                                             >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-nursing-health-services"
                                                 type="checkbox"
-                                                name="school-of-nursing-health-services"
+                                                class="css-checkbox"
                                             />
                                             <label
                                                 for="school-of-nursing-health-services"
@@ -2397,9 +2414,10 @@
                                                 Sciences</label
                                             >
                                             <input
+                                                name="cssCheckbox"
                                                 id="school-of-business"
                                                 type="checkbox"
-                                                name="school-of-business"
+                                                class="css-checkbox"
                                             />
                                             <label for="school-of-business"
                                                 >Stafford School of
@@ -2465,11 +2483,18 @@
                                 class="program-archive__programs__pagination"
                             >
                                 <ul class="page-numbers">
-                                    <li>1</li>
-                                    <li>2</li>
+                                    <li>
+                                        <a class="prev" href="#">
+                                            <span class="sr-only">Next</span>
+                                            <
+                                        </a>
+                                    </li>
+                                    <li class="current-page">1</li>
+                                    <li><a href="#">2</a></li>
                                     <li>
                                         <a class="next" href="#">
-                                            <span class="sr-only">Next</span>>
+                                            <span class="sr-only">Next</span>
+                                            >
                                         </a>
                                     </li>
                                 </ul>

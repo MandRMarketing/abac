@@ -4,20 +4,110 @@
         gap: 50px;
     }
     &__filters {
-        .checkboxes-header {
-            border-bottom: 1px solid $primary-yellow;
-        }
-        .toggles {
-            .toggle {
-                &__trigger {
-                    border-left: 0px;
-                    border-right: 0px;
-                    border-top: 0px;
-                    border-bottom: 1px solid $primary-yellow;
-
-                    &-text {
-                        h3 {
-                            color: $green;
+        #program-archive-form {
+            max-width: 337px;
+            .search-wrapper {
+                position: relative;
+                margin-bottom: 25px;
+                #program-archive-search {
+                    border: 2px solid $primary-yellow;
+                    background: $offWhite;
+                    color: $textColor;
+                    margin-bottom: 0;
+                }
+                &::after {
+                    content: '';
+                    background: url(assets/images/icon-search.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    filter: brightness(0);
+                    width: 27px;
+                    height: 27px;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                }
+            }
+            .checkboxes-header {
+                border-bottom: 1px solid $primary-yellow;
+                padding-bottom: 25px;
+            }
+            .toggles {
+                .toggle {
+                    &__trigger {
+                        padding-left: 0;
+                        padding-right: 0;
+                        border-left: 0px;
+                        border-right: 0px;
+                        border-top: 0px;
+                        border-bottom: 1px solid $primary-yellow;
+                        min-width: 337px;
+                        &-text {
+                            h3 {
+                                color: $green;
+                            }
+                        }
+                    }
+                    &__box {
+                        border: 0px;
+                        border-bottom: 1px solid $primary-yellow;
+                        padding: 0px;
+                        padding-bottom: 25px;
+                        .css-checkbox {
+                            position: absolute;
+                            overflow: hidden;
+                            clip: rect(0 0 0 0);
+                            height: 1px;
+                            width: 1px;
+                            margin: -1px;
+                            padding: 0;
+                            border: 0;
+                            width: 2%;
+                        }
+                        .css-checkbox + label {
+                            position: relative;
+                            font-size: 17px;
+                            cursor: pointer;
+                            display: inline-flex;
+                            color: rgb(0, 0, 0);
+                            width: 95%;
+                        }
+                        .css-checkbox + label::before {
+                            content: ' ';
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-right: 19px;
+                            width: 19px;
+                            height: 19px;
+                            min-height: 19px;
+                            min-width: 19px;
+                            background-color: rgb(255, 246, 223);
+                            border-width: 1px;
+                            border-style: solid;
+                            border-color: rgb(254, 191, 16);
+                            border-radius: 2px;
+                            box-shadow: none;
+                        }
+                        .css-checkbox:checked + label::after {
+                            content: ' ';
+                            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjMDAwMDAwIiBkPSJNMTczLjg5OCA0MzkuNDA0bC0xNjYuNC0xNjYuNGMtOS45OTctOS45OTctOS45OTctMjYuMjA2IDAtMzYuMjA0bDM2LjIwMy0zNi4yMDRjOS45OTctOS45OTggMjYuMjA3LTkuOTk4IDM2LjIwNCAwTDE5MiAzMTIuNjkgNDMyLjA5NSA3Mi41OTZjOS45OTctOS45OTcgMjYuMjA3LTkuOTk3IDM2LjIwNCAwbDM2LjIwMyAzNi4yMDRjOS45OTcgOS45OTcgOS45OTcgMjYuMjA2IDAgMzYuMjA0bC0yOTQuNCAyOTQuNDAxYy05Ljk5OCA5Ljk5Ny0yNi4yMDcgOS45OTctMzYuMjA0LS4wMDF6Ii8+PC9zdmc+');
+                            background-repeat: no-repeat;
+                            background-size: 14px 14px;
+                            background-position: center center;
+                            position: absolute;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-left: 0px;
+                            left: 0px;
+                            top: 0px;
+                            text-align: center;
+                            background-color: transparent;
+                            font-size: 10px;
+                            height: 21px;
+                            width: 21px;
                         }
                     }
                 }
@@ -39,15 +129,41 @@
             }
         }
         &__pagination {
+            margin-top: 25px;
             .page-numbers {
                 display: flex;
                 justify-content: flex-end;
                 li {
                     list-style-type: none !important;
+                    font-style: normal;
+                    .current-page {
+                        color: black;
+                    }
                     a {
+                        text-decoration: underline;
+                    }
+                    * {
+                        font-style: normal;
+                    }
+
+                    .next,
+                    .prev {
                         text-decoration: none;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-break) {
+    .program-archive {
+        .container {
+            flex-direction: column;
+        }
+        &__filters {
+            #program-archive-form {
+                max-width: 100%;
             }
         }
     }
