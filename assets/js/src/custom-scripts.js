@@ -511,7 +511,6 @@
         );
 
         //Toggles code
-
         (function () {
             const toggles = document.querySelectorAll('.toggle');
             if (typeof toggles !== 'undefined' && toggles !== null) {
@@ -604,55 +603,6 @@
                 );
             });
         }
-
-        /*---------------------------------------------------------
-			On Scroll
-			-- fade in sections
-		----------------------------------------------------------*/
-
-        /*var $win = $(window);
-		var $img = $('#find-your-greatness .diamond-fg'); // Change this to affect your desired element.
-
-		$win.on('scroll', function () {
-			var scrollTop = $win.scrollTop();
-
-			$img.each(function () {
-				var $self = $(this);
-				var prev=$self.offset();
-				if(prev){
-					var pt=0;
-					pt=prev.top-$win.height();    
-					$self.css({
-						opacity: (scrollTop-pt)/ ($self.offset().top-pt)
-					});
-				}
-				else{
-					$self.css({
-						opacity: 1
-					});
-				}  
-			});
-
-		}).scroll();*/
-
-        // ----------------------------------------
-        // Buttons https://codepen.io/kjbrum/pen/wBBLXx
-        // ----------------------------------------
-        /*
-        $('.button').append('<span></span>');
-        
-        $('.button').on('mouseenter', function(e) {
-            var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-            $(this).find('span').css({top:relY, left:relX});
-        }).on('mouseout', function(e) {
-                var parentOffset = $(this).offset(),
-                relX = e.pageX - parentOffset.left,
-                relY = e.pageY - parentOffset.top;
-            $(this).find('span').css({top:relY, left:relX});
-        });
-        */
     });
 
     /*----------------------------------------

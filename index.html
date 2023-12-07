@@ -9,6 +9,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://use.typekit.net/ebu8uhb.css" />
         <link href="style.css" rel="stylesheet" type="text/css" />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/all.min.js"></script>
 
@@ -2339,7 +2344,7 @@
                         });
                     </script>
                 </section>
-                <section class="front-slider-footer-content section-wrap">
+                <section class="front-slider-footer-content">
                     <h3>
                         Abraham Baldwin Agricultural College offers a unique and
                         intimate experience-based learning environment, where
@@ -2353,7 +2358,6 @@
                     id="university-stats"
                     class="horizontal-cards section-wrap"
                     role="region"
-                    aria-label="Beginning of content body"
                 >
                     <div class="container-large">
                         <div class="horizontal-cards__cards">
@@ -2563,12 +2567,12 @@
 
                 <!--start full-width forty-sixty image-right section-->
                 <section
-                    class="full-width forty-sixty image-right forty-left"
+                    class="section-wrap full-width forty-sixty image-right forty-left"
                     role="region"
                     aria-label=""
                 >
                     <div
-                        class="full-width forty-sixty__left offwhite-bg stallion-bg"
+                        class="section-wrap full-width forty-sixty__left offwhite-bg stallion-bg"
                     >
                         <h2>Thriving Together</h2>
                         <strong>
@@ -2586,7 +2590,7 @@
                         <a href="" class="button">Stallion Athletics</a>
                         <a href="" class="button">Student Resources</a>
                     </div>
-                    <div class="full-width forty-sixty__right">
+                    <div class="section-wrap full-width forty-sixty__right">
                         <img
                             src="assets/images/hp-thriving-together.jpg"
                             alt="Two students sitting in a courtyard on campus laughing"
@@ -3184,5 +3188,25 @@
             </footer>
         </div>
         <!-- end #main -->
+        <script>
+            window.addEventListener('load', function () {
+                $('.section-wrap').attr({
+                    'data-aos': 'fade-up',
+                });
+                // below listed default settings
+                AOS.init({
+                    // Global settings:
+                    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+                    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+                    offset: 400, // offset (in px) from the original trigger point
+                    delay: 100, // values from 0 to 3000, with step 50ms
+                    duration: 1000, // values from 0 to 3000, with step 50ms
+                    easing: 'ease', // default easing for AOS animations
+                    once: true, // whether animation should happen only once - while scrolling down
+                    mirror: false, // whether elements should animate out while scrolling past them
+                    anchorPlacement: 'top-center', // defines which position of the element regarding to window should trigger the animation
+                });
+            });
+        </script>
     </body>
 </html>
