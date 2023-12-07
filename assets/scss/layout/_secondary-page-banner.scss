@@ -1,15 +1,69 @@
 .secondary-page-banner {
     background-color: $green;
-    &__image {
+    &__bg-image {
     }
 
     &__content {
-        padding: 50px;
         text-align: center;
         z-index: 1;
+        display: flex;
+        gap: 50px;
+        .column {
+            flex: 1;
+        }
         h1 {
             color: white;
             margin-bottom: 0;
+        }
+        &::after,
+        ::before {
+            content: unset;
+        }
+    }
+    &.faded-bg-banner {
+        position: relative;
+        min-height: 475px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &::after {
+            content: '';
+            background: #006130cc;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        &::before {
+            content: '';
+            background: rgb(0, 97, 48);
+            background: linear-gradient(
+                90deg,
+                rgba(0, 97, 48, 1) 50%,
+                rgba(0, 0, 0, 0) 100%
+            );
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100%;
+            z-index: 1;
+        }
+        .secondary-page-banner__bg-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            object-fit: cover;
+            height: 100%;
+            width: 60%;
+            z-index: 0;
+        }
+        .secondary-page-banner__content {
+            color: white;
+            position: relative;
+            text-align: center;
         }
     }
     &.info-banner {
@@ -28,7 +82,7 @@
             width: 100%;
             height: 100%;
         }
-        .secondary-page-banner__image {
+        .secondary-page-banner__bg-image {
             position: absolute;
             top: 0;
             left: 0;
@@ -47,7 +101,7 @@
     &.school-single-banner {
         position: relative;
         min-height: 375px;
-        .secondary-page-banner__image {
+        .secondary-page-banner__bg-image {
             position: absolute;
             top: 0;
             left: 0;

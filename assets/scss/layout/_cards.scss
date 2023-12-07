@@ -107,6 +107,8 @@
         }
         .horizontal-cards__content {
         }
+        &.announcement {
+        }
         @media screen and (max-width: $extra-break) {
             background-color: $green;
         }

@@ -136,10 +136,9 @@ h6 {
     text-align: center;
 }
 
-.green-bg,
-.dark-green-bg {
+.white-text {
     p,
-    a,
+    a:not(.button),
     strong,
     h1,
     h2,
@@ -147,7 +146,7 @@ h6 {
     h4,
     h5,
     h6 {
-        color: #fff;
+        color: #fff !important;
     }
 }
 
