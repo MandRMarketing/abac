@@ -262,20 +262,20 @@ Version 1.2.5
     }
 }
 
-.clearfix::before,
-.clearfix::after,
-.container::before,
-.container::after,
-#main::before,
-#main::after,
-header::before,
-header::after {
-    content: '';
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-}
+// .clearfix::before,
+// .clearfix::after,
+// .container::before,
+// .container::after,
+// #main::before,
+// #main::after,
+// header::before,
+// header::after {
+//     content: '';
+//     visibility: hidden;
+//     display: block;
+//     height: 0;
+//     clear: both;
+// }
 
 .simpleClear {
     clear: both;
