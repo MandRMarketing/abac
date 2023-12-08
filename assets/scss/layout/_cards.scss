@@ -7,6 +7,10 @@
     .horizontal-cards__cards__card {
         height: 273px;
         width: 372px;
+        @media screen and (max-width: $extra-break) {
+            width: 100%;
+            height: unset;
+        }
         p {
             display: block;
             color: $green;
@@ -85,6 +89,30 @@
         justify-content: center;
         margin-top: 50px;
         gap: 25px;
+    }
+    &.quote {
+        .horizontal-cards__cards {
+            gap: 25px;
+            .horizontal-cards__cards__card {
+                padding: 100px 25px;
+                border: 2px solid $primary-yellow;
+                text-align: center;
+                .badge-icon {
+                    background: url(assets/images/badge-bg-green.svg) no-repeat;
+                    margin-top: -140px !important;
+                    img {
+                        position: absolute;
+                        left: 43%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        max-height: unset;
+                    }
+                }
+                h3 {
+                    color: $green;
+                }
+            }
+        }
     }
     &.icons {
         .horizontal-cards__cards {

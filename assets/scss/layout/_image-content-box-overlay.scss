@@ -138,6 +138,9 @@
     }
     .content-left {
         width: 50%;
+        a {
+            text-decoration: none;
+        }
         * {
             color: white;
         }
@@ -147,6 +150,11 @@
         width: 50%;
         * {
             color: white;
+        }
+        ul {
+            li {
+                color: white !important;
+            }
         }
 
         .content {
