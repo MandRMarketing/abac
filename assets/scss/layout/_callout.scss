@@ -28,13 +28,14 @@
         }
         &__container {
             &.left {
-                border-bottom: 8px solid $primary-yellow;
+                border-top: 2px solid $primary-yellow;
                 display: flex;
                 justify-content: center;
-                padding-bottom: 25px;
+                padding-top: 25px;
             }
             &.right {
                 padding-top: 25px;
+                border-bottom: 2px solid $primary-yellow;
             }
         }
     }

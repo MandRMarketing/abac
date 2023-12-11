@@ -56,11 +56,26 @@
 }
 
 .horizontal-cards {
+    .container {
+        .horizontal-cards__cards__card {
+            flex: 0 1 calc(33.333% - 10px); // Three items per row with some spacing
+            // max-width: calc(33.333% - 10px);
+            flex-grow: 1;
+        }
+    }
+    .container-large {
+        .horizontal-cards__cards__card {
+            flex: 0 1 calc(25% - 12px); // Four items per row with some spacing
+            // max-width: calc(25% - 10px);
+            flex-grow: 1;
+        }
+    }
     &__cards {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 40px;
+        gap: 15px;
         &__card {
             background: white;
             border-bottom: 8px solid $primary-yellow;
@@ -68,12 +83,17 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            padding: 15px;
+            padding: 25px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             flex: 1;
             align-self: stretch;
-            & > :last-child {
-                margin-bottom: 0;
+            .header-image {
+                height: 50%;
+                width: calc(100% + 50px);
+                max-width: calc(100% + 50px);
+                margin-top: -25px;
+                object-fit: cover;
+                margin-bottom: 15px;
             }
         }
         @media screen and (max-width: $extra-break) {
@@ -137,26 +157,20 @@
         }
         &.announcement {
         }
-        @media screen and (max-width: $extra-break) {
-            background-color: $green;
-        }
+        // @media screen and (max-width: $extra-break) {
+        //     background-color: $green;
+        // }
     }
     &.borders {
         .horizontal-cards__cards {
-            gap: 25px;
             .horizontal-cards__cards__card {
                 position: relative;
-                padding: 0;
                 gap: 25px;
                 width: 100%;
                 height: unset;
                 border: 2px solid $primary-yellow;
-                img {
-                    height: 50%;
-                    width: 100%;
-                    object-fit: cover;
-                }
-                h3 {
+                h3,
+                h4 {
                     text-align: center;
                     color: $green;
                 }

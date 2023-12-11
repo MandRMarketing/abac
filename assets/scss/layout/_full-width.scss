@@ -173,6 +173,35 @@
             }
         }
     }
+    &.program-single-info {
+        .back-btn {
+            position: relative;
+            text-decoration: none;
+            font-style: italic;
+            padding-left: 30px;
+            font-weight: 400;
+            &::before {
+                content: '';
+                background: url(assets/images/btn-arrow-yellow.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 20px;
+                width: 20px;
+                position: absolute;
+                left: -5px;
+                top: 20%;
+                transform: rotate(180deg);
+            }
+        }
+        a {
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        p {
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+    }
 }
 @media screen and (max-width: $extra-break) {
     .full-width {

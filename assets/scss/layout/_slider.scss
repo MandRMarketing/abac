@@ -1,0 +1,118 @@
+.image-overlays > .slider {
+    &__wrap {
+        margin-top: 100px;
+        .slick-next,
+        .slick-prev {
+            top: -55px;
+            background: $primary-yellow;
+            height: 66px;
+            width: 66px;
+            &::before {
+                content: '';
+                background: url(assets/images/btn-arrow-green.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 24px;
+                height: 40px;
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .slick-prev {
+            left: 30%;
+            &::before {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+        .slick-next {
+            right: 30%;
+        }
+        .slick-slide {
+            img {
+                width: 100%;
+            }
+            .slick-caption {
+                padding: 25px;
+                .button-arrow {
+                    margin-bottom: 0;
+                }
+                * {
+                    color: white !important;
+                }
+            }
+        }
+    }
+}
+.rotating-content-image > .slider {
+    &__wrap {
+        .slick-prev,
+        .slick-next {
+            display: none !important;
+        }
+        .slick-slide {
+            display: flex;
+            flex-direction: row-reverse;
+            img {
+                width: 673px;
+                height: 673px;
+                object-fit: cover;
+                z-index: -1;
+            }
+            .slick-caption {
+                margin: 100px -150px;
+                z-index: 1;
+                width: 55%;
+                background: white;
+                border-bottom: 8px solid $primary-yellow;
+                padding: 25px;
+                .button-arrow {
+                    margin-bottom: 0;
+                }
+                * {
+                    color: $textColor !important;
+                }
+            }
+        }
+        .slick-dots {
+            text-align: left;
+            button {
+                background-color: $green;
+                width: 34px;
+                height: 7px;
+
+                &:before {
+                    content: '';
+                    display: none;
+                }
+            }
+
+            .slick-active button {
+                background-color: $primary-yellow;
+            }
+        }
+    }
+}
+@media screen and (max-width: $extra-break) {
+    .rotating-content-image > .slider {
+        &__wrap {
+            .slick-slide {
+                display: flex;
+                flex-direction: column;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                .slick-caption {
+                    margin: 0;
+                    width: 100%;
+                }
+            }
+            .slick-dots {
+                text-align: center;
+            }
+        }
+    }
+}

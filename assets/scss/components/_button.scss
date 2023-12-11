@@ -30,7 +30,7 @@ input[type='button'],
     }
     &::after {
         content: '';
-        background: url(assets/images/btn-arrow.svg);
+        background: url(assets/images/btn-arrow-yellow.svg);
         background-repeat: no-repeat;
         background-size: contain;
         width: 10px;
@@ -66,7 +66,7 @@ input[type='button'],
     }
     &::after {
         content: '';
-        background: url(assets/images/btn-arrow.svg);
+        background: url(assets/images/btn-arrow-yellow.svg);
         background-repeat: no-repeat;
         background-size: contain;
         width: 10px;
@@ -96,7 +96,7 @@ input[type='button'],
     }
     &::after {
         content: '';
-        background: url(assets/images/btn-arrow.svg);
+        background: url(assets/images/btn-arrow-yellow.svg);
         background-repeat: no-repeat;
         background-size: contain;
         width: 10px;
@@ -114,6 +114,7 @@ input[type='button'],
 .button-lg,
 .button-arrow {
     display: inline-block;
+    width: fit-content;
     margin-bottom: 24px; /* match p margin-bottom inside typography.scss */
     text-decoration: none;
     &.block {

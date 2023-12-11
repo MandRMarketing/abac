@@ -5,33 +5,33 @@
 ----------------------------------------*/
 
 (function ($) {
-  "use strict";
-  //var $document = $(document);
-  //var $window = $(window);
-  var width = $(window).width();
+    'use strict';
+    //var $document = $(document);
+    //var $window = $(window);
+    var width = $(window).width();
 
-  /*----------------------------------------
+    /*----------------------------------------
 		Support Functions
 	----------------------------------------*/
 
-  /*----------------------------------------
+    /*----------------------------------------
 		On Load 
 	----------------------------------------*/
-  //$window.load(function() {
-  //});
+    //$window.load(function() {
+    //});
 
-  /*----------------------------------------
+    /*----------------------------------------
 		On Ready
 	----------------------------------------*/
-  $(document).ready(function () {
-    // Placeholder Polyfill
-    $("input, textarea").placeholder();
+    $(document).ready(function () {
+        // Placeholder Polyfill
+        $('input, textarea').placeholder();
 
-    // Superfish it
-    $("ul.inner-menu").superfish();
+        // Superfish it
+        $('ul.inner-menu').superfish();
 
-    /* Combine menu items */
-    /**
+        /* Combine menu items */
+        /**
 		// Main Menu, actual UL
 		var primaryMenu = jQuery("#menu-primary-menu");
 		// Secondary Menu, jsut the LIs
@@ -44,94 +44,98 @@
 		});
 		**/
 
-    // Magnific - Images & Galleries
-    var groups = {};
+        // Magnific - Images & Galleries
+        var groups = {};
 
-    $("a[rel^='magnificMe']").each(function () {
-      var id = parseInt($(this).attr("data-group"), 10);
+        $("a[rel^='magnificMe']").each(function () {
+            var id = parseInt($(this).attr('data-group'), 10);
 
-      if (!groups[id]) {
-        groups[id] = [];
-      }
+            if (!groups[id]) {
+                groups[id] = [];
+            }
 
-      groups[id].push(this);
-    });
+            groups[id].push(this);
+        });
 
-    $.each(groups, function () {
-      $(this).magnificPopup({
-        type: "image",
-        closeOnContentClick: true,
-        closeBtnInside: false,
-        gallery: { enabled: true },
+        $.each(groups, function () {
+            $(this).magnificPopup({
+                type: 'image',
+                closeOnContentClick: true,
+                closeBtnInside: false,
+                gallery: { enabled: true },
 
-        image: {
-          verticalFit: true,
-          titleSrc: function (item) {
-            return (
-              '<a class="image-source-link" href="' +
-              item.src +
-              '" target="_blank">view file</a>'
-            );
-          },
-        },
-      });
-    });
+                image: {
+                    verticalFit: true,
+                    titleSrc: function (item) {
+                        return (
+                            '<a class="image-source-link" href="' +
+                            item.src +
+                            '" target="_blank">view file</a>'
+                        );
+                    },
+                },
+            });
+        });
 
-    // ---------------------------------------------------------
-    // Object fit fallback
-    // ---------------------------------------------------------
+        // ---------------------------------------------------------
+        // Object fit fallback
+        // ---------------------------------------------------------
 
-    var ms9 =
-      /MSIE 9/i.test(navigator.userAgent) ||
-      /rv:11.0/i.test(navigator.userAgent);
-    var ms10 = /MSIE 10/i.test(navigator.userAgent);
-    var edge = /Edge\/\d./i.test(navigator.userAgent);
-    var safari =
-      navigator.userAgent.indexOf("Safari") !== -1 &&
-      navigator.userAgent.indexOf("Chrome") === -1;
+        var ms9 =
+            /MSIE 9/i.test(navigator.userAgent) ||
+            /rv:11.0/i.test(navigator.userAgent);
+        var ms10 = /MSIE 10/i.test(navigator.userAgent);
+        var edge = /Edge\/\d./i.test(navigator.userAgent);
+        var safari =
+            navigator.userAgent.indexOf('Safari') !== -1 &&
+            navigator.userAgent.indexOf('Chrome') === -1;
 
-    if (edge || ms10 || ms9 || safari) {
-      $(".object-fit-image").each(function () {
-        var $container = $(this);
-        var imgUrl = $container.prop("src");
-        if (imgUrl) {
-          $container
-            .parent()
-            .css("backgroundImage", "url(" + imgUrl + ")")
-            .removeClass("object-fit-image")
-            .addClass("compat-object-fit");
+        if (edge || ms10 || ms9 || safari) {
+            $('.object-fit-image').each(function () {
+                var $container = $(this);
+                var imgUrl = $container.prop('src');
+                if (imgUrl) {
+                    $container
+                        .parent()
+                        .css('backgroundImage', 'url(' + imgUrl + ')')
+                        .removeClass('object-fit-image')
+                        .addClass('compat-object-fit');
+                }
+            });
         }
-      });
-    }
 
-    // ---------------------------------------------------------
-    // Responsive wrap for Wordpress aligned images
-    // ---------------------------------------------------------
+        // ---------------------------------------------------------
+        // Responsive wrap for Wordpress aligned images
+        // ---------------------------------------------------------
 
-    $("img.alignleft").each(function () {
-      var $this = $(this);
+        $('img.alignleft').each(function () {
+            var $this = $(this);
 
-      if ($this.parent("a").length > 0) {
-        $this.parent("a").wrap('<span class="mobile-center-image"></span>');
-      } else {
-        $this.wrap('<span class="mobile-center-image"></span>');
-      }
-    });
+            if ($this.parent('a').length > 0) {
+                $this
+                    .parent('a')
+                    .wrap('<span class="mobile-center-image"></span>');
+            } else {
+                $this.wrap('<span class="mobile-center-image"></span>');
+            }
+        });
 
-    $("img.alignright").each(function () {
-      var $this = $(this);
+        $('img.alignright').each(function () {
+            var $this = $(this);
 
-      if ($this.parent("a").length > 0) {
-        $this.parent("a").wrap('<span class="mobile-center-image"></span>');
-      } else {
-        $this.wrap('<span class="mobile-center-image"></span>');
-      }
-    });
+            if ($this.parent('a').length > 0) {
+                $this
+                    .parent('a')
+                    .wrap('<span class="mobile-center-image"></span>');
+            } else {
+                $this.wrap('<span class="mobile-center-image"></span>');
+            }
+        });
 
-    // ---------------------------------------------------------
-    // Smooth in page scrolling
-    // ---------------------------------------------------------
-    /*		$("a[href*='#']:not([href='#'], [href^='#address'])").click(function() {
+        // ---------------------------------------------------------
+        // Smooth in page scrolling
+        // ---------------------------------------------------------
+        /*		$("a[href*='#']:not([href='#'], [href^='#address'])").click(function() {
 			if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
 			  var target = $(this.hash);
 			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -144,443 +148,495 @@
 			}
 		});*/
 
-    // ---------------------------------------------------------
-    // Tabs v2
-    // ---------------------------------------------------------
+        // ---------------------------------------------------------
+        // Tabs v2
+        // ---------------------------------------------------------
 
-    $("ul.tabs").on("click", "li", function (e) {
-      e.preventDefault();
+        $('ul.tabs').on('click', 'li', function (e) {
+            e.preventDefault();
 
-      var $this = $(this);
-      var $parents = $this.parents(".tabs-wrapper");
+            var $this = $(this);
+            var $parents = $this.parents('.tabs-wrapper');
 
-      var tab_id = $this.attr("data-tab");
+            var tab_id = $this.attr('data-tab');
 
-      $parents
-        .find(".tabs li")
-        .removeClass("tab-current")
-        .children("a")
-        .attr("aria-selected", "false");
-      $parents
-        .find(".tab-content")
-        .removeClass("tab-current")
-        .attr("aria-hidden", "true");
+            $parents
+                .find('.tabs li')
+                .removeClass('tab-current')
+                .children('a')
+                .attr('aria-selected', 'false');
+            $parents
+                .find('.tab-content')
+                .removeClass('tab-current')
+                .attr('aria-hidden', 'true');
 
-      $this.addClass("tab-current").children("a").attr("aria-selected", "true");
-      $("#" + tab_id)
-        .addClass("tab-current")
-        .attr("aria-hidden", "false");
-      $(".tab-content").attr("tabindex", -1).focus();
-    });
+            $this
+                .addClass('tab-current')
+                .children('a')
+                .attr('aria-selected', 'true');
+            $('#' + tab_id)
+                .addClass('tab-current')
+                .attr('aria-hidden', 'false');
+            $('.tab-content').attr('tabindex', -1).focus();
+        });
 
-    // ---------------------------------------------------------
-    // Toggle
-    // ---------------------------------------------------------
-    $(".toggle").find(".box").hide();
-    $(".mobile-toggle").find(".box").hide();
-    $(".toggle-with-anchor").find(".box").hide();
+        // ---------------------------------------------------------
+        // Toggle
+        // ---------------------------------------------------------
+        $('.toggle').find('.box').hide();
+        $('.mobile-toggle').find('.box').hide();
+        $('.toggle-with-anchor').find('.box').hide();
 
-    $(".toggle").on("click", ".trigger", function () {
-      // Control ARIA landmarks on open
-      if ($(this).attr("aria-expanded", "false")) {
-        $(this).attr("aria-expanded", "true");
-        $(this).next().attr("aria-hidden", "false");
-      }
+        $('.toggle').on('click', '.trigger', function () {
+            // Control ARIA landmarks on open
+            if ($(this).attr('aria-expanded', 'false')) {
+                $(this).attr('aria-expanded', 'true');
+                $(this).next().attr('aria-hidden', 'false');
+            }
 
-      // Control ARIA landmarks on close
-      if ($(this).hasClass("active") && $(this).attr("aria-expanded", "true")) {
-        $(this).attr("aria-expanded", "false");
-        $(this).next().attr("aria-hidden", "true");
-      }
+            // Control ARIA landmarks on close
+            if (
+                $(this).hasClass('active') &&
+                $(this).attr('aria-expanded', 'true')
+            ) {
+                $(this).attr('aria-expanded', 'false');
+                $(this).next().attr('aria-hidden', 'true');
+            }
 
-      $(this)
-        .toggleClass("active")
-        .next()
-        .stop(true, true)
-        .slideToggle("normal");
+            $(this)
+                .toggleClass('active')
+                .next()
+                .stop(true, true)
+                .slideToggle('normal');
 
-      return false;
-    });
+            return false;
+        });
 
-    $(".mobile-toggle").on("click", ".trigger", function () {
-      // Control ARIA landmarks on open
-      if ($(this).attr("aria-expanded", "false")) {
-        $(this).attr("aria-expanded", "true");
-        $(this).next().attr("aria-hidden", "false");
-      }
+        $('.mobile-toggle').on('click', '.trigger', function () {
+            // Control ARIA landmarks on open
+            if ($(this).attr('aria-expanded', 'false')) {
+                $(this).attr('aria-expanded', 'true');
+                $(this).next().attr('aria-hidden', 'false');
+            }
 
-      // Control ARIA landmarks on close
-      if ($(this).hasClass("active") && $(this).attr("aria-expanded", "true")) {
-        $(this).attr("aria-expanded", "false");
-        $(this).next().attr("aria-hidden", "true");
-      }
+            // Control ARIA landmarks on close
+            if (
+                $(this).hasClass('active') &&
+                $(this).attr('aria-expanded', 'true')
+            ) {
+                $(this).attr('aria-expanded', 'false');
+                $(this).next().attr('aria-hidden', 'true');
+            }
 
-      $(this)
-        .toggleClass("active")
-        .next()
-        .stop(true, true)
-        .slideToggle("normal");
+            $(this)
+                .toggleClass('active')
+                .next()
+                .stop(true, true)
+                .slideToggle('normal');
 
-      return false;
-    });
+            return false;
+        });
 
-    $(".toggle-with-anchor").on("click", ".toggle-dropdown", function () {
-      // Control ARIA landmarks on open
-      if ($(this).attr("aria-expanded", "false")) {
-        $(this).attr("aria-expanded", "true");
-        $(this).next().attr("aria-hidden", "false");
-      }
+        $('.toggle-with-anchor').on('click', '.toggle-dropdown', function () {
+            // Control ARIA landmarks on open
+            if ($(this).attr('aria-expanded', 'false')) {
+                $(this).attr('aria-expanded', 'true');
+                $(this).next().attr('aria-hidden', 'false');
+            }
 
-      // Control ARIA landmarks on close
-      if ($(this).hasClass("active") && $(this).attr("aria-expanded", "true")) {
-        $(this).attr("aria-expanded", "false");
-        $(this).next().attr("aria-hidden", "true");
-      }
+            // Control ARIA landmarks on close
+            if (
+                $(this).hasClass('active') &&
+                $(this).attr('aria-expanded', 'true')
+            ) {
+                $(this).attr('aria-expanded', 'false');
+                $(this).next().attr('aria-hidden', 'true');
+            }
 
-      $(this)
-        .toggleClass("active")
-        .parent()
-        .next()
-        .stop(true, true)
-        .slideToggle("normal");
+            $(this)
+                .toggleClass('active')
+                .parent()
+                .next()
+                .stop(true, true)
+                .slideToggle('normal');
 
-      return false;
-    });
+            return false;
+        });
 
-    /*---------------------------------------------------------
+        /*---------------------------------------------------------
 			Javascript font size increase
 		----------------------------------------------------------*/
-    var size = parseInt($("p").css("font-size"));
-    var anchor = parseInt($("a").css("font-size"));
+        var size = parseInt($('p').css('font-size'));
+        var anchor = parseInt($('a').css('font-size'));
 
-    $("#big").on("click", function () {
-      size += 2;
-      $("p").css("font-size", size + "px");
-      $("a").css("font-size", anchor + "px");
-      $("#text-resize-example").text(size + "px");
-    });
-
-    $("#small").on("click", function () {
-      size -= 2;
-
-      if (size >= 16) {
-        $("p").css("font-size", size + "px");
-        $("a").css("font-size", anchor + "px");
-        $("#text-resize-example").text(size + "px");
-      } else {
-        size = 16;
-        $(this).prop("disable", true);
-        $("p").css("font-size", size + "px");
-        $("a").css("font-size", anchor + "px");
-      }
-    });
-
-    //New code
-
-    /* Mobile Nav Code */
-
-    // Click event for mobile-nav-search trigger
-    $("#mobile-search-trigger").click(function (event) {
-      event.preventDefault();
-      // Close all mobile-nav-subnavs and set opacity to 0
-      $("#mobile-menu").removeClass("active");
-      $("#mobile-menu-trigger").removeClass("active");
-      $(".mobile-nav-primary-item").removeClass("expanded");
-      $(".mobile-nav-subnav-trigger").attr("aria-expanded", "false");
-
-      $("body").removeClass("mobile-menu-active"); // Add a class to body for styling when the menu is active
-      $(this).attr("aria-expanded", "true");
-      $("#mobile-search-form").css("display", "flex").stop().fadeTo(400, 1);
-    });
-
-    // Click event for mobile nav .back-btn elements
-    $(".back-btn").click(function () {
-      // Remove the 'expanded' class from all .mobile-nav-primary-item elements
-      $(".mobile-nav-primary-item").removeClass("expanded");
-
-      // Set the aria-expanded attribute to 'false' for all .mobile-nav-subnav-trigger elements
-      $(".mobile-nav-subnav-trigger").attr("aria-expanded", "false");
-    });
-
-    $("#mobile-menu-trigger").click(function () {
-      $(this).toggleClass("active");
-      $("#mobile-menu").toggleClass("active");
-      $("body").toggleClass("mobile-menu-active"); // Add a class to body for styling when the menu is active
-      $(".mobile-nav-subnav-trigger").attr("aria-expanded", false);
-      $(".mobile-nav-primary-item").removeClass("expanded");
-      $("#mobile-search-trigger").attr("aria-expanded", "false");
-      $("#mobile-search-form").fadeOut(400, function () {
-        // Remove inline style for opacity after fadeOut is complete
-        $(this).css("opacity", "");
-        // Set display to 'none' after removing opacity style
-        $(this).css("display", "none");
-      });
-    });
-
-    $(".mobile-nav-subnav-trigger").click(function () {
-      // Get the current value of aria-expanded
-      var currentValue = $(this).attr("aria-expanded");
-
-      // Toggle the value
-      var newValue = currentValue === "true" ? "false" : "true";
-
-      // Set the new value
-      $(this).attr("aria-expanded", newValue);
-
-      // Get the parent element and toggle the 'expanded' class
-      $(this)
-        .parent()
-        .toggleClass("expanded", newValue === "true");
-    });
-
-    /* Desktop Nav Code */
-
-    // Click event for desktop-nav-search trigger
-    $("#desktop-search-trigger").click(function (event) {
-      event.preventDefault();
-      // Close all desktop-nav-subnavs and set opacity to 0
-      $(".desktop-nav-subnav").fadeOut(400, function () {
-        // Remove inline style for opacity after fadeOut is complete
-        $(this).css("opacity", "");
-      });
-      $(this).attr("aria-expanded", "true");
-      $("#desktop-search-form").css("display", "flex").stop().fadeTo(400, 1);
-
-      // Ensure 'desktop-menu-active' class is set on the body
-      $("body").addClass("desktop-menu-active");
-    });
-
-    // Click event for desktop-nav-subnav-trigger
-    $(".primary-item .desktop-nav-subnav-trigger").click(function (event) {
-      // Prevent the default behavior of the anchor link
-      event.preventDefault();
-      $(".desktop-nav-subnav-trigger").attr("aria-expanded", "false");
-      // Close all desktop-nav-subnavs and set opacity to 0
-      $(".desktop-nav-subnav").fadeOut(400, function () {
-        // Remove inline style for opacity after fadeOut is complete
-        $(this).css("opacity", "");
-      });
-
-      $("#desktop-search-trigger").attr("aria-expanded", "false");
-      $("#desktop-search-form").fadeOut(400, function () {
-        // Remove inline style for opacity after fadeOut is complete
-        $(this).css("opacity", "");
-        // Set display to 'none' after removing opacity style
-        $(this).css("display", "none");
-      });
-
-      // Set the new value
-      $(this).attr("aria-expanded", "true");
-      // Toggle the display property to 'flex' and fade in the opacity for the clicked subnav
-      var subnav = $(this).next(".desktop-nav-subnav");
-      subnav.css("display", "flex").stop().fadeTo(400, 1);
-
-      // Ensure 'desktop-menu-active' class is set on the body
-      $("body").addClass("desktop-menu-active");
-    });
-
-    //code for both mobile and desktop navs
-
-    // Check for clicks on the document
-    $(document).on("click", function (event) {
-      // Check if the body has the class 'desktop-menu-active'
-      if ($("body").hasClass("desktop-menu-active")) {
-        // Check if the clicked element is not a .desktop-nav-subnav or .desktop-nav-subnav-trigger
-        if (
-          !$(event.target).is(
-            ".desktop-nav-subnav, .desktop-nav-subnav-trigger, #desktop-search-trigger, #desktop-search-form, #desktop-search-form *, #mobile-search-trigger, mobile-search-form, mobile-search-form *"
-          )
-        ) {
-          // Fade out all .desktop-nav-subnavs and set opacity to 0
-          $(".desktop-nav-subnav-trigger").attr("aria-expanded", "false");
-          $(".desktop-nav-subnav").fadeOut(400, function () {
-            // Remove inline style for opacity after fadeOut is complete
-            $(this).css("opacity", "");
-            // Set display to 'none' after removing opacity style
-            $(this).css("display", "none");
-          });
-
-          $("#desktop-search-trigger").attr("aria-expanded", "false");
-          $("#desktop-search-form").fadeOut(400, function () {
-            // Remove inline style for opacity after fadeOut is complete
-            $(this).css("opacity", "");
-            // Set display to 'none' after removing opacity style
-            $(this).css("display", "none");
-          });
-
-          $("#mobile-search-trigger").attr("aria-expanded", "false");
-          $("#mobile-search-form").fadeOut(400, function () {
-            // Remove inline style for opacity after fadeOut is complete
-            $(this).css("opacity", "");
-            // Set display to 'none' after removing opacity style
-            $(this).css("display", "none");
-          });
-
-          // Remove the 'desktop-menu-active' class from the body
-          $("body").removeClass("desktop-menu-active");
-        }
-      }
-    });
-
-    // Scroll event to remove 'desktop-menu-active' class when the user scrolls
-    $(window).scroll(function () {
-      // Check if the subnav is currently visible before fading out
-      var desktopNavSubnav = $(".desktop-nav-subnav");
-      var desktopSearchForm = $("#desktop-search-form");
-      var mobileSearchForm = $("#mobile-search-form");
-      if (
-        desktopNavSubnav.is(":visible") ||
-        desktopSearchForm.is(":visible") ||
-        mobileSearchForm.is(":visible")
-      ) {
-        // Remove 'desktop-menu-active' class from the body
-        $("body").removeClass("desktop-menu-active");
-
-        // Close all desktop-nav-subnavs and set opacity to 0
-        $(".desktop-nav-subnav-trigger").attr("aria-expanded", "false");
-        desktopNavSubnav.fadeOut(400, function () {
-          // Remove inline style for opacity after fadeOut is complete
-          $(this).css("opacity", "");
-          // Set display to 'none' after removing opacity style
-          $(this).css("display", "none");
+        $('#big').on('click', function () {
+            size += 2;
+            $('p').css('font-size', size + 'px');
+            $('a').css('font-size', anchor + 'px');
+            $('#text-resize-example').text(size + 'px');
         });
 
-        $("#desktop-search-trigger").attr("aria-expanded", "false");
-        desktopSearchForm.fadeOut(400, function () {
-          // Remove inline style for opacity after fadeOut is complete
-          $(this).css("opacity", "");
-          // Set display to 'none' after removing opacity style
-          $(this).css("display", "none");
+        $('#small').on('click', function () {
+            size -= 2;
+
+            if (size >= 16) {
+                $('p').css('font-size', size + 'px');
+                $('a').css('font-size', anchor + 'px');
+                $('#text-resize-example').text(size + 'px');
+            } else {
+                size = 16;
+                $(this).prop('disable', true);
+                $('p').css('font-size', size + 'px');
+                $('a').css('font-size', anchor + 'px');
+            }
         });
 
-        $("#mobile-search-trigger").attr("aria-expanded", "false");
-        $("#mobile-search-form").fadeOut(400, function () {
-          // Remove inline style for opacity after fadeOut is complete
-          $(this).css("opacity", "");
-          // Set display to 'none' after removing opacity style
-          $(this).css("display", "none");
+        //New code
+
+        /* Mobile Nav Code */
+
+        // Click event for mobile-nav-search trigger
+        $('#mobile-search-trigger').click(function (event) {
+            event.preventDefault();
+            // Close all mobile-nav-subnavs and set opacity to 0
+            $('#mobile-menu').removeClass('active');
+            $('#mobile-menu-trigger').removeClass('active');
+            $('.mobile-nav-primary-item').removeClass('expanded');
+            $('.mobile-nav-subnav-trigger').attr('aria-expanded', 'false');
+
+            $('body').removeClass('mobile-menu-active'); // Add a class to body for styling when the menu is active
+            $(this).attr('aria-expanded', 'true');
+            $('#mobile-search-form')
+                .css('display', 'flex')
+                .stop()
+                .fadeTo(400, 1);
         });
-      }
-    });
 
-    /* Content Box Overlay Code */
-    $(".image-content-box-overlay .content-left .overlay-link").click(function (
-      event
-    ) {
-      $(".image-content-box-overlay .content-left .overlay-link").attr(
-        "aria-expanded",
-        false
-      );
-      $(this).attr("aria-expanded", true);
-      // Get the id
-      var buttonID = $(this).data("id");
-      $(".image-content-box-overlay .content-right .content").attr(
-        "aria-hidden",
-        "true"
-      );
-      var contentElement = $(
-        ".image-content-box-overlay .content-right .content[data-id='" +
-          buttonID +
-          "'"
-      );
-      contentElement.attr("aria-hidden", "false");
-    });
+        // Click event for mobile nav .back-btn elements
+        $('.back-btn').click(function () {
+            // Remove the 'expanded' class from all .mobile-nav-primary-item elements
+            $('.mobile-nav-primary-item').removeClass('expanded');
 
-    //Toggles code
-    (function () {
-      const toggles = document.querySelectorAll(".toggle");
-      if (typeof toggles !== "undefined" && toggles !== null) {
-        Toggles(toggles);
-      } else {
-      }
-    })();
+            // Set the aria-expanded attribute to 'false' for all .mobile-nav-subnav-trigger elements
+            $('.mobile-nav-subnav-trigger').attr('aria-expanded', 'false');
+        });
 
-    /**
-     * Default toggle functionality
-     *
-     * @param {Node} toggles Node list of all toggles
-     */
-    function Toggles(toggles) {
-      function toggleBehavior(e) {
-        e.preventDefault();
+        $('#mobile-menu-trigger').click(function () {
+            $(this).toggleClass('active');
+            $('#mobile-menu').toggleClass('active');
+            $('body').toggleClass('mobile-menu-active'); // Add a class to body for styling when the menu is active
+            $('.mobile-nav-subnav-trigger').attr('aria-expanded', false);
+            $('.mobile-nav-primary-item').removeClass('expanded');
+            $('#mobile-search-trigger').attr('aria-expanded', 'false');
+            $('#mobile-search-form').fadeOut(400, function () {
+                // Remove inline style for opacity after fadeOut is complete
+                $(this).css('opacity', '');
+                // Set display to 'none' after removing opacity style
+                $(this).css('display', 'none');
+            });
+        });
 
-        const $this = e.target;
+        $('.mobile-nav-subnav-trigger').click(function () {
+            // Get the current value of aria-expanded
+            var currentValue = $(this).attr('aria-expanded');
 
-        // Control ARIA landmarks on open
-        if ($this.getAttribute("aria-expanded") === "false") {
-          $this.setAttribute("aria-expanded", "true");
-          $this.nextElementSibling.setAttribute("aria-hidden", "false");
-        } else if ($this.getAttribute("aria-expanded") === "true") {
-          $this.setAttribute("aria-expanded", "false");
-          $this.nextElementSibling.setAttribute("aria-hidden", "true");
-        }
+            // Toggle the value
+            var newValue = currentValue === 'true' ? 'false' : 'true';
 
-        // Control ARIA landmarks on close
-        if (
-          $this.classList.contains("active") &&
-          $this.getAttribute("aria-expanded") === "true"
-        ) {
-          $this.setAttribute("aria-expanded", "false");
-          $this.nextElementSibling.setAttribute("aria-hidden", "true");
-        }
+            // Set the new value
+            $(this).attr('aria-expanded', newValue);
 
-        // Check if toggle trigger has multiple children
-        let triggerText = $this.querySelector(".toggle__trigger-text");
-        if (triggerText !== null) {
-          const revealedText = triggerText.dataset.show;
-          const hiddenText = triggerText.dataset.hide;
+            // Get the parent element and toggle the 'expanded' class
+            $(this)
+                .parent()
+                .toggleClass('expanded', newValue === 'true');
+        });
 
-          // Only run if data attributes found
-          if (
-            typeof revealedText !== "undefined" &&
-            typeof hiddenText !== "undefined"
-          ) {
-            // Change value based on if toggle is active
-            const toggleText = $this.classList.contains("toggle--active")
-              ? triggerText.dataset.show
-              : triggerText.dataset.hide;
+        /* Desktop Nav Code */
 
-            // Replace the current text value
-            triggerText.textContent = toggleText;
-          }
-        }
+        // Click event for desktop-nav-search trigger
+        $('#desktop-search-trigger').click(function (event) {
+            event.preventDefault();
+            // Close all desktop-nav-subnavs and set opacity to 0
+            $('.desktop-nav-subnav').fadeOut(400, function () {
+                // Remove inline style for opacity after fadeOut is complete
+                $(this).css('opacity', '');
+            });
+            $(this).attr('aria-expanded', 'true');
+            $('#desktop-search-form')
+                .css('display', 'flex')
+                .stop()
+                .fadeTo(400, 1);
 
-        $this.classList.toggle("toggle--active");
+            // Ensure 'desktop-menu-active' class is set on the body
+            $('body').addClass('desktop-menu-active');
+        });
 
-        const toggleBoxDisplay = $this.classList.contains("toggle--active")
-          ? "block"
-          : "none";
-        $this.nextElementSibling.style.display = toggleBoxDisplay;
-      }
-      Array.prototype.slice.call(toggles, 0).forEach(function (e) {
-        const toggleBox = e.querySelector(".toggle__box");
+        // Click event for desktop-nav-subnav-trigger
+        $('.primary-item .desktop-nav-subnav-trigger').click(function (event) {
+            // Prevent the default behavior of the anchor link
+            event.preventDefault();
+            $('.desktop-nav-subnav-trigger').attr('aria-expanded', 'false');
+            // Close all desktop-nav-subnavs and set opacity to 0
+            $('.desktop-nav-subnav').fadeOut(400, function () {
+                // Remove inline style for opacity after fadeOut is complete
+                $(this).css('opacity', '');
+            });
 
-        // Check to make sure box is intended to be hidden on load
-        if (toggleBox.getAttribute("aria-hidden") !== "false") {
-          toggleBox.style.display = "none";
-        }
+            $('#desktop-search-trigger').attr('aria-expanded', 'false');
+            $('#desktop-search-form').fadeOut(400, function () {
+                // Remove inline style for opacity after fadeOut is complete
+                $(this).css('opacity', '');
+                // Set display to 'none' after removing opacity style
+                $(this).css('display', 'none');
+            });
 
-        e.querySelector(".toggle__trigger").addEventListener(
-          "click",
-          toggleBehavior
+            // Set the new value
+            $(this).attr('aria-expanded', 'true');
+            // Toggle the display property to 'flex' and fade in the opacity for the clicked subnav
+            var subnav = $(this).next('.desktop-nav-subnav');
+            subnav.css('display', 'flex').stop().fadeTo(400, 1);
+
+            // Ensure 'desktop-menu-active' class is set on the body
+            $('body').addClass('desktop-menu-active');
+        });
+
+        //code for both mobile and desktop navs
+
+        // Check for clicks on the document
+        $(document).on('click', function (event) {
+            // Check if the body has the class 'desktop-menu-active'
+            if ($('body').hasClass('desktop-menu-active')) {
+                // Check if the clicked element is not a .desktop-nav-subnav or .desktop-nav-subnav-trigger
+                if (
+                    !$(event.target).is(
+                        '.desktop-nav-subnav, .desktop-nav-subnav-trigger, #desktop-search-trigger, #desktop-search-form, #desktop-search-form *, #mobile-search-trigger, mobile-search-form, mobile-search-form *'
+                    )
+                ) {
+                    // Fade out all .desktop-nav-subnavs and set opacity to 0
+                    $('.desktop-nav-subnav-trigger').attr(
+                        'aria-expanded',
+                        'false'
+                    );
+                    $('.desktop-nav-subnav').fadeOut(400, function () {
+                        // Remove inline style for opacity after fadeOut is complete
+                        $(this).css('opacity', '');
+                        // Set display to 'none' after removing opacity style
+                        $(this).css('display', 'none');
+                    });
+
+                    $('#desktop-search-trigger').attr('aria-expanded', 'false');
+                    $('#desktop-search-form').fadeOut(400, function () {
+                        // Remove inline style for opacity after fadeOut is complete
+                        $(this).css('opacity', '');
+                        // Set display to 'none' after removing opacity style
+                        $(this).css('display', 'none');
+                    });
+
+                    $('#mobile-search-trigger').attr('aria-expanded', 'false');
+                    $('#mobile-search-form').fadeOut(400, function () {
+                        // Remove inline style for opacity after fadeOut is complete
+                        $(this).css('opacity', '');
+                        // Set display to 'none' after removing opacity style
+                        $(this).css('display', 'none');
+                    });
+
+                    // Remove the 'desktop-menu-active' class from the body
+                    $('body').removeClass('desktop-menu-active');
+                }
+            }
+        });
+
+        // Scroll event to remove 'desktop-menu-active' class when the user scrolls
+        $(window).scroll(function () {
+            // Check if the subnav is currently visible before fading out
+            var desktopNavSubnav = $('.desktop-nav-subnav');
+            var desktopSearchForm = $('#desktop-search-form');
+            var mobileSearchForm = $('#mobile-search-form');
+            if (
+                desktopNavSubnav.is(':visible') ||
+                desktopSearchForm.is(':visible') ||
+                mobileSearchForm.is(':visible')
+            ) {
+                // Remove 'desktop-menu-active' class from the body
+                $('body').removeClass('desktop-menu-active');
+
+                // Close all desktop-nav-subnavs and set opacity to 0
+                $('.desktop-nav-subnav-trigger').attr('aria-expanded', 'false');
+                desktopNavSubnav.fadeOut(400, function () {
+                    // Remove inline style for opacity after fadeOut is complete
+                    $(this).css('opacity', '');
+                    // Set display to 'none' after removing opacity style
+                    $(this).css('display', 'none');
+                });
+
+                $('#desktop-search-trigger').attr('aria-expanded', 'false');
+                desktopSearchForm.fadeOut(400, function () {
+                    // Remove inline style for opacity after fadeOut is complete
+                    $(this).css('opacity', '');
+                    // Set display to 'none' after removing opacity style
+                    $(this).css('display', 'none');
+                });
+
+                $('#mobile-search-trigger').attr('aria-expanded', 'false');
+                $('#mobile-search-form').fadeOut(400, function () {
+                    // Remove inline style for opacity after fadeOut is complete
+                    $(this).css('opacity', '');
+                    // Set display to 'none' after removing opacity style
+                    $(this).css('display', 'none');
+                });
+            }
+        });
+
+        /* Content Box Overlay Code */
+        $('.image-content-box-overlay .content-left .overlay-link').click(
+            function (event) {
+                $(
+                    '.image-content-box-overlay .content-left .overlay-link'
+                ).attr('aria-expanded', false);
+                $(this).attr('aria-expanded', true);
+                // Get the id
+                var buttonID = $(this).data('id');
+                $('.image-content-box-overlay .content-right .content').attr(
+                    'aria-hidden',
+                    'true'
+                );
+                var contentElement = $(
+                    ".image-content-box-overlay .content-right .content[data-id='" +
+                        buttonID +
+                        "'"
+                );
+                contentElement.attr('aria-hidden', 'false');
+            }
         );
-      });
 
-      // loading animation
-      $(document).ready(function () {
-        $("#loading-delay").delay(400).fadeOut(300);
-        setTimeout(function () {
-          $(document.body).trigger("siteLoaded");
-          $(document.body).addClass("site-loaded");
-        }, 700);
-      });
-    }
-  });
+        //Toggles code
+        (function () {
+            const toggles = document.querySelectorAll('.toggle');
+            if (typeof toggles !== 'undefined' && toggles !== null) {
+                Toggles(toggles);
+            } else {
+            }
+        })();
 
-  /*----------------------------------------
+        /**
+         * Default toggle functionality
+         *
+         * @param {Node} toggles Node list of all toggles
+         */
+        function Toggles(toggles) {
+            function closeAllToggles() {
+                toggles.forEach((toggle) => {
+                    toggle
+                        .querySelector('.toggle__trigger')
+                        .setAttribute('aria-expanded', 'false');
+                    toggle
+                        .querySelector('.toggle__trigger')
+                        .classList.remove('toggle--active');
+                    toggle
+                        .querySelector('.toggle__box')
+                        .setAttribute('aria-hidden', 'true');
+                    toggle.querySelector('.toggle__box').style.display = 'none';
+                });
+            }
+            function toggleBehavior(e) {
+                e.preventDefault();
+
+                const $this = e.target;
+
+                //if the toggle is contained in .image-content-box-overlay
+                if (e.target.closest('.image-content-box-overlay')) {
+                    closeAllToggles();
+                }
+
+                // Control ARIA landmarks on open
+                if ($this.getAttribute('aria-expanded') === 'false') {
+                    $this.setAttribute('aria-expanded', 'true');
+                    $this.nextElementSibling.setAttribute(
+                        'aria-hidden',
+                        'false'
+                    );
+                } else if ($this.getAttribute('aria-expanded') === 'true') {
+                    $this.setAttribute('aria-expanded', 'false');
+                    $this.nextElementSibling.setAttribute(
+                        'aria-hidden',
+                        'true'
+                    );
+                }
+
+                // Control ARIA landmarks on close
+                if (
+                    $this.classList.contains('active') &&
+                    $this.getAttribute('aria-expanded') === 'true'
+                ) {
+                    $this.setAttribute('aria-expanded', 'false');
+                    $this.nextElementSibling.setAttribute(
+                        'aria-hidden',
+                        'true'
+                    );
+                }
+
+                // Check if toggle trigger has multiple children
+                let triggerText = $this.querySelector('.toggle__trigger-text');
+                if (triggerText !== null) {
+                    const revealedText = triggerText.dataset.show;
+                    const hiddenText = triggerText.dataset.hide;
+
+                    // Only run if data attributes found
+                    if (
+                        typeof revealedText !== 'undefined' &&
+                        typeof hiddenText !== 'undefined'
+                    ) {
+                        // Change value based on if toggle is active
+                        const toggleText = $this.classList.contains(
+                            'toggle--active'
+                        )
+                            ? triggerText.dataset.show
+                            : triggerText.dataset.hide;
+
+                        // Replace the current text value
+                        triggerText.textContent = toggleText;
+                    }
+                }
+
+                $this.classList.toggle('toggle--active');
+
+                const toggleBoxDisplay = $this.classList.contains(
+                    'toggle--active'
+                )
+                    ? 'block'
+                    : 'none';
+                $this.nextElementSibling.style.display = toggleBoxDisplay;
+            }
+            Array.prototype.slice.call(toggles, 0).forEach(function (e) {
+                const toggleBox = e.querySelector('.toggle__box');
+
+                // Check to make sure box is intended to be hidden on load
+                if (toggleBox.getAttribute('aria-hidden') !== 'false') {
+                    toggleBox.style.display = 'none';
+                }
+
+                e.querySelector('.toggle__trigger').addEventListener(
+                    'click',
+                    toggleBehavior
+                );
+            });
+        }
+
+        // loading animation
+        $(document).ready(function () {
+            $('#loading-delay').delay(400).fadeOut(300);
+            setTimeout(function () {
+                $(document.body).trigger('siteLoaded');
+                $(document.body).addClass('site-loaded');
+            }, 700);
+        });
+    });
+
+    /*----------------------------------------
 		On Resize
 	----------------------------------------*/
-  /*
+    /*
 	$window.resize(function() {
 
 	});

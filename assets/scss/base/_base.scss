@@ -38,7 +38,6 @@ $push: 410px;
 .desktop-hide {
     display: none;
     visibility: hidden;
-
     @media screen and (max-width: $mobile-break) {
         display: block;
         visibility: visible;
@@ -66,6 +65,7 @@ $push: 410px;
         height: 0;
         visibility: hidden;
         overflow: hidden;
+        padding: 0 !important;
     }
 }
 

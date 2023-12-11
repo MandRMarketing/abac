@@ -47,7 +47,8 @@
                     a.button-lg,
                     a.button,
                     a.button-arrow {
-                        max-width: unset;
+                        max-width: 100%;
+                        width: 100%;
                         flex: 1;
                     }
                 }
