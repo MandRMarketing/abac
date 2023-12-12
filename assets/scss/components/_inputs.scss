@@ -53,9 +53,6 @@ select {
     font-weight: 400;
 }
 
-.filter-input {
-}
-
 input:focus,
 textarea:focus {
     border: 1px solid #999;
@@ -79,37 +76,4 @@ input::-webkit-inner-spin-button {
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-results-button {
     display: none;
-}
-
-.search-container,
-.search-container-grey {
-    position: relative;
-    display: block;
-    margin-bottom: 12px;
-
-    input {
-        margin-bottom: 0;
-    }
-
-    &:after {
-        content: '\e906';
-        position: absolute;
-        z-index: 5;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 1px;
-        max-height: $spacing-med;
-        padding: 8px 10px;
-        color: $purple;
-        font-family: 'icomoon' !important;
-        font-size: 20px;
-        pointer-events: none;
-    }
-}
-
-.search-container:after {
-    background-color: #fff;
-}
-.search-container-grey:after {
-    background-color: $grey;
 }

@@ -52,24 +52,6 @@ Site Header
     position: relative;
     right: 0;
     transition: right 0.3s ease-in-out;
-
-    .slicknav_btn {
-        margin: 5px $spacing-xs 6px 5px;
-    }
-
-    .slicknav_nav {
-        padding: 10px 0;
-
-        .slicknav_parent [role='menu'] {
-            @extend .two-column;
-        }
-
-        .slicknav_parent [role='menu'] > li {
-            display: inline-block;
-            float: left;
-            max-width: 50%;
-        }
-    }
 }
 
 #header {

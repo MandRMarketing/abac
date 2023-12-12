@@ -16,14 +16,14 @@
             text-align: left;
             border: 2px solid $primary-yellow;
             border-left: 8px solid $primary-yellow;
-            color: $color-text;
+            color: $textColor;
             text-decoration: none;
             font-weight: bold;
             text-transform: uppercase;
 
             &:hover,
             &:focus {
-                color: $color-text;
+                color: $textColor;
             }
 
             &-text {
@@ -44,7 +44,7 @@
                 width: 45px;
                 height: 100%;
 
-                color: $color-text;
+                color: $textColor;
                 font-size: 26px;
                 line-height: 52px;
                 text-align: center;
@@ -185,7 +185,7 @@
                     width: 45px;
                     height: 100%;
 
-                    color: $color-text;
+                    color: $textColor;
                     font-size: 26px;
                     line-height: 52px;
                     text-align: center;

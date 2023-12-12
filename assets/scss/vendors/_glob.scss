@@ -1,16 +1,9 @@
 /* Bourbon.io Library */
-@import "bourbon";
-
-/* WP Plugins */
-/* @import "event-calendar"; */
-/* @import "woocommerce/woo-custom"; */
-@import "gravity-forms/gform-custom";
+@import 'bourbon';
 
 /* Other Plugins, etc */
-@import "magnific";
-@import "superfish";
-@import "icomoon";
-@import "slick/slick";
-@import "slick/slick_theme";
-@import "slickNav/core";
-@import "slickNav/theme";
+@import 'magnific';
+@import 'superfish';
+@import 'icomoon';
+@import 'slick/slick';
+@import 'slick/slick_theme';
