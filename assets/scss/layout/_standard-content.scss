@@ -5,7 +5,7 @@
             content: unset;
         }
         display: flex;
-        gap: 50px;
+        gap: $spacing-med;
         @media screen and (max-width: $mobile-break) {
             flex-direction: column;
         }

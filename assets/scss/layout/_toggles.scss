@@ -12,7 +12,7 @@
             width: 100%;
             height: auto;
             border: none;
-            padding: 25px 60px 25px 25px;
+            padding: $spacing-sm 60px $spacing-sm $spacing-sm;
             text-align: left;
             border: 2px solid $primary-yellow;
             border-left: 8px solid $primary-yellow;
@@ -65,7 +65,7 @@
 
         &__box {
             overflow: hidden;
-            padding: 25px;
+            padding: $spacing-sm;
             border-bottom: 2px solid $primary-yellow;
             border-left: 8px solid $primary-yellow;
             border-right: 2px solid $primary-yellow;
@@ -113,7 +113,7 @@
             display: block;
             position: relative;
             width: 32.5%;
-            margin-bottom: 50px;
+            margin-bottom: $spacing-med;
             h1,
             h2,
             h3,
@@ -138,7 +138,7 @@
                 position: relative;
                 width: 32.5%;
                 height: auto;
-                padding: 25px 15px 25px 0px;
+                padding: $spacing-sm $spacing-xs $spacing-sm 0px;
                 text-align: left;
                 cursor: pointer;
                 border: none;
@@ -220,7 +220,7 @@
                 bottom: 0;
                 left: 40%;
                 overflow: hidden;
-                padding: 25px;
+                padding: $spacing-sm;
                 border: 0px;
                 color: white;
                 h1,
@@ -303,7 +303,7 @@
                         justify-content: flex-end;
                         flex-direction: column;
                         align-items: center;
-                        padding-bottom: 75px;
+                        padding-bottom: $spacing-lg;
                         h1,
                         h2,
                         h3,
@@ -347,7 +347,7 @@
                     display: none;
                     pointer-events: none;
                     border: 0;
-                    margin-bottom: 25px;
+                    margin-bottom: $spacing-sm;
                     overflow: unset;
                     p {
                         font-size: 23px;

@@ -170,7 +170,7 @@ h6 {
     }
 
     @media screen and (max-width: $mobile-small) {
-        font-size: 50px;
+        font-size: $spacing-med;
     }
 }
 
@@ -194,8 +194,8 @@ h6 {
 
 .header-underline {
     position: relative;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
+    margin-bottom: $spacing-sm;
+    padding-bottom: $spacing-sm;
 
     &:after {
         content: '';

@@ -2,213 +2,213 @@
 Sidebars
 ---------------------------------------------------------------------------------------------------- */
 #sidebar {
-	background-color: $grey;
-	
-	@media screen and (max-width: $mobile-break) {
-		margin-top: 35px;
-	}
+    background-color: $grey;
+
+    @media screen and (max-width: $mobile-break) {
+        margin-top: 35px;
+    }
 }
 
 #side-navigation {
-	margin-bottom: 0;
-	list-style-type: none;
-	font-family: 'Oswald', sans-serif;
-	font-size: 18px;
-	
-	.current-page {
-		/*font-size: 22px;*/
-		font-weight: bold;
-	}
-	
-	a {
-		display: block;
-		color: $darkGrey;
-		
-		&:hover {
-			color: $purple;
-		}
-	}
+    margin-bottom: 0;
+    list-style-type: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+
+    .current-page {
+        /*font-size: 22px;*/
+        font-weight: bold;
+    }
+
+    a {
+        display: block;
+        color: $darkGrey;
+
+        &:hover {
+            color: $purple;
+        }
+    }
 }
 
 .sidebar-single-section {
-	padding: 55px;
+    padding: 55px;
 }
 
 .sub-navigation {
-	list-style-type: none;
-	font-size: 16px;
+    list-style-type: none;
+    font-size: 16px;
 }
 
 .sidebar-info-links {
-	overflow: hidden;
-	
-	a:not(.dropdown-toggle) {
-		border-bottom: 1px solid $altGrey;
-		padding: 8px 0;
-	}
-	
-	.toggle .trigger span {
-		top: 0;
-	}
+    overflow: hidden;
+
+    a:not(.dropdown-toggle) {
+        border-bottom: 1px solid $altGrey;
+        padding: 8px 0;
+    }
+
+    .toggle .trigger span {
+        top: 0;
+    }
 }
 
 .sidebar-secondary-content {
-	background-color: #c2c2c2;
-	
-	.section-title,
-	.event-header,
-	.event-time {
-		text-align: left;
-	}
-	
-	.section-title {
-		font-weight: bold;
-	}
-	
-	.event-header {
-		color: $purple;
-	}
-	
-	.event-time {
-		margin: 5px 0 15px;
-		font-style: italic;
-	}
-	
-	.button {
-		margin: auto;
-	}
+    background-color: #c2c2c2;
+
+    .section-title,
+    .event-header,
+    .event-time {
+        text-align: left;
+    }
+
+    .section-title {
+        font-weight: bold;
+    }
+
+    .event-header {
+        color: $purple;
+    }
+
+    .event-time {
+        margin: 5px 0 $spacing-xs;
+        font-style: italic;
+    }
+
+    .button {
+        margin: auto;
+    }
 }
 
 .sidebar-profile-information-single {
-	position: relative;
-	margin: 0 0 16px;
-	padding: 0 0 16px;
-	
-	&:after {
-		content: '';
-		background-color: #eaeaea;
-		position: absolute;
-		z-index: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		width: 100%;
-		height: 1px;
-	}
-	
-	p:last-of-type {
-		margin: 0;
-	}
-	
-	img {
-		display: inherit;
-		margin: 0 auto 15px;
-		text-align: center;
-	}
+    position: relative;
+    margin: 0 0 16px;
+    padding: 0 0 16px;
+
+    &:after {
+        content: '';
+        background-color: #eaeaea;
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 1px;
+    }
+
+    p:last-of-type {
+        margin: 0;
+    }
+
+    img {
+        display: inherit;
+        margin: 0 auto $spacing-xs;
+        text-align: center;
+    }
 }
 
 .sidebar-contact-information-single {
-	margin-bottom: 15px;
-	
-	h5 {
-		margin: 0;
-	}
-	
-	a {
-		color: $purple;
-		font-style: italic;
-		font-weight: bold;
-	}
+    margin-bottom: $spacing-xs;
+
+    h5 {
+        margin: 0;
+    }
+
+    a {
+        color: $purple;
+        font-style: italic;
+        font-weight: bold;
+    }
 }
 
 .sidebar-upcoming-events {
-	text-align: center;
+    text-align: center;
 }
 
 .child-dropdown {
-	position: relative;
+    position: relative;
 }
 
 .dropdown-toggle {
-	background-color: $grey;
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: auto;
-	height: 100%;
-	max-width: 45px;
-	max-height: 45px;
-	padding: 0 15px;
-	cursor: pointer;
-	transition: background-color .2s ease-in-out;
-	
-	&:hover {
-		background-color: $purple;
-		
-		&:after {
-			color: #fff;
-		}
-	}
-	
-	&:after {
-		content: '+';
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		left: 0;
-		right: 0;
-		margin: auto;
-		color: $darkGrey;
-		font-family: monospace;
-		font-size: 25px;
-		text-align: center;
-		transition: color .2s ease-in-out;
-	}
+    background-color: $grey;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 100%;
+    max-width: 45px;
+    max-height: 45px;
+    padding: 0 $spacing-xs;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: $purple;
+
+        &:after {
+            color: #fff;
+        }
+    }
+
+    &:after {
+        content: '+';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        margin: auto;
+        color: $darkGrey;
+        font-family: monospace;
+        font-size: $spacing-sm;
+        text-align: center;
+        transition: color 0.2s ease-in-out;
+    }
 }
 
 .active.dropdown-toggle {
-	background: $purple;
-	
-	&:after {
-		content: '-';
-		color: #fff;
-	}
+    background: $purple;
+
+    &:after {
+        content: '-';
+        color: #fff;
+    }
 }
 
 .dropdown-navigation {
-	margin: 0;
-	padding: 10px 0;
-	list-style-type: none;
-	font-size: 16px;
-	line-height: 1.2;
-	
-	a {
-		margin-bottom: 10px;
-	}
+    margin: 0;
+    padding: 10px 0;
+    list-style-type: none;
+    font-size: 16px;
+    line-height: 1.2;
+
+    a {
+        margin-bottom: 10px;
+    }
 }
 
 /*-----------------------
 	SCHOOL DIVISIONS
 ------------------------*/
-.school-contact-information {	
-	a {
-		color: $purple;
-		font-style: italic;
-		font-weight: bold;
-	}
+.school-contact-information {
+    a {
+        color: $purple;
+        font-style: italic;
+        font-weight: bold;
+    }
 }
 
 .school-application {
-	background-color: $purple;
-	display: block;
-	padding: 3.5rem;
-	font-size: 30px;
-	text-align: center;
-	
-	&:hover,
-	&:focus {
-		background-color: $darkPurple;
-		color: rgba(255,255,255,.5);
-	}
+    background-color: $purple;
+    display: block;
+    padding: 3.5rem;
+    font-size: 30px;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+        background-color: $darkPurple;
+        color: rgba(255, 255, 255, 0.5);
+    }
 }

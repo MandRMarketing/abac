@@ -4,11 +4,11 @@
             display: flex;
             justify-content: space-between;
             border-bottom: 2px solid $primary-yellow;
-            margin-bottom: 25px;
+            margin-bottom: $spacing-sm;
 
             .social-icons {
                 display: flex;
-                gap: 15px;
+                gap: $spacing-xs;
                 .badge-icon {
                     background-size: contain;
                 }
@@ -20,7 +20,7 @@
     &__content {
         .article-heading {
             border-left: 8px solid $primary-yellow;
-            padding-left: 25px;
+            padding-left: $spacing-sm;
         }
     }
     &__footer {
@@ -28,10 +28,10 @@
             display: flex;
             justify-content: space-between;
             border-top: 2px solid $primary-yellow;
-            padding-top: 25px;
+            padding-top: $spacing-sm;
             .social-icons {
                 display: flex;
-                gap: 15px;
+                gap: $spacing-xs;
                 .badge-icon {
                     background-size: contain;
                 }
@@ -42,13 +42,13 @@
 .featured-articles {
     &__container {
         display: flex;
-        gap: 25px;
+        gap: $spacing-sm;
         height: 777px;
         &__primary-article {
             width: 60%;
             height: 100%;
             border-bottom: 8px solid $primary-yellow;
-            padding: 15px;
+            padding: $spacing-xs;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             position: relative;
             z-index: 1;
@@ -107,11 +107,11 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: $spacing-sm;
             &__article {
                 flex: 1;
                 border-bottom: 8px solid $primary-yellow;
-                padding: 15px;
+                padding: $spacing-xs;
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                 position: relative;
                 z-index: 1;
@@ -171,7 +171,7 @@
 .news-articles {
     &__container {
         display: flex;
-        gap: 25px;
+        gap: $spacing-sm;
         &__articles {
             width: 75%;
             display: flex;
@@ -182,22 +182,22 @@
                 flex: 1 0 calc(33.33% - 20px); /* 10px for margin or gap, adjust as needed */
                 border: 1px solid $primary-yellow;
                 border-bottom: 8px solid $primary-yellow;
-                padding: 15px;
+                padding: $spacing-xs;
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                 position: relative;
                 img {
                     max-width: unset;
                     width: calc(100% + 30px);
-                    margin-top: -15px;
-                    margin-left: -15px;
+                    margin-top: -$spacing-xs;
+                    margin-left: -$spacing-xs;
                 }
                 time {
                     background: $green;
                     color: white;
                     font-weight: 700;
                     padding: 5px;
-                    margin-left: -15px;
-                    padding-left: 15px;
+                    margin-left: -$spacing-xs;
+                    padding-left: $spacing-xs;
                     margin-top: -37px;
                     position: relative;
                     z-index: 1;
@@ -227,7 +227,7 @@
         }
     }
     &__pagination {
-        margin-top: 50px;
+        margin-top: $spacing-med;
         .page-numbers {
             display: flex;
             justify-content: flex-end;
@@ -273,7 +273,7 @@
     .news-articles {
         &__container {
             flex-direction: column-reverse;
-            gap: 25px;
+            gap: $spacing-sm;
             &__articles {
                 width: 100%;
                 flex-direction: column;

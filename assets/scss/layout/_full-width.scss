@@ -7,14 +7,14 @@
         width: 567px;
         height: 587px;
         position: absolute;
-        left: 50px;
-        top: 100px;
+        left: $spacing-med;
+        top: $spacing-xl;
         @media screen and (max-width: $extra-break) {
             width: 320px;
             height: 320px;
             left: 50%;
             transform: translateX(-50%);
-            top: 25px;
+            top: $spacing-sm;
         }
     }
 }
@@ -24,16 +24,16 @@
         display: flex;
         &__left {
             width: 50%;
-            padding: 100px;
+            padding: $spacing-xl;
         }
 
         &__right {
             width: 50%;
-            padding: 100px;
+            padding: $spacing-xl;
         }
         &.image-right {
             .fifty-fifty__left {
-                padding: 100px;
+                padding: $spacing-xl;
             }
             .fifty-fifty__right {
                 padding: 0;
@@ -54,7 +54,7 @@
                 }
             }
             .fifty-fifty__right {
-                padding: 100px;
+                padding: $spacing-xl;
             }
         }
     }
@@ -70,7 +70,7 @@
         }
         &.image-right {
             .forty-sixty__left {
-                padding: 100px;
+                padding: $spacing-xl;
             }
             .forty-sixty__right {
                 padding: 0;
@@ -99,7 +99,7 @@
                 }
             }
             .forty-sixty__right {
-                padding: 100px;
+                padding: $spacing-xl;
             }
         }
         @media screen and (max-width: $extra-break) {
@@ -194,7 +194,7 @@
             }
         }
         a {
-            margin-bottom: 25px;
+            margin-bottom: $spacing-sm;
             font-weight: 700;
         }
         p {

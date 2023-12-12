@@ -9,10 +9,10 @@ Site Footer
     text-align: center;
     background-color: $green;
     border-top: 11px solid $primary-yellow;
-    padding-bottom: 25px;
+    padding-bottom: $spacing-sm;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: $spacing-med;
     * {
         color: white;
     }
@@ -41,7 +41,7 @@ Site Footer
         }
         .social-icons {
             display: flex;
-            gap: 15px;
+            gap: $spacing-xs;
         }
     }
 
@@ -60,7 +60,7 @@ Site Footer
                 text-align: left;
                 li {
                     margin: 0;
-                    margin-bottom: 15px;
+                    margin-bottom: $spacing-xs;
                 }
             }
         }
@@ -85,7 +85,7 @@ Site Footer
             display: flex;
             justify-content: center;
             margin: 0;
-            padding: 15px 0;
+            padding: $spacing-xs 0;
             border-top: 1px solid $primary-yellow;
             border-bottom: 1px solid $primary-yellow;
             gap: 10px;
@@ -101,7 +101,7 @@ Site Footer
     @media screen and (max-width: $mobile-break) {
         #footer-socials {
             flex-direction: column;
-            gap: 25px;
+            gap: $spacing-sm;
             .footer-site-logo {
                 img {
                     max-width: 100%;

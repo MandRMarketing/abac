@@ -4,7 +4,7 @@
     background-color: $green;
     display: flex;
     justify-content: flex-end;
-    height: 50px;
+    height: $spacing-med;
     width: 100%;
     position: fixed;
     top: 0;
@@ -15,7 +15,7 @@
         display: flex;
         .secondary-item {
             border-left: 1px solid $primary-yellow;
-            padding: 15px 35px;
+            padding: $spacing-xs 35px;
             display: flex;
             align-items: center;
             a {
@@ -27,7 +27,7 @@
             }
             label {
                 color: white;
-                margin-right: 15px;
+                margin-right: $spacing-xs;
                 font-family: 'libre-franklin', sans-serif;
                 font-weight: 700;
                 font-style: normal;
@@ -45,8 +45,8 @@
 #desktop-nav-primary {
     position: relative;
     width: 100%;
-    height: 100px;
-    margin-top: 50px;
+    height: $spacing-xl;
+    margin-top: $spacing-med;
     position: fixed;
     top: 0;
     left: 0;
@@ -86,7 +86,7 @@
             &#desktop-search-menu-item {
                 height: 100%;
                 padding: 0px;
-                width: 100px;
+                width: $spacing-xl;
                 background: $primary-yellow;
                 #desktop-search-trigger {
                     height: 100%;
@@ -109,7 +109,7 @@
                     display: none;
                     justify-content: center;
                     align-items: center;
-                    gap: 15px;
+                    gap: $spacing-xs;
                     opacity: 0;
                     background: $offWhite;
                     height: 95px;
@@ -120,7 +120,7 @@
                     top: calc(
                         100% + 11px
                     ); /* 100% + border bottom of primary desktop menu */
-                    padding: 0 15px;
+                    padding: 0 $spacing-xs;
 
                     input {
                         margin-bottom: 0;
@@ -154,8 +154,8 @@
                     100% + 11px
                 ); /* 100% + border bottom of prumary desktop menu */
                 background: $offWhite;
-                gap: 25px;
-                padding: 25px;
+                gap: $spacing-sm;
+                padding: $spacing-sm;
                 box-shadow: 0rem 0.15rem 0.5rem 0 rgba(0, 0, 0, 0.29);
 
                 .desktop-nav-subnav-list {
@@ -237,7 +237,7 @@
                 height: 100%;
                 display: flex;
                 align-items: center;
-                padding: 15px 35px;
+                padding: $spacing-xs 35px;
                 transition: background 0.15s ease-in-out;
                 font-size: 22px;
                 font-family: 'bookmania', serif;
@@ -260,7 +260,7 @@
                     background: $primary-yellow;
                 }
                 @media screen and (max-width: $first-break) {
-                    padding: 15px 15px;
+                    padding: $spacing-xs $spacing-xs;
                     font-size: 18px;
                 }
             }
@@ -285,10 +285,10 @@
     z-index: 300;
     border-top: 11px solid $green;
     border-bottom: 11px solid $primary-yellow;
-    padding-left: 15px;
+    padding-left: $spacing-xs;
     background: white;
     display: flex;
-    gap: 15px;
+    gap: $spacing-xs;
 
     #mobile-search-menu-item {
         flex: 1;
@@ -316,7 +316,7 @@
             display: none;
             justify-content: center;
             align-items: center;
-            gap: 15px;
+            gap: $spacing-xs;
             opacity: 0;
             background: $offWhite;
             height: 68px;
@@ -327,7 +327,7 @@
             top: calc(
                 100% + 11px
             ); /* 100% + border bottom of primary desktop menu */
-            padding: 0 15px;
+            padding: 0 $spacing-xs;
 
             input {
                 margin-bottom: 0;
@@ -360,7 +360,7 @@
         background-color: $offWhite;
         // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         transition: right 0.3s ease;
-        padding: 0 25px;
+        padding: 0 $spacing-sm;
         .mobile-nav-primary-item {
             a:not(.button),
             span {
@@ -413,7 +413,7 @@
                 background-color: $offWhite;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 transition: right 0.3s ease;
-                padding: 0 25px;
+                padding: 0 $spacing-sm;
                 .mobile-nav-subnav-item {
                     a,
                     span {
@@ -451,7 +451,7 @@
                 }
                 .mobile-nav-button {
                     position: relative;
-                    margin: 0 -25px;
+                    margin: 0 -$spacing-sm;
                     width: unset;
                 }
             }
@@ -469,7 +469,7 @@
                 text-align: left;
                 position: relative;
                 display: block;
-                padding: 15px;
+                padding: $spacing-xs;
                 color: $green;
                 text-transform: uppercase;
                 text-decoration: none;

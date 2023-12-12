@@ -2,39 +2,38 @@
 	ABOUT
 ------------------------*/
 figure.upcoming-event-thumb {
-	height: 150px; 
-	margin: 0 0 25px;
-	overflow: hidden;
-	
-	img {
-		@supports (object-fit: cover) {
-			object-fit: cover;
-    		width: 100%;
-    		height: 100%;
-		}
-	}
-	
-	&:hover {
-		.image-overlay {
-			background-color: rgba(0,0,0,.8);
-		}
-		
-		.image-overlay-excerpt {
-			opacity: 1;
-		}
-	}
+    height: 150px;
+    margin: 0 0 $spacing-sm;
+    overflow: hidden;
+
+    img {
+        @supports (object-fit: cover) {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &:hover {
+        .image-overlay {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .image-overlay-excerpt {
+            opacity: 1;
+        }
+    }
 }
 
 /*-----------------------
 	POLICE
 ------------------------*/
 .police-image-holder {
-	
-	@media screen and (max-width: $mobile-break){
-		text-align: center;
-	}
-	
-	img {
-		max-width: 150px;
-	}
+    @media screen and (max-width: $mobile-break) {
+        text-align: center;
+    }
+
+    img {
+        max-width: 150px;
+    }
 }

@@ -1,14 +1,14 @@
 .program-archive {
     .container {
         display: flex;
-        gap: 50px;
+        gap: $spacing-med;
     }
     &__filters {
         #program-archive-form {
             max-width: 337px;
             .search-wrapper {
                 position: relative;
-                margin-bottom: 25px;
+                margin-bottom: $spacing-sm;
                 #program-archive-search {
                     border: 2px solid $primary-yellow;
                     background: $offWhite;
@@ -24,7 +24,7 @@
                     width: 27px;
                     height: 27px;
                     position: absolute;
-                    right: 15px;
+                    right: $spacing-xs;
                     top: 50%;
                     transform: translateY(-50%);
                     cursor: pointer;
@@ -32,7 +32,7 @@
             }
             .checkboxes-header {
                 border-bottom: 1px solid $primary-yellow;
-                padding-bottom: 25px;
+                padding-bottom: $spacing-sm;
             }
             .toggles {
                 .toggle {
@@ -54,7 +54,7 @@
                         border: 0px;
                         border-bottom: 1px solid $primary-yellow;
                         padding: 0px;
-                        padding-bottom: 25px;
+                        padding-bottom: $spacing-sm;
                         .css-checkbox {
                             position: absolute;
                             overflow: hidden;
@@ -120,16 +120,16 @@
         &__list {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: $spacing-xs;
             article {
                 border-bottom: 8px solid $primary-yellow;
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                padding: 15px;
+                padding: $spacing-xs;
                 width: calc(50% - 9px);
             }
         }
         &__pagination {
-            margin-top: 25px;
+            margin-top: $spacing-sm;
             .page-numbers {
                 display: flex;
                 justify-content: flex-end;

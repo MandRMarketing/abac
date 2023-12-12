@@ -2,43 +2,46 @@
 --------------------------------------------- */
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	line-height: 2;
-	margin-bottom: 40px;
-	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    line-height: 2;
+    margin-bottom: 40px;
+    width: 100%;
 }
-tbody { border-bottom: 1px solid #ddd; font-size: 14px;}
+tbody {
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
 th,
-td { 
-	text-align: left;
-	
-	@media screen and (max-width: $mobile-break){
-		display: block;
-	}
+td {
+    text-align: left;
+
+    @media screen and (max-width: $mobile-break) {
+        display: block;
+    }
 }
 th {
-	font-weight: bold;
-	text-transform: uppercase;
-	padding: 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px $spacing-xs;
 }
 tr {
-	thead & {
-		background: #c2c2c2;
-	}
-	
-	tbody &:nth-of-type(odd){
-		background: $grey;
-	}
-	
-	tbody &:nth-of-type(even){
-		background: #c2c2c2;
-	}
+    thead & {
+        background: #c2c2c2;
+    }
+
+    tbody &:nth-of-type(odd) {
+        background: $grey;
+    }
+
+    tbody &:nth-of-type(even) {
+        background: #c2c2c2;
+    }
 }
 td {
-	padding: 10px 15px;
-	
-	@media screen and (max-width: $mobile-break){
-		display: block;
-	}
+    padding: 10px $spacing-xs;
+
+    @media screen and (max-width: $mobile-break) {
+        display: block;
+    }
 }

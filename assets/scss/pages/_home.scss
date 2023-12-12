@@ -1,132 +1,133 @@
 time {
-	display: block;
-	color: #777;
-	margin-bottom: 18px;
-	
-	h2 + & {
-		margin-top: -24px;
-	}
+    display: block;
+    color: #777;
+    margin-bottom: 18px;
+
+    h2 + & {
+        margin-top: -24px;
+    }
 }
 
-.blog, .category {
-	.post-holder {
-		margin-bottom: 32px;
-		
-		.excerpt {
-			margin-bottom: 18px;
-		}
-	}
+.blog,
+.category {
+    .post-holder {
+        margin-bottom: 32px;
+
+        .excerpt {
+            margin-bottom: 18px;
+        }
+    }
 }
 
 .breadcrumbs {
-	display: block;
-	margin-bottom: 25px;
-	
-	a,
-	.breadcrumb {
-		position: relative;
-		border: none !important;
-		color: $altGrey;
-		font-style: italic;
-		
-		&:not(.right):before {
-			content: '\e907';
-			font-family: 'icomoon' !important;
-			font-size: 16px;
-			display: inline-block;
-			vertical-align: baseline;	
-			padding-right: 5px;
-			color: $altGrey;
-			font-style: italic;
-			transition: color .3s ease;
-		}
-		
-		&.right:after {
-			content: '\e905';
-			font-family: 'icomoon' !important;
-			font-size: 16px;
-			display: inline-block;
-			vertical-align: bottom;
-			padding-left: 5px;
-			color: $altGrey;
-			font-style: italic;
-			transition: color .3s ease;
-		}
-	}
-	
-	a:hover,
-	a:focus {
-		color: $darkGrey;
-		
-		&:before {
-			color: $darkGrey;
-		}
-	}
+    display: block;
+    margin-bottom: $spacing-sm;
+
+    a,
+    .breadcrumb {
+        position: relative;
+        border: none !important;
+        color: $altGrey;
+        font-style: italic;
+
+        &:not(.right):before {
+            content: '\e907';
+            font-family: 'icomoon' !important;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: baseline;
+            padding-right: 5px;
+            color: $altGrey;
+            font-style: italic;
+            transition: color 0.3s ease;
+        }
+
+        &.right:after {
+            content: '\e905';
+            font-family: 'icomoon' !important;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: bottom;
+            padding-left: 5px;
+            color: $altGrey;
+            font-style: italic;
+            transition: color 0.3s ease;
+        }
+    }
+
+    a:hover,
+    a:focus {
+        color: $darkGrey;
+
+        &:before {
+            color: $darkGrey;
+        }
+    }
 }
 
 .entry-title {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .entry-time {
-	margin-bottom: 0;
-	color: darken($grey, 20%);
-	font-size: 16px;
+    margin-bottom: 0;
+    color: darken($grey, 20%);
+    font-size: 16px;
 }
 
 .category-container {
-	display: block;
-	margin-bottom: 10px;
-	
-	.entry-category {
-		position: relative;
-		border: none;
-		margin-right: 7px;
-		
-		&:after {
-			content: "|";
-			position: absolute;
-			right: -8px;
-		}
-	}
-	
-	.entry-category:last-of-type {
-		margin-right: 0;
-		
-		&:after {
-			display: none;
-		}
-	}
+    display: block;
+    margin-bottom: 10px;
+
+    .entry-category {
+        position: relative;
+        border: none;
+        margin-right: 7px;
+
+        &:after {
+            content: '|';
+            position: absolute;
+            right: -8px;
+        }
+    }
+
+    .entry-category:last-of-type {
+        margin-right: 0;
+
+        &:after {
+            display: none;
+        }
+    }
 }
 
 .pagination {
-	display: block;
+    display: block;
     width: 100%;
     height: auto;
-	clear: both;
-	padding: 25px 0;
+    clear: both;
+    padding: $spacing-sm 0;
     text-align: right;
-	
-	.fleft,
-	.fright,
-	.page-num {
-		display: inline;
-		border: none;
-		padding: 0 5px;
-		color: $darkPurple;
-		font-style: normal;
-		
-		&:hover,
-		&:focus {
-			color: $darkGrey;
-		}
-		
-		&:last-of-type {
-			padding-right: 0;
-		}
-	}
-	
-	@media screen and (max-width:$mobile-break){
-		text-align: center;
-	}
+
+    .fleft,
+    .fright,
+    .page-num {
+        display: inline;
+        border: none;
+        padding: 0 5px;
+        color: $darkPurple;
+        font-style: normal;
+
+        &:hover,
+        &:focus {
+            color: $darkGrey;
+        }
+
+        &:last-of-type {
+            padding-right: 0;
+        }
+    }
+
+    @media screen and (max-width: $mobile-break) {
+        text-align: center;
+    }
 }

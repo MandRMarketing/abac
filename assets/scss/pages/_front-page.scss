@@ -32,7 +32,7 @@
     padding: 10% 0;
 
     @media screen and (max-width: $mobile-break) {
-        padding: 25px 0;
+        padding: $spacing-sm 0;
     }
 }
 
@@ -164,7 +164,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: $spacing-med;
     margin-bottom: -500px;
     &::before {
         content: '';
@@ -202,7 +202,7 @@
         font-weight: 400;
         strong {
             em {
-                margin-top: 25px;
+                margin-top: $spacing-sm;
                 display: block;
             }
         }
@@ -436,7 +436,7 @@
 .hover-diamond {
     position: absolute;
     z-index: 1;
-    top: 75px;
+    top: $spacing-lg;
     transform: translateY(-50%);
     margin: auto;
     width: 150px;
@@ -480,7 +480,7 @@
         transform: none;
         width: 100%;
         height: auto;
-        padding: 25px 0;
+        padding: $spacing-sm 0;
         opacity: 1;
     }
 }
@@ -604,7 +604,7 @@ span.diamond-excerpt {
     padding: 55px 0;
 
     @media screen and (max-width: $mobile-break) {
-        padding: 25px;
+        padding: $spacing-sm;
     }
 
     .center-flex {
@@ -618,7 +618,7 @@ span.diamond-excerpt {
 
 .background-button {
     position: relative;
-    margin-top: 15px;
+    margin-top: $spacing-xs;
     padding: 35px;
     background-color: $purple;
     box-shadow: inset 0px 0px 0 5px #fff;
@@ -668,7 +668,7 @@ span.diamond-excerpt {
     border-top: 1px solid $purple;
     border-bottom: 1px solid $purple;
     margin-left: 3%;
-    padding: 25px 0;
+    padding: $spacing-sm 0;
     width: 30%;
     min-height: 150px;
 
@@ -694,7 +694,7 @@ span.diamond-excerpt {
     }
 
     @media screen and (max-width: $first-break) {
-        padding: 25px 0 0 !important;
+        padding: $spacing-sm 0 0 !important;
     }
 
     @media screen and (max-width: $mobile-break) {
@@ -760,7 +760,7 @@ span.diamond-excerpt {
 	NEWS
 ------------------------*/
 .home .primary-content-wrap .outer-container.grey-backdrop {
-    padding-bottom: 25px;
+    padding-bottom: $spacing-sm;
 }
 
 .news-slide {

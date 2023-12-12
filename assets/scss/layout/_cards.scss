@@ -75,7 +75,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 15px;
+        gap: $spacing-xs;
         &__card {
             background: white;
             border-bottom: 8px solid $primary-yellow;
@@ -83,17 +83,17 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            padding: 25px;
+            padding: $spacing-sm;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             flex: 1;
             align-self: stretch;
             .header-image {
                 height: 50%;
-                width: calc(100% + 50px);
-                max-width: calc(100% + 50px);
-                margin-top: -25px;
+                width: calc(100% + $spacing-med);
+                max-width: calc(100% + $spacing-med);
+                margin-top: -$spacing-sm;
                 object-fit: cover;
-                margin-bottom: 15px;
+                margin-bottom: $spacing-xs;
             }
         }
         @media screen and (max-width: $extra-break) {
@@ -107,14 +107,14 @@
     &__content {
         display: flex;
         justify-content: center;
-        margin-top: 50px;
-        gap: 25px;
+        margin-top: $spacing-med;
+        gap: $spacing-sm;
     }
     &.quote {
         .horizontal-cards__cards {
-            gap: 25px;
+            gap: $spacing-sm;
             .horizontal-cards__cards__card {
-                padding: 100px 25px;
+                padding: $spacing-xl $spacing-sm;
                 border: 2px solid $primary-yellow;
                 text-align: center;
                 .badge-icon {
@@ -136,9 +136,9 @@
     }
     &.icons {
         .horizontal-cards__cards {
-            gap: 25px;
+            gap: $spacing-sm;
             .horizontal-cards__cards__card {
-                gap: 15px;
+                gap: $spacing-xs;
                 width: 100%;
                 height: unset;
                 .badge-icon {
@@ -165,7 +165,7 @@
         .horizontal-cards__cards {
             .horizontal-cards__cards__card {
                 position: relative;
-                gap: 25px;
+                gap: $spacing-sm;
                 width: 100%;
                 height: unset;
                 border: 2px solid $primary-yellow;

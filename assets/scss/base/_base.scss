@@ -1,4 +1,8 @@
-$push: 410px;
+$spacing-xs: 15px;
+$spacing-sm: 25px;
+$spacing-med: 50px;
+$spacing-lg: 75px;
+$spacing-xl: 100px;
 
 /* General CSS */
 
@@ -153,7 +157,7 @@ img {
     margin-top: 55px;
 
     @media screen and (max-width: $mobile-med) {
-        margin-top: 25px;
+        margin-top: $spacing-sm;
     }
 }
 
@@ -162,7 +166,7 @@ img {
     padding: 55px 0;
 
     @media screen and (max-width: $mobile-med) {
-        padding: 25px 0 0;
+        padding: $spacing-sm 0 0;
     }
 }
 

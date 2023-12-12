@@ -4,7 +4,7 @@
             display: flex;
             border-top: 2px solid $primary-yellow;
             border-bottom: 2px solid $primary-yellow;
-            padding: 50px 0;
+            padding: $spacing-med 0;
         }
 
         &__container {
@@ -31,10 +31,10 @@
                 border-top: 2px solid $primary-yellow;
                 display: flex;
                 justify-content: center;
-                padding-top: 25px;
+                padding-top: $spacing-sm;
             }
             &.right {
-                padding-top: 25px;
+                padding-top: $spacing-sm;
                 border-bottom: 2px solid $primary-yellow;
             }
         }

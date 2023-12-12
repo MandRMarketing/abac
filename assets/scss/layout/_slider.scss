@@ -1,6 +1,6 @@
 .image-overlays > .slider {
     &__wrap {
-        margin-top: 100px;
+        margin-top: $spacing-xl;
         .slick-next,
         .slick-prev {
             top: -55px;
@@ -35,7 +35,7 @@
                 width: 100%;
             }
             .slick-caption {
-                padding: 25px;
+                padding: $spacing-sm;
                 .button-arrow {
                     margin-bottom: 0;
                 }
@@ -62,12 +62,12 @@
                 z-index: -1;
             }
             .slick-caption {
-                margin: 100px -150px;
+                margin: $spacing-xl -150px;
                 z-index: 1;
                 width: 55%;
                 background: white;
                 border-bottom: 8px solid $primary-yellow;
-                padding: 25px;
+                padding: $spacing-sm;
                 .button-arrow {
                     margin-bottom: 0;
                 }

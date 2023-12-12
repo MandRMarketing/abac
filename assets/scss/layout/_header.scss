@@ -54,7 +54,7 @@ Site Header
     transition: right 0.3s ease-in-out;
 
     .slicknav_btn {
-        margin: 5px 15px 6px 5px;
+        margin: 5px $spacing-xs 6px 5px;
     }
 
     .slicknav_nav {
@@ -69,10 +69,6 @@ Site Header
             float: left;
             max-width: 50%;
         }
-    }
-
-    .menu-open & {
-        right: $push;
     }
 }
 

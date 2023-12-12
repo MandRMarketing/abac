@@ -4653,7 +4653,7 @@ jQuery.extend(jQuery.easing, {
                 autoplay: false,
                 autoplaySpeed: 3000,
                 centerMode: false,
-                centerPadding: '50px',
+                centerPadding: '$spacing-med',
                 cssEase: 'ease',
                 customPaging: function (slider, i) {
                     return $(

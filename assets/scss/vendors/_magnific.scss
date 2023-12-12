@@ -362,7 +362,7 @@ button {
             margin-left: 31px;
         }
         &:before {
-            margin-left: 25px;
+            margin-left: $spacing-sm;
             border-right: 27px solid $mfp-controls-border-color;
         }
     }

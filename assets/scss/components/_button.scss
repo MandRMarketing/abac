@@ -49,8 +49,8 @@ input[type='button'],
     width: auto;
     color: black !important;
     font-size: 20px;
-    padding: 25px;
-    padding-right: 50px;
+    padding: $spacing-sm;
+    padding-right: $spacing-med;
     cursor: pointer;
     text-transform: capitalize;
     border: 2px solid $primary-yellow;
@@ -84,7 +84,7 @@ input[type='button'],
     width: auto;
     color: black !important;
     font-size: 20px;
-    padding-right: 25px;
+    padding-right: $spacing-sm;
     cursor: pointer;
     text-transform: capitalize;
     &:hover,
@@ -148,7 +148,7 @@ p.centered-button {
     @media screen and (max-width: $third-break) {
         width: 100%;
         float: none;
-        margin-bottom: 25px;
+        margin-bottom: $spacing-sm;
     }
 }
 
@@ -156,7 +156,7 @@ p.centered-button {
     display: block;
     position: relative;
     background-color: $grey;
-    margin-bottom: 25px;
+    margin-bottom: $spacing-sm;
     padding: 70px 20px;
     color: $purple;
     font-size: 42px;
