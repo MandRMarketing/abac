@@ -36,10 +36,9 @@
                     role="tablist"
                     aria-describedby="menu-description"
                 >
-                    <p id="menu-description" class="hidden">
+                    <p id="menu-description" class="sr-only">
                         The menu can be opened by selecting any of the tabs in
-                        this group. To close this menu, press the escape key to
-                        return to the normal menu.
+                        this group.
                     </p>
 
                     <li class="secondary-item" role="presentation">
@@ -105,15 +104,18 @@
                 <ul
                     id="main-menu"
                     class="sf-menu primary-items"
-                    role="tablist"
+                    role="menu"
                     aria-describedby="menu-description"
                 >
-                    <p id="menu-description" class="hidden">
+                    <p id="menu-description" class="sr-only">
                         The menu can be opened by selecting any of the tabs in
-                        this group. To close this menu, press the escape key to
-                        return to the normal menu.
+                        this group.
                     </p>
-                    <li class="primary-item current-item" role="presentation">
+                    <li
+                        class="primary-item current-item"
+                        role="menuitem"
+                        aria-haspopup="true"
+                    >
                         <a
                             id="academics-toggle"
                             aria-expanded="false"
@@ -130,12 +132,12 @@
                         >
                             <ul
                                 class="desktop-nav-subnav-list no-header"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
-                                    class="desktop-nav-subnav-item current-item"
-                                    role="presentation"
+                                    class="desktop-nav-subnav-item"
+                                    role="menuitem"
                                 >
                                     <a href="academics-home.html"
                                         >Academics Home</a
@@ -143,7 +145,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="employment-opportunities.html"
                                         >Employment Opportunities
@@ -151,7 +153,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="office-of-provost.html"
                                         >Office of the Provost</a
@@ -171,7 +173,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -182,7 +184,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="school-single.html"
                                         >School of Agriculture & Natural
@@ -191,7 +193,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="school-single.html"
                                         >School of Arts & Sciences</a
@@ -199,7 +201,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="school-single.html">
                                         School of Nursing and Health Sciences
@@ -207,7 +209,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="school-single.html"
                                         >Stafford School of Business</a
@@ -216,7 +218,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -227,7 +229,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="class-schedule-search.html"
                                         >Class Schedule Search</a
@@ -235,19 +237,19 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="catalogs.html">Catalogs</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="libraries.html">Libraries</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="tutoring-center.html"
                                         >The Tutoring Center</a
@@ -255,13 +257,13 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="testing.html">Testing</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="office-of-registrar.html"
                                         >Office of the Registrar</a
@@ -269,20 +271,20 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="graduation.html">Graduation</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="abac-connect.html">ABAC Connect</a>
                                 </li>
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -293,7 +295,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="steps.html"
                                         >STEPS (Student Engagement Programs)
@@ -301,7 +303,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="multicultural-education.html"
                                         >Multicultural Education</a
@@ -310,11 +312,14 @@
                             </ul>
                         </nav>
                     </li>
-                    <li class="primary-item" role="presentation">
+                    <li
+                        class="primary-item"
+                        role="menuitem"
+                        aria-haspopup="true"
+                    >
                         <a
                             id="programs-toggle"
                             aria-expanded="false"
-                            aria-haspopup="true"
                             title="Toggle Programs menu"
                             class="desktop-nav-subnav-trigger"
                             href="#"
@@ -328,12 +333,12 @@
                         >
                             <ul
                                 class="desktop-nav-subnav-list no-header"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-archive.html"
                                         >Find Your Program</a
@@ -341,7 +346,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="abac-catalogs.html"
                                         >ABAC Catalogs</a
@@ -349,7 +354,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="academics-home.html"
                                         >Academics Home</a
@@ -369,7 +374,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -380,7 +385,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Agribusiness
@@ -388,7 +393,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Agriculture</a
@@ -396,7 +401,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html">
                                         Ag Technology Management
@@ -404,7 +409,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Environmental Horticulture</a
@@ -412,7 +417,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Natural Resource Management</a
@@ -420,7 +425,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Ag Education</a
@@ -428,7 +433,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Ag Communication</a
@@ -437,7 +442,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -448,7 +453,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Core Curriculum</a
@@ -456,7 +461,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Writing & Communication</a
@@ -464,13 +469,13 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html">Music</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >History & Government</a
@@ -478,7 +483,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Rural Community Development</a
@@ -486,7 +491,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Criminal Justice</a
@@ -494,14 +499,14 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html">Biology</a>
                                 </li>
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -512,7 +517,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Nursing ASN
@@ -520,7 +525,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html"
                                         >Nursing BSN</a
@@ -534,18 +539,21 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-single.html">Business </a>
                                 </li>
                             </ul>
                         </nav>
                     </li>
-                    <li class="primary-item" role="presentation">
+                    <li
+                        class="primary-item"
+                        role="menuitem"
+                        aria-haspopup="true"
+                    >
                         <a
                             id="admissions-toggle"
                             aria-expanded="false"
-                            aria-haspopup="true"
                             title="Toggle Admissions menu"
                             class="desktop-nav-subnav-trigger"
                             href="#"
@@ -559,12 +567,12 @@
                         >
                             <ul
                                 class="desktop-nav-subnav-list no-header"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="admissions-home.html"
                                         >Admissions Home</a
@@ -572,7 +580,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="program-archive.html"
                                         >Find Your Program</a
@@ -603,7 +611,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -614,13 +622,13 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="visit-abac.html">Visit ABAC </a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="stallion-days.html"
                                         >Stallion Days</a
@@ -628,7 +636,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="submit-sat-scores.html">
                                         Submit SAT Scores</a
@@ -636,7 +644,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="submit-act-scores.html"
                                         >Submit ACT Scores</a
@@ -645,7 +653,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -656,7 +664,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="new-student-checklist.html"
                                         >New Student Checklist</a
@@ -664,7 +672,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="reserve-your-spot.html"
                                         >Reserve Your Spot</a
@@ -672,13 +680,13 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="orientation.html">Orientation</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="office-of-registrar.html"
                                         >Office of the Registrar</a
@@ -687,7 +695,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -698,7 +706,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="financial-aid.html"
                                         >Financial Aid</a
@@ -706,7 +714,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="abac-affordability.html"
                                         >ABAC Affordability</a
@@ -714,7 +722,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="tution-fees.html"
                                         >Tuition & Fees</a
@@ -722,30 +730,33 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="fafsa.html">FAFSA</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="verification.html">Verification</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="ways-to-pay.html">Ways to Pay</a>
                                 </li>
                             </ul>
                         </nav>
                     </li>
-                    <li class="primary-item" role="presentation">
+                    <li
+                        class="primary-item"
+                        role="menuitem"
+                        aria-haspopup="true"
+                    >
                         <a
                             id="campus-life-toggle"
                             aria-expanded="false"
-                            aria-haspopup="true"
                             title="Toggle Campus Life menu"
                             class="desktop-nav-subnav-trigger"
                             href="#"
@@ -759,12 +770,12 @@
                         >
                             <ul
                                 class="desktop-nav-subnav-list no-header"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="campus-life-home.html"
                                         >Campus Life Home</a
@@ -772,13 +783,13 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="campus-map.html">Campus Map</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="abac-police.html"> ABAC Police</a>
                                 </li>
@@ -796,7 +807,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -807,7 +818,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="clubs-organizations.html"
                                         >Clubs & Organizations</a
@@ -815,7 +826,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="arts-culture.html"
                                         >Arts & Culture</a
@@ -823,13 +834,13 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="greek-life.html"> Greek Life</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="recreational-sports.html"
                                         >Recreational Sports</a
@@ -837,7 +848,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="thrash-wellness-center.html"
                                         >Thrash Wellness Center</a
@@ -845,7 +856,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="foundation-legacy-pool.html"
                                         >Foundation Legacy Pool</a
@@ -854,7 +865,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -865,7 +876,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="residence-life-housing.html"
                                         >Residence Life & Housing</a
@@ -873,7 +884,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="dining-services.html"
                                         >Dining Services</a
@@ -881,7 +892,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="parking-info.html"
                                         >Parking Information</a
@@ -889,7 +900,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="dean-of-students.html"
                                         >Dean of Students</a
@@ -897,13 +908,13 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="technology.html">Technology</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="student-handbook.html"
                                         >Student Handbook</a
@@ -911,14 +922,14 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="bookstore.html">Bookstore</a>
                                 </li>
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -929,13 +940,13 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="abac-police.html">ABAC Police</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="health-center.html"
                                         >Health Center</a
@@ -943,7 +954,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="counseling-center.html"
                                         >Counseling Center</a
@@ -951,13 +962,13 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="care-team.html">CARE Team</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a
                                         href="accomodation-disability-services.html"
@@ -966,7 +977,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="lets-chat-abac.html"
                                         >LetsChat@ABAC</a
@@ -974,18 +985,21 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="title-ix.html">Title IX</a>
                                 </li>
                             </ul>
                         </nav>
                     </li>
-                    <li class="primary-item" role="presentation">
+                    <li
+                        class="primary-item"
+                        role="menuitem"
+                        aria-haspopup="true"
+                    >
                         <a
                             id="about-abac-toggle"
                             aria-expanded="false"
-                            aria-haspopup="true"
                             title="Toggle About ABAC menu"
                             class="desktop-nav-subnav-trigger"
                             href="#"
@@ -999,18 +1013,18 @@
                         >
                             <ul
                                 class="desktop-nav-subnav-list no-header"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="about-abac.html">About ABAC</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="employee-directory.html"
                                         >Employee Directory</a
@@ -1018,7 +1032,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="departmental-directory.html"
                                         >Departmental Directory</a
@@ -1035,7 +1049,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -1046,7 +1060,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="arts-culture.html"
                                         >Arts & Culture</a
@@ -1054,7 +1068,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="forest-lakes-golf-course.html"
                                         >Forest Lakes Golf Course</a
@@ -1062,7 +1076,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="georgia-museum-agriculture.html"
                                         >Georgia Museum of Agriculture</a
@@ -1070,7 +1084,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="georgia-rural-center.html"
                                         >Georgia's Rural Center</a
@@ -1078,7 +1092,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="nature-study-area.html"
                                         >Nature Study Area</a
@@ -1086,7 +1100,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="travel-with-abac.html"
                                         >Travel with ABAC</a
@@ -1095,7 +1109,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -1106,7 +1120,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="alumni-friends-home.html"
                                         >Alumni & Friends Home</a
@@ -1114,7 +1128,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="abac-foundation.html"
                                         >ABAC Foundation</a
@@ -1128,7 +1142,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="policy-guides.html"
                                         >Policy Guides</a
@@ -1136,7 +1150,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="branding-guide.html"
                                         >Branding Guide</a
@@ -1145,7 +1159,7 @@
                             </ul>
                             <ul
                                 class="desktop-nav-subnav-list"
-                                role="tablist"
+                                role="menu"
                                 aria-describedby="menu-description"
                             >
                                 <li
@@ -1156,7 +1170,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="accreditation.html"
                                         >Accreditation</a
@@ -1164,7 +1178,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="accessibility.html"
                                         >Accessibility</a
@@ -1172,7 +1186,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="ethics-complicance-hotline.html"
                                         >Ethics & Compliance Hotline</a
@@ -1180,7 +1194,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="emergency-info.html"
                                         >Emergency Info</a
@@ -1188,7 +1202,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="human-trafficking.html"
                                         >Human Trafficking</a
@@ -1196,7 +1210,7 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="privacy-policy.html"
                                         >Privacy Policy</a
@@ -1204,13 +1218,13 @@
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="title-ix.html">Title IX</a>
                                 </li>
                                 <li
                                     class="desktop-nav-subnav-item"
-                                    role="presentation"
+                                    role="menuitem"
                                 >
                                     <a href="fcc.html">FCC</a>
                                 </li>
@@ -1225,10 +1239,8 @@
                         <a
                             id="desktop-search-trigger"
                             href="#"
-                            aria-controls="search"
                             aria-expanded="false"
                             title="Toggle Search menu"
-                            href="#"
                         >
                             <span aria-hidden="true">Search</span>
                             <span class="icon-search"></span>
@@ -3153,11 +3165,13 @@
                 <nav
                     id="footer-navigation"
                     aria-label="Website navigation content in footer"
+                    role="navigation"
                 >
                     <div class="container">
                         <ul
                             class="footer-nav"
                             aria-label="Primary footer navigation links"
+                            role="menu"
                         >
                             <li>
                                 <div class="foooter-sub-nav-header">
@@ -3342,6 +3356,7 @@
                         <ul
                             class="foooter-secondary-nav"
                             aria-label="Secondary footer navigation links"
+                            role="menu"
                         >
                             <li>
                                 <a href="accreditation.html">Accreditation</a>

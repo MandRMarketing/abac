@@ -4162,7 +4162,7 @@ jQuery.extend(jQuery.easing, {
             [
                 '<' +
                     settings.parentTag +
-                    ' aria-haspopup="true" tabindex="0" class="' +
+                    '  tabindex="0" class="' +
                     prefix +
                     '_btn ' +
                     prefix +
@@ -4220,7 +4220,7 @@ jQuery.extend(jQuery.easing, {
                 var wrapElement = $(
                     '<' +
                         settings.parentTag +
-                        ' role="menuitem" aria-haspopup="true" tabindex="-1" class="' +
+                        ' role="menuitem"  tabindex="-1" class="' +
                         prefix +
                         '_item"/>'
                 );
