@@ -151,87 +151,6 @@ h6 {
     }
 }
 
-.page-title {
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    bottom: 35px;
-    margin: auto;
-    color: #fff;
-    font-size: 80px;
-    font-weight: 400;
-    text-align: center;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
-
-    @media screen and (max-width: $extra-break) {
-        font-size: 60px;
-    }
-
-    @media screen and (max-width: $mobile-small) {
-        font-size: 50px;
-    }
-}
-
-.section-header {
-    color: $purple;
-    font-family: 'Oswald', sans-serif;
-    font-size: 62px;
-    text-transform: uppercase;
-
-    @media screen and (max-width: $mobile-break) {
-        font-size: 30px;
-    }
-}
-
-.entry-header {
-    font-family: 'Oswald', sans-serif;
-    font-size: 22px;
-    font-weight: normal;
-    text-transform: none;
-}
-
-.header-underline {
-    position: relative;
-    margin-bottom: $spacing-sm;
-    padding-bottom: $spacing-sm;
-
-    &:after {
-        content: '';
-        background: $purple;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 125px;
-        height: 1px;
-        margin: auto;
-    }
-}
-
-.highlight {
-    position: relative;
-    padding-left: 10px;
-    color: $purple;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.4;
-    text-transform: uppercase;
-
-    &:after {
-        content: '';
-        background-color: $purple;
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        left: 0;
-        width: 2px;
-        height: 100%;
-    }
-}
-
 /* Typographical Basics +
 --------------------------------------------- */
 
@@ -286,15 +205,10 @@ hr {
     box-sizing: border-box;
     display: block;
     height: 1px;
-    border-color: #c3c5c8;
+    border-color: $primary-yellow;
     border-style: solid;
     margin: 8px 0 10px;
     padding: 0;
-}
-
-.hr-alt {
-    max-width: 200px;
-    border-color: darken($grey, 20%);
 }
 
 .entry-content code {

@@ -1,11 +1,5 @@
 /* Set your primary colors here */
-$red: #990000;
-$blue: #0000ff;
 $offWhite: #fff6df;
-$purple: #633394; /*rgba(99, 51, 148, 1)*/
-$darkPurple: #37236a;
-$grey: #eaeaea; /* rgba(234, 234, 234, 1) */
-$altGrey: darken($grey, 20%);
 $darkGrey: #2a2a2a;
 
 $green: #006130;
@@ -20,7 +14,7 @@ $youtube: #e52d27;
 $instagram: #3f729b;
 
 /* Make sure to set this*/
-$mainColor: $purple;
+$mainColor: $green;
 
 /* typical text color */
 $textColor: $darkGrey;
@@ -29,7 +23,7 @@ $textColor: $darkGrey;
 $selectionColor: #333333;
 
 /* simple a and a:hover */
-$linkColor: $red;
+$linkColor: $green;
 $linkHover: black;
 
 .green-bg {
