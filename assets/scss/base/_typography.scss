@@ -132,6 +132,8 @@ h6 {
     font-style: normal;
 }
 
+/* Text Classes */
+
 .text-center {
     text-align: center;
 }
@@ -149,6 +151,10 @@ h6 {
     time {
         color: #fff !important;
     }
+}
+
+.no-wrap {
+    text-wrap: nowrap;
 }
 
 /* Typographical Basics +

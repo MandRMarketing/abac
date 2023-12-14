@@ -1,4 +1,4 @@
-#university-stats {
+.stats {
     position: relative;
     background: url(assets/images/hp-stats-bg.png);
     background-repeat: no-repeat;
@@ -27,6 +27,10 @@
             font-family: 'bookmania', serif;
             font-weight: 400;
             font-style: normal;
+            margin-bottom: 0;
+            @media screen and (max-width: $extra-break) {
+                font-size: 50px;
+            }
         }
     }
 
