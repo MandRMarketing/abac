@@ -350,7 +350,7 @@
                     margin-bottom: $spacing-sm;
                     overflow: unset;
                     p {
-                        font-size: 23px;
+                        font-size: 20px;
                     }
                     * {
                         color: white !important;
@@ -396,6 +396,21 @@
                     z-index: 1;
                     position: unset;
                     padding: 0;
+                }
+            }
+        }
+        &.image-overlays {
+            .toggles__wrap {
+                display: flex;
+                justify-content: center;
+                flex: 1;
+                gap: 40px;
+                .toggle {
+                    &__box {
+                        p {
+                            font-size: 16px;
+                        }
+                    }
                 }
             }
         }

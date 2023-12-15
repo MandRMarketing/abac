@@ -2,6 +2,7 @@
     @media screen and (min-width: $first-break) {
         .container {
             display: flex;
+            align-items: center;
             border-top: 2px solid $primary-yellow;
             border-bottom: 2px solid $primary-yellow;
             padding: $spacing-med 0;
@@ -34,6 +35,7 @@
                 padding-top: $spacing-sm;
             }
             &.right {
+                text-align: center;
                 padding-top: $spacing-sm;
                 border-bottom: 2px solid $primary-yellow;
             }

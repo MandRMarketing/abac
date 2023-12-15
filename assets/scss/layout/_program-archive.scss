@@ -121,11 +121,18 @@
             display: flex;
             flex-wrap: wrap;
             gap: $spacing-xs;
-            article {
+            &__program {
+                background: transparent;
+                position: relative;
                 border-bottom: 8px solid $primary-yellow;
-                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                box-shadow: rgba(0, 0, 0, 0.18) 0px 3px 8px;
                 padding: $spacing-xs;
                 width: calc(50% - 9px);
+                transition: 0.25s ease;
+
+                &:hover {
+                    background: $offWhite;
+                }
             }
         }
         &__pagination {
@@ -135,7 +142,7 @@
                 justify-content: flex-end;
                 li {
                     list-style-type: none !important;
-                    font-style: normal;
+                    font-style: normal !important;
                     .current-page {
                         color: black;
                     }

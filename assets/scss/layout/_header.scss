@@ -40,6 +40,13 @@
                         color: $textColor;
                     }
                 }
+                &:hover {
+                    background-color: $primary-yellow;
+
+                    a {
+                        color: $textColor;
+                    }
+                }
             }
         }
     }

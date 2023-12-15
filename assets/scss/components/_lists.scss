@@ -8,7 +8,7 @@ main {
             list-style-type: square;
             text-indent: -0;
             margin-left: $spacing-sm;
-            color: $green;
+            color: $textColor;
             font-style: italic;
 
             &::marker {

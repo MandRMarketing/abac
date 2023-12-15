@@ -1,5 +1,6 @@
 .standard-content {
-    .container {
+    .container,
+    .container-large {
         &::before,
         &::after {
             content: unset;
@@ -16,7 +17,8 @@
 
     /* Group of buttons standard content styling */
     &.button-group {
-        .container {
+        .container,
+        .container-large {
             .column {
                 display: flex;
                 flex-wrap: wrap;
@@ -28,6 +30,20 @@
                     align-items: center;
                     max-width: calc(33.33% - 24px);
                     flex: 1 0 calc(33.33% - 24px); /* Each item takes up 33.33% of the container width with margin */
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    /* Intro text for secondary pages */
+    &.intro-text {
+        .container,
+        .container-large {
+            .column {
+                p {
+                    font-family: 'bookmania', serif;
+                    text-align: center;
                 }
             }
         }

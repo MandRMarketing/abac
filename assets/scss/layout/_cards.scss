@@ -1,64 +1,3 @@
-.stats {
-    position: relative;
-    background: url(assets/images/hp-stats-bg.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-
-    .horizontal-cards__cards__card {
-        height: 273px;
-        width: 372px;
-        @media screen and (max-width: $extra-break) {
-            width: 100%;
-            height: unset;
-        }
-        p {
-            display: block;
-            color: $green;
-            font-size: 34px;
-            text-align: center;
-            font-family: 'bookmania', serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-        strong {
-            display: block;
-            color: $green;
-            font-size: 79px;
-            font-family: 'bookmania', serif;
-            font-weight: 400;
-            font-style: normal;
-            margin-bottom: 0;
-            @media screen and (max-width: $extra-break) {
-                font-size: 50px;
-            }
-        }
-    }
-
-    @media screen and (min-width: $extra-break) {
-        background-size: cover;
-        padding-top: 600px;
-        padding-bottom: 300px;
-    }
-    @media screen and (max-width: $extra-break) {
-        padding-bottom: 300px;
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            background: rgb(255, 255, 255);
-            background: linear-gradient(
-                180deg,
-                rgba(255, 255, 255, 1) 0%,
-                rgba(255, 255, 255, 0.93) 69%,
-                rgba(255, 255, 255, 0) 100%
-            );
-            z-index: 0;
-            width: 100%;
-            height: 50%;
-        }
-    }
-}
-
 .horizontal-cards {
     .container {
         .horizontal-cards__cards__card {
@@ -79,14 +18,15 @@
         align-items: center;
         gap: $spacing-xs;
         &__card {
+            position: relative;
             background: white;
             border-bottom: 8px solid $primary-yellow;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            align-items: center;
+            align-items: flex-start;
             padding: $spacing-sm;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            box-shadow: rgba(0, 0, 0, 0.18) 0px 3px 8px;
             flex: 1;
             align-self: stretch;
             .header-image {
@@ -97,6 +37,7 @@
                 margin-top: -$spacing-sm;
                 object-fit: cover;
                 margin-bottom: $spacing-xs;
+                margin-left: -$spacing-sm;
             }
         }
         @media screen and (max-width: $extra-break) {
@@ -117,6 +58,7 @@
         .horizontal-cards__cards {
             gap: $spacing-sm;
             .horizontal-cards__cards__card {
+                align-items: center;
                 padding: $spacing-xl $spacing-sm;
                 border: 2px solid $primary-yellow;
                 text-align: center;
@@ -141,18 +83,17 @@
         .horizontal-cards__cards {
             gap: $spacing-sm;
             .horizontal-cards__cards__card {
+                align-items: center;
                 gap: $spacing-xs;
                 width: 100%;
                 height: unset;
+                text-align: center;
                 .badge-icon {
                     @media screen and (min-width: $extra-break) {
                         margin-top: -70px;
                     }
                     height: 96px;
                     width: 77px;
-                }
-                h3 {
-                    color: $green;
                 }
             }
         }
@@ -167,7 +108,8 @@
     &.borders {
         .horizontal-cards__cards {
             .horizontal-cards__cards__card {
-                position: relative;
+                align-items: center;
+                box-shadow: unset;
                 gap: $spacing-sm;
                 width: 100%;
                 height: unset;
@@ -175,27 +117,86 @@
                 h3,
                 h4 {
                     text-align: center;
-                    color: $green;
+                    color: $textColor;
                 }
-                // &::after {
-                //     content: '';
-                //     opacity: 0;
-                //     background: $primary-yellow;
-                //     height: 6px;
-                //     width: 100%;
-                //     position: absolute;
-                //     left: 0;
-                //     bottom: 0;
-                //     transition: 0.25s ease;
-                // }
-                // &:hover {
-                //     &::after {
-                //         opacity: 1;
-                //     }
-                // }
+                &::after {
+                    content: '';
+                    opacity: 0;
+                    background: $primary-yellow;
+                    height: 6px;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    transition: 0.25s ease;
+                }
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
             }
         }
-        .horizontal-cards__content {
+    }
+    &.stats {
+        position: relative;
+        background: url(assets/images/hp-stats-bg.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        .horizontal-cards__cards__card {
+            align-items: center;
+            height: 273px;
+            width: 372px;
+            @media screen and (max-width: $extra-break) {
+                width: 100%;
+                height: unset;
+            }
+            p {
+                display: block;
+                color: $green;
+                font-size: 34px;
+                text-align: center;
+                font-family: 'bookmania', serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            strong {
+                display: block;
+                color: $green;
+                font-size: 79px;
+                font-family: 'bookmania', serif;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 0;
+                @media screen and (max-width: $extra-break) {
+                    font-size: 50px;
+                }
+            }
+        }
+
+        @media screen and (min-width: $extra-break) {
+            background-size: cover;
+            padding-top: 600px;
+            padding-bottom: 300px;
+        }
+        @media screen and (max-width: $extra-break) {
+            padding-bottom: 300px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgba(255, 255, 255, 0.93) 69%,
+                    rgba(255, 255, 255, 0) 100%
+                );
+                z-index: 0;
+                width: 100%;
+                height: 50%;
+            }
         }
     }
 }

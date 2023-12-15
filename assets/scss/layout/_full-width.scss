@@ -129,9 +129,9 @@
     &.fifty-fifty,
     &.forty-sixty {
         &__left {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
             &.offwhite-fade {
                 position: relative;
                 &::after {
@@ -151,9 +151,9 @@
             }
         }
         &__right {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
             &.offwhite-fade {
                 position: relative;
                 &::before {
