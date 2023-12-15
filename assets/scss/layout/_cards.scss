@@ -45,6 +45,12 @@
                 margin-bottom: $spacing-xs;
                 margin-left: -$spacing-sm;
             }
+            .button-arrow,
+            .button {
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
         }
         @media screen and (max-width: $extra-break) {
             flex-direction: column;
@@ -210,6 +216,14 @@
                 z-index: 0;
                 width: 100%;
                 height: 50%;
+            }
+        }
+    }
+    &.single-row {
+        .container,
+        .container-large {
+            .horizontal-cards__cards__card {
+                flex: 1 !important;
             }
         }
     }

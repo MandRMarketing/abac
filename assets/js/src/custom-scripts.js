@@ -607,7 +607,33 @@
                     ? 'block'
                     : 'none';
 
-                $this.nextElementSibling.style.display = toggleBoxDisplay;
+                const box = $this.nextElementSibling;
+
+                if ($this.closest('.image-overlays')) {
+                    if (toggleBoxDisplay == 'block') {
+                        console.log('open');
+                        box.style.display = toggleBoxDisplay;
+                        setTimeout(function () {
+                            box.classList.remove('visually-hidden');
+                        }, 20);
+                    } else {
+                        console.log('close');
+                        box.classList.add('visually-hidden');
+                        box.addEventListener(
+                            'transitionend',
+                            function (e) {
+                                box.style.display = toggleBoxDisplay;
+                            },
+                            {
+                                capture: false,
+                                once: true,
+                                passive: false,
+                            }
+                        );
+                    }
+                } else {
+                    box.style.display = toggleBoxDisplay;
+                }
             }
             Array.prototype.slice.call(toggles, 0).forEach(function (e) {
                 const toggleBox = e.querySelector('.toggle__box');

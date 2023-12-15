@@ -59,7 +59,7 @@
             .container {
                 .column {
                     flex-direction: column;
-                    gap: 0px;
+                    gap: $spacing-xs;
                     a.button-lg,
                     a.button,
                     a.button-arrow {

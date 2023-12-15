@@ -69,6 +69,12 @@
             border-bottom: 2px solid $primary-yellow;
             border-left: 8px solid $primary-yellow;
             border-right: 2px solid $primary-yellow;
+            transition: 0.25s ease;
+            opacity: 1;
+
+            &.visually-hidden {
+                opacity: 0;
+            }
         }
 
         &--active {
