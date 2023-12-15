@@ -64,14 +64,12 @@
         .horizontal-cards__cards__card {
             flex: 0 1 calc(33.333% - 10px); // Three items per row with some spacing
             // max-width: calc(33.333% - 10px);
-            flex-grow: 1;
         }
     }
     .container-large {
         .horizontal-cards__cards__card {
             flex: 0 1 calc(25% - 12px); // Four items per row with some spacing
             // max-width: calc(25% - 10px);
-            flex-grow: 1;
         }
     }
     &__cards {
@@ -93,6 +91,7 @@
             align-self: stretch;
             .header-image {
                 height: 50%;
+                min-height: 50%;
                 width: calc(100% + $spacing-med);
                 max-width: calc(100% + $spacing-med);
                 margin-top: -$spacing-sm;

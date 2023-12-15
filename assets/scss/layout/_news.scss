@@ -192,12 +192,14 @@
                     margin-left: -$spacing-xs;
                 }
                 time {
+                    display: block;
                     background: $green;
                     color: white;
                     font-weight: 700;
                     padding: 5px;
                     margin-left: -$spacing-xs;
                     padding-left: $spacing-xs;
+                    margin-bottom: $spacing-sm;
                     margin-top: -37px;
                     position: relative;
                     z-index: 1;
