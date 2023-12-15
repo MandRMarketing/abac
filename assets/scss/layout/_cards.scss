@@ -29,9 +29,15 @@
             box-shadow: rgba(0, 0, 0, 0.18) 0px 3px 8px;
             flex: 1;
             align-self: stretch;
+            h4 {
+                color: $green;
+            }
+            h6 {
+                text-transform: uppercase;
+            }
             .header-image {
-                height: 50%;
-                min-height: 50%;
+                // height: 50%;
+                // min-height: 50%;
                 width: calc(100% + $spacing-med);
                 max-width: calc(100% + $spacing-med);
                 margin-top: -$spacing-sm;
@@ -58,8 +64,9 @@
         .horizontal-cards__cards {
             gap: $spacing-sm;
             .horizontal-cards__cards__card {
+                flex: 1;
                 align-items: center;
-                padding: $spacing-xl $spacing-sm;
+                padding: $spacing-xl $spacing-sm $spacing-med $spacing-sm;
                 border: 2px solid $primary-yellow;
                 text-align: center;
                 .badge-icon {
@@ -100,6 +107,11 @@
         .horizontal-cards__content {
         }
         &.announcement {
+            .horizontal-cards__cards {
+                .horizontal-cards__cards__card {
+                    flex: 1;
+                }
+            }
         }
         // @media screen and (max-width: $extra-break) {
         //     background-color: $green;
@@ -110,14 +122,16 @@
             .horizontal-cards__cards__card {
                 align-items: center;
                 box-shadow: unset;
-                gap: $spacing-sm;
+                gap: $spacing-xs;
                 width: 100%;
                 height: unset;
                 border: 2px solid $primary-yellow;
                 h3,
                 h4 {
                     text-align: center;
-                    color: $textColor;
+                }
+                .header-image {
+                    margin-left: unset;
                 }
                 &::after {
                     content: '';

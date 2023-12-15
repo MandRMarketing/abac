@@ -40,11 +40,13 @@
                         color: $textColor;
                     }
                 }
-                &:hover {
-                    background-color: $primary-yellow;
+                &:not(.information-select-wrapper) {
+                    &:hover {
+                        background-color: $primary-yellow;
 
-                    a {
-                        color: $textColor;
+                        a {
+                            color: $textColor;
+                        }
                     }
                 }
             }

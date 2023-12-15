@@ -15,12 +15,16 @@
             }
         }
         &__date {
+            font-weight: 700;
+            font-family: 'bookmania', serif;
         }
     }
     &__content {
         .article-heading {
             border-left: 8px solid $primary-yellow;
             padding-left: $spacing-sm;
+            color: $textColor;
+            font-family: 'libre-franklin', sans-serif;
         }
     }
     &__footer {
@@ -183,7 +187,6 @@
                 border: 1px solid $primary-yellow;
                 border-bottom: 8px solid $primary-yellow;
                 padding: $spacing-xs;
-                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                 position: relative;
                 img {
                     max-width: unset;
@@ -196,6 +199,7 @@
                     background: $green;
                     color: white;
                     font-weight: 700;
+                    font-size: 18px;
                     padding: 5px;
                     margin-left: -$spacing-xs;
                     padding-left: $spacing-xs;
@@ -206,6 +210,7 @@
                 }
                 h3 {
                     color: $green;
+                    font-family: 'libre-franklin', sans-serif;
                 }
                 a:not(.button-arrow) {
                     font-style: italic;

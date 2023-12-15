@@ -52,3 +52,32 @@
         }
     }
 }
+
+.green-bg {
+    background-color: $green !important;
+}
+
+.dark-green-bg {
+    background-color: $dark-green !important;
+}
+
+.offwhite-bg {
+    background-color: $offWhite !important;
+}
+
+.green-overlay {
+    position: relative;
+    .container {
+        z-index: 1;
+    }
+    &::after {
+        content: '';
+        background: $green;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
