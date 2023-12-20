@@ -11,291 +11,15 @@
     var width = $(window).width();
 
     /*----------------------------------------
-		Support Functions
-	----------------------------------------*/
-
-    /*----------------------------------------
-		On Load 
-	----------------------------------------*/
-    //$window.load(function() {
-    //});
-
-    /*----------------------------------------
 		On Ready
 	----------------------------------------*/
     $(document).ready(function () {
         // Placeholder Polyfill
         $('input, textarea').placeholder();
 
-        // Superfish it
-        $('ul.inner-menu').superfish();
-
-        /* Combine menu items */
-        /**
-		// Main Menu, actual UL
-		var primaryMenu = jQuery("#menu-primary-menu");
-		// Secondary Menu, jsut the LIs
-		var topMenuItems = jQuery("#menu-header-menu li");
-		
-		// clone secondary items to the main menu & hide them                                                        
-		topMenuItems.each(function(idx, li) {
-						var menuItem = jQuery(li);
-						menuItem.clone(true).appendTo(primaryMenu).addClass("for-slickNav");
-		});
-		**/
-
-        // Magnific - Images & Galleries
-        var groups = {};
-
-        $("a[rel^='magnificMe']").each(function () {
-            var id = parseInt($(this).attr('data-group'), 10);
-
-            if (!groups[id]) {
-                groups[id] = [];
-            }
-
-            groups[id].push(this);
-        });
-
-        $.each(groups, function () {
-            $(this).magnificPopup({
-                type: 'image',
-                closeOnContentClick: true,
-                closeBtnInside: false,
-                gallery: { enabled: true },
-
-                image: {
-                    verticalFit: true,
-                    titleSrc: function (item) {
-                        return (
-                            '<a class="image-source-link" href="' +
-                            item.src +
-                            '" target="_blank">view file</a>'
-                        );
-                    },
-                },
-            });
-        });
-
-        // ---------------------------------------------------------
-        // Object fit fallback
-        // ---------------------------------------------------------
-
-        var ms9 =
-            /MSIE 9/i.test(navigator.userAgent) ||
-            /rv:11.0/i.test(navigator.userAgent);
-        var ms10 = /MSIE 10/i.test(navigator.userAgent);
-        var edge = /Edge\/\d./i.test(navigator.userAgent);
-        var safari =
-            navigator.userAgent.indexOf('Safari') !== -1 &&
-            navigator.userAgent.indexOf('Chrome') === -1;
-
-        if (edge || ms10 || ms9 || safari) {
-            $('.object-fit-image').each(function () {
-                var $container = $(this);
-                var imgUrl = $container.prop('src');
-                if (imgUrl) {
-                    $container
-                        .parent()
-                        .css('backgroundImage', 'url(' + imgUrl + ')')
-                        .removeClass('object-fit-image')
-                        .addClass('compat-object-fit');
-                }
-            });
-        }
-
-        // ---------------------------------------------------------
-        // Responsive wrap for Wordpress aligned images
-        // ---------------------------------------------------------
-
-        $('img.alignleft').each(function () {
-            var $this = $(this);
-
-            if ($this.parent('a').length > 0) {
-                $this
-                    .parent('a')
-                    .wrap('<span class="mobile-center-image"></span>');
-            } else {
-                $this.wrap('<span class="mobile-center-image"></span>');
-            }
-        });
-
-        $('img.alignright').each(function () {
-            var $this = $(this);
-
-            if ($this.parent('a').length > 0) {
-                $this
-                    .parent('a')
-                    .wrap('<span class="mobile-center-image"></span>');
-            } else {
-                $this.wrap('<span class="mobile-center-image"></span>');
-            }
-        });
-
-        // ---------------------------------------------------------
-        // Smooth in page scrolling
-        // ---------------------------------------------------------
-        /*		$("a[href*='#']:not([href='#'], [href^='#address'])").click(function() {
-			if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
-			  var target = $(this.hash);
-			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			  if (target.length) {
-				$('html,body').animate({
-				  scrollTop: target.offset().top-20
-				}, 1000);
-				return false;
-			  }
-			}
-		});*/
-
-        // ---------------------------------------------------------
-        // Tabs v2
-        // ---------------------------------------------------------
-
-        $('ul.tabs').on('click', 'li', function (e) {
-            e.preventDefault();
-
-            var $this = $(this);
-            var $parents = $this.parents('.tabs-wrapper');
-
-            var tab_id = $this.attr('data-tab');
-
-            $parents
-                .find('.tabs li')
-                .removeClass('tab-current')
-                .children('a')
-                .attr('aria-selected', 'false');
-            $parents
-                .find('.tab-content')
-                .removeClass('tab-current')
-                .attr('aria-hidden', 'true');
-
-            $this
-                .addClass('tab-current')
-                .children('a')
-                .attr('aria-selected', 'true');
-            $('#' + tab_id)
-                .addClass('tab-current')
-                .attr('aria-hidden', 'false');
-            $('.tab-content').attr('tabindex', -1).focus();
-        });
-
-        // ---------------------------------------------------------
-        // Toggle
-        // ---------------------------------------------------------
-        $('.toggle').find('.box').hide();
-        $('.mobile-toggle').find('.box').hide();
-        $('.toggle-with-anchor').find('.box').hide();
-
-        $('.toggle').on('click', '.trigger', function () {
-            // Control ARIA landmarks on open
-            if ($(this).attr('aria-expanded', 'false')) {
-                $(this).attr('aria-expanded', 'true');
-                $(this).next().attr('aria-hidden', 'false');
-            }
-
-            // Control ARIA landmarks on close
-            if (
-                $(this).hasClass('active') &&
-                $(this).attr('aria-expanded', 'true')
-            ) {
-                $(this).attr('aria-expanded', 'false');
-                $(this).next().attr('aria-hidden', 'true');
-            }
-
-            $(this)
-                .toggleClass('active')
-                .next()
-                .stop(true, true)
-                .slideToggle('normal');
-
-            return false;
-        });
-
-        $('.mobile-toggle').on('click', '.trigger', function () {
-            // Control ARIA landmarks on open
-            if ($(this).attr('aria-expanded', 'false')) {
-                $(this).attr('aria-expanded', 'true');
-                $(this).next().attr('aria-hidden', 'false');
-            }
-
-            // Control ARIA landmarks on close
-            if (
-                $(this).hasClass('active') &&
-                $(this).attr('aria-expanded', 'true')
-            ) {
-                $(this).attr('aria-expanded', 'false');
-                $(this).next().attr('aria-hidden', 'true');
-            }
-
-            $(this)
-                .toggleClass('active')
-                .next()
-                .stop(true, true)
-                .slideToggle('normal');
-
-            return false;
-        });
-
-        $('.toggle-with-anchor').on('click', '.toggle-dropdown', function () {
-            // Control ARIA landmarks on open
-            if ($(this).attr('aria-expanded', 'false')) {
-                $(this).attr('aria-expanded', 'true');
-                $(this).next().attr('aria-hidden', 'false');
-            }
-
-            // Control ARIA landmarks on close
-            if (
-                $(this).hasClass('active') &&
-                $(this).attr('aria-expanded', 'true')
-            ) {
-                $(this).attr('aria-expanded', 'false');
-                $(this).next().attr('aria-hidden', 'true');
-            }
-
-            $(this)
-                .toggleClass('active')
-                .parent()
-                .next()
-                .stop(true, true)
-                .slideToggle('normal');
-
-            return false;
-        });
-
-        /*---------------------------------------------------------
-			Javascript font size increase
-		----------------------------------------------------------*/
-        var size = parseInt($('p').css('font-size'));
-        var anchor = parseInt($('a').css('font-size'));
-
-        $('#big').on('click', function () {
-            size += 2;
-            $('p').css('font-size', size + 'px');
-            $('a').css('font-size', anchor + 'px');
-            $('#text-resize-example').text(size + 'px');
-        });
-
-        $('#small').on('click', function () {
-            size -= 2;
-
-            if (size >= 16) {
-                $('p').css('font-size', size + 'px');
-                $('a').css('font-size', anchor + 'px');
-                $('#text-resize-example').text(size + 'px');
-            } else {
-                size = 16;
-                $(this).prop('disable', true);
-                $('p').css('font-size', size + 'px');
-                $('a').css('font-size', anchor + 'px');
-            }
-        });
-
-        //New code
-
         /* Mobile Nav Code */
 
-        // Click event for mobile-nav-search trigger
+        /* Click event for mobile-nav-search trigger */
         $('#mobile-search-trigger').click(function (event) {
             event.preventDefault();
             // Close all mobile-nav-subnavs and set opacity to 0
@@ -312,7 +36,7 @@
                 .fadeTo(400, 1);
         });
 
-        // Click event for mobile nav .back-btn elements
+        /* Click event for mobile nav .back-btn elements */
         $('.back-btn').click(function () {
             // Remove the 'expanded' class from all .mobile-nav-primary-item elements
             $('.mobile-nav-primary-item').removeClass('expanded');
@@ -321,6 +45,7 @@
             $('.mobile-nav-subnav-trigger').attr('aria-expanded', 'false');
         });
 
+        /* Click event for mobile-menu-trigger trigger */
         $('#mobile-menu-trigger').click(function () {
             $(this).toggleClass('active');
             $('#mobile-menu').toggleClass('active');
@@ -336,6 +61,7 @@
             });
         });
 
+        /* Click event for mobile-nav-subnav-trigger trigger */
         $('.mobile-nav-subnav-trigger').click(function () {
             // Get the current value of aria-expanded
             var currentValue = $(this).attr('aria-expanded');
@@ -354,7 +80,7 @@
 
         /* Desktop Nav Code */
 
-        // Click event for desktop-nav-search trigger
+        /* Click event for desktop-nav-search trigger */
         $('#desktop-search-trigger').click(function (event) {
             event.preventDefault();
             // Close all desktop-nav-subnavs and set opacity to 0
@@ -372,7 +98,7 @@
             $('body').addClass('desktop-menu-active');
         });
 
-        // Click event for desktop-nav-subnav-trigger
+        /* Click event for desktop-nav-subnav-trigger */
         $('.primary-item .desktop-nav-subnav-trigger').click(function (event) {
             // Prevent the default behavior of the anchor link
             event.preventDefault();
@@ -401,9 +127,9 @@
             $('body').addClass('desktop-menu-active');
         });
 
-        //code for both mobile and desktop navs
+        /* Code for both Mobile and Desktop navs */
 
-        // Check for clicks on the document
+        /* Check for clicks on the document */
         $(document).on('click', function (event) {
             // Check if the body has the class 'desktop-menu-active'
             if ($('body').hasClass('desktop-menu-active')) {
@@ -447,7 +173,7 @@
             }
         });
 
-        // Scroll event to remove 'desktop-menu-active' class when the user scrolls
+        /* Scroll event to remove 'desktop-menu-active' class when the user scrolls */
         $(window).scroll(function () {
             // Check if the subnav is currently visible before fading out
             var desktopNavSubnav = $('.desktop-nav-subnav');
@@ -488,29 +214,7 @@
             }
         });
 
-        /* Content Box Overlay Code */
-        $('.image-content-box-overlay .content-left .overlay-link').click(
-            function (event) {
-                $(
-                    '.image-content-box-overlay .content-left .overlay-link'
-                ).attr('aria-expanded', false);
-                $(this).attr('aria-expanded', true);
-                // Get the id
-                var buttonID = $(this).data('id');
-                $('.image-content-box-overlay .content-right .content').attr(
-                    'aria-hidden',
-                    'true'
-                );
-                var contentElement = $(
-                    ".image-content-box-overlay .content-right .content[data-id='" +
-                        buttonID +
-                        "'"
-                );
-                contentElement.attr('aria-hidden', 'false');
-            }
-        );
-
-        //Toggles code
+        /* Query all toggles on page and pass to Toggles function */
         (function () {
             const toggles = document.querySelectorAll('.toggle');
             if (typeof toggles !== 'undefined' && toggles !== null) {
@@ -660,6 +364,7 @@
         });
     });
 
+    /* Create animation for stats cards section */
     document.addEventListener('DOMContentLoaded', () => {
         let counters = document.querySelectorAll(
             '.stats .horizontal-cards__cards__card strong span'
@@ -687,6 +392,7 @@
         });
     });
 
+    /* Helper function for animation for stats cards section */
     function setCounter(element, number, isPercentage, animated) {
         if (animated === 'true') {
             element.textContent = number + (isPercentage ? '%' : '');
