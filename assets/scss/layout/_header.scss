@@ -427,7 +427,9 @@
                     .mobile-nav-subnav-item {
                         a,
                         span {
-                            color: $green;
+                            &:hover {
+                                color: $green !important;
+                            }
                         }
                         &.back-btn {
                             a {

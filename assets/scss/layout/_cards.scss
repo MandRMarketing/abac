@@ -160,9 +160,6 @@
     }
     &.stats {
         position: relative;
-        background: url(assets/images/hp-stats-bg.png);
-        background-repeat: no-repeat;
-        background-position: bottom;
 
         .horizontal-cards__cards__card {
             align-items: center;
@@ -196,7 +193,7 @@
         }
 
         @media screen and (min-width: $extra-break) {
-            background-size: cover;
+            background-size: cover !important;
             padding-top: 600px;
             padding-bottom: 300px;
         }
