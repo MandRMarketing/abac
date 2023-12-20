@@ -1,5 +1,6 @@
 .stallion-bg {
     position: relative;
+    z-index: 1;
     &::before {
         content: '';
         background: url(assets/images/stallion.svg) no-repeat;
@@ -9,6 +10,7 @@
         position: absolute;
         left: $spacing-med;
         top: $spacing-xl;
+        z-index: -1;
         @media screen and (max-width: $extra-break) {
             width: 320px;
             height: 320px;
