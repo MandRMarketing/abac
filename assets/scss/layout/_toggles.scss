@@ -140,7 +140,7 @@
             padding: 0 0 2px 0;
             width: 100%;
 
-            img:has(+ .toggle--active) {
+            .toggle__trigger[aria-expanded='true'] ~ img {
                 visibility: visible;
                 opacity: 1;
             }
@@ -235,6 +235,14 @@
                         color: $primary-yellow;
                         &::after {
                             filter: brightness(1);
+                        }
+                    }
+                }
+
+                &.toggle--active {
+                    .toggle__trigger-text {
+                        * {
+                            color: $primary-yellow;
                         }
                     }
                 }

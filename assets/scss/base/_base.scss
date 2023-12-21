@@ -76,12 +76,10 @@ $spacing-xl: 100px;
 /* Hide all images */
 .mobile-img-hide {
     @media screen and (max-width: $mobile-break) {
-        img {
-            width: 0;
-            height: 0;
-            visibility: hidden;
-            overflow: hidden;
-        }
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
     }
 }
 
