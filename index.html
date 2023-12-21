@@ -2301,11 +2301,7 @@
             <!-- Main Content Body -->
             <div class="primary-content-wrap">
                 <!-- start of homepage slider -->
-                <section
-                    class="slider-wrapper front-page-slider-wrapper"
-                    aria-label="Sliding content area"
-                    role="region"
-                >
+                <section class="slider front-page-slider" role="region">
                     <div class="slick-slider">
                         <div
                             class="slick-slide front-page-slide"
@@ -2367,18 +2363,16 @@
                     </div>
                     <script>
                         $(window).on('load', function () {
-                            $('.front-page-slider-wrapper .slick-slider').slick(
-                                {
-                                    accessibility: true,
-                                    arrows: false,
-                                    autoplay: false,
-                                    autoplaySpeed: 5000,
-                                    dots: true,
-                                    fade: false,
-                                    slide: '.slick-slide',
-                                    speed: 800,
-                                }
-                            );
+                            $('.front-page-slider .slick-slider').slick({
+                                accessibility: true,
+                                arrows: false,
+                                autoplay: false,
+                                autoplaySpeed: 5000,
+                                dots: true,
+                                fade: false,
+                                slide: '.slick-slide',
+                                speed: 800,
+                            });
                         });
                     </script>
                 </section>
@@ -2395,7 +2389,7 @@
 
                 <!-- start cards stats section -->
                 <section
-                    class="section-wrap horizontal-cards stats"
+                    class="section-wrap cards stats"
                     role="region"
                     style="
                         background: url(assets/images/hp-stats-bg.png) no-repeat
@@ -2403,25 +2397,25 @@
                     "
                 >
                     <div class="container-large">
-                        <div class="horizontal-cards__cards">
-                            <div class="horizontal-cards__cards__card">
+                        <div class="cards__wrap">
+                            <div class="cards__wrap__card">
                                 <strong><span>26</span></strong>
                                 <p>Academic Programs</p>
                             </div>
-                            <div class="horizontal-cards__cards__card">
+                            <div class="cards__wrap__card">
                                 <strong><span>8200</span>+</strong>
                                 <p>Students</p>
                             </div>
-                            <div class="horizontal-cards__cards__card">
+                            <div class="cards__wrap__card">
                                 <strong><span>18</span>:1</strong>
                                 <p>Student to Faculty Ratio</p>
                             </div>
-                            <div class="horizontal-cards__cards__card">
+                            <div class="cards__wrap__card">
                                 <strong><span>50</span>%</strong>
                                 <p>of graduates finish debt-free</p>
                             </div>
                         </div>
-                        <div class="horizontal-cards__content">
+                        <div class="cards__content">
                             <a href="" class="button">Apply For Admissions</a>
                             <a href="" class="button">Degree Programs</a>
                         </div>

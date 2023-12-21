@@ -5109,36 +5109,36 @@ td {
     background-color: #633394;
 }
 
-.front-page-slider-wrapper {
+.front-page-slider {
     position: relative;
     z-index: 50;
     height: 100vh;
 }
-.front-page-slider-wrapper .slick-dots li button {
+.front-page-slider .slick-dots li button {
     background-color: #633394;
 }
-.front-page-slider-wrapper .slick-dots .slick-active button {
+.front-page-slider .slick-dots .slick-active button {
     background-color: #fff;
 }
 @media screen and (max-width: 56.25em) {
-    .front-page-slider-wrapper {
+    .front-page-slider {
         height: auto;
     }
-    .front-page-slider-wrapper .front-page-slide {
+    .front-page-slider .front-page-slide {
         height: 100% !important;
         min-height: 600px;
     }
 }
 @media screen and (max-width: 40.125em) {
-    .front-page-slider-wrapper .front-page-slide {
+    .front-page-slider .front-page-slide {
         min-height: 550px;
     }
 }
 @media screen and (max-width: 22.5em) {
-    .front-page-slider-wrapper .front-page-slide {
+    .front-page-slider .front-page-slide {
         min-height: 420px;
     }
-    .front-page-slider-wrapper .slick-dots {
+    .front-page-slider .slick-dots {
         bottom: $spacing-sm;
     }
 }

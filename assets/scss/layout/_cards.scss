@@ -1,17 +1,15 @@
-.horizontal-cards {
+.cards {
     .container {
-        .horizontal-cards__cards__card {
-            flex: 0 1 calc(33.333% - 10px); // Three items per row with some spacing
-            // max-width: calc(33.333% - 10px);
+        .cards__wrap__card {
+            flex: 0 1 calc(33.333% - 10px);
         }
     }
     .container-large {
-        .horizontal-cards__cards__card {
-            flex: 0 1 calc(25% - 12px); // Four items per row with some spacing
-            // max-width: calc(25% - 10px);
+        .cards__wrap__card {
+            flex: 0 1 calc(25% - 12px);
         }
     }
-    &__cards {
+    &__wrap {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -36,8 +34,6 @@
                 text-transform: uppercase;
             }
             .header-image {
-                // height: 50%;
-                // min-height: 50%;
                 width: calc(100% + $spacing-med);
                 max-width: calc(100% + $spacing-med);
                 margin-top: -$spacing-sm;
@@ -67,9 +63,9 @@
         gap: $spacing-sm;
     }
     &.quote {
-        .horizontal-cards__cards {
+        .cards__wrap {
             gap: $spacing-sm;
-            .horizontal-cards__cards__card {
+            .cards__wrap__card {
                 flex: 1;
                 align-items: center;
                 padding: $spacing-xl $spacing-sm $spacing-med $spacing-sm;
@@ -93,9 +89,9 @@
         }
     }
     &.icons {
-        .horizontal-cards__cards {
+        .cards__wrap {
             gap: $spacing-sm;
-            .horizontal-cards__cards__card {
+            .cards__wrap__card {
                 align-items: center;
                 gap: $spacing-xs;
                 width: 100%;
@@ -110,11 +106,9 @@
                 }
             }
         }
-        .horizontal-cards__content {
-        }
         &.announcement {
-            .horizontal-cards__cards {
-                .horizontal-cards__cards__card {
+            .cards__wrap {
+                .cards__wrap__card {
                     flex: 1;
                 }
             }
@@ -124,8 +118,8 @@
         // }
     }
     &.borders {
-        .horizontal-cards__cards {
-            .horizontal-cards__cards__card {
+        .cards__wrap {
+            .cards__wrap__card {
                 align-items: center;
                 box-shadow: unset;
                 gap: $spacing-xs;
@@ -161,7 +155,7 @@
     &.stats {
         position: relative;
 
-        .horizontal-cards__cards__card {
+        .cards__wrap__card {
             align-items: center;
             height: 273px;
             width: 372px;
@@ -219,7 +213,7 @@
     &.single-row {
         .container,
         .container-large {
-            .horizontal-cards__cards__card {
+            .cards__wrap__card {
                 flex: 1 !important;
             }
         }

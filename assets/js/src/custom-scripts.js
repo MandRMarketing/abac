@@ -367,7 +367,7 @@
     /* Create animation for stats cards section */
     document.addEventListener('DOMContentLoaded', () => {
         let counters = document.querySelectorAll(
-            '.stats .horizontal-cards__cards__card strong span'
+            '.stats .cards__wrap__card strong span'
         );
 
         const observer = new IntersectionObserver((entries) => {

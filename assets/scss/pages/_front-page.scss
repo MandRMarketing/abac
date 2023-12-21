@@ -29,34 +29,8 @@
 
 /* Slider Classes
 -------------------------*/
-.slider-wrapper {
-    .slick-dots {
-        margin: 0;
 
-        li {
-            width: auto;
-            height: auto;
-            padding-left: 0;
-
-            &:before {
-                content: '';
-                display: none;
-            }
-
-            button {
-                width: 34px;
-                height: 7px;
-
-                &:before {
-                    content: '';
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
-.front-page-slider-wrapper {
+.front-page-slider {
     position: relative;
     z-index: 50;
     height: 636px;
@@ -82,11 +56,29 @@
         }
     }
     .slick-dots {
+        margin: 0;
         z-index: 1;
         position: absolute;
         bottom: 140px;
-        li button {
-            background-color: white;
+        li {
+            width: auto;
+            height: auto;
+            padding-left: 0;
+
+            &:before {
+                content: '';
+                display: none;
+            }
+
+            button {
+                width: 34px;
+                height: 7px;
+                background-color: white;
+                &:before {
+                    content: '';
+                    display: none;
+                }
+            }
         }
 
         .slick-active button {
