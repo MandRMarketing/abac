@@ -73,23 +73,12 @@ $spacing-xl: 100px;
     }
 }
 
-/* Hide all images & bg images */
+/* Hide all images */
 .mobile-img-hide {
     @media screen and (max-width: $mobile-break) {
         img {
             width: 0;
             height: 0;
-            visibility: hidden;
-            overflow: hidden;
-        }
-
-        div[style*='background:'] {
-            background: none !important;
-            width: 0;
-            height: 0;
-            min-height: 0 !important;
-            margin: 0;
-            padding: 0;
             visibility: hidden;
             overflow: hidden;
         }
