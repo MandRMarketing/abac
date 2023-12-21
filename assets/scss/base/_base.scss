@@ -96,22 +96,6 @@ $spacing-xl: 100px;
     }
 }
 
-/* Allow for items to be manipulated w/ flex on mobile */
-.mobile-flex {
-    @media screen and (max-width: $mobile-break) {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-
-        -webkit-flex-wrap: wrap;
-        -moz-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-}
-
 /* Primary container classes
 ---------------------------*/
 
@@ -140,45 +124,8 @@ img {
     display: none !important;
 }
 
-.outer-container {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-    height: auto;
-}
-
-/* Primary Content Wrap-related CSS */
-.primary-content-wrap {
-    background-color: #fff;
-    padding-bottom: 55px;
-}
-
-.primary-content-wrap .outer-container {
-    margin-top: 55px;
-
-    @media screen and (max-width: $mobile-med) {
-        margin-top: $spacing-sm;
-    }
-}
-
-.primary-content-wrap.outer-container,
-.primary-content-wrap .outer-container.grey-backdrop {
-    padding: 55px 0;
-
-    @media screen and (max-width: $mobile-med) {
-        padding: $spacing-sm 0 0;
-    }
-}
-
 /* Positioning classes
 ---------------------------*/
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
 
 /* Position object in center of parent */
 .abs-center {
