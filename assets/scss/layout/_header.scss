@@ -151,6 +151,9 @@
                         }
                         input[type='submit'] {
                             width: min-content;
+                            &:hover {
+                                text-decoration: underline;
+                            }
                         }
                     }
                 }
