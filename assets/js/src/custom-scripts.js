@@ -315,13 +315,11 @@
 
                 if ($this.closest('.image-overlays')) {
                     if (toggleBoxDisplay == 'block') {
-                        console.log('open');
                         box.style.display = toggleBoxDisplay;
                         setTimeout(function () {
                             box.classList.remove('visually-hidden');
                         }, 20);
                     } else {
-                        console.log('close');
                         box.classList.add('visually-hidden');
                         box.addEventListener(
                             'transitionend',
