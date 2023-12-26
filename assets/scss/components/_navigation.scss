@@ -1,7 +1,9 @@
-h1.site-title {
+li.site-title,
+div.site-title {
     display: flex;
     align-items: center;
     margin: 0;
+    margin-right: $spacing-med;
     span {
         position: absolute;
         overflow: hidden;

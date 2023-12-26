@@ -171,6 +171,9 @@ a {
     &.block {
         margin: 0 0 16px;
     }
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 p {

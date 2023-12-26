@@ -3113,25 +3113,25 @@ Site Header
 
 /* Title Area
 --------------------------------------------- */
-h1.site-title {
+li.site-title {
     position: absolute;
     z-index: 55;
     top: 0;
     left: 0;
 }
 @media screen and (max-width: 56.25em) {
-    h1.site-title {
+    li.site-title {
         display: none;
         right: 0;
         left: 0;
         margin: auto;
         text-align: center;
     }
-    .home h1.site-title {
+    .home li.site-title {
         top: 60px;
     }
 }
-h1.site-title > span {
+li.site-title > span {
     position: absolute;
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);

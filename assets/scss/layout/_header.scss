@@ -71,7 +71,8 @@
         border-bottom: 11px solid $primary-yellow;
         box-shadow: 0rem 0.15rem 0.5rem 0 rgba(0, 0, 0, 0.29);
 
-        h1.site-title {
+        li.site-title,
+        div.site-title {
             img {
                 min-height: 65px;
                 min-width: 172px;
@@ -82,9 +83,12 @@
             margin: 0;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             height: 100%;
+            width: 100%;
             .primary-item {
                 height: 100%;
+                width: 100%;
                 position: unset;
                 &:first-of-type {
                     a {
@@ -100,6 +104,7 @@
                     background: $primary-yellow;
                     #desktop-search-trigger {
                         height: 100%;
+                        min-width: 100px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -249,6 +254,7 @@
                     color: $textColor;
                     height: 100%;
                     display: flex;
+                    justify-content: center;
                     align-items: center;
                     padding: $spacing-xs 35px;
                     transition: background 0.15s ease-in-out;
@@ -598,7 +604,8 @@
             }
         }
 
-        h1.site-title {
+        li.site-title,
+        div.site-title {
             img {
                 max-height: 40px;
             }

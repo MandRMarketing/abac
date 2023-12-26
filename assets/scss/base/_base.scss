@@ -76,14 +76,15 @@ $spacing-xl: 100px;
 /* Hide all images */
 .mobile-img-hide {
     &.column {
-        display: none;
-    }
-    img {
         @media screen and (max-width: $mobile-break) {
-            width: 0;
-            height: 0;
-            visibility: hidden;
-            overflow: hidden;
+            display: none;
+
+            img {
+                width: 0;
+                height: 0;
+                visibility: hidden;
+                overflow: hidden;
+            }
         }
     }
 }
