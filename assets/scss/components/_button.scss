@@ -109,10 +109,7 @@
     width: fit-content;
     margin-bottom: 24px; /* match p margin-bottom inside typography.scss */
     text-decoration: none;
-    font-size: 18px;
-    @media (min-width: $mobile-med) {
-        font-size: 19px;
-    }
+    font-size: 19px;
     @media (min-width: $mobile-break) {
         font-size: 20px;
     }
