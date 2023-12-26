@@ -17,8 +17,14 @@
             flex: 1;
             img {
                 min-height: 300px;
-                min-width: 300px;
+                //min-width: 300px;
                 object-fit: cover;
+                transition: 0.25s ease;
+            }
+            &:hover {
+                img {
+                    opacity: 0.75;
+                }
             }
         }
     }

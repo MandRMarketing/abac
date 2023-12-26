@@ -1,18 +1,5 @@
 // basic page section-wrap padding
 .section-wrap {
-    // last item before footer has padding below
-    &:last-child {
-        padding-bottom: 64px;
-
-        @media (max-width: $extra-break) {
-            padding-bottom: 52px;
-        }
-
-        @media (max-width: $mobile-med) {
-            padding-bottom: 36px;
-        }
-    }
-
     padding: 88px 0;
 
     article > &:first-child {
