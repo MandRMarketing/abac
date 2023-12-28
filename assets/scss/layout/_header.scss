@@ -262,6 +262,9 @@
                     font-family: 'bookmania', serif;
                     font-weight: 400;
                     font-style: normal;
+                    border: 0;
+                    background-color: transparent;
+                    width: 100%;
                     &:hover {
                         background-color: $primary-yellow;
                         &::after {
