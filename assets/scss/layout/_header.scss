@@ -288,7 +288,7 @@
                 }
                 &.current-item {
                     background: $primary-yellow;
-                    a {
+                    button {
                         &::after {
                             content: unset;
                         }
