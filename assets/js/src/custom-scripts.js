@@ -352,6 +352,12 @@
             });
         }
 
+        // Code specific to image overlay toggles, makes trigger icon clickable
+        $('.image-overlays .toggle__trigger-icon').click(function () {
+            // Trigger a click on the .toggle__trigger element
+            $(this).closest('.image-overlays .toggle__trigger').click();
+        });
+
         // loading animation
         $(document).ready(function () {
             $('#loading-delay').delay(400).fadeOut(300);
