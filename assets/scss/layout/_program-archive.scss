@@ -140,6 +140,7 @@
             .page-numbers {
                 display: flex;
                 justify-content: flex-end;
+                gap: $spacing-xs;
                 li {
                     list-style-type: none !important;
                     font-style: normal !important;

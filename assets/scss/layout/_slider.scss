@@ -79,6 +79,9 @@
         }
         .slick-dots {
             text-align: left;
+            li {
+                margin-left: $spacing-xs;
+            }
             button {
                 background-color: $green;
                 width: 34px;
