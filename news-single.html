@@ -1143,7 +1143,8 @@
                     <li
                         class="primary-item"
                         id="desktop-search-menu-item"
-                        role="search"
+                        role="menuitem"
+                        aria-haspopup="true"
                     >
                         <a
                             id="desktop-search-trigger"
@@ -1154,12 +1155,12 @@
                             <span aria-hidden="true">Search</span>
                             <span class="icon-search"></span>
                         </a>
-                        <form id="desktop-search-form">
+                        <form id="desktop-search-form" role="search">
                             <span class="icon-search-green"></span>
                             <input type="search" placeholder="Search ABAC" />
                             <input
                                 type="reset"
-                                value="X"
+                                value="Clear"
                                 alt="Clear the search form"
                             />
                             <input type="submit" value="Search" />
@@ -1197,7 +1198,6 @@
                         <span class="icon-search-green"></span>
                     </a>
                     <form id="mobile-search-form">
-                        <span class="icon-search-green"></span>
                         <input type="search" placeholder="Search ABAC" />
                         <input
                             type="reset"
@@ -2320,9 +2320,9 @@
                         class="news-article-single__header__breadcrumbs container"
                     >
                         <a href="#">< All News</a>
-                        <div class="social-icons">
-                            <p>Share</p>
-                            <div class="badge-icon">
+                        <ul class="social-icons">
+                            <li><p>Share</p></li>
+                            <li class="badge-icon">
                                 <a
                                     href="https://facebook.com"
                                     target="_blank"
@@ -2333,8 +2333,8 @@
                                         alt="Facebook logo"
                                     />
                                 </a>
-                            </div>
-                            <div class="badge-icon">
+                            </li>
+                            <li class="badge-icon">
                                 <a
                                     href="https://x.com"
                                     target="_blank"
@@ -2345,8 +2345,8 @@
                                         alt="X logo"
                                     />
                                 </a>
-                            </div>
-                            <div class="badge-icon">
+                            </li>
+                            <li class="badge-icon">
                                 <a
                                     href="https://www.instagram.com/abac_college/"
                                     target="_blank"
@@ -2357,8 +2357,8 @@
                                         alt="Instagram logo"
                                     />
                                 </a>
-                            </div>
-                            <div class="badge-icon">
+                            </li>
+                            <li class="badge-icon">
                                 <a
                                     href="https://youtube.com"
                                     target="_blank"
@@ -2369,8 +2369,8 @@
                                         alt="Youtube logo"
                                     />
                                 </a>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="news-article-single__header__date container">
                         <time>October 7, 2023</time>
@@ -2521,7 +2521,9 @@
                                     src="assets/images/article.jpg"
                                     alt="abac logo"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     Frightful Tales at ABAC’s Georgia Museum of
                                     Agriculture scheduled Oct. 13
@@ -2541,7 +2543,9 @@
                                     src="assets/images/article-2.jpg"
                                     alt="violin players from abac"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     ABAC Presents! The Vega Quartet performance
                                     on Oct. 12
@@ -2561,7 +2565,9 @@
                                     src="assets/images/article-3.jpg"
                                     alt="violin players from abac"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     Forgotten “Power Couple” subject of Oct. 5
                                     Usher Lecture Series event
@@ -2583,9 +2589,9 @@
                         class="news-article-single__footer__breadcrumbs container"
                     >
                         <a href="#">< All News</a>
-                        <div class="social-icons">
-                            <p>Share</p>
-                            <div class="badge-icon">
+                        <ul class="social-icons">
+                            <li><p>Share</p></li>
+                            <li class="badge-icon">
                                 <a
                                     href="https://facebook.com"
                                     target="_blank"
@@ -2596,8 +2602,8 @@
                                         alt="Facebook logo"
                                     />
                                 </a>
-                            </div>
-                            <div class="badge-icon">
+                            </li>
+                            <li class="badge-icon">
                                 <a
                                     href="https://x.com"
                                     target="_blank"
@@ -2608,8 +2614,8 @@
                                         alt="X logo"
                                     />
                                 </a>
-                            </div>
-                            <div class="badge-icon">
+                            </li>
+                            <li class="badge-icon">
                                 <a
                                     href="https://www.instagram.com/abac_college/"
                                     target="_blank"
@@ -2620,8 +2626,8 @@
                                         alt="Instagram logo"
                                     />
                                 </a>
-                            </div>
-                            <div class="badge-icon">
+                            </li>
+                            <li class="badge-icon">
                                 <a
                                     href="https://youtube.com"
                                     target="_blank"
@@ -2632,8 +2638,8 @@
                                         alt="Youtube logo"
                                     />
                                 </a>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </section>
             </article>
@@ -2646,10 +2652,10 @@
                 <a class="footer-site-logo" href="index.html">
                     <img alt="ABAC logo" src="assets/images/logo-white.svg" />
                 </a>
-                <div class="social-icons">
-                    <div class="badge-icon">
+                <ul class="social-icons">
+                    <li class="badge-icon">
                         <a
-                            href="https://facebook.com"
+                            href="https://www.facebook.com/1908ABAC/"
                             target="_blank"
                             rel="noopener"
                         >
@@ -2658,17 +2664,17 @@
                                 alt="Facebook logo"
                             />
                         </a>
-                    </div>
-                    <div class="badge-icon">
+                    </li>
+                    <li class="badge-icon">
                         <a
-                            href="https://facebook.com"
+                            href="https://twitter.com/abac_college?lang=en"
                             target="_blank"
                             rel="noopener"
                         >
                             <img src="assets/images/x.svg" alt="X logo" />
                         </a>
-                    </div>
-                    <div class="badge-icon">
+                    </li>
+                    <li class="badge-icon">
                         <a
                             href="https://www.instagram.com/abac_college/"
                             target="_blank"
@@ -2679,10 +2685,10 @@
                                 alt="Instagram logo"
                             />
                         </a>
-                    </div>
-                    <div class="badge-icon">
+                    </li>
+                    <li class="badge-icon">
                         <a
-                            href="https://facebook.com"
+                            href="https://www.youtube.com/user/TheABACStallion"
                             target="_blank"
                             rel="noopener"
                         >
@@ -2691,8 +2697,8 @@
                                 alt="Youtube logo"
                             />
                         </a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
             <nav
                 id="footer-navigation"

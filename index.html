@@ -1139,7 +1139,8 @@
                     <li
                         class="primary-item"
                         id="desktop-search-menu-item"
-                        role="search"
+                        role="menuitem"
+                        aria-haspopup="true"
                     >
                         <a
                             id="desktop-search-trigger"
@@ -1150,12 +1151,12 @@
                             <span aria-hidden="true">Search</span>
                             <span class="icon-search"></span>
                         </a>
-                        <form id="desktop-search-form">
+                        <form id="desktop-search-form" role="search">
                             <span class="icon-search-green"></span>
                             <input type="search" placeholder="Search ABAC" />
                             <input
                                 type="reset"
-                                value="X"
+                                value="Clear"
                                 alt="Clear the search form"
                             />
                             <input type="submit" value="Search" />
@@ -1193,7 +1194,6 @@
                         <span class="icon-search-green"></span>
                     </a>
                     <form id="mobile-search-form">
-                        <span class="icon-search-green"></span>
                         <input type="search" placeholder="Search ABAC" />
                         <input
                             type="reset"
@@ -2698,7 +2698,9 @@
                                         nostrud exercitation ullamco laboris
                                         nisi ut aliquip ex ea commodo consequat
                                     </p>
-                                    <a class="button-arrow">Learn More</a>
+                                    <a class="button-arrow" href="#"
+                                        >Learn More</a
+                                    >
                                 </div>
                             </div>
                             <div class="toggle">
@@ -2732,7 +2734,9 @@
                                         nostrud exercitation ullamco laboris
                                         nisi ut aliquip ex ea commodo consequat
                                     </p>
-                                    <a class="button-arrow">Learn More</a>
+                                    <a class="button-arrow" href="#"
+                                        >Learn More</a
+                                    >
                                 </div>
                             </div>
                             <div class="toggle">
@@ -2766,7 +2770,9 @@
                                         nostrud exercitation ullamco laboris
                                         nisi ut aliquip ex ea commodo consequat
                                     </p>
-                                    <a class="button-arrow">Learn More</a>
+                                    <a class="button-arrow" href="#"
+                                        >Learn More</a
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -2799,7 +2805,7 @@
                                     exercitation ullamco laboris nisi ut aliquip
                                     ex ea commodo consequat
                                 </p>
-                                <a class="button-arrow">Learn More</a>
+                                <a class="button-arrow" href="#">Learn More</a>
                             </div>
                         </div>
                         <div class="slick-slide">
@@ -2821,7 +2827,7 @@
                                     exercitation ullamco laboris nisi ut aliquip
                                     ex ea commodo consequat
                                 </p>
-                                <a class="button-arrow">Learn More</a>
+                                <a class="button-arrow" href="#">Learn More</a>
                             </div>
                         </div>
                         <div class="slick-slide">
@@ -2843,7 +2849,7 @@
                                     exercitation ullamco laboris nisi ut aliquip
                                     ex ea commodo consequat
                                 </p>
-                                <a class="button-arrow">Learn More</a>
+                                <a class="button-arrow" href="#">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -2892,10 +2898,10 @@
                                 </a>
                             </div>
                             <div
-                                class="news-grid__articles__secoondary-articles"
+                                class="news-grid__articles__secondary-articles"
                             >
                                 <div
-                                    class="news-grid__articles__secoondary-articles__article"
+                                    class="news-grid__articles__secondary-articles__article"
                                 >
                                     <h4>
                                         ABAC President addresses faculty, staff
@@ -2909,7 +2915,7 @@
                                     </a>
                                 </div>
                                 <div
-                                    class="news-grid__articles__secoondary-articles__article"
+                                    class="news-grid__articles__secondary-articles__article"
                                 >
                                     <h4>
                                         ABAC President addresses faculty, staff
@@ -2923,7 +2929,7 @@
                                     </a>
                                 </div>
                                 <div
-                                    class="news-grid__articles__secoondary-articles__article"
+                                    class="news-grid__articles__secondary-articles__article"
                                 >
                                     <h4>
                                         ABAC President addresses faculty, staff
@@ -2984,7 +2990,12 @@
                                 />
                             </a>
                         </div>
-                        <h4>abac_college</h4>
+                        <a
+                            href="https://www.instagram.com/abac_college/?hl=en"
+                            target="_blank"
+                            rel="noopener"
+                            ><h4>abac_college</h4></a
+                        >
                     </div>
                     <div class="instagram-feed__feed">
                         <div class="instagram-feed__feed__thumbnail">
@@ -3072,10 +3083,10 @@
                 <a class="footer-site-logo" href="index.html">
                     <img alt="ABAC logo" src="assets/images/logo-white.svg" />
                 </a>
-                <div class="social-icons">
-                    <div class="badge-icon">
+                <ul class="social-icons">
+                    <li class="badge-icon">
                         <a
-                            href="https://facebook.com"
+                            href="https://www.facebook.com/1908ABAC/"
                             target="_blank"
                             rel="noopener"
                         >
@@ -3084,17 +3095,17 @@
                                 alt="Facebook logo"
                             />
                         </a>
-                    </div>
-                    <div class="badge-icon">
+                    </li>
+                    <li class="badge-icon">
                         <a
-                            href="https://facebook.com"
+                            href="https://twitter.com/abac_college?lang=en"
                             target="_blank"
                             rel="noopener"
                         >
                             <img src="assets/images/x.svg" alt="X logo" />
                         </a>
-                    </div>
-                    <div class="badge-icon">
+                    </li>
+                    <li class="badge-icon">
                         <a
                             href="https://www.instagram.com/abac_college/"
                             target="_blank"
@@ -3105,10 +3116,10 @@
                                 alt="Instagram logo"
                             />
                         </a>
-                    </div>
-                    <div class="badge-icon">
+                    </li>
+                    <li class="badge-icon">
                         <a
-                            href="https://facebook.com"
+                            href="https://www.youtube.com/user/TheABACStallion"
                             target="_blank"
                             rel="noopener"
                         >
@@ -3117,8 +3128,8 @@
                                 alt="Youtube logo"
                             />
                         </a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
             <nav
                 id="footer-navigation"

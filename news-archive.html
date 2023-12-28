@@ -1143,7 +1143,8 @@
                     <li
                         class="primary-item"
                         id="desktop-search-menu-item"
-                        role="search"
+                        role="menuitem"
+                        aria-haspopup="true"
                     >
                         <a
                             id="desktop-search-trigger"
@@ -1154,12 +1155,12 @@
                             <span aria-hidden="true">Search</span>
                             <span class="icon-search"></span>
                         </a>
-                        <form id="desktop-search-form">
+                        <form id="desktop-search-form" role="search">
                             <span class="icon-search-green"></span>
                             <input type="search" placeholder="Search ABAC" />
                             <input
                                 type="reset"
-                                value="X"
+                                value="Clear"
                                 alt="Clear the search form"
                             />
                             <input type="submit" value="Search" />
@@ -1197,7 +1198,6 @@
                         <span class="icon-search-green"></span>
                     </a>
                     <form id="mobile-search-form">
-                        <span class="icon-search-green"></span>
                         <input type="search" placeholder="Search ABAC" />
                         <input
                             type="reset"
@@ -2345,7 +2345,7 @@
                                 <a href="#">Category</a>
                             </p>
                             <h2>ABAC Fall Jazz Concert set for October 19</h2>
-                            <time>October 7, 2023</time>
+                            <time datetime="2023-10-07">October 7, 2023</time>
                             <a href="news-single.html" class="button-arrow"
                                 >Read Article</a
                             >
@@ -2367,7 +2367,9 @@
                                 <h2>
                                     ABAC Fall Jazz Concert set for October 19
                                 </h2>
-                                <time>October 7, 2023</time>
+                                <time datetime="2023-10-07"
+                                    >October 7, 2023</time
+                                >
                                 <a href="news-single.html" class="button-arrow"
                                     >Read Article</a
                                 >
@@ -2386,7 +2388,9 @@
                                 <h2>
                                     ABAC Fall Jazz Concert set for October 19
                                 </h2>
-                                <time>October 7, 2023</time>
+                                <time datetime="2023-10-07"
+                                    >October 7, 2023</time
+                                >
                                 <a href="news-single.html" class="button-arrow"
                                     >Read Article</a
                                 >
@@ -2402,15 +2406,17 @@
                     role="region"
                 >
                     <div class="news-articles__container container">
-                        <div class="news-articles__container__articles">
-                            <div
+                        <ul class="news-articles__container__articles">
+                            <li
                                 class="news-articles__container__articles__article"
                             >
                                 <img
                                     src="assets/images/article.jpg"
                                     alt="abac logo"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     Frightful Tales at ABAC’s Georgia Museum of
                                     Agriculture scheduled Oct. 13
@@ -2422,15 +2428,17 @@
                                 <a href="news-single.html" class="button-arrow"
                                     >Read Article</a
                                 >
-                            </div>
-                            <div
+                            </li>
+                            <li
                                 class="news-articles__container__articles__article"
                             >
                                 <img
                                     src="assets/images/article-2.jpg"
                                     alt="violin players from abac"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     ABAC Presents! The Vega Quartet performance
                                     on Oct. 12
@@ -2442,15 +2450,17 @@
                                 <a href="news-single.html" class="button-arrow"
                                     >Read Article</a
                                 >
-                            </div>
-                            <div
+                            </li>
+                            <li
                                 class="news-articles__container__articles__article"
                             >
                                 <img
                                     src="assets/images/article-3.jpg"
                                     alt="violin players from abac"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     Forgotten “Power Couple” subject of Oct. 5
                                     Usher Lecture Series event
@@ -2462,15 +2472,17 @@
                                 <a href="news-single.html" class="button-arrow"
                                     >Read Article</a
                                 >
-                            </div>
-                            <div
+                            </li>
+                            <li
                                 class="news-articles__container__articles__article"
                             >
                                 <img
                                     src="assets/images/article.jpg"
                                     alt="abac logo"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     Frightful Tales at ABAC’s Georgia Museum of
                                     Agriculture scheduled Oct. 13
@@ -2482,15 +2494,17 @@
                                 <a href="news-single.html" class="button-arrow"
                                     >Read Article</a
                                 >
-                            </div>
-                            <div
+                            </li>
+                            <li
                                 class="news-articles__container__articles__article"
                             >
                                 <img
                                     src="assets/images/article-2.jpg"
                                     alt="violin players from abac"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     ABAC Presents! The Vega Quartet performance
                                     on Oct. 12
@@ -2502,15 +2516,17 @@
                                 <a href="news-single.html" class="button-arrow"
                                     >Read Article</a
                                 >
-                            </div>
-                            <div
+                            </li>
+                            <li
                                 class="news-articles__container__articles__article"
                             >
                                 <img
                                     src="assets/images/article-3.jpg"
                                     alt="violin players from abac"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     Forgotten “Power Couple” subject of Oct. 5
                                     Usher Lecture Series event
@@ -2522,15 +2538,17 @@
                                 <a href="news-single.html" class="button-arrow"
                                     >Read Article</a
                                 >
-                            </div>
-                            <div
+                            </li>
+                            <li
                                 class="news-articles__container__articles__article"
                             >
                                 <img
                                     src="assets/images/article.jpg"
                                     alt="abac logo"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     Frightful Tales at ABAC’s Georgia Museum of
                                     Agriculture scheduled Oct. 13
@@ -2542,15 +2560,17 @@
                                 <a href="news-single.html" class="button-arrow"
                                     >Read Article</a
                                 >
-                            </div>
-                            <div
+                            </li>
+                            <li
                                 class="news-articles__container__articles__article"
                             >
                                 <img
                                     src="assets/images/article-2.jpg"
                                     alt="violin players from abac"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     ABAC Presents! The Vega Quartet performance
                                     on Oct. 12
@@ -2562,15 +2582,17 @@
                                 <a href="news-single.html" class="button-arrow"
                                     >Read Article</a
                                 >
-                            </div>
-                            <div
+                            </li>
+                            <li
                                 class="news-articles__container__articles__article"
                             >
                                 <img
                                     src="assets/images/article-3.jpg"
                                     alt="violin players from abac"
                                 />
-                                <time>September 29, 2023</time>
+                                <time datetime="2023-09-29"
+                                    >September 29, 2023</time
+                                >
                                 <h3>
                                     Forgotten “Power Couple” subject of Oct. 5
                                     Usher Lecture Series event
@@ -2582,9 +2604,9 @@
                                 <a href="news-single.html" class="button-arrow"
                                     >Read Article</a
                                 >
-                            </div>
-                        </div>
-                        <div class="news-articles__container__categories">
+                            </li>
+                        </ul>
+                        <aside class="news-articles__container__categories">
                             <h3>Categories</h3>
                             <a href="#" class="block">Category Title</a>
                             <a href="#" class="block">Category Title</a>
@@ -2594,7 +2616,7 @@
                             <a href="#" class="block">Category Title</a>
                             <a href="#" class="block">Category Title</a>
                             <a href="#" class="block">Category Title</a>
-                        </div>
+                        </aside>
                     </div>
                     <aside class="news-articles__pagination container">
                         <ul class="page-numbers">
@@ -2618,11 +2640,11 @@
                             </li>
                         </ul>
                     </aside>
-                </article>
-                <!-- end news-articles section-->
-            </main>
-            <!-- end Main Content Body -->
-        </div>
+                </section>
+            </article>
+            <!-- end news-articles section-->
+        </main>
+        <!-- end Main Content Body -->
         <!-- end #main -->
         <!-- Footer -->
         <footer id="footer" role="contentinfo" class="section-wrap">
@@ -2630,10 +2652,10 @@
                 <a class="footer-site-logo" href="index.html">
                     <img alt="ABAC logo" src="assets/images/logo-white.svg" />
                 </a>
-                <div class="social-icons">
-                    <div class="badge-icon">
+                <ul class="social-icons">
+                    <li class="badge-icon">
                         <a
-                            href="https://facebook.com"
+                            href="https://www.facebook.com/1908ABAC/"
                             target="_blank"
                             rel="noopener"
                         >
@@ -2642,17 +2664,17 @@
                                 alt="Facebook logo"
                             />
                         </a>
-                    </div>
-                    <div class="badge-icon">
+                    </li>
+                    <li class="badge-icon">
                         <a
-                            href="https://facebook.com"
+                            href="https://twitter.com/abac_college?lang=en"
                             target="_blank"
                             rel="noopener"
                         >
                             <img src="assets/images/x.svg" alt="X logo" />
                         </a>
-                    </div>
-                    <div class="badge-icon">
+                    </li>
+                    <li class="badge-icon">
                         <a
                             href="https://www.instagram.com/abac_college/"
                             target="_blank"
@@ -2663,10 +2685,10 @@
                                 alt="Instagram logo"
                             />
                         </a>
-                    </div>
-                    <div class="badge-icon">
+                    </li>
+                    <li class="badge-icon">
                         <a
-                            href="https://facebook.com"
+                            href="https://www.youtube.com/user/TheABACStallion"
                             target="_blank"
                             rel="noopener"
                         >
@@ -2675,8 +2697,8 @@
                                 alt="Youtube logo"
                             />
                         </a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
             <nav
                 id="footer-navigation"

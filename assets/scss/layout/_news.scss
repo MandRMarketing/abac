@@ -9,9 +9,16 @@
             .social-icons {
                 display: flex;
                 gap: $spacing-xs;
+                li {
+                    list-style-type: none !important;
+                    margin-left: 0 !important;
+                }
                 .badge-icon {
                     background-size: contain;
                 }
+            }
+            @media screen and (max-width: $mobile-break) {
+                flex-direction: column;
             }
         }
         &__date {
@@ -36,9 +43,16 @@
             .social-icons {
                 display: flex;
                 gap: $spacing-xs;
+                li {
+                    list-style-type: none !important;
+                    margin-left: 0 !important;
+                }
                 .badge-icon {
                     background-size: contain;
                 }
+            }
+            @media screen and (max-width: $mobile-break) {
+                flex-direction: column-reverse;
             }
         }
     }
@@ -188,6 +202,7 @@
                 border-bottom: 8px solid $primary-yellow;
                 padding: $spacing-xs;
                 position: relative;
+                list-style-type: none;
                 img {
                     max-width: unset;
                     width: calc(100% + 30px);
@@ -227,6 +242,10 @@
                     border-bottom: 2px solid $primary-yellow;
                 }
                 &.selected {
+                    color: black;
+                    font-weight: 700;
+                }
+                &:hover {
                     color: black;
                     font-weight: 700;
                 }
@@ -273,7 +292,7 @@
                 display: block;
             }
         }
-        &__secoondary-articles {
+        &__secondary-articles {
             display: flex;
             flex-direction: column;
             &__article {

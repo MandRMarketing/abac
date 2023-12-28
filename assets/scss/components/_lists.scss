@@ -1,9 +1,9 @@
 #main,
 main {
-    ul {
+    ul:not([class]) {
         padding-left: 0;
 
-        li {
+        li:not([class]) {
             position: relative;
             list-style-type: square;
             text-indent: -0;
