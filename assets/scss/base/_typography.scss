@@ -77,7 +77,8 @@ h1,
         font-size: 47px;
     }
 }
-h2 {
+h2,
+.h2 {
     color: $darkGrey;
     font-size: 28px;
     font-family: 'bookmania', serif;
@@ -92,7 +93,8 @@ h2 {
         font-size: 34px;
     }
 }
-h3 {
+h3,
+.h3 {
     color: $darkGrey;
     font-size: 24px;
     font-family: 'bookmania', serif;
