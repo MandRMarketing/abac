@@ -1,5 +1,11 @@
 .callout {
     @media screen and (min-width: $first-break) {
+        &.no-borders {
+            .container {
+                border-top: unset;
+                border-bottom: unset;
+            }
+        }
         .container {
             display: flex;
             align-items: center;

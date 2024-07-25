@@ -57,7 +57,7 @@
                     top: calc(50% - 1px);
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    color: $green;
+                    color: white;
                     font-size: 60px;
                 }
             }
@@ -93,7 +93,8 @@
         position: relative;
         &::before {
             content: '';
-            background: #002a15ad;
+            background: #00381c;
+            opacity: 0.87;
             position: absolute;
             width: 37.5%;
             height: 100%;
@@ -101,15 +102,16 @@
             left: 0;
             z-index: 1;
         }
-        &::after {
-            content: '';
-            background: #002a15ad;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
+        // &::after {
+        //     content: '';
+        //     background: #00381c;
+        //     opacity: 0.87;
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 100%;
+        //     top: 0;
+        //     left: 0;
+        // }
 
         .container-large {
             position: unset;
@@ -128,7 +130,7 @@
             h4,
             h5,
             h6 {
-                color: $primary-yellow;
+                color: white;
             }
             p {
                 color: white;
@@ -172,11 +174,11 @@
                 border-bottom: 1px solid $primary-yellow;
                 z-index: 1;
                 &:hover {
-                    .toggle__trigger-text {
-                        * {
-                            color: $primary-yellow;
-                        }
-                    }
+                    // .toggle__trigger-text {
+                    //     * {
+                    //         color: $primary-yellow;
+                    //     }
+                    // }
                     .toggle__trigger-icon {
                         &::before {
                             filter: brightness(1);
@@ -240,9 +242,9 @@
                 }
 
                 &.toggle--active {
-                    .toggle__trigger-text {
-                        * {
-                            color: $primary-yellow;
+                    .toggle__trigger-icon {
+                        &::before {
+                            filter: brightness(1);
                         }
                     }
                 }
@@ -252,19 +254,24 @@
                 z-index: 1;
                 position: absolute;
                 bottom: 0;
-                left: 40%;
+                top: 0;
+                left: 37.5%;
+                width: 62.5%;
+                height: 100%;
                 overflow: hidden;
                 padding: $spacing-sm;
+                padding-top: 88px;
                 padding-bottom: $spacing-xl;
                 border: 0px;
                 color: white;
+                background: #00381cde;
                 h1,
                 h2,
                 h3,
                 h4,
                 h5,
                 h6 {
-                    color: $primary-yellow;
+                    color: white;
                 }
                 ul {
                     li {
@@ -296,20 +303,6 @@
                 text-align: center;
                 align-items: center;
                 border-bottom: 7px solid $primary-yellow;
-                &::before {
-                    content: '';
-                    background: rgb(0, 42, 21);
-                    background: linear-gradient(
-                        0deg,
-                        rgba(0, 42, 21, 1) 0%,
-                        rgba(255, 255, 255, 0) 100%
-                    );
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                }
                 > img {
                     position: absolute;
                     object-fit: cover;
@@ -325,6 +318,18 @@
                     padding: 0;
                     border: 0px;
                     height: 100%;
+                    &::before {
+                        content: '';
+                        background: #00381c;
+                        opacity: 0.87;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 32.5%;
+                        z-index: -1;
+                        transition: 0.25s ease-in-out;
+                    }
                     &-text {
                         height: 100%;
                         display: flex;
@@ -338,7 +343,7 @@
                         h4,
                         h5,
                         h6 {
-                            color: $primary-yellow;
+                            color: white;
                         }
                         * {
                             text-align: center;
@@ -365,7 +370,7 @@
                         z-index: 1;
                         width: 66px;
                         height: 66px;
-                        background: $primary-yellow;
+                        background: $green;
                         pointer-events: all;
                         cursor: pointer;
                     }
@@ -386,6 +391,17 @@
                     }
                 }
                 &--active {
+                    &::before {
+                        content: '';
+                        background: #00381c;
+                        opacity: 0.87;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                    }
                     .toggle__trigger-text {
                         padding-bottom: 400px;
                     }

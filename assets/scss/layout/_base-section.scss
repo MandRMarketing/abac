@@ -88,6 +88,25 @@
     }
 }
 
+.white-overlay {
+    position: relative;
+    background-position: bottom !important;
+
+    .container {
+        z-index: 1;
+    }
+    &::after {
+        content: '';
+        background: white;
+        opacity: 0.75;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .gold-border-top {
     padding-top: $spacing-med;
     border-top: 2px solid $primary-yellow;

@@ -98,7 +98,7 @@ $spacing-xl: 100px;
     transition: all 0.3s ease-in-out;
 
     /* Margin for desktop and mobile menus */
-    margin-top: 150px; /* Desktop Menu Height */
+    margin-top: 125px; /* Desktop Menu Height */
     @media screen and (max-width: $mobile-break) {
         margin-top: 80px; /* Mobile Menu Height */
     }

@@ -287,3 +287,27 @@
         }
     }
 }
+
+.stallion-seal-bg {
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        background: url(assets/images/stallion-seal.svg) no-repeat;
+        background-size: contain;
+        width: 364px;
+        height: 451px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        z-index: -1;
+        @media screen and (max-width: $extra-break) {
+            width: 320px;
+            height: 320px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: $spacing-sm;
+        }
+    }
+}

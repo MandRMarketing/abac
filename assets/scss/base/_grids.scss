@@ -16,11 +16,7 @@ Version 1.2.5
     margin: 0 auto;
     padding: 0;
     position: relative;
-    width: 95%;
-
-    @media screen and (max-width: $second-break) {
-        width: 90%;
-    }
+    width: 90%;
 
     @media screen and (max-width: $mobile-break) {
         width: 100%;

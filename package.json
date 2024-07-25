@@ -4,7 +4,6 @@
     "description": "Making websites",
     "main": "gulpfile.js",
     "devDependencies": {
-        "node-bourbon": "^4.2.3",
         "@babel/core": "^7.13.15",
         "@babel/preset-env": "^7.13.15",
         "autoprefixer": "^10.4.0",
@@ -24,8 +23,12 @@
         "gulp-sass": "^5.0.0",
         "gulp-uglify": "^3.0.2",
         "jshint": "^2.13.1",
+        "node-bourbon": "^4.2.3",
         "postcss": "^8.4.4",
         "postcss-pxtorem": "^6.0.0",
         "sass": "1.54.4"
+    },
+    "dependencies": {
+        "livereload": "^0.9.3"
     }
 }

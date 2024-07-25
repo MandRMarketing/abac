@@ -81,7 +81,7 @@
                                 onchange="location = this.value;"
                             >
                                 <option value="/" disabled selected>
-                                    Select
+                                    Select One
                                 </option>
                                 <option value="current-students.html">
                                     Current Students
@@ -116,7 +116,7 @@
                     <li class="primary-item site-title" role="menuitem">
                         <a href="index.html">
                             <img
-                                src="assets/images/logo-green.svg"
+                                src="assets/images/logo-white.svg"
                                 alt="The logo of Abraham Baldwin Agricultural College"
                             />
                         </a>
@@ -1191,7 +1191,7 @@
                 <div class="site-title">
                     <a href="index.html">
                         <img
-                            src="assets/images/logo-green.svg"
+                            src="assets/images/logo-white.svg"
                             alt="The logo of Abraham Baldwin Agricultural College"
                         />
                     </a>
@@ -2315,105 +2315,30 @@
         <main id="main">
             <!-- Main Content Body -->
             <article class="primary-content-wrap">
-                <!-- start of homepage slider -->
-                <section class="slider front-page-slider" role="region">
+                <!-- start of homepage header -->
+                <section class="front-page-header" role="region">
                     <h1 class="sr-only">
                         Abraham Baldwin Agricultural College
                     </h1>
-                    <div class="slick-slider">
-                        <div
-                            class="slick-slide front-page-slide"
-                            style="
-                                background: url('assets/images/hp-slider-1.jpg')
-                                    no-repeat center / cover;
-                            "
-                        >
-                            <div class="slick-caption abs-center">
-                                <h2 class="slider-caption-header h1">
-                                    Community for
-                                    <strong><em>Learning.</em></strong>
-                                    Community for
-                                    <strong><em>Life.</em></strong>
-                                </h2>
-                                <a href="#" class="button slider-button"
-                                    >Apply For Admissions</a
-                                >
-                            </div>
-                        </div>
-                        <div
-                            class="slick-slide front-page-slide"
-                            style="
-                                background: url('assets/images/hp-slider-1.jpg')
-                                    no-repeat center / cover;
-                            "
-                        >
-                            <div class="slick-caption abs-center">
-                                <h2 class="slider-caption-header h1">
-                                    Community for
-                                    <strong><em>Learning.</em></strong>
-                                    Community for
-                                    <strong><em>Life.</em></strong>
-                                </h2>
-                                <a href="#" class="button slider-button"
-                                    >Apply For Admissions</a
-                                >
-                            </div>
-                        </div>
-                        <div
-                            class="slick-slide front-page-slide"
-                            style="
-                                background: url('assets/images/hp-slider-1.jpg')
-                                    no-repeat center / cover;
-                            "
-                        >
-                            <div class="slick-caption abs-center">
-                                <h2 class="slider-caption-header h1">
-                                    Community for
-                                    <strong><em>Learning.</em></strong>
-                                    Community for
-                                    <strong><em>Life.</em></strong>
-                                </h2>
-                                <a href="#" class="button slider-button"
-                                    >Apply For Admissions</a
-                                >
-                            </div>
-                        </div>
+                    <div class="front-page-header__image">
+                        <img
+                            src="/assets/images/hp-header.jpg"
+                            alt="Students walking to class"
+                        />
                     </div>
-                    <script>
-                        $(window).on('load', function () {
-                            $('.front-page-slider .slick-slider').slick({
-                                accessibility: true,
-                                arrows: false,
-                                autoplay: true,
-                                autoplaySpeed: 5000,
-                                dots: true,
-                                fade: false,
-                                slide: '.slick-slide',
-                                speed: 800,
-                            });
-                        });
-                    </script>
+                    <div class="front-page-header__content">
+                        <h2>Community<br />for Life.</h2>
+                        <p>
+                            You can use up to X number of characters to generate
+                            approximately 2 lines of text.
+                        </p>
+                        <a href="" class="button white">Apply For Admissions</a>
+                    </div>
                 </section>
-                <section class="front-slider-footer-content">
-                    <h3>
-                        Abraham Baldwin Agricultural College offers a unique and
-                        intimate experience-based learning environment, where
-                        students are challenged to recognize their potential and
-                        push the limits of what’s possible.
-                        <strong><em>Pursue your future at ABAC!</em></strong>
-                    </h3>
-                </section>
-                <!-- end of homepage slider -->
+                <!-- end of homepage header -->
 
                 <!-- start cards stats section -->
-                <section
-                    class="section-wrap cards stats"
-                    role="region"
-                    style="
-                        background: url(assets/images/hp-stats-bg.png) no-repeat
-                            bottom;
-                    "
-                >
+                <section class="section-wrap cards stats" role="region">
                     <div class="container-large">
                         <ul class="cards__wrap">
                             <li class="cards__wrap__card">
@@ -2442,7 +2367,14 @@
                 <!-- end university stats -->
 
                 <!-- start call to action -->
-                <section class="callout section-wrap" role="region">
+                <section
+                    class="callout white-overlay no-borders section-wrap"
+                    role="region"
+                    style="
+                        background: url(assets/images/hp-stats-bg.png) no-repeat
+                            bottom;
+                    "
+                >
                     <div class="container">
                         <div class="callout__container left">
                             <img
@@ -2516,7 +2448,9 @@
                                         <li>Program</li>
                                         <li>Program</li>
                                     </ul>
-                                    <a class="button">Find Your Program</a>
+                                    <a class="button white"
+                                        >Find Your Program</a
+                                    >
                                 </div>
                                 <img
                                     src="assets/images/hp-programs-bg.jpg"
@@ -2549,7 +2483,9 @@
                                         <li>Program</li>
                                         <li>Program</li>
                                     </ul>
-                                    <a class="button">Find Your Program</a>
+                                    <a class="button white"
+                                        >Find Your Program</a
+                                    >
                                 </div>
                                 <img
                                     src="assets/images/hp-programs-bg-1.jpg"
@@ -2588,7 +2524,9 @@
                                         <li>Program</li>
                                         <li>Program</li>
                                     </ul>
-                                    <a class="button">Find Your Program</a>
+                                    <a class="button white"
+                                        >Find Your Program</a
+                                    >
                                 </div>
                                 <img
                                     src="assets/images/hp-programs-bg-2.jpg"
@@ -2624,7 +2562,9 @@
                                         <li>Program</li>
                                         <li>Program</li>
                                     </ul>
-                                    <a class="button">Find Your Program</a>
+                                    <a class="button white"
+                                        >Find Your Program</a
+                                    >
                                 </div>
                                 <img
                                     src="assets/images/hp-programs-bg-3.jpg"
@@ -2643,7 +2583,7 @@
                     aria-label=""
                 >
                     <div
-                        class="section-wrap full-width forty-sixty__left offwhite-bg stallion-bg"
+                        class="section-wrap full-width forty-sixty__left offwhite-bg stallion-seal-bg"
                     >
                         <h2>Thriving Together</h2>
                         <strong>
@@ -2983,8 +2923,12 @@
                                 students another option for starting their
                                 journey in higher education.
                             </p>
-                            <a href="" class="button">Explore Bainbridge </a>
-                            <a href="" class="button">Bainbridge Campus Map </a>
+                            <a href="" class="button white"
+                                >Explore Bainbridge
+                            </a>
+                            <a href="" class="button white"
+                                >Bainbridge Campus Map
+                            </a>
                         </div>
                     </div>
                 </section>

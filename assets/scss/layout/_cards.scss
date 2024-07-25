@@ -18,7 +18,7 @@
         margin: 0;
         &__card {
             position: relative;
-            background: white;
+            background: $offWhite;
             border-bottom: 8px solid $primary-yellow;
             display: flex;
             flex-direction: column;
@@ -187,11 +187,11 @@
             }
         }
 
-        @media screen and (min-width: $extra-break) {
-            background-size: cover !important;
-            padding-top: 600px;
-            padding-bottom: 300px;
-        }
+        // @media screen and (min-width: $extra-break) {
+        //     background-size: cover !important;
+        //     padding-top: 600px;
+        //     padding-bottom: 300px;
+        // }
         @media screen and (max-width: $extra-break) {
             padding-bottom: 300px;
             &::before {

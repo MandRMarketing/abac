@@ -7,7 +7,7 @@ Site Footer
     z-index: 30;
     font-size: 18px;
     text-align: center;
-    background-color: $green;
+    background-color: $dark-green;
     border-top: 11px solid $primary-yellow;
     padding-bottom: $spacing-sm;
     display: flex;
@@ -43,6 +43,10 @@ Site Footer
             display: flex;
             gap: $spacing-xs;
             list-style-type: none;
+            .badge-icon {
+                background: url(assets/images/badge-bg-white.svg) no-repeat;
+                background-size: cover !important;
+            }
         }
     }
 
