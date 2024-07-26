@@ -56,8 +56,10 @@
 .icon-search:before {
     content: '';
     background: url(assets/images/icon-search.svg);
-    height: 42px;
-    width: 42px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 22px;
+    width: 22px;
     display: block;
 }
 

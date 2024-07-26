@@ -16,7 +16,7 @@
             display: flex;
             .secondary-item {
                 position: relative;
-                padding: $spacing-xs 35px;
+                padding: 0 35px;
                 display: flex;
                 align-items: center;
                 &::after {
@@ -43,13 +43,13 @@
                     font-size: 14px;
                 }
                 &.current-item {
-                    background: $primary-yellow;
                     a {
-                        color: $textColor;
+                        color: $primary-yellow;
                     }
                 }
                 #information-select {
                     border-bottom: 1px solid $primary-yellow;
+                    height: 25px;
                 }
                 &:not(.information-select-wrapper) {
                     &:hover {
@@ -86,10 +86,11 @@
         div.site-title {
             img {
                 position: absolute;
-                top: -25px;
+                top: calc(50% - 25px);
+                transform: translateY(-50%);
                 left: 30px;
-                max-height: 85px;
-                max-width: 415px;
+                width: 25%;
+                height: auto;
             }
         }
 
@@ -99,11 +100,12 @@
             align-items: center;
             justify-content: space-between;
             height: 100%;
-            width: 85%;
+            //width: 85%;
             .primary-item {
                 height: 100%;
                 width: 100%;
                 position: unset;
+                margin: 0 5px;
                 &:first-of-type {
                     a {
                         &::after {
@@ -145,9 +147,7 @@
                         position: absolute;
                         width: 100%;
                         left: 0;
-                        top: calc(
-                            100% + 11px
-                        ); /* 100% + border bottom of primary desktop menu */
+                        top: 100%;
                         padding: 0 $spacing-xs;
 
                         input {
@@ -259,7 +259,13 @@
                         }
                     }
                 }
-                .desktop-nav-subnav-trigger {
+                .desktop-nav-link {
+                    &::after {
+                        content: unset !important;
+                    }
+                }
+                .desktop-nav-subnav-trigger,
+                .desktop-nav-link {
                     text-decoration: none;
                     position: relative;
                     color: white;
@@ -267,7 +273,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    padding: $spacing-xs 15px;
+                    padding: 15px 30px;
                     transition: background 0.15s ease-in-out;
                     font-size: 22px;
                     font-family: 'bookmania', serif;
@@ -275,12 +281,9 @@
                     font-style: normal;
                     border: 0;
                     background-color: transparent;
-                    width: 100%;
+                    width: max-content;
                     &:hover {
-                        background-color: $primary-yellow;
-                        &::after {
-                            content: unset;
-                        }
+                        color: $primary-yellow;
                     }
                     &::after {
                         content: '';
@@ -301,11 +304,8 @@
                     }
                 }
                 &.current-item {
-                    background: $primary-yellow;
                     button {
-                        &::after {
-                            content: unset;
-                        }
+                        color: $primary-yellow;
                     }
                 }
             }
