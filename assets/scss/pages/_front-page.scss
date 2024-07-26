@@ -33,8 +33,19 @@
         left: 5%;
         width: 30%;
         z-index: 2;
+        h2 {
+            font-size: 68px;
+        }
         * {
             color: white;
+        }
+        @media (max-width: $mobile-break) {
+            background: $green;
+            left: 0;
+            padding: 2.5%;
+            width: 100%;
+            position: relative;
+            transform: unset;
         }
     }
     &__image {
@@ -57,6 +68,10 @@
             left: 0;
             top: 0;
             z-index: 1;
+        }
+        @media (max-width: $mobile-break) {
+            height: 300px;
+            width: 100%;
         }
     }
 }

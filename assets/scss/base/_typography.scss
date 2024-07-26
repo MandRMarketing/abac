@@ -16,7 +16,7 @@ html {
 body {
     background-color: white;
     color: $textColor;
-    font-family: 'libre-franklin', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 400;
     font-style: normal;
@@ -25,7 +25,7 @@ body {
         font-size: 20px;
     }
     @media (min-width: $mobile-break) {
-        font-size: 23px;
+        font-size: 22px;
     }
     &.menu-open {
         overflow: hidden;
@@ -64,7 +64,7 @@ body {
 h1,
 .h1 {
     font-size: 40px;
-    font-family: 'bookmania', serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 400;
     font-style: normal;
     text-transform: capitalize;
@@ -81,7 +81,7 @@ h2,
 .h2 {
     color: $darkGrey;
     font-size: 28px;
-    font-family: 'bookmania', serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 400;
     font-style: normal;
     color: $green;
@@ -97,7 +97,7 @@ h3,
 .h3 {
     color: $darkGrey;
     font-size: 24px;
-    font-family: 'bookmania', serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
     font-style: normal;
     text-transform: capitalize;
@@ -110,7 +110,7 @@ h3,
 }
 h4 {
     color: $green;
-    font-family: 'libre-franklin', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 22px;
@@ -125,7 +125,7 @@ h4 {
 }
 h5 {
     color: $darkGrey;
-    font-family: 'libre-franklin', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-style: italic;
     font-size: 21px;
@@ -135,7 +135,7 @@ h6 {
     color: $green;
     font-size: 18px;
     text-transform: capitalize;
-    font-family: 'libre-franklin', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-style: normal;
 }

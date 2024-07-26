@@ -23,7 +23,7 @@
         }
         &__date {
             font-weight: 700;
-            font-family: 'bookmania', serif;
+            font-family: 'Outfit', sans-serif;
         }
     }
     &__content {
@@ -31,7 +31,7 @@
             border-left: 8px solid $primary-yellow;
             padding-left: $spacing-sm;
             color: $textColor;
-            font-family: 'libre-franklin', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
     }
     &__footer {
@@ -225,7 +225,7 @@
                 }
                 h3 {
                     color: $green;
-                    font-family: 'libre-franklin', sans-serif;
+                    font-family: 'Poppins', sans-serif;
                 }
                 a:not(.button-arrow) {
                     font-style: italic;

@@ -196,7 +196,7 @@
                         color: white;
                         text-transform: initial !important;
                         margin-bottom: 0;
-                        font-family: 'libre-franklin', sans-serif;
+                        font-family: 'Poppins', sans-serif;
                         font-weight: 700;
                         font-style: normal;
                         font-size: 24px;
@@ -390,7 +390,7 @@
                         color: white !important;
                     }
                 }
-                &--active {
+                &--active.toggle__trigger {
                     &::before {
                         content: '';
                         background: #00381c;
