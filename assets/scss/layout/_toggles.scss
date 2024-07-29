@@ -92,6 +92,30 @@
     }
     &.image-content-box-overlay {
         position: relative;
+        background: url(assets/images/hp-programs-bg.jpg);
+        background-size: cover !important;
+        &:has(.toggle--active) {
+            background: unset;
+            @media screen and (min-width: $extra-break) {
+                .close-toggle-btn {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    height: 120px;
+                    width: 120px;
+                    cursor: pointer;
+                    &::before {
+                        content: '';
+                        background: url(assets/images/close-x.svg);
+                        background-size: cover;
+                        height: 120px;
+                        width: 120px;
+                        position: absolute;
+                        z-index: 999;
+                    }
+                }
+            }
+        }
         &::before {
             content: '';
             background: #00381c;
@@ -103,6 +127,7 @@
             left: 0;
             z-index: 1;
         }
+
         // &::after {
         //     content: '';
         //     background: #00381c;
@@ -261,11 +286,14 @@
                 height: 100%;
                 overflow: hidden;
                 padding: $spacing-sm;
-                padding-top: 88px;
+                padding-top: 100px;
                 padding-bottom: $spacing-xl;
                 border: 0px;
                 color: white;
                 background: #00381cde;
+                @media screen and (max-width: $extra-break) {
+                    width: 100%;
+                }
                 h1,
                 h2,
                 h3,

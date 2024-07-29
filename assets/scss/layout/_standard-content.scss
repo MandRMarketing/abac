@@ -54,6 +54,13 @@
         .column:nth-of-type(2) {
             flex: 0.5;
         }
+        .cards__wrap__card {
+            justify-content: center;
+            align-items: center;
+            .header-image {
+                margin-left: 0px;
+            }
+        }
     }
 }
 @media (max-width: $mobile-break) {

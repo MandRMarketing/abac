@@ -7,6 +7,8 @@
         h4 {
             display: inline-block;
             text-transform: unset;
+            transform: translateY(-16px);
+            color: $green;
         }
     }
     &__feed {
@@ -23,10 +25,10 @@
             }
             &:hover {
                 img {
-                    opacity: 0.75;
+                    filter: brightness(0.7);
                 }
             }
-            @media screen and (max-width: $mobilenew-break) {
+            @media screen and (max-width: $mobile-break) {
                 &.mobile-hide {
                     display: none;
                 }

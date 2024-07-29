@@ -40,27 +40,6 @@ body {
     margin: 0 0 16px;
 }
 
-.home {
-    h2 {
-        font-size: 40px;
-        @media (min-width: $mobile-med) {
-            font-size: 42px;
-        }
-        @media (min-width: $mobile-break) {
-            font-size: 47px;
-        }
-    }
-    h3 {
-        font-size: 28px;
-        @media (min-width: $mobile-med) {
-            font-size: 30px;
-        }
-        @media (min-width: $mobile-break) {
-            font-size: 34px;
-        }
-    }
-}
-
 h1,
 .h1 {
     font-size: 40px;

@@ -38,7 +38,7 @@
                     color: white;
                     margin-right: $spacing-xs;
                     font-family: 'Poppins', sans-serif;
-                    font-weight: 700;
+                    font-weight: 400;
                     font-style: normal;
                     font-size: 18px;
                 }
@@ -54,10 +54,8 @@
                 }
                 &:not(.information-select-wrapper) {
                     &:hover {
-                        background-color: $primary-yellow;
-
                         a {
-                            color: $textColor;
+                            color: $primary-yellow;
                         }
                     }
                 }
@@ -189,6 +187,10 @@
                     .desktop-nav-subnav-list {
                         flex: 1;
                         &.no-header {
+                            .desktop-nav-subnav-item:first-of-type {
+                                border-top: 1px solid #e2e2e2;
+                                margin-top: 23px;
+                            }
                             a:not(.button),
                             span {
                                 text-align: left;
@@ -202,6 +204,7 @@
                                 font-size: 22px;
                                 border-bottom: 1px solid #e2e2e2;
                                 transition: background-color 0.3s ease;
+
                                 &::after {
                                     content: '';
                                     background: url(assets/images/btn-arrow-yellow.svg)

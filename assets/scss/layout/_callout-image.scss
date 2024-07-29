@@ -30,6 +30,9 @@
         * {
             color: white;
         }
+        p {
+            margin: 25px 0;
+        }
     }
     @media screen and (max-width: $mobile-break) {
         .container-large {

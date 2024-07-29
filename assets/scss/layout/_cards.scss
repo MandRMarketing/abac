@@ -134,6 +134,15 @@
                 // }
             }
         }
+        &.align-start {
+            .cards__wrap__card {
+                align-items: flex-start !important;
+                padding: 25px !important;
+                * {
+                    text-align: left;
+                }
+            }
+        }
         &.announcement {
             .cards__wrap {
                 .cards__wrap__card {
