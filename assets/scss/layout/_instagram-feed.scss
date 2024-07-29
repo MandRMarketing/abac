@@ -26,6 +26,9 @@
                     opacity: 0.75;
                 }
             }
+            &.mobile-hide {
+                display: none;
+            }
         }
     }
     @media screen and (max-width: $second-break) {
