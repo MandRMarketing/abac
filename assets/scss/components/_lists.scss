@@ -9,10 +9,22 @@ main {
             text-indent: -0;
             margin-left: $spacing-sm;
             color: $textColor;
-            font-style: italic;
+            font-style: normal;
+            list-style-type: disc;
 
             &::marker {
-                color: $primary-yellow;
+                color: $green;
+            }
+        }
+    }
+}
+
+.dark-green-bg,
+.green-bg {
+    ul:not([class]) {
+        li:not([class]) {
+            &::marker {
+                color: $primary-yellow !important;
             }
         }
     }

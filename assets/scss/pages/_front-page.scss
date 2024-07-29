@@ -46,6 +46,9 @@
             width: 100%;
             position: relative;
             transform: unset;
+            h2 {
+                font-size: 50px;
+            }
         }
     }
     &__image {

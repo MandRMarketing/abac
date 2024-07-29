@@ -10,10 +10,15 @@
                 position: relative;
                 margin-bottom: $spacing-sm;
                 #program-archive-search {
-                    border: 2px solid $primary-yellow;
-                    background: $offWhite;
-                    color: $textColor;
+                    background: $grey;
+                    color: black;
                     margin-bottom: 0;
+                    &::placeholder {
+                        color: black; /* Change placeholder text color to red */
+                        font-weight: 400;
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 22px;
+                    }
                 }
                 &::after {
                     content: '';
@@ -37,6 +42,7 @@
             .toggles {
                 .toggle {
                     &__trigger {
+                        padding: 10px 0;
                         padding-left: 0;
                         padding-right: 0;
                         border-left: 0px;
@@ -45,8 +51,21 @@
                         border-bottom: 1px solid $primary-yellow;
                         min-width: 337px;
                         &-text {
-                            h3 {
-                                color: $green;
+                            h4 {
+                                color: $darkGrey;
+                            }
+                        }
+                        &-icon {
+                            top: -7px;
+                            &::before {
+                                color: $primary-yellow;
+                                font-family: auto;
+                                font-size: 40px;
+                            }
+                        }
+                        &.toggle--active {
+                            .toggle__trigger-icon {
+                                top: -12px;
                             }
                         }
                     }
@@ -79,14 +98,15 @@
                             display: inline-block;
                             vertical-align: top;
                             margin-right: 19px;
+                            margin-top: 2px;
                             width: 19px;
                             height: 19px;
                             min-height: 19px;
                             min-width: 19px;
-                            background-color: rgb(255, 246, 223);
+                            background-color: $grey;
                             border-width: 1px;
                             border-style: solid;
-                            border-color: rgb(254, 191, 16);
+                            border-color: #e5e5e5;
                             border-radius: 2px;
                             box-shadow: none;
                         }

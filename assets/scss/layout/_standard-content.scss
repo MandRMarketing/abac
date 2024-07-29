@@ -50,8 +50,11 @@
     }
 
     /* Content with single card */
-    // &.single-card {
-    // }
+    &.single-card {
+        .column:nth-of-type(2) {
+            flex: 0.5;
+        }
+    }
 }
 @media (max-width: $mobile-break) {
     .standard-content {

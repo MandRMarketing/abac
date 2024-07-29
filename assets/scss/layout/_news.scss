@@ -3,6 +3,7 @@
         &__breadcrumbs {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             border-bottom: 2px solid $primary-yellow;
             margin-bottom: $spacing-sm;
 
@@ -19,26 +20,28 @@
             }
             @media screen and (max-width: $mobile-break) {
                 flex-direction: column;
+                align-items: flex-start;
             }
         }
         &__date {
+            color: $green;
             font-weight: 700;
             font-family: 'Outfit', sans-serif;
+            margin-bottom: 25px;
         }
     }
     &__content {
         .article-heading {
             border-left: 8px solid $primary-yellow;
             padding-left: $spacing-sm;
-            color: $textColor;
-            font-family: 'Poppins', sans-serif;
+            color: $green;
+            font-family: 'Outfit', sans-serif;
         }
     }
     &__footer {
         &__breadcrumbs {
             display: flex;
             justify-content: space-between;
-            border-top: 2px solid $primary-yellow;
             padding-top: $spacing-sm;
             .social-icons {
                 display: flex;
@@ -66,7 +69,7 @@
             width: 60%;
             height: 100%;
             border-bottom: 8px solid $primary-yellow;
-            padding: $spacing-xs;
+            padding: 55px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             position: relative;
             z-index: 1;
@@ -84,14 +87,14 @@
                 z-index: -1;
             }
             time {
-                font-style: italic;
+                font-weight: 600;
                 color: white;
             }
-            h2 {
-                color: $primary-yellow;
+            h3,
+            p {
+                color: white;
             }
             a:not(.button-arrow) {
-                font-style: italic;
                 color: white;
             }
             .button-arrow {
@@ -147,14 +150,14 @@
                     z-index: -1;
                 }
                 time {
-                    font-style: italic;
+                    font-weight: 600;
                     color: white;
                 }
-                h2 {
-                    color: $primary-yellow;
+                h3,
+                p {
+                    color: white;
                 }
                 a:not(.button-arrow) {
-                    font-style: italic;
                     color: white;
                 }
                 .button-arrow {
@@ -191,15 +194,15 @@
         display: flex;
         gap: $spacing-sm;
         &__articles {
-            width: 75%;
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             &__article {
                 background: white;
-                flex: 1 0 calc(33.33% - 20px); /* 10px for margin or gap, adjust as needed */
-                border: 1px solid $primary-yellow;
+                flex: 1 0 calc(25% - 20px); /* 10px for margin or gap, adjust as needed */
                 border-bottom: 8px solid $primary-yellow;
+                box-shadow: rgba(0, 0, 0, 0.18) 0px 3px 8px;
                 padding: $spacing-xs;
                 position: relative;
                 list-style-type: none;
@@ -210,25 +213,20 @@
                     margin-left: -$spacing-xs;
                 }
                 time {
-                    display: block;
-                    background: $green;
-                    color: white;
+                    color: $darkGrey;
+                    font-family: 'Poppins', sans-serif;
                     font-weight: 700;
-                    font-size: 18px;
-                    padding: 5px;
-                    margin-left: -$spacing-xs;
-                    padding-left: $spacing-xs;
-                    margin-bottom: $spacing-sm;
-                    margin-top: -37px;
-                    position: relative;
-                    z-index: 1;
+                    font-style: italic;
+                    font-size: 21px;
+                    text-transform: capitalize;
                 }
                 h3 {
                     color: $green;
                     font-family: 'Poppins', sans-serif;
                 }
                 a:not(.button-arrow) {
-                    font-style: italic;
+                    font-style: normal;
+                    font-size: 18px;
                 }
             }
         }
@@ -237,16 +235,15 @@
             a {
                 margin-bottom: 0;
                 border-top: 2px solid $primary-yellow;
+                padding: 15px 0;
                 text-decoration: none;
+                color: $darkGrey;
                 &:last-child {
                     border-bottom: 2px solid $primary-yellow;
                 }
+                &:hover,
                 &.selected {
-                    color: black;
-                    font-weight: 700;
-                }
-                &:hover {
-                    color: black;
+                    color: $green;
                     font-weight: 700;
                 }
             }

@@ -41,11 +41,11 @@
 }
 
 .green-bg {
-    background-color: $green !important;
+    background-color: $dark-green !important;
 }
 
 .dark-green-bg {
-    background-color: $dark-green !important;
+    background-color: $darker-green !important;
 }
 
 .offwhite-bg {
@@ -110,4 +110,9 @@
 .gold-border-top {
     padding-top: $spacing-med;
     border-top: 2px solid $primary-yellow;
+}
+
+.gold-border-bot {
+    padding-bottom: $spacing-med;
+    border-bottom: 2px solid $primary-yellow;
 }

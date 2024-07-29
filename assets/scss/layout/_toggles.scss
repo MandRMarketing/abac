@@ -14,8 +14,8 @@
             border: none;
             padding: $spacing-sm 60px $spacing-sm $spacing-sm;
             text-align: left;
-            border: 2px solid $primary-yellow;
-            border-left: 8px solid $primary-yellow;
+            border: 2px solid white;
+            border-left: 8px solid white;
             color: $textColor;
             text-decoration: none;
             font-weight: bold;
@@ -52,12 +52,13 @@
                 pointer-events: none;
                 &:before {
                     z-index: 2;
+                    font-family: auto;
                     content: '+';
                     position: absolute;
                     top: calc(50% - 1px);
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    color: white;
+                    color: $primary-yellow;
                     font-size: 60px;
                 }
             }
@@ -66,9 +67,9 @@
         &__box {
             overflow: hidden;
             padding: $spacing-sm;
-            border-bottom: 2px solid $primary-yellow;
-            border-left: 8px solid $primary-yellow;
-            border-right: 2px solid $primary-yellow;
+            border-bottom: 2px solid white;
+            border-left: 8px solid white;
+            border-right: 2px solid white;
             transition: 0.25s ease;
             opacity: 1;
 
@@ -285,6 +286,48 @@
             }
         }
     }
+    &.alternating-color {
+        .toggles__wrap {
+            .toggle {
+                padding: 0 5%;
+                .toggle__trigger,
+                .toggle__box {
+                    border: 0px;
+                }
+                &:nth-of-type(odd) {
+                    background: $offWhite;
+                }
+                .toggle__trigger-icon {
+                    &::before {
+                        color: $green;
+                    }
+                }
+                .button-lg {
+                    width: 100%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    max-width: calc(33.33% - 24px);
+                    max-width: calc(33.33% - 2.4rem);
+                    -webkit-box-flex: 1;
+                    -ms-flex: 1 0 calc(33.33% - 24px);
+                    flex: 1 0 calc(33.33% - 24px);
+                    -ms-flex: 1 0 calc(33.33% - 2.4rem);
+                    flex: 1 0 calc(33.33% - 2.4rem);
+                    margin-bottom: 0;
+                    max-width: 100%;
+                    width: 100%;
+                    -webkit-box-flex: 1;
+                    -ms-flex: 1;
+                    flex: 1;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
     &.image-overlays {
         .toggles__wrap {
             display: flex;
@@ -303,6 +346,12 @@
                 text-align: center;
                 align-items: center;
                 border-bottom: 7px solid $primary-yellow;
+                @media screen and (max-width: $mobile-break) {
+                    width: 100%;
+                    &.mobile-hide {
+                        display: none;
+                    }
+                }
                 > img {
                     position: absolute;
                     object-fit: cover;
@@ -373,6 +422,9 @@
                         background: $green;
                         pointer-events: all;
                         cursor: pointer;
+                        &:before {
+                            color: white;
+                        }
                     }
                 }
                 &__box {
@@ -411,14 +463,14 @@
     }
     &.green-bg {
         .toggle__trigger-icon:before {
-            color: white;
+            color: $primary-yellow;
         }
     }
 }
 @media screen and (max-width: $extra-break) {
     .toggles {
         &.image-content-box-overlay {
-            background: $dark-green;
+            background: $darker-green;
             &::before,
             &::after {
                 content: unset;

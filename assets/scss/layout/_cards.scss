@@ -24,16 +24,18 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
-            padding: $spacing-sm;
+            padding: 25px;
             box-shadow: rgba(0, 0, 0, 0.18) 0px 3px 8px;
             flex: 1;
             align-self: stretch;
-            h4 {
-                color: $green;
+            transition: 0.25s ease-in-out;
+            &:hover {
+                border-bottom: 8px solid $green;
             }
-            h6 {
-                text-transform: uppercase;
-            }
+            // h4 {
+            //     color: $green;
+            // }
+
             .header-image {
                 width: calc(100% + $spacing-med);
                 max-width: calc(100% + $spacing-med);
@@ -70,44 +72,66 @@
         .cards__wrap {
             gap: $spacing-sm;
             .cards__wrap__card {
+                gap: $spacing-xs;
                 flex: 1;
                 align-items: center;
-                padding: $spacing-xl $spacing-sm $spacing-med $spacing-sm;
-                border: 2px solid $primary-yellow;
+                padding: $spacing-med $spacing-sm;
+                background: $darker-green;
+                border-bottom: 5px solid $primary-yellow;
                 text-align: center;
+                * {
+                    color: white;
+                }
                 .badge-icon {
-                    background: url(assets/images/badge-bg-green.svg) no-repeat;
-                    margin-top: -140px !important;
+                    height: 96px;
+                    width: 77px;
+                    background: url(assets/images/badge-bg-white.svg) no-repeat;
+                    background-size: cover !important;
                     img {
                         position: absolute;
-                        left: 43%;
-                        top: 50%;
+                        left: 50%;
+                        top: calc(50% + 5px);
                         transform: translate(-50%, -50%);
                         max-height: unset;
                     }
                 }
                 h3 {
-                    color: $green;
+                    color: white !important;
                 }
             }
         }
     }
     &.icons {
         .cards__wrap {
-            gap: $spacing-sm;
+            gap: 10px;
             .cards__wrap__card {
                 align-items: center;
                 gap: $spacing-xs;
-                width: 100%;
+                padding: 25px 10px !important;
+                flex: 1;
                 height: unset;
                 text-align: center;
+                h3 {
+                    color: $green;
+                    font-size: 24px;
+                }
+                .button-arrow {
+                    font-weight: 600;
+                    text-wrap: nowrap;
+                    padding-right: 10px;
+                }
                 .badge-icon {
-                    @media screen and (min-width: $extra-break) {
-                        margin-top: -70px;
-                    }
                     height: 96px;
                     width: 77px;
                 }
+                // @media screen and (max-width: $extra-break) {
+                //     padding-left: 30%;
+                //     .badge-icon {
+                //         position: absolute;
+                //         left: 20%;
+                //         transform: translateX(-50%);
+                //     }
+                // }
             }
         }
         &.announcement {
@@ -122,28 +146,15 @@
         .cards__wrap {
             .cards__wrap__card {
                 align-items: center;
-                box-shadow: unset;
                 gap: $spacing-xs;
                 width: 100%;
                 height: unset;
-                border: 2px solid $primary-yellow;
                 h3,
                 h4 {
                     text-align: center;
                 }
                 .header-image {
                     margin-left: unset;
-                }
-                &::after {
-                    content: '';
-                    opacity: 0;
-                    background: $primary-yellow;
-                    height: 6px;
-                    width: 100%;
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    transition: 0.25s ease;
                 }
                 &:hover {
                     &::after {
@@ -193,7 +204,7 @@
         //     padding-bottom: 300px;
         // }
         @media screen and (max-width: $extra-break) {
-            padding-bottom: 300px;
+            //padding-bottom: 300px;
             &::before {
                 content: '';
                 position: absolute;
@@ -209,6 +220,11 @@
                 width: 100%;
                 height: 50%;
             }
+        }
+    }
+    &.desktop-offset-top {
+        @media screen and (min-width: $extra-break) {
+            margin-top: -200px;
         }
     }
     &.single-row {

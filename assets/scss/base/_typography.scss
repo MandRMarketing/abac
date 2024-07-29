@@ -65,54 +65,54 @@ h1,
 .h1 {
     font-size: 40px;
     font-family: 'Outfit', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
-    text-transform: capitalize;
+    // text-transform: capitalize;
     color: $green;
     text-shadow: 0px 0px 10px #000000;
     @media (min-width: $mobile-med) {
-        font-size: 42px;
+        font-size: 47px;
+    }
+    @media (min-width: $mobile-break) {
+        font-size: 60px;
+    }
+    &.underline {
+        position: relative;
+        padding-bottom: 40px;
+        margin-bottom: 40px !important;
+        display: block;
+        &::after {
+            content: '';
+            background: $primary-yellow;
+            width: 90px;
+            height: 8px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+h2,
+.h2 {
+    font-size: 36px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: $green;
+    text-transform: capitalize;
+    @media (min-width: $mobile-med) {
+        font-size: 40px;
     }
     @media (min-width: $mobile-break) {
         font-size: 47px;
     }
 }
-h2,
-.h2 {
-    color: $darkGrey;
-    font-size: 28px;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: $green;
-    text-transform: capitalize;
-    @media (min-width: $mobile-med) {
-        font-size: 30px;
-    }
-    @media (min-width: $mobile-break) {
-        font-size: 34px;
-    }
-}
 h3,
 .h3 {
-    color: $darkGrey;
-    font-size: 24px;
+    color: $green;
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
-    font-style: normal;
-    text-transform: capitalize;
-    @media (min-width: $mobile-med) {
-        font-size: 26px;
-    }
-    @media (min-width: $mobile-break) {
-        font-size: 28px;
-    }
-}
-h4 {
-    color: $green;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-style: normal;
     font-size: 22px;
     font-weight: bold;
     text-transform: capitalize;
@@ -121,6 +121,18 @@ h4 {
     }
     @media (min-width: $mobile-break) {
         font-size: 24px;
+    }
+}
+h4 {
+    color: $darkGrey;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: capitalize;
+    @media (min-width: $mobile-break) {
+        font-size: 22px;
     }
 }
 h5 {
@@ -132,12 +144,11 @@ h5 {
     text-transform: capitalize;
 }
 h6 {
-    color: $green;
-    font-size: 18px;
-    text-transform: capitalize;
+    color: $darkGrey;
+    font-size: 20px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 600;
+    font-style: italic;
 }
 
 /* Text Classes */

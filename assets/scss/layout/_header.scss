@@ -2,7 +2,7 @@
     /* Nav Primary
 ---------------------------------------------------------------------------------------------------- */
     #desktop-nav-secondary {
-        background-color: $dark-green;
+        background-color: $darker-green;
         display: flex;
         justify-content: flex-end;
         height: $spacing-med;
@@ -40,7 +40,7 @@
                     font-family: 'Poppins', sans-serif;
                     font-weight: 700;
                     font-style: normal;
-                    font-size: 14px;
+                    font-size: 18px;
                 }
                 &.current-item {
                     a {
@@ -50,6 +50,7 @@
                 #information-select {
                     border-bottom: 1px solid $primary-yellow;
                     height: 25px;
+                    transform: translateY(5px);
                 }
                 &:not(.information-select-wrapper) {
                     &:hover {
@@ -71,7 +72,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: $dark-green;
+        background-color: $darker-green;
         overflow: visible;
         color: #fff;
         z-index: 300;
@@ -319,7 +320,7 @@
         left: 0;
         z-index: 300;
         padding-left: $spacing-xs;
-        background: $dark-green;
+        background: $darker-green;
         display: flex;
         gap: $spacing-xs;
 
@@ -343,6 +344,10 @@
                 .icon-search-green,
                 .icon-search {
                     pointer-events: none;
+                    &::before {
+                        width: 28px;
+                        height: 28px;
+                    }
                 }
             }
             #mobile-search-form {
@@ -357,9 +362,7 @@
                 position: absolute;
                 width: 100%;
                 left: 0;
-                top: calc(
-                    100% + 11px
-                ); /* 100% + border bottom of primary desktop menu */
+                top: 100%;
                 padding: 0 $spacing-xs;
 
                 input {
@@ -401,12 +404,12 @@
                     position: relative;
                     display: block;
                     padding: 10px;
-                    color: $textColor;
+                    color: $green;
                     text-decoration: none;
                     font-family: 'Outfit', sans-serif;
-                    font-weight: 400;
+                    font-weight: 700;
                     font-size: 22px;
-                    border-bottom: 1px solid $primary-yellow;
+                    border-bottom: 1px solid #e5e5e5;
                     transition: background-color 0.3s ease;
                     &::after {
                         content: '';
@@ -428,7 +431,8 @@
                 .mobile-nav-header {
                     span {
                         padding-bottom: 0;
-                        color: $green;
+                        color: $darkGrey;
+                        font-weight: 700;
                         border-bottom: 4px solid $primary-yellow;
                         font-size: 28px;
                         &::after {
@@ -456,10 +460,12 @@
                         }
                         &.back-btn {
                             a {
+                                color: $darkGrey;
                                 padding-bottom: 0;
                                 padding-left: 40px;
                                 &::after {
                                     left: 0;
+                                    top: 60%;
                                     transform: translateY(-50%) rotateZ(180deg);
                                 }
                             }
@@ -511,7 +517,7 @@
                     font-family: 'Poppins', sans-serif;
                     font-weight: 700;
                     font-style: normal;
-                    font-size: 14px;
+                    font-size: 18px;
                     transition: background-color 0.3s ease;
                 }
                 a:hover {
@@ -527,7 +533,7 @@
                         font-family: 'Poppins', sans-serif;
                         font-weight: 700;
                         font-style: normal;
-                        font-size: 14px;
+                        font-size: 18px;
                     }
                 }
                 .mobile-nav-subnav {
@@ -573,7 +579,6 @@
             top: 0;
             right: 0;
             height: 100%;
-            background: $primary-yellow;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -583,19 +588,19 @@
             &::after {
                 content: 'Menu';
                 position: absolute;
-                bottom: -5px;
+                bottom: 10px;
                 left: 50%;
                 transform: translateX(-50%);
                 font-size: 12px;
                 font-family: 'Outfit', sans-serif;
                 font-weight: 400;
-                color: $green;
+                color: $primary-yellow;
             }
             span {
                 display: block;
                 width: 30px;
                 height: 3px;
-                background-color: $green;
+                background-color: $primary-yellow;
                 margin-bottom: 6px;
                 transition: 0.25s ease-in-out;
             }
@@ -621,7 +626,7 @@
         li.site-title,
         div.site-title {
             img {
-                max-height: 40px;
+                max-height: 60px;
             }
         }
     }
