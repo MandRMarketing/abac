@@ -562,6 +562,10 @@
                 }
             }
             .mobile-nav-secondary-item {
+                margin-top: 10px;
+                & ~ .mobile-nav-secondary-item {
+                    margin-top: unset;
+                }
                 a,
                 span {
                     text-align: left;
