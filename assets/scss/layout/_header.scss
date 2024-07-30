@@ -85,7 +85,7 @@
                 position: absolute;
                 top: calc(50% - 25px);
                 transform: translateY(-50%);
-                left: 30px;
+                left: 5%;
                 width: 20%;
                 height: auto;
             }
@@ -322,7 +322,7 @@
                         height: 10px;
                         pointer-events: none;
                     }
-                    @media screen and (max-width: $first-break) {
+                    @media screen and (max-width: $extra-break) {
                         padding: $spacing-xs $spacing-xs;
                         font-size: 18px;
                     }
