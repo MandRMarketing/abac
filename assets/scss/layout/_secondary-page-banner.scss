@@ -141,6 +141,10 @@
             position: relative;
             text-align: center;
         }
+
+        @media screen and (max-width: $extra-break) {
+            min-height: unset;
+        }
     }
     &.school-single-banner {
         position: relative;
