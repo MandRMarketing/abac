@@ -90,9 +90,13 @@
         }
         .secondary-page-banner__content {
             color: white;
-            position: relative;
             align-items: center;
             text-align: left;
+            @media screen and (min-width: $extra-large) {
+                h1 {
+                    transform: translateX(-35%) !important;
+                }
+            }
             @media screen and (max-width: $extra-break) {
                 flex-direction: column;
             }
