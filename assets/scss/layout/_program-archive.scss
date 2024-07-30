@@ -150,6 +150,9 @@
                 padding: $spacing-xs;
                 width: calc(50% - 9px);
                 transition: 0.25s ease;
+                a.button-arrow {
+                    margin-bottom: 0px;
+                }
 
                 &:hover {
                     background: $offWhite;
