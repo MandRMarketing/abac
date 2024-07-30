@@ -494,7 +494,12 @@
                     transition: right 0.3s ease;
                     padding: 0 $spacing-sm;
                     .mobile-nav-subnav-item {
-                        a,
+                        > a {
+                            border-bottom: 1px solid #e2e2e2;
+                            color: $green;
+                            font-weight: 700;
+                            font-size: 20px;
+                        }
                         span {
                             font-size: 18px !important;
                             &:hover {
@@ -507,10 +512,14 @@
                             }
                         }
                         &.back-btn {
+                            padding-bottom: 10px;
+                            border-bottom: 1px solid #e2e2e2;
                             a {
-                                color: $darkGrey;
+                                color: $darkGrey !important;
                                 padding-bottom: 0;
                                 padding-left: 40px;
+                                border-bottom: 0px;
+                                font-size: 20px;
                                 &::after {
                                     left: 0;
                                     top: 60%;
@@ -527,7 +536,7 @@
                                     color: $textColor;
                                     font-family: 'Poppins', sans-serif;
                                     font-weight: 400;
-                                    font-size: 22px;
+                                    font-size: 18px;
                                     &::after {
                                         content: unset;
                                     }
