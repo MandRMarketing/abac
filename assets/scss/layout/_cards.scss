@@ -246,6 +246,21 @@
             margin-top: -215px;
         }
     }
+    &.row-cards {
+        @media screen and (max-width: $extra-break) {
+            .cards__wrap__card {
+                display: flex;
+                flex-direction: row !important;
+                justify-content: center !important;
+                gap: 40px !important;
+            }
+        }
+        @media screen and (max-width: $extra-small) {
+            .cards__wrap__card {
+                gap: 15px !important;
+            }
+        }
+    }
     &.single-row {
         .container,
         .container-large {
