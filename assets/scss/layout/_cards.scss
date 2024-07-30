@@ -260,6 +260,13 @@
                 flex-direction: row !important;
                 justify-content: center !important;
                 gap: 40px !important;
+                text-align: left !important;
+                .translate10 {
+                    transform: translateX(10px);
+                }
+                .translate-10 {
+                    transform: translateX(-10px);
+                }
             }
         }
         @media screen and (max-width: $extra-small) {

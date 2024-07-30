@@ -68,8 +68,8 @@
     cursor: pointer;
     text-transform: capitalize;
     border: 2px solid $green;
-    border-left: 8px solid $green;
-    background: linear-gradient(to right, $green 50%, transparent 50%);
+    border-left: 8px solid $darker-green;
+    background: linear-gradient(to right, $darker-green 50%, transparent 50%);
     background-size: 200% 100%;
     background-position: 100%;
     transition: background-position 0.3s;
