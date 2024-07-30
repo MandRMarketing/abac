@@ -29,6 +29,9 @@
             flex: 1;
             align-self: stretch;
             transition: 0.25s ease-in-out;
+            &.no-hover {
+                border-bottom: 8px solid $primary-yellow !important;
+            }
             &:hover {
                 border-bottom: 8px solid $green;
             }
