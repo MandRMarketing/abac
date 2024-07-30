@@ -68,12 +68,15 @@
                 width: 55%;
                 background: $offWhite;
                 border-bottom: 8px solid $primary-yellow;
-                padding: $spacing-med;
+                padding: 65px 60px;
                 .button-arrow {
                     margin-bottom: 0;
                 }
                 h3 {
                     color: $green !important;
+                }
+                p:last-of-type {
+                    margin-bottom: 0px;
                 }
                 * {
                     color: $textColor !important;
