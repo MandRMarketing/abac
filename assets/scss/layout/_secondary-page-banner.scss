@@ -140,10 +140,14 @@
             color: white;
             position: relative;
             text-align: center;
+            transform: translateY(-50px);
         }
 
         @media screen and (max-width: $extra-break) {
             min-height: unset;
+            .secondary-page-banner__content {
+                transform: unset !important;
+            }
         }
     }
     &.school-single-banner {
