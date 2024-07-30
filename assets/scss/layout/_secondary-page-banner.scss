@@ -23,6 +23,10 @@
     }
     &.half-image-bg {
         position: relative;
+        @media screen and (max-width: $extra-break) {
+            background: #00381c;
+        }
+
         .secondary-page-banner__bg-image {
             position: absolute;
             top: 0;
