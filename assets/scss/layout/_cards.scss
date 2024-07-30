@@ -146,7 +146,13 @@
         &.announcement {
             .cards__wrap {
                 .cards__wrap__card {
+                    background-color: $darker-green !important;
+                    padding-top: 50px !important;
+                    padding-bottom: 50px !important;
                     flex: 1;
+                    .badge-icon.white {
+                        background-size: contain !important;
+                    }
                 }
             }
         }
