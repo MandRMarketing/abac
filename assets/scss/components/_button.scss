@@ -23,7 +23,7 @@
         background-size: 100% 225%;
         background-position: 0 90%;
         &::after {
-            transform: translate(450%, 50%);
+            transform: translate(350%, 50%);
         }
     }
     &::after {
@@ -34,7 +34,7 @@
         width: 10px;
         height: 16px;
         float: right;
-        transform: translate(400%, 50%);
+        transform: translate(300%, 50%);
         //filter: brightness(0);
         transition: 0.25s ease;
     }
