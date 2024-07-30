@@ -1,5 +1,4 @@
 .button {
-    position: relative;
     width: auto;
     color: white !important;
     font-family: 'Outfit', sans-serif;
@@ -24,7 +23,7 @@
         background-size: 100% 225%;
         background-position: 0 90%;
         &::after {
-            transform: translateY(-50%) translateX(10px);
+            transform: translate(450%, 50%);
         }
     }
     &::after {
@@ -35,12 +34,9 @@
         width: 10px;
         height: 16px;
         float: right;
-        transform: translateY(-50%);
+        transform: translate(400%, 50%);
         //filter: brightness(0);
         transition: 0.25s ease;
-        position: absolute;
-        right: 20px;
-        top: 55%;
     }
     &.white {
         color: black !important;
