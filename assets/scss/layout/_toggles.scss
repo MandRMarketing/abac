@@ -359,6 +359,14 @@
         }
     }
     &.image-overlays {
+        @media screen and (max-width: $mobile-break) {
+            padding-bottom: 0px !important;
+        }
+        .container-large {
+            @media screen and (max-width: $mobile-break) {
+                padding: 0;
+            }
+        }
         .toggles__wrap {
             display: flex;
             justify-content: center;

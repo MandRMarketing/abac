@@ -1,3 +1,25 @@
+.home {
+    .callout {
+        @media screen and (max-width: $first-break) {
+            &__container {
+                &.left {
+                    border-bottom: 8px solid $primary-yellow;
+                    border-top: 0px;
+                    display: flex;
+                    justify-content: center;
+                    padding-top: $spacing-sm;
+                    padding-bottom: 30px;
+                }
+                &.right {
+                    text-align: left;
+                    padding-top: $spacing-sm;
+                    border-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
 .callout {
     @media screen and (min-width: $first-break) {
         &.no-borders {

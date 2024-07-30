@@ -393,9 +393,27 @@
                     margin-bottom: 0;
                 }
 
+                input::placeholder {
+                    font-weight: 400;
+                }
+                /* For better cross-browser compatibility */
+                input::-webkit-input-placeholder {
+                    font-weight: 400;
+                }
+                input:-moz-placeholder {
+                    font-weight: 400;
+                }
+                input::-moz-placeholder {
+                    font-weight: 400;
+                }
+                input:-ms-input-placeholder {
+                    font-weight: 400;
+                }
+
                 input[type='search'] {
                     width: 180px;
                     height: 100%;
+                    transform: translateY(5px);
 
                     &:focus {
                         border: 0px;

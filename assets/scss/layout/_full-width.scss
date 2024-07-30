@@ -217,7 +217,7 @@
                 flex-direction: column;
                 .forty-sixty__left {
                     width: 100%;
-                    padding: 20px;
+                    padding: 50px 20px;
                 }
                 .forty-sixty__right {
                     width: 100%;
@@ -288,11 +288,7 @@
         transform: translateY(-50%) translateX(-50%);
         z-index: -1;
         @media screen and (max-width: $extra-break) {
-            width: 320px;
-            height: 320px;
-            left: 50%;
-            transform: translateX(-50%);
-            top: $spacing-sm;
+            display: none;
         }
     }
 }
