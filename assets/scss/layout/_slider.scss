@@ -69,6 +69,9 @@
                 background: $offWhite;
                 border-bottom: 8px solid $primary-yellow;
                 padding: 65px 60px;
+                @media screen and (max-width: $extra-break) {
+                    padding: 25px 20px;
+                }
                 .button-arrow {
                     margin-bottom: 0;
                 }
@@ -85,6 +88,9 @@
         }
         .slick-dots {
             text-align: left;
+            @media screen and (max-width: $extra-break) {
+                margin-top: 25px;
+            }
             li {
                 margin-left: $spacing-xs;
             }

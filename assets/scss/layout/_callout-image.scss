@@ -33,6 +33,9 @@
         p {
             margin: 25px 0;
         }
+        .button {
+            margin-bottom: 0;
+        }
     }
     @media screen and (max-width: $mobile-break) {
         .container-large {
