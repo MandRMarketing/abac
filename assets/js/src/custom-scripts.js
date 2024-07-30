@@ -217,8 +217,10 @@
         /* Query all toggles on page and pass to Toggles function */
         (function () {
             const toggles = document.querySelectorAll('.toggle');
+            const closeButtons = document.querySelectorAll('.close-toggle-btn');
+
             if (typeof toggles !== 'undefined' && toggles !== null) {
-                Toggles(toggles);
+                Toggles(toggles, closeButtons);
             } else {
             }
         })();
@@ -227,8 +229,9 @@
          * Default toggle functionality
          *
          * @param {Node} toggles Node list of all toggles
+         * @param {Node} closeButtons Node list of all close buttons
          */
-        function Toggles(toggles) {
+        function Toggles(toggles, closeButtons) {
             function closeAllToggles() {
                 toggles.forEach((toggle) => {
                     toggle
@@ -243,12 +246,13 @@
                     toggle.querySelector('.toggle__box').style.display = 'none';
                 });
             }
+
             function toggleBehavior(e) {
                 e.preventDefault();
 
                 const $this = e.target;
 
-                //if the toggle is contained in .image-content-box-overlay
+                // if the toggle is contained in .image-content-box-overlay
                 if (e.target.closest('.image-content-box-overlay')) {
                     closeAllToggles();
                 }
@@ -337,6 +341,7 @@
                     box.style.display = toggleBoxDisplay;
                 }
             }
+
             Array.prototype.slice.call(toggles, 0).forEach(function (e) {
                 const toggleBox = e.querySelector('.toggle__box');
 
@@ -349,6 +354,14 @@
                     'click',
                     toggleBehavior
                 );
+            });
+
+            // Add event listener to close buttons
+            Array.prototype.slice.call(closeButtons, 0).forEach(function (btn) {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    closeAllToggles();
+                });
             });
         }
 
