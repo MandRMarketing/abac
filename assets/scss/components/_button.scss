@@ -97,13 +97,14 @@
     color: black !important;
     padding-right: $spacing-sm;
     font-weight: 500;
+    position: relative;
 
     cursor: pointer;
     text-transform: capitalize;
     &:hover,
     &:focus {
         &::after {
-            transform: translate(150%, 50%);
+            right: -5px;
             filter: brightness(1);
         }
     }
@@ -114,12 +115,12 @@
         background-size: contain;
         width: 10px;
         height: 16px;
-        // position: absolute;
-        // right: 5px;
-        // top: calc(50%);
-        // transform: translateY(-50%);
+        position: absolute;
+        right: 0px;
+        top: calc(50%);
+        transform: translateY(-50%);
         float: right;
-        transform: translate(100%, 50%);
+        // transform: translate(100%, 50%);
         filter: brightness(1);
         transition: 0.25s ease;
     }
