@@ -29,6 +29,13 @@
             flex: 1;
             align-self: stretch;
             transition: 0.25s ease-in-out;
+            @media screen and (max-width: $extra-break) {
+                h4,
+                h3 {
+                    margin-top: 0px !important;
+                    transform: unset !important;
+                }
+            }
             &.no-hover {
                 border-bottom: 8px solid $primary-yellow !important;
             }
