@@ -28,6 +28,7 @@
                 a.button-arrow {
                     display: flex;
                     align-items: center;
+                    justify-content: space-between;
                     max-width: calc(33.33% - 24px);
                     flex: 1 0 calc(33.33% - 24px); /* Each item takes up 33.33% of the container width with margin */
                     margin-bottom: 0;
