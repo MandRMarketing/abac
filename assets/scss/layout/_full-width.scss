@@ -14,6 +14,12 @@
         &.image-right {
             .fifty-fifty__left {
                 padding: $spacing-xl;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    width: 75px;
+                }
             }
             .fifty-fifty__right {
                 padding: 0;
@@ -53,6 +59,15 @@
             }
             .fifty-fifty__right {
                 padding: $spacing-xl;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                img {
+                    width: 75px;
+                }
+                .button {
+                    margin-bottom: 0px;
+                }
             }
         }
     }
