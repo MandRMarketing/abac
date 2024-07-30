@@ -31,6 +31,9 @@
             height: 100%;
             width: 100%;
             z-index: 0;
+            @media screen and (max-width: $extra-break) {
+                position: unset;
+            }
         }
         .secondary-page-banner__content {
             width: 50%;
@@ -51,6 +54,7 @@
             @media screen and (max-width: $extra-break) {
                 width: 100%;
                 padding: 40px 5%;
+                background: #00381c;
             }
         }
     }
