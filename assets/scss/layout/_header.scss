@@ -446,12 +446,12 @@
                     position: relative;
                     display: block;
                     padding: 10px;
-                    color: $green;
+                    color: $darkGrey;
                     text-decoration: none;
                     font-family: 'Outfit', sans-serif;
-                    font-weight: 700;
+                    font-weight: 400;
                     font-size: 22px;
-                    border-bottom: 1px solid #e5e5e5;
+                    border-bottom: 1px solid $primary-yellow;
                     transition: background-color 0.3s ease;
                     &::after {
                         content: '';
@@ -496,8 +496,14 @@
                     .mobile-nav-subnav-item {
                         a,
                         span {
+                            font-size: 18px !important;
                             &:hover {
                                 color: $green !important;
+                            }
+                        }
+                        .mobile-nav-header {
+                            span {
+                                font-size: 20px;
                             }
                         }
                         &.back-btn {
@@ -552,12 +558,12 @@
                     text-align: left;
                     position: relative;
                     display: block;
-                    padding: $spacing-xs;
-                    color: $green;
-                    text-transform: uppercase;
+                    padding: 5px 10px;
+                    color: $darker-green;
+                    //text-transform: uppercase;
                     text-decoration: none;
                     font-family: 'Poppins', sans-serif;
-                    font-weight: 700;
+                    font-weight: 400;
                     font-style: normal;
                     font-size: 18px;
                     transition: background-color 0.3s ease;
@@ -569,11 +575,10 @@
                     margin-left: -24px;
 
                     span {
-                        color: $green;
-                        text-transform: uppercase;
+                        color: $darker-green;
                         text-decoration: none;
                         font-family: 'Poppins', sans-serif;
-                        font-weight: 700;
+                        font-weight: 400;
                         font-style: normal;
                         font-size: 18px;
                     }
