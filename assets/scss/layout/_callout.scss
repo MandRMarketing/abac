@@ -36,12 +36,14 @@
         &__container {
             &.left {
                 border-top: 2px solid $primary-yellow;
+                border-bottom: 8px solid $primary-yellow;
                 display: flex;
                 justify-content: center;
                 padding-top: $spacing-sm;
+                padding-bottom: 30px;
             }
             &.right {
-                text-align: center;
+                text-align: left;
                 padding-top: $spacing-sm;
                 border-bottom: 2px solid $primary-yellow;
             }
