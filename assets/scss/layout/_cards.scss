@@ -254,6 +254,9 @@
         }
     }
     &.row-cards {
+        .button-arrow {
+            padding-right: 25px !important;
+        }
         @media screen and (max-width: $extra-break) {
             .cards__wrap__card {
                 display: flex;
