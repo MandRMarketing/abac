@@ -93,7 +93,13 @@
             align-items: center;
             text-align: left;
             @media screen and (min-width: $extra-large) {
-                h1 {
+                h1,
+                p,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
                     transform: translateX(-35%) !important;
                 }
             }
