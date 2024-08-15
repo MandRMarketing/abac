@@ -137,6 +137,11 @@ h6 {
     text-align: center;
 }
 
+.text-center-full-width {
+    text-align: center;
+    width: 100%;
+}
+
 .white-text {
     p,
     a:not(.button),
@@ -247,4 +252,64 @@ img::-moz-selection {
 
 body {
     -webkit-tap-highlight-color: $selectionColor;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.margin-top-25 {
+    margin-top: 25px;
+}
+
+.margin-bottom-25 {
+    margin-bottom: 25px;
+}
+
+.margin-bottom-40 {
+    margin-bottom: 40;
+}
+
+.negative-margin-top-15 {
+    margin-top: -15px;
+}
+
+.padding-top-0 {
+    padding-top: 0;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.yellow-text {
+    color: $primary-yellow;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.margin-25 {
+    margin: 25px;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-left-0 {
+    margin-left: 0;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-bottom-50 {
+    margin-bottom: 50px;
 }
